@@ -17,7 +17,7 @@ import { HomeComponent } from './pages/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot(),
+    NgbModule,
     BrowserAnimationsModule
   ],
   providers: [],
