@@ -121,6 +121,14 @@
               "devServerTarget": "etp:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/etp",
+            "netlifyToken": "08d39f79e5815f9f7c7f8e7d74fa80b6cde67c3544625f05743ab960371fbea6",
+            "siteId": "\\d76cc4ec-5bdf-4c54-8943-84bedb486435"
+          }
         }
       }
     }
