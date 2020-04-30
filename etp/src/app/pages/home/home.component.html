@@ -1,33 +1,37 @@
 <div class="home-wrapper">
   <svg
-    version="1.1"
+    id="Layer_1"
+    data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    x="0px"
-    y="0px"
-    width="41%"
-    height="100%"
-    style="overflow: visible; position: absolute; right: 0; top: 0;"
-    xml:space="preserve"
+    viewBox="0 0 924 942.41"
+    style="position: absolute; top: 0; right: 0; width: 40%;"
   >
-    <style type="text/css">
-      .st0 {
-        fill: #2f3b52;
-        stroke-width: 0.75;
-        stroke-miterlimit: 10;
-      }
-    </style>
-    <defs></defs>
+    <defs>
+      <style>
+        .cls-1 {
+          fill: #2f3b52;
+        }
+      </style>
+    </defs>
     <path
-      class="st0"
-      d="M0.59,204.63c1.24,7.1,7.26,11.31,8.57,12.29c12.22,9.14,252.74,215.67,586.72,502.96
-	c0-239.83,0-479.67,0-719.5H176.92C84.35,99.4,17.47,172.61,7.02,186.2C0.09,195.22,0.02,201.36,0.59,204.63z"
+      class="cls-1"
+      d="M996.34,267.53c1.92,9.3,11.26,14.81,13.29,16.1,19,12,392.16,282.48,910.37,658.78V0H1269.93c-143.63,129.7-247.4,225.59-263.62,243.39C995.56,255.2,995.45,263.25,996.34,267.53Z"
+      transform="translate(-996)"
     />
   </svg>
+  <!-- login buttons  -->
+  <div class="top-btn">
+    <span class="span"
+      >0.4$ <sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup>
+      <sub>K W H</sub></span
+    >
+    <button mat-raised-button class="btn" type="button">SIGN IN</button>
+    <button mat-raised-button class="btn" type="button">SIGN UP</button>
+  </div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-7 col-md-6">
-        <div class="heading m-5">
+      <div class="col-lg-6 col-md-6">
+        <div class="heading">
           <h1 class="title">
             Welcome to <br />
             Energy Trading Platform
@@ -41,14 +45,29 @@
             />
           </div>
         </div>
-        <div class="shadow-sm my-5">
+        <div class="shadow-sm my-3">
           <div class="line-chart">
             <img src="/assets/img/Chart.png" alt="charts" class="img-fluid" />
           </div>
         </div>
       </div>
-      <div class="col-lg-5 col-md-6">
-        <div class="container"></div>
+      <div class="col-lg-6 col-md-6">
+        <div class="container">
+          <div class="bar-pic" *ngIf="!(isHandset$ | async)">
+            <img
+              src="/assets/img/Consumption.png"
+              alt="consumption by day"
+              class="img-fluid"
+            />
+          </div>
+          <div style="margin: -20px auto;" *ngIf="!(isHandset$ | async)">
+            <img
+              src="/assets/img/active-hours.png"
+              alt="consumption by day"
+              class="img-fluid"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
