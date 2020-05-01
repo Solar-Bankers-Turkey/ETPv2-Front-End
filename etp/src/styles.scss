@@ -55,10 +55,11 @@ body {
     margin-top: 17%;
     padding: 20px 0;
     .title {
-      font-size: 4em;
+      font-size: 300%;
       font-weight: 400;
       line-height: 1;
-      margin-top: 3%;
+      margin-top: 5%;
+      text-shadow: 4px 4px 0px #0c1425, 7px 7px 0px rgba(0, 0, 0, 0.84);
     }
     p {
       font-size: 16px;
@@ -69,9 +70,8 @@ body {
 
   .line-chart {
     width: 100%;
-    margin-top: 20%;
+    margin-top: 10%;
     img {
-      background-color: $bg;
       padding: 10px;
     }
   }
@@ -83,7 +83,7 @@ body {
     .span {
       margin-right: 20px;
       font-weight: 400;
-      font-size: 150%;
+      font-size: 130%;
       sup,
       sub {
         color: #70889e;
@@ -91,8 +91,8 @@ body {
       }
     }
     .btn {
-      height: 2rem;
-      width: 10rem;
+      height: 1.7rem;
+      width: 8rem;
       margin: 5px 10px;
       line-height: 5px;
     }
@@ -107,16 +107,31 @@ body {
 }
 
 @media (max-width: 800px) {
+  svg {
+    display: none;
+  }
   .home-wrapper {
     padding-left: 10px;
-    margin-left: 0;
+    .heading {
+      margin: 30% auto 0;
+    }
+    .line-chart {
+      margin: 10% auto;
+      img {
+        padding: 0;
+      }
+    }
+    .bar-pic {
+      width: 100%;
+    }
   }
   .top-btn {
     position: relative;
     margin: 0;
-    padding: 10px 5px;
+    padding: 0px 5px;
+    text-align: right;
     .span {
-      margin: auto 2px;
+      display: none;
     }
   }
 }

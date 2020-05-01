@@ -37,30 +37,38 @@
             Energy Trading Platform
           </h1>
           <p>by solar bankers</p>
-          <div style="width: 120px; height: 100px; margin-top: 5px;">
+          <div style="width: 45%; margin: 5px -10% 0;">
             <img
-              src="https://solarbankers.org/static/logo.png"
+              src="assets/img/logo.png"
               alt="solar bankers"
               class="img-fluid"
             />
           </div>
         </div>
-        <div class="shadow-sm my-3">
-          <div class="line-chart">
-            <img src="/assets/img/Chart.png" alt="charts" class="img-fluid" />
-          </div>
+
+        <div class="line-chart" *ngIf="!(isHandset$ | async)">
+          <img src="/assets/img/Chart.png" alt="charts" class="img-fluid" />
         </div>
       </div>
-      <div class="col-lg-6 col-md-6">
+      <div class="line-chart" *ngIf="isHandset$ | async">
+        <img
+          style="margin: 0 20px;"
+          src="/assets/img/combine.png"
+          alt="charts"
+          class="img-fluid"
+        />
+        <img src="/assets/img/Chart.png" alt="charts" class="img-fluid" />
+      </div>
+      <div class="col-lg-6 col-md-6" *ngIf="!(isHandset$ | async)">
         <div class="container">
-          <div class="bar-pic" *ngIf="!(isHandset$ | async)">
+          <div class="bar-pic">
             <img
               src="/assets/img/Consumption.png"
               alt="consumption by day"
               class="img-fluid"
             />
           </div>
-          <div style="margin: -20px auto;" *ngIf="!(isHandset$ | async)">
+          <div style="margin: -20px auto;">
             <img
               src="/assets/img/active-hours.png"
               alt="consumption by day"
