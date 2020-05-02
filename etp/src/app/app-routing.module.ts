@@ -6,13 +6,10 @@ import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: '/home', pathMatch: 'full'
+    path: '', component: HomeComponent,
   },
   {
-    path: 'home', component: HomeComponent
-  },
-  {
-    path: 'signin', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+    path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: '**', component: ErrorComponent

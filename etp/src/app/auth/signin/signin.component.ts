@@ -8,8 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class SigninComponent implements OnInit {
 
   constructor() { }
+  type: 'signin' | 'reset' = 'signin';
 
   ngOnInit(): void {
   }
 
+  changeType(val) {
+    this.type = val;
+  }
+
+  get isSignin() {
+    return this.type === 'signin';
+  }
+
+  get isReset() {
+    return this.type === 'reset';
+  }
 }

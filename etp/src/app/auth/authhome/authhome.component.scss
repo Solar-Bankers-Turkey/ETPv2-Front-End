@@ -1,0 +1,15 @@
+.row {
+  margin: auto 0 !important;
+}
+.authbox {
+  padding: calc(50vh - 7%) calc(70vw - 110%) 0;
+  .title {
+    color: white;
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: bold;
+    span {
+      font-weight: 300;
+    }
+  }
+}

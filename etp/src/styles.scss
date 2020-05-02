@@ -27,7 +27,11 @@ $etp-theme: mat-light-theme($etp-primary, $etp-accent, $etp-warn);
 $prmary: #1f8efa;
 $bg: #2f3b52;
 $big-bg: linear-gradient(90deg, #0c1425 100%, #242e42 0%);
+$textcol: #20293c;
 /* You can add global styles to this file, and also import other style files */
+* {
+  outline: none !important;
+}
 
 html,
 body {
@@ -40,9 +44,10 @@ body {
 .btn {
   background-color: $prmary !important;
   border-radius: 2px !important;
-  font-size: 100% !important;
+  font-size: 90% !important;
   font-weight: 300 !important;
   color: white !important;
+  line-height: 5px !important;
 }
 // home styling
 .home-wrapper {
@@ -52,10 +57,10 @@ body {
   max-width: 100%;
   .heading {
     margin-left: 20%;
-    margin-top: 17%;
+    margin-top: 15%;
     padding: 20px 0;
     .title {
-      font-size: 300%;
+      font-size: 250%;
       font-weight: 400;
       line-height: 1;
       margin-top: 5%;
@@ -69,8 +74,8 @@ body {
   }
 
   .line-chart {
-    width: 100%;
-    margin-top: 10%;
+    width: 117%;
+    margin: 5% -10% 0;
     img {
       padding: 10px;
     }
@@ -93,13 +98,13 @@ body {
     .btn {
       height: 1.7rem;
       width: 8rem;
-      margin: 5px 10px;
-      line-height: 5px;
+      padding: 5px 0px;
+      margin: auto 5px;
     }
   }
   .bar-pic {
-    width: 45%;
-    margin-top: 15%;
+    width: 50%;
+    margin-top: 10%;
   }
   img {
     border-radius: 5px;
@@ -132,6 +137,79 @@ body {
     text-align: right;
     .span {
       display: none;
+    }
+  }
+}
+// log in
+
+.auth-side {
+  background-image: url(/assets/img/bitmap.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  max-height: auto;
+  box-shadow: inset 0 0 0 2000px #2f3b52e1;
+  // width: 100%;
+  margin: 0 -15px;
+}
+
+.auth-logo {
+  width: 25%;
+  height: 100px;
+  margin: 10% auto 5%;
+}
+
+.wrapper {
+  .title {
+    font-size: 25px;
+    font-weight: 400;
+    color: $textcol;
+    text-align: center;
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  flex-wrap: wrap;
+  label {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  input {
+    width: 320px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: $textcol;
+    caret-color: #1f8efa;
+    color: white !important;
+    &:focus {
+      background-color: $textcol;
+      box-shadow: none;
+    }
+  }
+}
+.forgot {
+  p {
+    cursor: pointer;
+    margin: 20px 30px 0;
+    color: $bg;
+    &:hover {
+      color: $prmary;
+    }
+  }
+}
+.signup {
+  margin-top: 100px;
+  text-align: center;
+  color: $textcol;
+  span {
+    color: $prmary;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

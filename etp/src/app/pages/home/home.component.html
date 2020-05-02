@@ -1,79 +1,85 @@
 <div class="home-wrapper">
-  <svg
-    id="Layer_1"
-    data-name="Layer 1"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 924 942.41"
-    style="position: absolute; top: 0; right: 0; width: 40%;"
-  >
-    <defs>
-      <style>
-        .cls-1 {
-          fill: #2f3b52;
-        }
-      </style>
-    </defs>
-    <path
-      class="cls-1"
-      d="M996.34,267.53c1.92,9.3,11.26,14.81,13.29,16.1,19,12,392.16,282.48,910.37,658.78V0H1269.93c-143.63,129.7-247.4,225.59-263.62,243.39C995.56,255.2,995.45,263.25,996.34,267.53Z"
-      transform="translate(-996)"
-    />
-  </svg>
-  <!-- login buttons  -->
-  <div class="top-btn">
-    <span class="span"
-      >0.4$ <sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup>
-      <sub>K W H</sub></span
+  <div class="container">
+    <svg
+      id="Layer_1"
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 924 942.41"
+      style="position: absolute; top: 0; right: 0; width: 40%;"
     >
-    <button mat-raised-button class="btn" type="button">SIGN IN</button>
-    <button mat-raised-button class="btn" type="button">SIGN UP</button>
-  </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-6 col-md-6">
-        <div class="heading">
-          <h1 class="title">
-            Welcome to <br />
-            Energy Trading Platform
-          </h1>
-          <p>by solar bankers</p>
-          <div style="width: 45%; margin: 5px -10% 0;">
-            <img
-              src="assets/img/logo.png"
-              alt="solar bankers"
-              class="img-fluid"
-            />
+      <defs>
+        <style>
+          .cls-1 {
+            fill: #2f3b52;
+          }
+        </style>
+      </defs>
+      <path
+        class="cls-1"
+        d="M996.34,267.53c1.92,9.3,11.26,14.81,13.29,16.1,19,12,392.16,282.48,910.37,658.78V0H1269.93c-143.63,129.7-247.4,225.59-263.62,243.39C995.56,255.2,995.45,263.25,996.34,267.53Z"
+        transform="translate(-996)"
+      />
+    </svg>
+    <!-- login buttons  -->
+    <div class="top-btn">
+      <span class="span"
+        >0.4$ <sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup>
+        <sub>K W H</sub></span
+      >
+      <a href="/auth/signin" routerLink="/auth/signin"
+        ><button mat-raised-button class="btn" type="button">SIGN IN</button></a
+      >
+      <a href="/auth/signup" routerLink="/auth/signup">
+        <button mat-raised-button class="btn" type="button">SIGN UP</button></a
+      >
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="heading">
+            <h1 class="title">
+              Welcome to <br />
+              Energy Trading Platform
+            </h1>
+            <p>by solar bankers</p>
+            <div style="width: 30%; margin: 5px -5% 0;">
+              <img
+                src="assets/img/logo.png"
+                alt="solar bankers"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+
+          <div class="line-chart" *ngIf="!(set.isHandset$ | async)">
+            <img src="/assets/img/Chart.png" alt="charts" class="img-fluid" />
           </div>
         </div>
-
-        <div class="line-chart" *ngIf="!(isHandset$ | async)">
+        <div class="line-chart" *ngIf="set.isHandset$ | async">
+          <img
+            style="margin: 0 20px;"
+            src="/assets/img/combine.png"
+            alt="charts"
+            class="img-fluid"
+          />
           <img src="/assets/img/Chart.png" alt="charts" class="img-fluid" />
         </div>
-      </div>
-      <div class="line-chart" *ngIf="isHandset$ | async">
-        <img
-          style="margin: 0 20px;"
-          src="/assets/img/combine.png"
-          alt="charts"
-          class="img-fluid"
-        />
-        <img src="/assets/img/Chart.png" alt="charts" class="img-fluid" />
-      </div>
-      <div class="col-lg-6 col-md-6" *ngIf="!(isHandset$ | async)">
-        <div class="container">
-          <div class="bar-pic">
-            <img
-              src="/assets/img/Consumption.png"
-              alt="consumption by day"
-              class="img-fluid"
-            />
-          </div>
-          <div style="margin: -20px auto;">
-            <img
-              src="/assets/img/active-hours.png"
-              alt="consumption by day"
-              class="img-fluid"
-            />
+        <div class="col-lg-6 col-md-6" *ngIf="!(set.isHandset$ | async)">
+          <div class="container">
+            <div class="bar-pic">
+              <img
+                src="/assets/img/Consumption.png"
+                alt="consumption by day"
+                class="img-fluid"
+              />
+            </div>
+            <div style="width: 100%;">
+              <img
+                src="/assets/img/active-hours.png"
+                alt="consumption by day"
+                class="img-fluid"
+              />
+            </div>
           </div>
         </div>
       </div>

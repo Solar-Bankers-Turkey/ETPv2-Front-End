@@ -4,13 +4,16 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthhomeComponent } from './authhome/authhome.component';
 import { SigninComponent } from './signin/signin.component';
+import { MatButtonModule } from '@angular/material/button';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
-  declarations: [AuthhomeComponent, SigninComponent],
+  declarations: [AuthhomeComponent, SigninComponent, SignupComponent],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    MatButtonModule
   ]
 })
 export class AuthModule { }

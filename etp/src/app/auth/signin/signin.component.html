@@ -1,1 +1,65 @@
-<p>signin works!</p>
+<div class="wrapper">
+  <h1 class="title" *ngIf="isSignin">Sign In</h1>
+  <h1 class="title" *ngIf="isReset">Forgot Password</h1>
+  <p
+    *ngIf="isReset"
+    class="text-center"
+    style="color: #70889e; margin: 30px; font-size: 16px;"
+  >
+    Place your email in the field below. <br />
+    We will send you a link with the instructions to follow.
+  </p>
+  <div class="container">
+    <div class="form">
+      <form action="">
+        <div class="form-group">
+          <label for="">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name=""
+            id=""
+            aria-describedby="emailHelpId"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group" *ngIf="isSignin">
+          <label for="">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name=""
+            id=""
+            placeholder=""
+          />
+        </div>
+        <button
+          mat-raised-button
+          type="submit"
+          class="btn btn-block mt-4"
+          *ngIf="isSignin"
+        >
+          SIGN IN
+        </button>
+        <button
+          mat-raised-button
+          type="submit"
+          class="btn btn-block mt-4"
+          *ngIf="isReset"
+        >
+          RECOVER PASSWORD
+        </button>
+      </form>
+      <div class="forgot">
+        <p (click)="changeType('reset')">Forgot your password?</p>
+      </div>
+    </div>
+    <div class="signup">
+      <p *ngIf="isSignin">
+        Don't have an account?
+        <span routerLink="/auth/signup">sign up</span>
+      </p>
+      <span (click)="changeType('signin')" *ngIf="isReset">Login</span>
+    </div>
+  </div>
+</div>

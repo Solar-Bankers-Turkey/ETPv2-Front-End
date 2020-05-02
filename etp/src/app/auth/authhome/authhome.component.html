@@ -1,6 +1,31 @@
-<div class="wrapper">
-  <div class="row">
-    <div class="col-lg-9 col-md-8 col-sm-1"></div>
-    <div class="col-lg-3 col-md-4 col-sm-11"></div>
+<div class="row">
+  <div
+    class="col-lg-7 col-md-5"
+    style="
+      box-shadow: 1px 0 20px #152138d0;
+      overflow-y: hidden !important;
+      position: relative;
+    "
+    *ngIf="!(set.isHandset$ | async)"
+  >
+    <div class="auth-side">
+      <div class="authbox">
+        <h1 class="title">
+          <span>Get green energy from the sun </span><br />
+          And sell on Energy Trading Platform
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-5 col-md-7">
+    <div class="auth-logo">
+      <a href="" routerLink="">
+        <img
+          src="/assets/img/mainlogo.png"
+          alt="Solar bankers logo"
+          class="img-fluid"
+      /></a>
+    </div>
+    <router-outlet></router-outlet>
   </div>
 </div>
