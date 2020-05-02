@@ -3,32 +3,61 @@
   <div class="container">
     <div class="form">
       <form action="">
-        <div class="form-group">
-          <label for="">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            name=""
-            id=""
-            aria-describedby="emailHelpId"
-            placeholder=""
-          />
+        <div *ngIf="isSignup">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              aria-describedby="emailHelpId"
+            />
+          </div>
+          <div class="form-group">
+            <label for="">Password</label>
+            <input type="password" class="form-control" />
+          </div>
         </div>
-        <div class="form-group">
-          <label for="">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            name=""
-            id=""
-            placeholder=""
-          />
+        <div *ngIf="isReg">
+          <div class="form-group">
+            <label for="">Phone Number</label>
+            <input type="tel" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="">Address</label>
+            <textarea class="form-control" name="" id="" rows="2"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Electric Invoice Number</label>
+            <input type="number" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="">TC Number</label>
+            <input type="number" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="">Birth Date</label>
+            <input type="date" class="form-control" />
+          </div>
         </div>
-        <button mat-raised-button type="submit" class="btn btn-block mt-4">
+
+        <button
+          mat-raised-button
+          (click)="changeType('register')"
+          class="btn btn-block mt-4"
+          *ngIf="isSignup"
+        >
           SIGN UP
         </button>
+        <button
+          mat-raised-button
+          type="button"
+          class="btn btn-block mt-4"
+          *ngIf="isReg"
+        >
+          COMPLETE MY ACCOUNT
+        </button>
       </form>
-      <div class="forgot">
+      <div class="forgot" *ngIf="isSignup">
         <p>
           By clicking sign up, you agree to the Solar Bankers User Agreement,
           Privacy Policy, and Cookie Policy.
@@ -36,9 +65,10 @@
       </div>
     </div>
     <div class="signup">
-      <p>
+      <p *ngIf="isSignup">
         Already have an account? <span routerLink="/auth/signin">sign in</span>
       </p>
+      <span *ngIf="isReg" routerLink="/auth/signin">Not now</span>
     </div>
   </div>
 </div>

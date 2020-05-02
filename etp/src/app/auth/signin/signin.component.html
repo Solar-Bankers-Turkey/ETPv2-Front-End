@@ -35,22 +35,22 @@
         </div>
         <button
           mat-raised-button
-          type="submit"
           class="btn btn-block mt-4"
           *ngIf="isSignin"
+          type="button"
         >
           SIGN IN
         </button>
         <button
           mat-raised-button
-          type="submit"
           class="btn btn-block mt-4"
           *ngIf="isReset"
+          type="button"
         >
           RECOVER PASSWORD
         </button>
       </form>
-      <div class="forgot">
+      <div class="forgot" *ngIf="isSignin">
         <p (click)="changeType('reset')">Forgot your password?</p>
       </div>
     </div>

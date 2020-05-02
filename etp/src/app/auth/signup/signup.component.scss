@@ -3,14 +3,15 @@
 .forgot {
   width: 70%;
   p {
-    margin: 5px auto;
+    margin: 3vh 0 !important;
+    text-align: center;
     color: #869aac;
-    cursor: not-allowed;
+    cursor: context-menu;
   }
-  font-size: 12px;
+  font-size: 1.5vh;
 }
 @media (max-width: 500px) {
   .forgot {
-    width: 100%;
+    width: 100vw;
   }
 }

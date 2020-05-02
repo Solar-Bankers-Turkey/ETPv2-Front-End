@@ -10,7 +10,7 @@ import { map, shareReplay } from 'rxjs/operators';
 export class SettingsService {
   isHandset$: Observable<boolean> = this.breakpointObserver.observe([Breakpoints.Handset])
     .pipe(
-      map(result => { console.log(result); return result.matches; }),
+      map(result => { return result.matches; }),
       shareReplay()
     );
   constructor(private breakpointObserver: BreakpointObserver) { }
