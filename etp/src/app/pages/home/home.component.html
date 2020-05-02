@@ -51,11 +51,17 @@
             </div>
           </div>
 
-          <div class="line-chart" *ngIf="!(set.isHandset$ | async)">
+          <div
+            class="line-chart"
+            *ngIf="!(set.isHandset$ | async) && !(set.isTablet$ | async)"
+          >
             <img src="/assets/img/Chart.png" alt="charts" class="img-fluid" />
           </div>
         </div>
-        <div class="line-chart" *ngIf="set.isHandset$ | async">
+        <div
+          class="line-chart"
+          *ngIf="(set.isHandset$ | async) || (set.isTablet$ | async)"
+        >
           <img
             style="margin: 0 1vw;"
             src="/assets/img/combine.png"
@@ -64,7 +70,10 @@
           />
           <img src="/assets/img/Chart.png" alt="charts" class="img-fluid" />
         </div>
-        <div class="col-lg-6 col-md-6" *ngIf="!(set.isHandset$ | async)">
+        <div
+          class="col-lg-6 col-md-6"
+          *ngIf="!(set.isHandset$ | async) && !(set.isTablet$ | async)"
+        >
           <div class="container">
             <div class="bar-pic">
               <img
@@ -73,7 +82,7 @@
                 class="img-fluid"
               />
             </div>
-            <div style="width: 70vh;">
+            <div style="width: 40vw;">
               <img
                 src="/assets/img/active-hours.png"
                 alt="consumption by day"

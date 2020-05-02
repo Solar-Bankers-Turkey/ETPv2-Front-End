@@ -13,5 +13,10 @@ export class SettingsService {
       map(result => { return result.matches; }),
       shareReplay()
     );
+  isTablet$: Observable<boolean> = this.breakpointObserver.observe([Breakpoints.Tablet])
+    .pipe(
+      map(result => { return result.matches; }),
+      shareReplay()
+    );
   constructor(private breakpointObserver: BreakpointObserver) { }
 }
