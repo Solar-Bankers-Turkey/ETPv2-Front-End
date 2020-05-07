@@ -8,10 +8,9 @@ import { Register } from 'src/app/models/interfaces';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss'],
 })
-export class SignupComponent implements OnInit, OnDestroy {
+export class SignupComponent implements OnInit {
   signupForm: FormGroup;
   type: 'signup' | 'register' = 'signup';
-  sub: any;
   errorMsg = '';
 
   constructor(private fb: FormBuilder, private auth: AuthService) {}
@@ -65,14 +64,14 @@ export class SignupComponent implements OnInit, OnDestroy {
         Surname: this.lastName.value,
       };
 
-      this.sub = this.auth.signup(user).subscribe(
+      return this.auth.signup(user).subscribe(
         (data) => {
           console.log('Success!', data);
-          if (data['msg']) {
-            this.errorMsg = data['msg'];
+          if (data['successCode'] !== 1) {
+            this.errorMsg = data['message'];
           } else {
             this.signupForm.reset();
-            alert('You are logged In!');
+            alert(data['message']);
           }
         },
         (error) => {
@@ -80,11 +79,5 @@ export class SignupComponent implements OnInit, OnDestroy {
         }
       );
     }
-  }
-
-  ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
-    this.sub.unsubscribe();
   }
 }

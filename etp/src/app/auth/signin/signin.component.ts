@@ -8,10 +8,10 @@ import { HttpErrorResponse } from '@angular/common/http';
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.scss'],
 })
-export class SigninComponent implements OnInit, OnDestroy {
+export class SigninComponent implements OnInit {
   type: 'signin' | 'reset' = 'signin';
   signinForm: FormGroup;
-  sub: any;
+
   errorMsg = '';
 
   constructor(private fb: FormBuilder, private auth: AuthService) {}
@@ -47,7 +47,8 @@ export class SigninComponent implements OnInit, OnDestroy {
     } else {
       const email = this.email.value;
       const password = this.password.value;
-      this.sub = this.auth.login(email, password).subscribe(
+
+      return this.auth.login(email, password).subscribe(
         (data) => {
           console.log('Success!');
           if (data['msg']) {
@@ -62,11 +63,5 @@ export class SigninComponent implements OnInit, OnDestroy {
         }
       );
     }
-  }
-
-  ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
-    this.sub.unsubscribe();
   }
 }

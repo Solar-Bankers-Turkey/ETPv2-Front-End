@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpHeaders,
+} from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { Register } from '../models/interfaces';
@@ -8,14 +12,18 @@ import { Register } from '../models/interfaces';
   providedIn: 'root',
 })
 export class AuthService {
+  headers = {
+    'content-type': 'application/json',
+  };
+
   constructor(private http: HttpClient) {}
 
   //Login function
   login(email: string, password: string) {
     return this.http
       .post(
-        `http://142.93.165.55:9001/api/identity/login?username=${email}&password=${password}
-`,
+        `/api/identity/login?username=${email}&password=${password}
+    `,
         null
       )
       .pipe(catchError(this.errorHandler));
@@ -28,8 +36,9 @@ export class AuthService {
   // SignUp function
   signup(user: Register) {
     const body = JSON.stringify(user);
+
     return this.http
-      .post(`http://142.93.165.55:5002/api/customer/register`, body)
+      .post('/api/customer/register', body, { headers: this.headers })
       .pipe(catchError(this.errorHandler));
   }
 }
