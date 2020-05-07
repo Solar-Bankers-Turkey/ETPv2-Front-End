@@ -4,33 +4,36 @@
   <p
     *ngIf="isReset"
     class="text-center"
-    style="color: #70889e; margin: 30px; font-size: 16px;"
+    style="color: #70889e; margin: 5vh; font-size: 2vh;"
   >
     Place your email in the field below. <br />
     We will send you a link with the instructions to follow.
   </p>
   <div class="container">
     <div class="form">
-      <form action="">
+      <div *ngIf="errorMsg" class="alert alert-secondary" role="alert">
+        <strong class="text-danger">{{ errorMsg }}</strong>
+      </div>
+      <form action="" [formGroup]="signinForm">
         <div class="form-group">
-          <label for="">Email</label>
+          <label for="email">Email</label>
           <input
+            (focus)="errorMsg = ''"
             type="email"
             class="form-control"
-            name=""
-            id=""
+            formControlName="email"
             aria-describedby="emailHelpId"
-            placeholder=""
+            [class.is-invalid]="email.touched && email.invalid"
           />
         </div>
         <div class="form-group" *ngIf="isSignin">
-          <label for="">Password</label>
+          <label for="password">Password</label>
           <input
+            (focus)="errorMsg = ''"
             type="password"
             class="form-control"
-            name=""
-            id=""
-            placeholder=""
+            formControlName="password"
+            [class.is-invalid]="password.touched && password.invalid"
           />
         </div>
         <button
@@ -38,6 +41,7 @@
           class="btn btn-block mt-4"
           *ngIf="isSignin"
           type="button"
+          (click)="signin()"
         >
           SIGN IN
         </button>

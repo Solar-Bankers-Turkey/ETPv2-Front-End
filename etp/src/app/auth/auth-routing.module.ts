@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthhomeComponent } from './authhome/authhome.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
+import { ResetComponent } from './reset/reset.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,9 @@ const routes: Routes = [
       },
       {
         path: 'signup', component: SignupComponent
+      },
+      {
+        path: 'reset', component: ResetComponent
       }
     ]
   }

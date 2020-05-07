@@ -128,13 +128,13 @@ body {
 
 .auth-logo {
   width: 20vh;
-  height: 100px;
-  margin: 10vh auto 5vh;
+  margin: 6vh auto 5vh;
   max-height: 100vh;
 }
 
 .wrapper {
-  margin: 10vh auto 20px;
+  margin: 5vh auto 10px;
+  line-height: 1;
   .title {
     font-size: 4vh;
     font-weight: 400;
@@ -144,9 +144,9 @@ body {
 }
 .form {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 7vh;
-  flex-wrap: wrap;
   label {
     font-size: 2vh;
     font-weight: 500;
@@ -162,8 +162,8 @@ body {
     }
   }
   input {
-    width: 320px;
-    height: 30px;
+    width: 44vh;
+    height: 4vh;
     border-radius: 3px;
   }
 }

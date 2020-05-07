@@ -2,12 +2,12 @@
   <div
     class="col-lg-7 col-md-5"
     style="box-shadow: 1px 0 20px #152138d0;"
-    *ngIf="!(set.isHandset$ | async)"
+    *ngIf="!(set.isHandset$ | async) && !(set.isTablet$ | async)"
   >
     <div class="auth-side">
       <div class="authbox">
         <h1 class="title">
-          <span>Get green energy from the sun </span><br />
+          <span i18n>Get green energy from the sun </span><br />
           And sell on Energy Trading Platform
         </h1>
       </div>

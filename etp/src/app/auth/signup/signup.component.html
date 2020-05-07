@@ -2,47 +2,73 @@
   <h1 class="title">Sign Up</h1>
   <div class="container">
     <div class="form">
-      <form action="">
-        <div *ngIf="isSignup">
+      <div *ngIf="errorMsg" class="alert alert-secondary" role="alert">
+        <strong class="text-danger">{{ errorMsg }}</strong>
+      </div>
+      <form action="" [formGroup]="signupForm">
+        <div *ngIf="isSignup" formGroupName="register">
           <div class="form-group">
             <label for="email">Email</label>
             <input
+              (focus)="errorMsg = ''"
               type="email"
               class="form-control"
               aria-describedby="emailHelpId"
+              formControlName="email"
+              [class.is-invalid]="email.touched && email.invalid"
             />
           </div>
           <div class="form-group">
-            <label for="">Password</label>
-            <input type="password" class="form-control" />
+            <label for="first name">First Name</label>
+            <input
+              (focus)="errorMsg = ''"
+              type="text"
+              class="form-control"
+              formControlName="firstName"
+              [class.is-invalid]="firstName.touched && firstName.invalid"
+            />
+          </div>
+          <div class="form-group">
+            <label for="Last name">Last Name</label>
+            <input
+              type="text"
+              (focus)="errorMsg = ''"
+              class="form-control"
+              formControlName="lastName"
+              [class.is-invalid]="lastName.touched && lastName.invalid"
+            />
           </div>
         </div>
-        <div *ngIf="isReg">
+        <div *ngIf="isReg" formGroupName="completeRegister">
           <div class="form-group">
-            <label for="">Phone Number</label>
-            <input type="tel" class="form-control" />
+            <label for="telephone">Phone Number</label>
+            <input type="tel" class="form-control" formControlName="phone" />
           </div>
           <div class="form-group">
-            <label for="">Address</label>
-            <textarea class="form-control" name="" id="" rows="2"></textarea>
+            <label for="address">Address</label>
+            <textarea
+              class="form-control"
+              formControlName="address"
+              rows="2"
+            ></textarea>
           </div>
           <div class="form-group">
-            <label for="">Electric Invoice Number</label>
-            <input type="number" class="form-control" />
+            <label for="EI number">Electric Invoice Number</label>
+            <input type="number" class="form-control" formControlName="eiNum" />
           </div>
           <div class="form-group">
-            <label for="">TC Number</label>
-            <input type="number" class="form-control" />
+            <label for="TC number">TC Number</label>
+            <input type="number" class="form-control" formControlName="tcNum" />
           </div>
           <div class="form-group">
-            <label for="">Birth Date</label>
-            <input type="date" class="form-control" />
+            <label for="Birth Date">Birth Date</label>
+            <input type="date" class="form-control" formControlName="bDate" />
           </div>
         </div>
 
         <button
           mat-raised-button
-          (click)="changeType('register')"
+          (click)="signup()"
           class="btn btn-block mt-4"
           *ngIf="isSignup"
         >

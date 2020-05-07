@@ -6,14 +6,17 @@ import { AuthhomeComponent } from './authhome/authhome.component';
 import { SigninComponent } from './signin/signin.component';
 import { MatButtonModule } from '@angular/material/button';
 import { SignupComponent } from './signup/signup.component';
+import { ResetComponent } from './reset/reset.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [AuthhomeComponent, SigninComponent, SignupComponent],
+  declarations: [AuthhomeComponent, SigninComponent, SignupComponent, ResetComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
   ]
 })
 export class AuthModule { }
