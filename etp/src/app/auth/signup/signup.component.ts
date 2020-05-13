@@ -66,12 +66,12 @@ export class SignupComponent implements OnInit {
 
       return this.auth.signup(user).subscribe(
         (data) => {
-          console.log('Success!', data);
-          if (data['successCode'] !== 1) {
+          if (data['successCode'] < 1) {
             this.errorMsg = data['message'];
           } else {
             this.signupForm.reset();
             alert(data['message']);
+            this.changeType('register');
           }
         },
         (error) => {

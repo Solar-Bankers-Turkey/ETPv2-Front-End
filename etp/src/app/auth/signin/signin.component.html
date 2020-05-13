@@ -1,22 +1,18 @@
 <div class="wrapper">
   <h1 class="title" *ngIf="isSignin">Sign In</h1>
   <h1 class="title" *ngIf="isReset">Forgot Password</h1>
-  <p
-    *ngIf="isReset"
-    class="text-center"
-    style="color: #70889e; margin: 5vh; font-size: 2vh;"
-  >
+  <p *ngIf="isReset" class="text-center info" i18n>
     Place your email in the field below. <br />
     We will send you a link with the instructions to follow.
   </p>
   <div class="container">
     <div class="form">
       <div *ngIf="errorMsg" class="alert alert-secondary" role="alert">
-        <strong class="text-danger">{{ errorMsg }}</strong>
+        <span class="text-danger">{{ errorMsg }}</span>
       </div>
       <form action="" [formGroup]="signinForm">
         <div class="form-group">
-          <label for="email">Email</label>
+          <label for="email" i18n>Email</label>
           <input
             (focus)="errorMsg = ''"
             type="email"
@@ -27,7 +23,7 @@
           />
         </div>
         <div class="form-group" *ngIf="isSignin">
-          <label for="password">Password</label>
+          <label for="password" i18n>Password</label>
           <input
             (focus)="errorMsg = ''"
             type="password"
@@ -40,8 +36,9 @@
           mat-raised-button
           class="btn btn-block mt-4"
           *ngIf="isSignin"
-          type="button"
+          type="submit"
           (click)="signin()"
+          i18n
         >
           SIGN IN
         </button>
@@ -49,21 +46,22 @@
           mat-raised-button
           class="btn btn-block mt-4"
           *ngIf="isReset"
-          type="button"
+          type="submit"
+          i18n
         >
           RECOVER PASSWORD
         </button>
       </form>
       <div class="forgot" *ngIf="isSignin">
-        <p (click)="changeType('reset')">Forgot your password?</p>
+        <p (click)="changeType('reset')" i18n>Forgot your password?</p>
       </div>
     </div>
     <div class="signup">
-      <p *ngIf="isSignin">
+      <p *ngIf="isSignin" i18n>
         Don't have an account?
         <span routerLink="/auth/signup">sign up</span>
       </p>
-      <span (click)="changeType('signin')" *ngIf="isReset">Login</span>
+      <span (click)="changeType('signin')" *ngIf="isReset" i18n>Login</span>
     </div>
   </div>
 </div>

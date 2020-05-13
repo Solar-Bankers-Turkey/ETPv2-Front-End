@@ -7,5 +7,6 @@
     "target": "http://142.93.165.55:5002",
     "secure": false
   },
+  "changeOrigin": true,
   "logLevel": "debug"
 }

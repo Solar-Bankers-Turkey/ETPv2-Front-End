@@ -1,11 +1,11 @@
 <div class="wrapper">
-  <h1 class="title">Reset Password</h1>
+  <h1 class="title" i18n>Reset Password</h1>
 
   <div class="container">
     <div class="form">
       <form action="" [formGroup]="resetForm">
         <div class="form-group">
-          <label for="password">Old Password</label>
+          <label for="password" i18n>Old Password</label>
           <input
             type="password"
             class="form-control"
@@ -14,7 +14,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="New Password">New Password</label>
+          <label for="New Password" i18n>New Password</label>
           <input
             type="password"
             class="form-control"
@@ -22,14 +22,14 @@
           />
         </div>
         <div class="form-group">
-          <label for="Confirm">Confirm New Password</label>
+          <label for="Confirm" i18n>Confirm New Password</label>
           <input
             type="password"
             class="form-control"
             formControlName="confirm"
           />
         </div>
-        <button mat-raised-button class="btn btn-block mt-4" type="button">
+        <button mat-raised-button class="btn btn-block mt-4" type="button" i18n>
           SAVE
         </button>
       </form>

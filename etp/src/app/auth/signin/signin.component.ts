@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
-import { HttpErrorResponse } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -14,11 +14,15 @@ export class SigninComponent implements OnInit {
 
   errorMsg = '';
 
-  constructor(private fb: FormBuilder, private auth: AuthService) {}
+  constructor(
+    private fb: FormBuilder,
+    private auth: AuthService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.signinForm = this.fb.group({
-      email: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
     });
   }
@@ -43,19 +47,19 @@ export class SigninComponent implements OnInit {
 
   signin() {
     if (this.signinForm.invalid) {
-      this.errorMsg = 'Please Fill the fields correctly!';
+      this.errorMsg = 'Please fill the fields correctly!';
     } else {
       const email = this.email.value;
       const password = this.password.value;
 
       return this.auth.login(email, password).subscribe(
         (data) => {
-          console.log('Success!');
-          if (data['msg']) {
-            this.errorMsg = data['msg'];
+          console.log('Success!', data);
+          if (data['successCode'] <= 0) {
+            this.errorMsg = data['message'];
           } else {
             this.signinForm.reset();
-            alert('You are logged In!');
+            this.router.navigate(['/dashboard']);
           }
         },
         (error) => {

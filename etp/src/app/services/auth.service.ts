@@ -22,7 +22,7 @@ export class AuthService {
   login(email: string, password: string) {
     return this.http
       .post(
-        `/api/identity/login?username=${email}&password=${password}
+        `http://142.93.165.55:9001/api/identity/login?email=${email}&password=${password}
     `,
         null
       )
@@ -38,7 +38,9 @@ export class AuthService {
     const body = JSON.stringify(user);
 
     return this.http
-      .post('/api/customer/register', body, { headers: this.headers })
+      .post('http://142.93.165.55:5002/api/customer/register', body, {
+        headers: this.headers,
+      })
       .pipe(catchError(this.errorHandler));
   }
 }

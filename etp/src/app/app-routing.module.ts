@@ -3,21 +3,28 @@ import { Routes, RouterModule } from '@angular/router';
 import { ErrorComponent } from './pages/error/error.component';
 import { HomeComponent } from './pages/home/home.component';
 
-
 const routes: Routes = [
   {
-    path: '', component: HomeComponent,
+    path: '',
+    component: HomeComponent,
   },
   {
-    path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
   {
-    path: '**', component: ErrorComponent
-  }
+    path: 'dashboard',
+    loadChildren: () =>
+      import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+  },
+  {
+    path: '**',
+    component: ErrorComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

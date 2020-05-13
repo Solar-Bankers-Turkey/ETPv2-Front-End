@@ -1,14 +1,14 @@
 <div class="wrapper">
-  <h1 class="title">Sign Up</h1>
+  <h1 class="title" i18n>Sign Up</h1>
   <div class="container">
     <div class="form">
       <div *ngIf="errorMsg" class="alert alert-secondary" role="alert">
-        <strong class="text-danger">{{ errorMsg }}</strong>
+        <span class="text-danger" i18n>{{ errorMsg }}</span>
       </div>
       <form action="" [formGroup]="signupForm">
         <div *ngIf="isSignup" formGroupName="register">
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email" i18n>Email</label>
             <input
               (focus)="errorMsg = ''"
               type="email"
@@ -19,7 +19,7 @@
             />
           </div>
           <div class="form-group">
-            <label for="first name">First Name</label>
+            <label for="first name" i18n>First Name</label>
             <input
               (focus)="errorMsg = ''"
               type="text"
@@ -29,7 +29,7 @@
             />
           </div>
           <div class="form-group">
-            <label for="Last name">Last Name</label>
+            <label for="Last name" i18n>Last Name</label>
             <input
               type="text"
               (focus)="errorMsg = ''"
@@ -41,11 +41,11 @@
         </div>
         <div *ngIf="isReg" formGroupName="completeRegister">
           <div class="form-group">
-            <label for="telephone">Phone Number</label>
+            <label for="telephone" i18n>Phone Number</label>
             <input type="tel" class="form-control" formControlName="phone" />
           </div>
           <div class="form-group">
-            <label for="address">Address</label>
+            <label for="address" i18n>Address</label>
             <textarea
               class="form-control"
               formControlName="address"
@@ -53,15 +53,15 @@
             ></textarea>
           </div>
           <div class="form-group">
-            <label for="EI number">Electric Invoice Number</label>
+            <label for="EI number" i18n>Electric Invoice Number</label>
             <input type="number" class="form-control" formControlName="eiNum" />
           </div>
           <div class="form-group">
-            <label for="TC number">TC Number</label>
+            <label for="TC number" i18n>TC Number</label>
             <input type="number" class="form-control" formControlName="tcNum" />
           </div>
           <div class="form-group">
-            <label for="Birth Date">Birth Date</label>
+            <label for="Birth Date" i18n>Birth Date</label>
             <input type="date" class="form-control" formControlName="bDate" />
           </div>
         </div>
@@ -71,6 +71,8 @@
           (click)="signup()"
           class="btn btn-block mt-4"
           *ngIf="isSignup"
+          type="submit"
+          i18n
         >
           SIGN UP
         </button>
@@ -79,22 +81,25 @@
           type="button"
           class="btn btn-block mt-4"
           *ngIf="isReg"
+          type="submit"
+          i18n
         >
           COMPLETE MY ACCOUNT
         </button>
       </form>
       <div class="forgot" *ngIf="isSignup">
-        <p>
+        <p i18n>
           By clicking sign up, you agree to the Solar Bankers User Agreement,
           Privacy Policy, and Cookie Policy.
         </p>
       </div>
     </div>
     <div class="signup">
-      <p *ngIf="isSignup">
-        Already have an account? <span routerLink="/auth/signin">sign in</span>
+      <p *ngIf="isSignup" i18n>
+        Already have an account?
+        <span routerLink="/auth/signin">sign in</span>
       </p>
-      <span *ngIf="isReg" routerLink="/auth/signin">Not now</span>
+      <span *ngIf="isReg" routerLink="/auth/signin" i18n>Not now</span>
     </div>
   </div>
 </div>
