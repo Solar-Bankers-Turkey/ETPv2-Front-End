@@ -1,0 +1,20 @@
+<div class="header" [class.left]="set.sidetoggle !== ''">
+  <div
+    class="header-item d-flex align-items-stretch justify-content-between container-fluid"
+  >
+    <button
+      type="button"
+      mat-stroked-button
+      id="sidebarCollapse"
+      (click)="set.toggleClass()"
+      class="toggle"
+    >
+      <span class="material-icons text-secondary">
+        menu
+      </span>
+    </button>
+    <etp-topmenu></etp-topmenu>
+    <div class="mx-2"></div>
+    <etp-profilebar></etp-profilebar>
+  </div>
+</div>

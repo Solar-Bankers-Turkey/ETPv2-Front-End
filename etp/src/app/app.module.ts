@@ -13,24 +13,19 @@ import { MatButtonModule } from '@angular/material/button';
 import localeFr from '@angular/common/locales/fr';
 import localeFrExtra from '@angular/common/locales/extra/fr';
 import { registerLocaleData } from '@angular/common';
-registerLocaleData(localeFr, 'fr-FR', localeFrExtra)
+registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ErrorComponent,
-    HomeComponent
-  ],
+  declarations: [AppComponent, ErrorComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    HttpClientModule
-
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

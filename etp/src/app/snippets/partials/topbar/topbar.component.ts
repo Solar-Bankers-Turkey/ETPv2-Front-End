@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { SettingsService } from 'src/app/services/settings.service';
 
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss'],
+  selector: 'etp-topbar',
+  templateUrl: './topbar.component.html',
+  styleUrls: ['./topbar.component.scss'],
 })
-export class NavComponent implements OnInit {
+export class TopbarComponent implements OnInit {
   constructor(public set: SettingsService) {}
 
   ngOnInit(): void {}

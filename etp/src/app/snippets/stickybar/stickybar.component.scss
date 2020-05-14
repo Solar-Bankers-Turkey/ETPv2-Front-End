@@ -1,0 +1,66 @@
+//
+// Sticky Toolbar
+//
+@import "../../../variables.scss";
+
+.sticky-bar,
+.sticky-barside {
+  position: fixed;
+  top: 30%;
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  z-index: 50;
+  background: $grey;
+  box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  border-radius: 3px 0 0 3px;
+
+  .item {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+
+    > button {
+      background: $darkbg;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 30px !important;
+      min-height: 30px !important;
+      border-radius: 3px;
+      transition: background 0.3s ease;
+      padding: 0 5px;
+      color: $primary;
+      > i {
+        transition: color 0.3s ease;
+        font-size: 1.3rem;
+      }
+
+      &:hover {
+        transition: background 0.3s ease;
+        background: $primary;
+        color: white;
+        > i {
+          transition: color 0.3s ease;
+        }
+      }
+      img:hover {
+        mix-blend-mode: difference;
+      }
+    }
+  }
+}
+.sticky-bar {
+  right: 0;
+  width: 46px;
+}
+.sticky-barside {
+  right: 46px;
+  width: 180px;
+  height: 42px;
+}

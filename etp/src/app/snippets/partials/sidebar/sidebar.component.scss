@@ -1,0 +1,110 @@
+@import "../../../../variables.scss";
+
+#sidebar {
+  width: 300px;
+  background: $bg2;
+  transition: all 0.3s;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  i {
+    padding: 0 2vw 0 0;
+  }
+  .etp {
+    padding: 0 20px;
+    text-align: center;
+    border-right: 1px solid $darkbg;
+    border-bottom: 1px solid $darkbg;
+    background-color: $bg2;
+    a {
+      font-size: 2.1rem;
+      letter-spacing: 0.2vw;
+      font-weight: bold;
+      color: #98a7b9;
+      margin: auto;
+      line-height: 1.5;
+      text-decoration: none;
+    }
+  }
+}
+#sidebar::-webkit-scrollbar-track {
+  border: 1px solid $bg2;
+  background-color: $bg2;
+}
+
+#sidebar::-webkit-scrollbar {
+  width: 10px;
+  background-color: $bg2;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+  background-color: $bg2;
+  border-radius: 10px;
+}
+#sidebar.active {
+  margin-left: -300px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px 20px 0;
+  background: $bg2;
+  text-align: center;
+  cursor: pointer;
+  width: 137px;
+  margin: auto;
+  > a {
+    color: $secondary;
+    font-size: 18px;
+    font-weight: 400;
+    &:hover {
+      color: #fff;
+    }
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+#sidebar ul.components {
+  padding: 10px 0;
+}
+
+#sidebar ul li a {
+  color: $sidetext;
+  padding: 20px 40px;
+  display: block;
+  font-size: 1rem;
+  font-weight: 300;
+  cursor: pointer;
+  margin: 0 50px 0 0;
+}
+
+#sidebarCollapse {
+  opacity: 1;
+}
+#sidebar ul li a:hover,
+#sidebar ul li.active > a {
+  color: $primary;
+  background: $sidehover;
+  text-decoration: none;
+  border-left: 5px solid $primary;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+ul ul a {
+  font-size: 0.8em !important;
+  padding-left: 60px !important;
+}
+
+@media (max-width: 800px) {
+  #sidebar {
+    margin-left: -300px;
+    position: fixed;
+    z-index: 99999;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+}

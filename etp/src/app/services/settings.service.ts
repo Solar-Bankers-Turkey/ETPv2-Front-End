@@ -8,6 +8,7 @@ import { map, shareReplay } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class SettingsService {
+  // breakpoints
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe([Breakpoints.Handset])
     .pipe(
@@ -24,5 +25,20 @@ export class SettingsService {
       }),
       shareReplay()
     );
+
+  // classes
+  sidetoggle = '';
+  overlay = 'overlay';
   constructor(private breakpointObserver: BreakpointObserver) {}
+
+  toggleClass() {
+    this.sidetoggle = this.sidetoggle == 'active' ? '' : 'active';
+    this.overlay =
+      this.overlay == 'overlay active' ? 'overlay' : 'overlay active';
+  }
+
+  dismiss() {
+    this.sidetoggle = '';
+    this.overlay = 'overlay';
+  }
 }
