@@ -1,6 +1,72 @@
 @import "./variables.scss";
 
 /* You can add global styles to this file, and also import other style files */
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$etp-primary: mat-palette($mat-indigo);
+$etp-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$etp-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$etp-theme: mat-light-theme($etp-primary, $etp-accent, $etp-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($etp-theme);
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$etp-primary: mat-palette($mat-indigo);
+$etp-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$etp-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$etp-theme: mat-light-theme($etp-primary, $etp-accent, $etp-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+
+@include angular-material-theme($etp-theme);
+$enable-grid-classes: false;
+$primary: #1f8efa;
+$secondary: #657d95;
+$success: #28a745;
+$danger: #dc3545;
+$info: #17a2b8;
+$warning: #ffc107;
+$light: #f8f9fa;
+$dark: #343a40;
+@import "bootstrap";
+
+// --- General styling ---
 * {
   outline: none !important;
 }
@@ -19,7 +85,7 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 .btn {
-  background-color: $prmary !important;
+  background-color: $primary !important;
   border-radius: 2px !important;
   font-size: 2vh !important;
   font-weight: 300 !important;
@@ -27,10 +93,12 @@ body {
   line-height: 5px !important;
   letter-spacing: 1.2px;
 }
+
 .left {
   left: 0px !important;
 }
-// home styling
+
+// --- Home styling ---
 .home-wrapper {
   background: $big-bg;
   min-height: 100vh;
@@ -55,7 +123,6 @@ body {
   }
 
   .line-chart {
-    width: 50vw;
     margin: 3vh -5vh 0;
     img {
       padding: 10px;
@@ -80,7 +147,7 @@ body {
       height: 4vh;
       width: 20vh;
       padding: 5px 10px;
-      margin: auto 5px;
+      margin: auto 7px;
     }
   }
   .bar-pic {
@@ -91,8 +158,9 @@ body {
     border-radius: 5px;
   }
 }
+// --- End of Home  ---
 
-// log in
+// --- Auth Styling ---
 
 .auth-side {
   background-image: url(/assets/img/bitmap.png);
@@ -107,7 +175,7 @@ body {
 
 .auth-logo {
   width: 20vh;
-  margin: 6vh auto 5vh;
+  margin: 30px auto;
   max-height: 100vh;
 }
 
@@ -125,25 +193,27 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 7vh;
+  margin: 7vh 0;
   label {
-    font-size: 2vh;
     font-weight: 500;
   }
   input,
   textarea {
-    background-color: $textcol;
+    background-color: $darkbg;
     caret-color: #1f8efa;
     color: white !important;
+    font-weight: 300;
+    font-size: 16px;
+    border-radius: 4px;
     &:focus {
-      background-color: $textcol;
+      background-color: $darkbg;
       box-shadow: none;
+      border-color: $primary !important;
     }
   }
   input {
     width: 44vh;
-    height: 4vh;
-    border-radius: 3px;
+    height: 4.2vh;
   }
 }
 .forgot {
@@ -154,9 +224,8 @@ body {
     margin: 5vh 0 0;
     color: $bg1;
     line-height: 1.2;
-    font-size: 2vh !important;
     &:hover {
-      color: $prmary;
+      color: $primary;
     }
   }
 }
@@ -165,7 +234,7 @@ body {
   text-align: center;
   color: $textcol;
   span {
-    color: $prmary;
+    color: $primary !important;
     cursor: pointer;
     &:hover {
       text-decoration: underline;
@@ -173,13 +242,26 @@ body {
   }
 }
 
+// --- Dashboard ---
+.dash-title {
+  font-size: 22px !important;
+  font-weight: 300 !important;
+  color: white;
+  margin: 40px auto 20px !important;
+}
+.dash-card {
+  background-color: $bg1;
+  border-radius: 0;
+  min-height: 40vh;
+  color: white;
+}
+
+// --- Media Queries ---
 @media (max-width: 800px) {
   .container {
     padding: 0;
   }
-  svg {
-    display: none;
-  }
+
   .home-wrapper {
     padding-left: 10px;
     .heading {
@@ -187,7 +269,7 @@ body {
     }
     .line-chart {
       margin: 20px 20px;
-      width: 85%;
+      width: 100%;
       img {
         padding: 0;
       }
@@ -212,13 +294,4 @@ body {
       margin: 4vh 0 !important;
     }
   }
-}
-
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

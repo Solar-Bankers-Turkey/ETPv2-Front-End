@@ -9,24 +9,31 @@
 }
 
 #content {
-  width: 100%;
+  width: calc(100% - 300px);
   padding: 10px;
   transition: all 0.3s;
-  overflow: hidden;
+  overflow: hidden !important;
   background-color: $bg2;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#content.active {
+  width: 100%;
 }
 
 #dashcomps {
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
+  margin-top: 50px;
 }
 
 button[mat-raised-button] {
   border-radius: 50px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1050px) {
   .overlay {
     display: none;
     position: fixed;
@@ -36,6 +43,7 @@ button[mat-raised-button] {
     z-index: 998;
     opacity: 0;
     transition: all 0.5s ease-in-out;
+    top: 0;
   }
   .overlay.active {
     display: block;

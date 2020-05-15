@@ -5,10 +5,13 @@
   background: $bg2;
   transition: all 0.3s;
   height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   overflow-y: scroll;
   overflow-x: hidden;
   i {
-    padding: 0 2vw 0 0;
+    padding: 0 25px;
   }
   .etp {
     padding: 0 20px;
@@ -71,12 +74,12 @@
 
 #sidebar ul li a {
   color: $sidetext;
-  padding: 20px 40px;
+  padding: 15px 40px;
   display: block;
   font-size: 1rem;
   font-weight: 300;
   cursor: pointer;
-  margin: 0 50px 0 0;
+  margin: 7px 30px 7px 0;
 }
 
 #sidebarCollapse {
@@ -97,7 +100,7 @@ ul ul a {
   padding-left: 60px !important;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1050px) {
   #sidebar {
     margin-left: -300px;
     position: fixed;

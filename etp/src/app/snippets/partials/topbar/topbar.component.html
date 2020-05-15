@@ -1,4 +1,7 @@
-<div class="header" [class.left]="set.sidetoggle !== ''">
+<div
+  class="header"
+  [class.left]="set.sidetoggle !== '' || (set.isTablet$ | async)"
+>
   <div
     class="header-item d-flex align-items-stretch justify-content-between container-fluid"
   >
@@ -13,8 +16,8 @@
         menu
       </span>
     </button>
-    <etp-topmenu></etp-topmenu>
-    <div class="mx-2"></div>
+    <etp-topmenu *ngIf="!(set.isTablet$ | async)"></etp-topmenu>
+    <div class="mx-2" *ngIf="!(set.isTablet$ | async)"></div>
     <etp-profilebar></etp-profilebar>
   </div>
 </div>

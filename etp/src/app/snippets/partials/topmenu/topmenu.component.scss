@@ -1,4 +1,4 @@
-@import "../../../variables.scss";
+@import "../../../../variables.scss";
 .menu-wrapper {
   display: flex;
   align-items: stretch;
@@ -25,14 +25,14 @@
   }
   .subs {
     letter-spacing: 2px;
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 600;
     color: $small;
     margin: auto 4px;
   }
 
   .reload {
-    height: 50%;
+    height: 60%;
     margin: auto;
     color: white;
     background-color: $grey;
@@ -40,6 +40,7 @@
     border-radius: 50px;
     font-size: 12px;
     letter-spacing: 1.3px;
+    line-height: 1;
   }
 
   .progress {

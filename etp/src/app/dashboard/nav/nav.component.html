@@ -2,10 +2,14 @@
   <!-- Sidebar  -->
   <etp-side></etp-side>
   <!-- end of side  -->
-
-  <div id="content">
-    <etp-topbar></etp-topbar>
-    <div id="dashcomps"></div>
-    <etp-stickybar></etp-stickybar>
+  <etp-topbar></etp-topbar>
+  <div id="content" [class]="set.sidetoggle">
+    <div id="dashcomps">
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <etp-stickybar *ngIf="set.isTablet$ | async"></etp-stickybar>
   </div>
 </div>
+<div [class]="set.overlay" (click)="set.dismiss()"></div>

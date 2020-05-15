@@ -1,7 +1,4 @@
-//
-// Sticky Toolbar
-//
-@import "../../../variables.scss";
+@import "../../../../variables.scss";
 
 .sticky-bar,
 .sticky-barside {
@@ -11,13 +8,12 @@
   padding: 5px 0;
   margin: 0;
   z-index: 50;
-  background: $grey;
   box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  cursor: pointer;
   border-radius: 3px 0 0 3px;
 
   .item {
@@ -41,10 +37,12 @@
         font-size: 1.3rem;
       }
 
-      &:hover {
+      &:hover,
+      .active {
         transition: background 0.3s ease;
         background: $primary;
         color: white;
+
         > i {
           transition: color 0.3s ease;
         }
@@ -58,9 +56,34 @@
 .sticky-bar {
   right: 0;
   width: 46px;
+  background: $grey;
 }
 .sticky-barside {
-  right: 46px;
+  right: -246px;
   width: 180px;
   height: 42px;
+  transition: all 0.3s;
+  z-index: 0;
+}
+.progress {
+  width: 160px;
+  background-color: $darkbg;
+  height: 8px;
+}
+.quota {
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+  background-color: $darkbg;
+  width: 160px;
+  padding: 5px;
+  span {
+    letter-spacing: 2px;
+    font-size: 10px;
+    font-weight: 600;
+    color: $primary;
+  }
+}
+.right {
+  right: 46px;
 }

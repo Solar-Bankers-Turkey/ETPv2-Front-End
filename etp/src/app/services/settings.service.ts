@@ -33,8 +33,8 @@ export class SettingsService {
 
   toggleClass() {
     this.sidetoggle = this.sidetoggle == 'active' ? '' : 'active';
-    this.overlay =
-      this.overlay == 'overlay active' ? 'overlay' : 'overlay active';
+
+    this.overlay = this.sidetoggle == 'active' ? 'overlay active' : 'overlay';
   }
 
   dismiss() {

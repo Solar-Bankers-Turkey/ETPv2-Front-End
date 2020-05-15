@@ -6,6 +6,7 @@
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 924 942.41"
       style="position: absolute; top: 0; right: 0; width: 40%;"
+      [class.d-none]="set.isTablet$ | async"
     >
       <defs>
         <style>
@@ -21,7 +22,7 @@
       />
     </svg>
     <!-- login buttons  -->
-    <div class="top-btn">
+    <div class="top-btn" [class.mx-3]="!(set.isTablet$ | async)">
       <span class="span"
         >0.4$ <sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup>
         <sub>K W H</sub></span
@@ -39,14 +40,17 @@
     </div>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-6 col-md-6">
-          <div class="heading">
-            <h1 class="title" i18n>
+        <div [class.col-lg-6]="!(set.isTablet$ | async)">
+          <div class="heading" [class.mobile]="set.isTablet$ | async">
+            <h1 class="title" i18n [class.my-1]="set.isTablet$ | async">
               Welcome to <br />
               Energy Trading Platform
             </h1>
             <p i18n>by solar bankers</p>
-            <div style="width: 20vh; margin: 5px -5% 0;">
+            <div
+              style="width: 20vh; margin: 5px -5% 0;"
+              [class.mx-auto]="set.isTablet$ | async"
+            >
               <img
                 src="assets/img/logo.png"
                 alt="solar bankers"
@@ -62,8 +66,10 @@
             <img src="/assets/img/Chart.png" alt="charts" class="img-fluid" />
           </div>
         </div>
+
+        <!-- mobile view picture  -->
         <div
-          class="line-chart"
+          class="line-chart mx-auto"
           *ngIf="(set.isHandset$ | async) || (set.isTablet$ | async)"
         >
           <img
@@ -75,7 +81,7 @@
           <img src="/assets/img/Chart.png" alt="charts" class="img-fluid" />
         </div>
         <div
-          class="col-lg-6 col-md-6"
+          class="col-lg-6"
           *ngIf="!(set.isHandset$ | async) && !(set.isTablet$ | async)"
         >
           <div class="container">

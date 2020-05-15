@@ -5,26 +5,34 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { ResetComponent } from './reset/reset.component';
 
-
 const routes: Routes = [
   {
-    path: '', component: AuthhomeComponent,
+    path: '',
+    component: AuthhomeComponent,
     children: [
       {
-        path: 'signin', component: SigninComponent
+        path: '',
+        redirectTo: 'signin',
+        pathMatch: 'full',
       },
       {
-        path: 'signup', component: SignupComponent
+        path: 'signin',
+        component: SigninComponent,
       },
       {
-        path: 'reset', component: ResetComponent
-      }
-    ]
-  }
+        path: 'signup',
+        component: SignupComponent,
+      },
+      {
+        path: 'reset',
+        component: ResetComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AuthRoutingModule { }
+export class AuthRoutingModule {}

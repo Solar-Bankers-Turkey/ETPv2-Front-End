@@ -9,6 +9,7 @@ import { ErrorComponent } from './pages/error/error.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
 
 import localeFr from '@angular/common/locales/fr';
 import localeFrExtra from '@angular/common/locales/extra/fr';
@@ -24,6 +25,7 @@ registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
     BrowserAnimationsModule,
     MatButtonModule,
     HttpClientModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
