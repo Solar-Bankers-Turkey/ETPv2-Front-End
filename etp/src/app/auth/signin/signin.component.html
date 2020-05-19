@@ -34,7 +34,7 @@
         </div>
         <button
           mat-raised-button
-          class="btn btn-block mt-2"
+          class="btn btn-block mt-3"
           *ngIf="isSignin"
           type="submit"
           (click)="signin()"
@@ -44,7 +44,7 @@
         </button>
         <button
           mat-raised-button
-          class="btn btn-block mt-2"
+          class="btn btn-block mt-3"
           *ngIf="isReset"
           type="submit"
           i18n
@@ -53,7 +53,9 @@
         </button>
       </form>
       <div class="forgot" *ngIf="isSignin">
-        <p (click)="changeType('reset')" i18n>Forgot your password?</p>
+        <p (click)="changeType('reset')" i18n>
+          Forgot your password?
+        </p>
       </div>
     </div>
     <div class="signup">

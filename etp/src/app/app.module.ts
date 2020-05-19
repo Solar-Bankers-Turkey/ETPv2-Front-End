@@ -10,11 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
-
-import localeFr from '@angular/common/locales/fr';
-import localeFrExtra from '@angular/common/locales/extra/fr';
-import { registerLocaleData } from '@angular/common';
-registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [AppComponent, ErrorComponent, HomeComponent],
@@ -26,6 +22,7 @@ registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
     MatButtonModule,
     HttpClientModule,
     MatMenuModule,
+    ChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { StickybarComponent } from './partials/stickybar/stickybar.component';
 import { ProfilebarComponent } from './partials/profilebar/profilebar.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { RouterModule } from '@angular/router';
 
 const components = [
   TopbarComponent,
@@ -17,7 +18,7 @@ const components = [
 ];
 @NgModule({
   declarations: [...components],
-  imports: [CommonModule, MatButtonModule, MatMenuModule],
-  exports: [...components],
+  imports: [CommonModule, MatButtonModule, MatMenuModule, RouterModule],
+  exports: [...components, RouterModule],
 })
 export class SnippetsModule {}

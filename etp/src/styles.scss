@@ -205,6 +205,7 @@ body {
     font-weight: 300;
     font-size: 16px;
     border-radius: 4px;
+    box-shadow: inset 2px 2px 5px $bg1, inset -5px -5px 10px $grey;
     &:focus {
       background-color: $darkbg;
       box-shadow: none;
@@ -213,7 +214,7 @@ body {
   }
   input {
     width: 44vh;
-    height: 4.2vh;
+    height: 4.5vh;
   }
 }
 .forgot {
@@ -289,7 +290,7 @@ body {
   }
 
   .forgot {
-    margin: auto 0 !important;
+    margin: auto 10px !important;
     p {
       margin: 4vh 0 !important;
     }

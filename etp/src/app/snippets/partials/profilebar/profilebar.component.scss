@@ -8,9 +8,11 @@
 }
 ::ng-deep .menu {
   background: $grey !important;
+  min-height: auto !important;
   button {
     color: white !important;
     height: 30px;
+    line-height: 1;
     &:hover {
       background-color: $primary !important;
     }
