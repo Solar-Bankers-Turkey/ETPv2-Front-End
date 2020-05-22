@@ -1,10 +1,56 @@
 <div class="wrap">
   <div class="container">
     <h2 class="dash-title">Overview</h2>
-    <div class="card dash-card">
+    <div class="card dash-card shadow-sm">
       <div class="card-body">
-        <h4 class="card-title">Title</h4>
-        <p class="card-text">Text</p>
+        <div class="row">
+          <div class="col-md-6">
+            <p>History of activities</p>
+
+            <ngx-charts-advanced-pie-chart
+              [scheme]="colorScheme"
+              [results]="single"
+              [gradient]="gradient"
+              [label]="'Energy Usage'"
+            >
+            </ngx-charts-advanced-pie-chart>
+          </div>
+          <div class="col-md-6 side"></div>
+        </div>
+        <div class="list">
+          <mat-list *ngFor="let item of report">
+            <div class="reports shadow-sm">
+              <div class="row">
+                <div class="col-sm-3">
+                  <i
+                    class="fa fa-info-circle text-primary mx-4"
+                    aria-hidden="true"
+                    *ngIf="item.status === 'info'"
+                  ></i>
+                  <i
+                    class="fas fa-exclamation-triangle text-warning mx-4"
+                    aria-hidden="true"
+                    *ngIf="item.status === 'warning'"
+                  ></i>
+                  <i
+                    class="fas fa-cog text-success mx-4"
+                    aria-hidden="true"
+                    *ngIf="item.status === 'setting'"
+                  ></i>
+                  <span>{{ item.date | date: "HH:mm, MMMM yyy" }}</span>
+                </div>
+                <div class="col-sm-8">
+                  <div
+                    class="mx-1 message"
+                    [class.text-center]="set.isHandset$ | async"
+                  >
+                    {{ item.message }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mat-list>
+        </div>
       </div>
     </div>
   </div>

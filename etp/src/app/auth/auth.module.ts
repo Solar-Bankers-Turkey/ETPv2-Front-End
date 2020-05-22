@@ -9,14 +9,18 @@ import { SignupComponent } from './signup/signup.component';
 import { ResetComponent } from './reset/reset.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
-  declarations: [AuthhomeComponent, SigninComponent, SignupComponent, ResetComponent],
+  declarations: [
+    AuthhomeComponent,
+    SigninComponent,
+    SignupComponent,
+    ResetComponent,
+  ],
   imports: [
     CommonModule,
     AuthRoutingModule,
     MatButtonModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+  ],
 })
-export class AuthModule { }
+export class AuthModule {}

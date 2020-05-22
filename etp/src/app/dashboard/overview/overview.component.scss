@@ -1,0 +1,68 @@
+@import "../../../variables.scss";
+
+::ng-deep {
+  .advanced-pie-legend {
+    margin: 0 20px !important;
+    .total-label {
+      font-size: 18px !important;
+    }
+    .total-value {
+      margin: 10px 0 15px;
+      font-size: 17px !important;
+      &:after {
+        content: " KWH";
+        font-size: 13px;
+        font-weight: 600;
+        color: $secondary;
+        letter-spacing: 2px;
+      }
+    }
+    .legend-items-container .legend-items {
+      overflow: unset !important;
+      .legend-item {
+        .item-color {
+          height: 10px !important;
+          margin: auto !important;
+        }
+        .item-percent {
+          font-size: 14px !important;
+        }
+        .item-label,
+        .item-percent {
+          color: white !important;
+          opacity: 1 !important;
+          &:hover {
+            color: $primary !important;
+          }
+        }
+        .item-value {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+.side {
+  border-left: 0.5px solid $darkbg;
+}
+.list {
+  border-top: 0.5px solid $darkbg;
+  padding: 20px 5px;
+  margin: 10px 0;
+}
+.reports {
+  background-color: $darkbg;
+  padding: 6px;
+  cursor: pointer;
+  span {
+    color: $small;
+    font-size: 12px;
+  }
+  .message {
+    font-size: 12px;
+  }
+  &:hover {
+    background-color: $grey;
+  }
+}

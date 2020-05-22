@@ -10,7 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
-import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [AppComponent, ErrorComponent, HomeComponent],
@@ -22,7 +21,6 @@ import { ChartsModule } from 'ng2-charts';
     MatButtonModule,
     HttpClientModule,
     MatMenuModule,
-    ChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

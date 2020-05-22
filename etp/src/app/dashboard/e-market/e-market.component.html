@@ -1,11 +1,257 @@
 <div class="wrap">
   <div class="container">
-    <h2 class="dash-title">Energy Market</h2>
-    <div class="card dash-card">
+    <div class="">
+      <div class="row">
+        <div class="col">
+          <h2 class="dash-title">Energy Market</h2>
+        </div>
+        <div class="col mt-auto mb-3 d-flex justify-content-end">
+          <button mat-mini-fab class="bg-primary" (click)="open(sell)">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card dash-card shadow-sm">
       <div class="card-body">
-        <h4 class="card-title">Title</h4>
-        <p class="card-text">Text</p>
+        <div class="table-responsive">
+          <table class="table table-borderless table-vertical-center">
+            <thead class="my-5">
+              <tr class="text-white table-head">
+                <th style="min-width: 70px;">Seller</th>
+                <th style="min-width: 70px;">Location</th>
+                <th style="min-width: 70px;">Supply</th>
+                <th style="min-width: 70px;">Price</th>
+                <th style="min-width: 80px;">Date</th>
+                <th style="min-width: 100px;"></th>
+              </tr>
+            </thead>
+            <tbody class="py-5" *ngFor="let item of market">
+              <tr class="table-data">
+                <td class="pt-4">
+                  {{ item.seller }}
+                </td>
+                <td class="pt-4">
+                  {{ item.location }}
+                </td>
+                <td class="pt-4">{{ item.supply }} kW/h</td>
+                <td class="pt-4">
+                  {{ item.price }}
+                </td>
+                <td class="pt-4">
+                  20/03/2020 - 13:58
+                </td>
+                <td>
+                  <button
+                    mat-raised-button
+                    class="text-primary px-4"
+                    (click)="open(buy)"
+                  >
+                    BUY
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- sell electric Modal -->
+<ng-template #sell let-modal class="shadow-sm">
+  <div class="card modal-card">
+    <div class="card-header">
+      <h1 class="small d-inline">Add new sell order</h1>
+      <button
+        type="button"
+        class="close"
+        aria-label="Close"
+        (click)="modal.dismiss()"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="card-body">
+      <div class="container">
+        <!-- Sell board  -->
+        <div class="row" *ngIf="!sellValid">
+          <div class="col-sm-6 d-flex justify-content-center">
+            <div class="box w-75">
+              <span class="material-icons-round">
+                monetization_on
+              </span>
+              <p>Sell from battery</p>
+            </div>
+          </div>
+          <div
+            class="col-sm-6"
+            class="form"
+            [class.my-3]="set.isHandset$ | async"
+          >
+            <form action="" [formGroup]="sellForm">
+              <div class="form-group">
+                <label for="Energy"> Energy Kw/h</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="energy"
+                  aria-describedby="helpId"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="price"> Price </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="price"
+                  aria-describedby="helpId"
+                  placeholder=""
+                />
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="customCheck1"
+                />
+                <label class="custom-control-label" for="customCheck1"
+                  >Check this custom checkbox</label
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- End of sell board  -->
+
+        <!-- Validation board  -->
+        <div class="mx-auto text-center success" *ngIf="sellValid">
+          <span class="material-icons">
+            done
+          </span>
+          <p>Supply Created Successfully</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sell baord buttons  -->
+    <div
+      class="card-footer text-muted d-flex justify-content-end mx-2"
+      *ngIf="!sellValid"
+    >
+      <button mat-button class="text-white mx-1" (click)="modal.close()">
+        CANCEL
+      </button>
+      <button
+        mat-raised-button
+        class="btn btn-primary"
+        (click)="sellValid = true"
+      >
+        CREATE SUPPLY
+      </button>
+    </div>
+
+    <!-- Validation close button  -->
+    <div class="card-footer m-auto" *ngIf="sellValid">
+      <button
+        mat-raised-button
+        class="btn btn-primary"
+        (click)="modal.close(); sellValid = false"
+      >
+        CLOSE
+      </button>
+    </div>
+  </div>
+</ng-template>
+
+<!-- buy electric Modal -->
+
+<ng-template #buy let-modal class="shadow-sm">
+  <div class="card modal-card">
+    <div class="card-header">
+      <h1 class="small d-inline">Buy Electricity</h1>
+      <button
+        type="button"
+        class="close"
+        aria-label="Close"
+        (click)="modal.dismiss()"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="card-body">
+      <div class="container">
+        <!-- Buy board  -->
+        <div class="row" *ngIf="!buyValid">
+          <div class="col-sm-5 d-flex justify-content-center">
+            <div class="box w-75">
+              <span class="material-icons-round my-5">
+                monetization_on
+              </span>
+            </div>
+          </div>
+          <div class="col-sm-7">
+            <div class="row text-center">
+              <div class="col-sm-6">
+                <div class="box w-75 box-text m-auto">
+                  Supply
+                </div>
+                <h1 class="my-5 bills">12<span>kW</span></h1>
+              </div>
+              <div class="col-sm-6">
+                <div class="box w-75 box-text m-auto">
+                  Price
+                </div>
+                <h1 class="my-5 bills">12.000 <small>IYTECOIN</small></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- end of buy board  -->
+
+        <!-- Validation board  -->
+        <div class="mx-auto text-center success" *ngIf="buyValid">
+          <span class="material-icons">
+            done
+          </span>
+          <p>Purchase Successful</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- end of Validation voard  -->
+
+    <!-- buy board buttons -->
+    <div
+      class="card-footer text-muted d-flex justify-content-end mx-2"
+      *ngIf="!buyValid"
+    >
+      <button mat-button class="text-white mx-1" (click)="modal.close()">
+        CANCEL
+      </button>
+      <button
+        mat-raised-button
+        class="btn btn-primary"
+        (click)="buyValid = true"
+      >
+        BUY ORDER
+      </button>
+    </div>
+
+    <!-- Validation board buttons -->
+    <div class="card-footer m-auto" *ngIf="buyValid">
+      <button
+        mat-raised-button
+        class="btn btn-primary"
+        (click)="modal.close(); buyValid = false"
+      >
+        CLOSE
+      </button>
+    </div>
+  </div>
+</ng-template>
