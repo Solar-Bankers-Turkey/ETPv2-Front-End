@@ -1,0 +1,16 @@
+@import "../signin/signin.component.scss";
+
+.forgot {
+  width: 70%;
+  p {
+    margin: 3vh 0 !important;
+    text-align: center;
+    cursor: context-menu;
+    font-size: 2vh !important;
+  }
+}
+@media (max-width: 500px) {
+  .forgot {
+    width: 100vw;
+  }
+}

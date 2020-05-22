@@ -1,0 +1,12 @@
+{
+  "/api/identity": {
+    "target": "http://142.93.165.55:9001",
+    "secure": false
+  },
+  "/api/customer": {
+    "target": "http://142.93.165.55:5002",
+    "secure": false
+  },
+  "changeOrigin": true,
+  "logLevel": "debug"
+}

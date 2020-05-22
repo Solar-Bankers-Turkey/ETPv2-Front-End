@@ -1,0 +1,62 @@
+<div class="bar-wrapper">
+  <div class="item" [matMenuTriggerFor]="helpMenu">
+    <i class="material-icons tabs">
+      help
+    </i>
+    <sup class="my-auto"
+      ><span class="badge badge-pill badge-primary"> 1 </span></sup
+    >
+  </div>
+  <div class="item" [matMenuTriggerFor]="messageMenu">
+    <i class="material-icons tabs">
+      email
+    </i>
+    <sup class="my-auto"
+      ><span class="badge badge-pill badge-primary"> 7 </span></sup
+    >
+  </div>
+  <div class="item" [matMenuTriggerFor]="notifMenu">
+    <i class="material-icons tabs">
+      notifications
+    </i>
+    <sup class="my-auto"
+      ><span class="badge badge-pill badge-primary"> 4 </span></sup
+    >
+  </div>
+  <div class="item" [matMenuTriggerFor]="userMenu">
+    <span class="tabs ml-auto">Hi, Username</span>
+  </div>
+  <div class="item" [matMenuTriggerFor]="langMenu" style="line-height: 1;">
+    <div style="width: 30px; margin: auto 3px;">
+      <img class="img-fluid rounded-sm" src="/assets/svg/usa.svg" alt="" />
+    </div>
+    <span class="my-auto"> &nbsp; EN</span>
+  </div>
+</div>
+
+<!-- drop downs  -->
+
+<mat-menu #userMenu="matMenu" class="menu">
+  <button mat-menu-item>Settings</button>
+  <button mat-menu-item>Help</button>
+</mat-menu>
+<mat-menu #notifMenu="matMenu" class="menu">
+  <button mat-menu-item>Settings</button>
+  <button mat-menu-item>Help</button>
+</mat-menu>
+<mat-menu #messageMenu="matMenu" class="menu">
+  <button mat-menu-item>Settings</button>
+  <button mat-menu-item>Help</button>
+</mat-menu>
+<mat-menu #helpMenu="matMenu" class="menu">
+  <button mat-menu-item>Settings</button>
+  <button mat-menu-item>Help</button>
+</mat-menu>
+<mat-menu #langMenu="matMenu" class="menu">
+  <button mat-menu-item>
+    <div style="width: 20px; margin: auto 3px;">
+      <img class="img-fluid rounded-sm" src="/assets/svg/turkey.svg" alt="" />
+      &nbsp; TR
+    </div>
+  </button>
+</mat-menu>

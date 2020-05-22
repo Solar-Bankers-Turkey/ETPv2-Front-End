@@ -1,0 +1,107 @@
+<div class="home-wrapper">
+  <div class="container">
+    <svg
+      id="Layer_1"
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 924 942.41"
+      style="position: absolute; top: 0; right: 0; width: 40%;"
+      [class.d-none]="set.isTablet$ | async"
+    >
+      <defs>
+        <style>
+          .cls-1 {
+            fill: #2f3b52;
+          }
+        </style>
+      </defs>
+      <path
+        class="cls-1"
+        d="M996.34,267.53c1.92,9.3,11.26,14.81,13.29,16.1,19,12,392.16,282.48,910.37,658.78V0H1269.93c-143.63,129.7-247.4,225.59-263.62,243.39C995.56,255.2,995.45,263.25,996.34,267.53Z"
+        transform="translate(-996)"
+      />
+    </svg>
+    <!-- login buttons  -->
+    <div class="top-btn" [class.mx-3]="!(set.isTablet$ | async)">
+      <span class="span"
+        >0.4$ <sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup>
+        <sub>K W H</sub></span
+      >
+      <a href="/auth/signin" routerLink="/auth/signin"
+        ><button mat-raised-button class="btn" type="button" i18n>
+          SIGN IN
+        </button></a
+      >
+      <a href="/auth/signup" routerLink="/auth/signup">
+        <button mat-raised-button class="btn" type="button" i18n>
+          SIGN UP
+        </button></a
+      >
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div [class.col-lg-6]="!(set.isTablet$ | async)" class="mx-auto">
+          <div class="heading" [class.mobile]="set.isTablet$ | async">
+            <h1 class="title" i18n [class.my-1]="set.isTablet$ | async">
+              Welcome to <br />
+              Energy Trading Platform
+            </h1>
+            <p i18n>by solar bankers</p>
+            <div
+              style="width: 20vh; margin: 5px -5% 0;"
+              [class.mx-auto]="set.isTablet$ | async"
+            >
+              <img
+                src="assets/img/logo.png"
+                alt="solar bankers"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+
+          <div
+            class="line-chart"
+            *ngIf="!(set.isHandset$ | async) && !(set.isTablet$ | async)"
+          >
+            <img src="/assets/img/Chart.png" alt="charts" class="img-fluid" />
+          </div>
+        </div>
+
+        <!-- mobile view picture  -->
+        <div
+          class="line-chart mx-auto"
+          *ngIf="(set.isHandset$ | async) || (set.isTablet$ | async)"
+        >
+          <img
+            style="margin: 0 10px; width: 90%;"
+            src="/assets/img/combine.png"
+            alt="charts"
+            class="img-fluid"
+          />
+          <img src="/assets/img/Chart.png" alt="charts" class="img-fluid" />
+        </div>
+        <div
+          class="col-lg-6"
+          *ngIf="!(set.isHandset$ | async) && !(set.isTablet$ | async)"
+        >
+          <div class="container">
+            <div class="bar-pic">
+              <img
+                src="/assets/img/Consumption.png"
+                alt="consumption by day"
+                class="img-fluid"
+              />
+            </div>
+            <div>
+              <img
+                src="/assets/img/active-hours.png"
+                alt="consumption by day"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

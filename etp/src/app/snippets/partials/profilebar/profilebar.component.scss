@@ -1,0 +1,46 @@
+@import "../../../../variables.scss";
+.bar-wrapper {
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  padding-right: 15px;
+  height: 100%;
+}
+::ng-deep .menu {
+  background: $grey !important;
+  min-height: auto !important;
+  button {
+    color: white !important;
+    height: 30px;
+    line-height: 1;
+    &:hover {
+      background-color: $primary !important;
+    }
+  }
+}
+.item {
+  display: flex;
+  align-items: stretch;
+  cursor: pointer;
+  padding: 0 10px;
+  text-align: center;
+  .tabs {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+  }
+  i {
+    height: 44px;
+    width: 44px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 4px;
+    color: $secondary;
+    margin: 0 -16px;
+  }
+
+  &:hover {
+    background-color: $darkbg;
+  }
+}

@@ -1,0 +1,23 @@
+<div
+  class="header"
+  [class.left]="set.sidetoggle !== '' || (set.isTablet$ | async)"
+>
+  <div
+    class="header-item d-flex align-items-stretch justify-content-between container-fluid"
+  >
+    <button
+      type="button"
+      mat-stroked-button
+      id="sidebarCollapse"
+      (click)="set.toggleClass()"
+      class="toggle"
+    >
+      <span class="material-icons text-secondary">
+        menu
+      </span>
+    </button>
+    <etp-topmenu *ngIf="!(set.isTablet$ | async)"></etp-topmenu>
+    <div class="mx-2" *ngIf="!(set.isTablet$ | async)"></div>
+    <etp-profilebar></etp-profilebar>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="sticky-bar">
+  <div class="item">
+    <button mat-stroked-button>
+      <i class="material-icons">
+        refresh
+      </i>
+    </button>
+  </div>
+  <div class="item" (click)="toggleSide('coins')">
+    <button mat-stroked-button>
+      <i class="material-icons">
+        lock
+      </i>
+    </button>
+  </div>
+  <div class="item" (click)="toggleSide('panel')">
+    <button mat-stroked-button>
+      <div class="h-100 w-100">
+        <img src="/assets/svg/panel.svg" alt="panel" class="img-fluid" />
+      </div>
+    </button>
+  </div>
+  <div class="item" (click)="toggleSide('battery')">
+    <button mat-stroked-button>
+      <i class="material-icons">battery_charging_full</i>
+    </button>
+  </div>
+</div>
+<div
+  class="sticky-barside"
+  [class.right]="coins"
+  style="top: calc(40% + 53px);"
+>
+  <div class="item text-white">
+    <div class="quota">50.000 <span>IYTECOIN</span></div>
+  </div>
+</div>
+<div
+  class="sticky-barside"
+  [class.right]="panel"
+  style="top: calc(40% + 100px);"
+>
+  <div class="item">
+    <div class="quota">2.6 <span>KWH</span></div>
+  </div>
+</div>
+<div
+  class="sticky-barside"
+  [class.right]="battery"
+  style="top: calc(40% + 150px);"
+>
+  <div class="item">
+    <div class="progress">
+      <div
+        class="progress-bar bg-primary"
+        role="progressbar"
+        style="width: 60%;"
+        aria-valuenow="65"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      ></div>
+    </div>
+  </div>
+</div>
