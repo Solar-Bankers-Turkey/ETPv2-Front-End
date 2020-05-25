@@ -1,13 +1,123 @@
 <div class="wrap">
   <div class="container">
     <h2 class="dash-title">Analytics</h2>
-    <div class="card dash-card">
+    <div class="card dash-card mb-2">
       <div class="card-body">
         <div class="row">
-          <div class="col-lg-3 col-md-5 col-sm-12">
+          <div class="col-lg-3 col-md-5 col-sm-6">
             <p>Energy Consumption</p>
+            <div *ngFor="let item of data.iotData">
+              <div id="chart" class="d-flex flex-wrap">
+                <apx-chart
+                  [series]="item.series"
+                  [chart]="set.chartOptions.chart"
+                  [plotOptions]="set.chartOptions.plotOptions"
+                  [labels]="set.chartOptions.labels"
+                  [stroke]="set.chartOptions.stroke"
+                  [fill]="item.fill"
+                ></apx-chart>
+                <div class="my-auto room">
+                  {{ item.room }}
+                  <span class="d-block my-1"> {{ item.distance }}</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-9 col-md-7 col-sm-12"></div>
+          <div class="col-lg-9 col-md-7 col-sm-12">
+            <div class="mb-3">
+              <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <button mat-button class="nav-link text-secondary">
+                    DAY
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button mat-button class="nav-link text-secondary active">
+                    WEEK
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button mat-button class="nav-link text-secondary">
+                    MONTH
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button mat-button class="nav-link text-secondary">
+                    YEAR
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="w-100 mt-5 mx-2"
+              style="height: 85%;"
+              [class.h-100]="set.isHandset$ | async"
+            >
+              <ngx-charts-line-chart
+                [scheme]="data.colorScheme"
+                [xAxis]="data.xAxis"
+                [yAxis]="data.yAxis"
+                [timeline]="data.timeline"
+                [results]="data.multi"
+                [autoScale]="false"
+                [yScaleMax]="data.yScaleMax"
+                [yScaleMin]="data.yScaleMin"
+              >
+              </ngx-charts-line-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom cards  -->
+    <div class="row devices">
+      <div
+        class="col-lg-3 col-sm-6"
+        [class.cols]="!(set.isHandset$ | async)"
+        *ngFor="let item of data.devices"
+      >
+        <div class="card dash-card">
+          <div class="card-body">
+            <div class="d-flex flex-wrap">
+              <p class="mr-auto">{{ item.name | titlecase }}</p>
+              <div ngbDropdown class="ml-auto justify-content-end">
+                <button class="toggle" id="dropdownBasic1" ngbDropdownToggle>
+                  This month &nbsp; &nbsp; &nbsp;
+                </button>
+                <div
+                  ngbDropdownMenu
+                  aria-labelledby="dropdownBasic1"
+                  class="bg-dark menu"
+                >
+                  <button ngbDropdownItem>This week</button>
+                  <button ngbDropdownItem>Today</button>
+                  <button ngbDropdownItem>This year</button>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <apx-chart
+                  [series]="item.series"
+                  [chart]="set.chartOptions.chart"
+                  [plotOptions]="set.iotOptions.plotOptions"
+                  [stroke]="set.chartOptions.stroke"
+                  [fill]="{ type: 'solid', color: '#1f8efa' }"
+                ></apx-chart>
+                <i class="fas fa-{{ item.icon }} device-icon"></i>
+              </div>
+              <div class="col-6 reads">
+                <p>
+                  <i class="fas fa-history"></i>
+                  {{ time | date: "HH:mm:ss" }}
+                  <span>(-24%)</span>
+                </p>
+                <p>
+                  <i class="fas fa-level-up-alt"></i> 320 Wh <span>(-24%)</span>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

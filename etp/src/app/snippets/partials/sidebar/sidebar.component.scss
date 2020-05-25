@@ -1,7 +1,7 @@
 @import "../../../../variables.scss";
 
 #sidebar {
-  width: 300px;
+  width: 270px;
   background: $bg2;
   transition: all 0.3s;
   height: 100vh;
@@ -11,7 +11,7 @@
   overflow-y: scroll;
   overflow-x: hidden;
   i {
-    padding: 0 25px;
+    padding: 0 20px;
   }
   .etp {
     padding: 0 20px;
@@ -45,7 +45,7 @@
   border-radius: 10px;
 }
 #sidebar.active {
-  margin-left: -300px;
+  margin-left: -270px;
 }
 
 #sidebar .sidebar-header {
@@ -69,12 +69,12 @@
 }
 
 #sidebar ul.components {
-  padding: 10px 0;
+  padding: 30px 0 10px;
 }
 
 #sidebar ul li a {
   color: $sidetext;
-  padding: 15px 40px;
+  padding: 15px 20px;
   display: block;
   font-size: 1rem;
   font-weight: 300;
@@ -95,14 +95,9 @@
   border-bottom-right-radius: 10px;
 }
 
-ul ul a {
-  font-size: 0.8em !important;
-  padding-left: 60px !important;
-}
-
 @media (max-width: 1050px) {
   #sidebar {
-    margin-left: -300px;
+    margin-left: -270px;
     position: fixed;
     z-index: 99999;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);

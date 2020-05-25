@@ -63,7 +63,7 @@ $danger: #dc3545;
 $info: #17a2b8;
 $warning: #ffab4f;
 $light: #f8f9fa;
-$dark: #343a40;
+$dark: #20293c;
 @import "bootstrap";
 
 // --- General styling ---
@@ -185,7 +185,7 @@ body {
   .title {
     font-size: 4vh;
     font-weight: 400;
-    color: $textcol;
+    color: $darkbg;
     text-align: center;
   }
 }
@@ -233,7 +233,7 @@ body {
 .signup {
   margin-top: 10vh;
   text-align: center;
-  color: $textcol;
+  color: $darkbg;
   span {
     color: $primary !important;
     cursor: pointer;
@@ -254,6 +254,9 @@ body {
   background-color: $bg1;
   border-radius: 0;
   color: white;
+}
+.wrap {
+  margin: 5px 0 20px;
 }
 
 // --- Media Queries ---

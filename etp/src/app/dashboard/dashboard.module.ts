@@ -20,6 +20,8 @@ import { NodesComponent } from './nodes/nodes.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     ReactiveFormsModule,
     NgApexchartsModule,
+    MatSelectModule,
+    NgbModule,
   ],
 })
 export class DashboardModule {}

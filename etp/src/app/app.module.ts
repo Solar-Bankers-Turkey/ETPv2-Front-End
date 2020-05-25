@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [AppComponent, ErrorComponent, HomeComponent],
@@ -23,6 +24,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     HttpClientModule,
     MatMenuModule,
     NgApexchartsModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
