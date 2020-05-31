@@ -1,15 +1,15 @@
 <div class="wrap">
   <div class="container">
     <h2 class="dash-title">Analytics</h2>
-    <div class="card dash-card mb-2">
+    <div class="card dash-card mb-2 shadow">
       <div class="card-body">
         <div class="row">
-          <div class="col-lg-3 col-md-5 col-sm-6">
+          <div class="col-lg-4 col-md-5 col-sm-6">
             <p>Energy Consumption</p>
-            <div *ngFor="let item of data.iotData">
+            <div *ngFor="let item of set.iotData; let i = index">
               <div id="chart" class="d-flex flex-wrap">
                 <apx-chart
-                  [series]="item.series"
+                  [series]="[(item.series[0] / set.total) * 100]"
                   [chart]="set.chartOptions.chart"
                   [plotOptions]="set.chartOptions.plotOptions"
                   [labels]="set.chartOptions.labels"
@@ -23,7 +23,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-9 col-md-7 col-sm-12">
+          <div class="col-lg-8 col-md-7 col-sm-12">
             <div class="mb-3">
               <ul class="nav justify-content-end">
                 <li class="nav-item">
@@ -48,22 +48,16 @@
                 </li>
               </ul>
             </div>
-            <div
-              class="w-100 mt-5 mx-2"
-              style="height: 85%;"
-              [class.h-100]="set.isHandset$ | async"
-            >
-              <ngx-charts-line-chart
-                [scheme]="data.colorScheme"
-                [xAxis]="data.xAxis"
-                [yAxis]="data.yAxis"
-                [timeline]="data.timeline"
-                [results]="data.multi"
-                [autoScale]="false"
-                [yScaleMax]="data.yScaleMax"
-                [yScaleMin]="data.yScaleMin"
-              >
-              </ngx-charts-line-chart>
+            <div id="chart">
+              <apx-chart
+                [series]="data.chartOptions.series"
+                [chart]="data.chartOptions.chart"
+                [xaxis]="data.chartOptions.xaxis"
+                [grid]="data.chartOptions.grid"
+                [stroke]="data.chartOptions.stroke"
+                [tooltip]="data.chartOptions.tooltip"
+                [colors]="data.domain"
+              ></apx-chart>
             </div>
           </div>
         </div>
@@ -73,10 +67,10 @@
     <div class="row devices">
       <div
         class="col-lg-3 col-sm-6"
-        [class.cols]="!(set.isHandset$ | async)"
+        [class.cols]="!(set.isMedium$ | async)"
         *ngFor="let item of data.devices"
       >
-        <div class="card dash-card">
+        <div class="card dash-card shadow">
           <div class="card-body">
             <div class="d-flex flex-wrap">
               <p class="mr-auto">{{ item.name | titlecase }}</p>
@@ -116,6 +110,48 @@
                   <i class="fas fa-level-up-alt"></i> 320 Wh <span>(-24%)</span>
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- sparklines  -->
+    <div class="row devices">
+      <div
+        class="col-lg-3 col-sm-6"
+        *ngFor="let item of set.iotData; let i = index"
+      >
+        <div class="row my-3">
+          <div class="col-5">
+            <div class="m-auto sparkline">
+              <p>
+                {{ item.series[0] }}
+                <sup
+                  ><i
+                    class="fa fa-info-circle text-secondary"
+                    aria-hidden="true"
+                  ></i
+                ></sup>
+                <span>
+                  KWH
+                </span>
+              </p>
+              <span>
+                {{ item.room }}
+              </span>
+            </div>
+          </div>
+          <div class="col-7">
+            <div id="chart">
+              <apx-chart
+                [series]="[item.sparkline]"
+                [chart]="data.sparklineOptions.chart"
+                [stroke]="data.chartOptions.stroke"
+                [colors]="item.fill.colors"
+                [tooltip]="data.chartOptions.tooltip"
+                [xaxis]="data.chartOptions.xaxis"
+              ></apx-chart>
             </div>
           </div>
         </div>

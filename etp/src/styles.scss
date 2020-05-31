@@ -259,6 +259,10 @@ body {
   margin: 5px 0 20px;
 }
 
+.apexcharts-tooltip {
+  background: $bg2 !important;
+  color: $small !important;
+}
 // --- Media Queries ---
 @media (max-width: 800px) {
   .container {

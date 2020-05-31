@@ -38,26 +38,17 @@
   background-color: $primary;
   color: white !important;
 }
-::ng-deep .ngx-charts {
-  text {
-    fill: $shade2 !important;
-  }
-  .gridline-path {
-    stroke: $darkbg !important;
-    stroke-width: 0.5px !important;
-  }
-}
 
 .devices .cols:first-child {
-  padding-right: 0px !important;
+  padding: 0px 0 0 15px !important;
 }
 .devices .cols:last-child {
-  padding-left: 0px !important;
+  padding: 0px 15px 0 0 !important;
 }
 
 .devices .cols:nth-child(2),
 .cols:nth-child(3) {
-  padding: 0px !important;
+  padding: 0px 5px !important;
 }
 
 .device-icon {
@@ -81,5 +72,20 @@
     span {
       font-weight: 400;
     }
+  }
+}
+
+.sparkline {
+  p {
+    color: white;
+    font-size: 18px;
+  }
+  span {
+    color: $shade2;
+    font-size: 14px;
+  }
+  p span,
+  i {
+    font-size: 13px;
   }
 }
