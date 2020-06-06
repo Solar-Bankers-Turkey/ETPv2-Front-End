@@ -61,12 +61,12 @@
 .reads {
   margin: auto 0;
   p {
-    margin: auto 5px;
-    font-size: 14px;
+    margin: 5px;
+    font-size: 1rem;
     font-weight: 300;
     span,
     i {
-      font-size: 11px;
+      font-size: 1rem;
       color: $sidetext;
     }
     span {
@@ -78,11 +78,11 @@
 .sparkline {
   p {
     color: white;
-    font-size: 18px;
+    font-size: 1.2rem;
   }
   span {
     color: $shade2;
-    font-size: 14px;
+    font-size: 1rem;
   }
   p span,
   i {

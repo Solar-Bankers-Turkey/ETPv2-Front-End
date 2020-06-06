@@ -1,0 +1,53 @@
+<div class="wrapper">
+  <h1 class="title" i18n>Few more steps..</h1>
+  <div class="container">
+    <div class="form">
+      <div class="error">
+        <div *ngIf="errorMsg" class="alert alert-secondary" role="alert">
+          <span class="text-danger" i18n>{{ errorMsg | titlecase }}</span>
+        </div>
+      </div>
+
+      <form [formGroup]="regForm">
+        <div>
+          <div class="form-group">
+            <label for="telephone" i18n>Phone Number</label>
+            <input type="tel" class="form-control" formControlName="phone" />
+          </div>
+          <div class="form-group">
+            <label for="address" i18n>Address</label>
+            <textarea
+              class="form-control"
+              formControlName="address"
+              rows="2"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="EI number" i18n>Electric Invoice Number</label>
+            <input type="number" class="form-control" formControlName="eiNum" />
+          </div>
+          <div class="form-group">
+            <label for="TC number" i18n>TC Number</label>
+            <input type="number" class="form-control" formControlName="tcNum" />
+          </div>
+          <div class="form-group">
+            <label for="Birth Date" i18n>Birth Date</label>
+            <input type="date" class="form-control" formControlName="bDate" />
+          </div>
+        </div>
+        <button
+          mat-raised-button
+          type="button"
+          class="btn btn-block mt-3"
+          type="submit"
+          i18n
+        >
+          COMPLETE MY ACCOUNT
+        </button>
+      </form>
+    </div>
+    <div class="signup mb-2">
+      <span routerLink="/auth/signin" i18n>Not now</span>
+    </div>
+  </div>
+</div>

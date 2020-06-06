@@ -5,11 +5,11 @@
   <div style="background-color: #242e42;" class="sticky-top">
     <div class="sidebar-header">
       <img
-        src="/assets/img/avi.png"
-        alt="logo"
-        class="img-fluid rounded-circle mb-2"
+        [src]="data?.avi || 'assets/img/avi.png'"
+        alt="{{ data?.name }}"
+        class="img-fluid rounded-circle mb-3"
       />
-      <a class="mx-auto" routerLink="/dashboard"> Baris </a>
+      <a class="mx-auto" routerLink="/dashboard"> {{ data?.name }} </a>
     </div>
   </div>
   <ul class="list-unstyled components">
@@ -34,13 +34,13 @@
     >
       <a><i class="far fa-chart-bar"></i> Analytics </a>
     </li>
-    <li
+    <!-- <li
       (click)="set.dismiss()"
       routerLink="/dashboard/rules"
       routerLinkActive="active"
     >
       <a> <i class="fa fa-list-ul" aria-hidden="true"></i> Rules</a>
-    </li>
+    </li> -->
     <li
       (click)="set.dismiss()"
       routerLink="/dashboard/history"

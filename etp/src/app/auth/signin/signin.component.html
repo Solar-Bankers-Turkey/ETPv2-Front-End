@@ -7,9 +7,12 @@
   </p>
   <div class="container">
     <div class="form">
-      <div *ngIf="errorMsg" class="alert alert-secondary" role="alert">
-        <span class="text-danger">{{ errorMsg }}</span>
+      <div class="error">
+        <div *ngIf="errorMsg" class="alert alert-secondary" role="alert">
+          <span class="text-danger">{{ errorMsg | titlecase }}</span>
+        </div>
       </div>
+
       <form action="" [formGroup]="signinForm">
         <div class="form-group">
           <label for="email" i18n>Email</label>

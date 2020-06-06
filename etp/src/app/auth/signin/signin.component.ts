@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-signin',
@@ -17,7 +18,8 @@ export class SigninComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private info: DataService
   ) {}
 
   ngOnInit(): void {
@@ -47,7 +49,7 @@ export class SigninComponent implements OnInit {
 
   signin() {
     if (this.signinForm.invalid) {
-      this.errorMsg = 'Please fill the fields correctly!';
+      this.errorMsg = 'Please fill the provided fields correctly!';
     } else {
       const email = this.email.value;
       const password = this.password.value;
@@ -58,8 +60,16 @@ export class SigninComponent implements OnInit {
           if (data['successCode'] <= 0) {
             this.errorMsg = data['message'];
           } else {
+            this.auth.auth.authorization = `Bearer ${data['access_token']}`;
             this.signinForm.reset();
             this.router.navigate(['/dashboard']);
+            this.auth.getCustomerInfo().subscribe((result) => {
+              if (result['successCode'] > 0) {
+                localStorage.setItem('etpuser', JSON.stringify(result['data']));
+                localStorage.setItem('etplog', 'true');
+                this.router.navigate(['/dashboard']);
+              }
+            });
           }
         },
         (error) => {

@@ -1,12 +1,48 @@
 <div class="wrapper">
-  <h1 class="title" i18n>Sign Up</h1>
+  <h1 class="title" i18n *ngIf="!signedUp">Sign Up</h1>
   <div class="container">
     <div class="form">
-      <div *ngIf="errorMsg" class="alert alert-secondary" role="alert">
-        <span class="text-danger" i18n>{{ errorMsg }}</span>
+      <div *ngIf="signedUp" class="text-center">
+        <div class="mail">
+          <img src="/assets/img/mail.png" alt="Mail sent" class="img-fluid" />
+        </div>
+        <div>
+          <p class="text-center confirm-title">
+            We have sent a confirmation email to
+            <strong class="text-success">{{ email.value }}</strong
+            >.
+          </p>
+          <p class="text-center confirm-sub">
+            Please check your email and click on the link to verfiy your email
+            address.
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button
+            mat-raised-button
+            routerLink="/auth/register"
+            class="btn btn-primary m-1"
+          >
+            Complete Registeration
+          </button>
+          <br />
+          <button mat-raised-button class="btn btn-primary m-1">
+            Resend Verification Email
+          </button>
+        </div>
       </div>
-      <form action="" [formGroup]="signupForm">
-        <div *ngIf="isSignup" formGroupName="register">
+      <div class="error">
+        <div
+          *ngIf="errorMsg && !signedUp"
+          class="alert alert-secondary"
+          role="alert"
+        >
+          <span class="text-danger" i18n>{{ errorMsg | titlecase }}</span>
+        </div>
+      </div>
+
+      <form action="" [formGroup]="signupForm" *ngIf="!signedUp">
+        <div formGroupName="register">
           <div class="form-group">
             <label for="email" i18n>Email</label>
             <input
@@ -39,67 +75,30 @@
             />
           </div>
         </div>
-        <div *ngIf="isReg" formGroupName="completeRegister">
-          <div class="form-group">
-            <label for="telephone" i18n>Phone Number</label>
-            <input type="tel" class="form-control" formControlName="phone" />
-          </div>
-          <div class="form-group">
-            <label for="address" i18n>Address</label>
-            <textarea
-              class="form-control"
-              formControlName="address"
-              rows="2"
-            ></textarea>
-          </div>
-          <div class="form-group">
-            <label for="EI number" i18n>Electric Invoice Number</label>
-            <input type="number" class="form-control" formControlName="eiNum" />
-          </div>
-          <div class="form-group">
-            <label for="TC number" i18n>TC Number</label>
-            <input type="number" class="form-control" formControlName="tcNum" />
-          </div>
-          <div class="form-group">
-            <label for="Birth Date" i18n>Birth Date</label>
-            <input type="date" class="form-control" formControlName="bDate" />
-          </div>
-        </div>
 
         <button
           mat-raised-button
           (click)="signup()"
           class="btn btn-block mt-3"
-          *ngIf="isSignup"
           type="submit"
           i18n
         >
           SIGN UP
         </button>
-        <button
-          mat-raised-button
-          type="button"
-          class="btn btn-block mt-3"
-          *ngIf="isReg"
-          type="submit"
-          i18n
-        >
-          COMPLETE MY ACCOUNT
-        </button>
       </form>
-      <div class="forgot" *ngIf="isSignup">
+      <div class="forgot" *ngIf="!signedUp">
         <p i18n class="font-weight-normal text-secondary">
           By clicking sign up, you agree to the Solar Bankers User Agreement,
           Privacy Policy, and Cookie Policy.
         </p>
       </div>
     </div>
-    <div class="signup">
-      <p *ngIf="isSignup" i18n>
-        Already have an account?
-        <span routerLink="/auth/signin">sign in</span>
-      </p>
-      <span *ngIf="isReg" routerLink="/auth/signin" i18n>Not now</span>
-    </div>
+  </div>
+  <div class="signup">
+    <p i18n>
+      Already have <a *ngIf="!signedUp">an</a>
+      <strong *ngIf="signedUp">a verified</strong> account?
+      <span routerLink="/auth/signin">sign in</span>
+    </p>
   </div>
 </div>

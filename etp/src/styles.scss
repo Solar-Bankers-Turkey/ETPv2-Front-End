@@ -205,20 +205,19 @@ body {
     font-weight: 300;
     font-size: 16px;
     border-radius: 4px;
-    box-shadow: inset 2px 2px 5px $bg1, inset -5px -5px 10px $darkbg;
+
     &:focus {
       background-color: $darkbg;
-      box-shadow: none;
       border: 1px solid $primary !important;
     }
   }
   input {
     width: 44vh;
-    height: 4vh;
+    height: 4.4vh;
   }
 }
 .forgot {
-  margin: auto 5vh;
+  margin: auto 7vw;
 
   p {
     cursor: pointer;

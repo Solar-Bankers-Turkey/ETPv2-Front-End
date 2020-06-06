@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'etp-topmenu',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topmenu.component.scss'],
 })
 export class TopmenuComponent implements OnInit {
-  constructor() {}
+  constructor(public data: DataService) {}
 
   ngOnInit(): void {}
 }

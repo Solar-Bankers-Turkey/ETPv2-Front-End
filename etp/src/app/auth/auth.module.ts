@@ -8,6 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { SignupComponent } from './signup/signup.component';
 import { ResetComponent } from './reset/reset.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CompleteRegisterationComponent } from './complete-registeration/complete-registeration.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     SigninComponent,
     SignupComponent,
     ResetComponent,
+    CompleteRegisterationComponent,
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
     MatButtonModule,
     ReactiveFormsModule,
+    NgbModule,
   ],
 })
 export class AuthModule {}

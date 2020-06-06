@@ -10,9 +10,8 @@ import { Register } from 'src/app/models/interfaces';
 })
 export class SignupComponent implements OnInit {
   signupForm: FormGroup;
-  type: 'signup' | 'register' = 'signup';
   errorMsg = '';
-
+  signedUp = false;
   constructor(private fb: FormBuilder, private auth: AuthService) {}
 
   ngOnInit(): void {
@@ -22,19 +21,7 @@ export class SignupComponent implements OnInit {
         firstName: ['', [Validators.required]],
         lastName: ['', [Validators.required]],
       }),
-      completeRegister: this.fb.group({
-        password: ['', [Validators.required]],
-        phone: ['', [Validators.required]],
-        address: ['', [Validators.required]],
-        eiNum: ['', [Validators.required]],
-        tcNum: ['', [Validators.required]],
-        bDate: ['', [Validators.required]],
-      }),
     });
-  }
-
-  changeType(val) {
-    this.type = val;
   }
 
   get email() {
@@ -45,13 +32,6 @@ export class SignupComponent implements OnInit {
   }
   get lastName() {
     return this.signupForm.get('register.lastName');
-  }
-  get isSignup() {
-    return this.type === 'signup';
-  }
-
-  get isReg() {
-    return this.type === 'register';
   }
 
   signup() {
@@ -70,8 +50,7 @@ export class SignupComponent implements OnInit {
             this.errorMsg = data['message'];
           } else {
             this.signupForm.reset();
-            alert(data['message']);
-            this.changeType('register');
+            this.signedUp = true;
           }
         },
         (error) => {

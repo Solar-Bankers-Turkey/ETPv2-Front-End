@@ -4,6 +4,7 @@ import { AuthhomeComponent } from './authhome/authhome.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { ResetComponent } from './reset/reset.component';
+import { CompleteRegisterationComponent } from './complete-registeration/complete-registeration.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
       {
         path: 'signup',
         component: SignupComponent,
+      },
+      {
+        path: 'register',
+        component: CompleteRegisterationComponent,
       },
       {
         path: 'reset',

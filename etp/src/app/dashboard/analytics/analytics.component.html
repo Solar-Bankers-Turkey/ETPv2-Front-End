@@ -6,14 +6,14 @@
         <div class="row">
           <div class="col-lg-4 col-md-5 col-sm-6">
             <p>Energy Consumption</p>
-            <div *ngFor="let item of set.iotData; let i = index">
+            <div *ngFor="let item of data.iotData; let i = index">
               <div id="chart" class="d-flex flex-wrap">
                 <apx-chart
-                  [series]="[(item.series[0] / set.total) * 100]"
-                  [chart]="set.chartOptions.chart"
-                  [plotOptions]="set.chartOptions.plotOptions"
-                  [labels]="set.chartOptions.labels"
-                  [stroke]="set.chartOptions.stroke"
+                  [series]="[(item.series[0] / data.total) * 100]"
+                  [chart]="chart.roomOptions.chart"
+                  [plotOptions]="chart.roomOptions.plotOptions"
+                  [labels]="chart.roomOptions.labels"
+                  [stroke]="chart.roomOptions.stroke"
                   [fill]="item.fill"
                 ></apx-chart>
                 <div class="my-auto room">
@@ -50,12 +50,12 @@
             </div>
             <div id="chart">
               <apx-chart
-                [series]="data.chartOptions.series"
-                [chart]="data.chartOptions.chart"
-                [xaxis]="data.chartOptions.xaxis"
-                [grid]="data.chartOptions.grid"
-                [stroke]="data.chartOptions.stroke"
-                [tooltip]="data.chartOptions.tooltip"
+                [series]="chart.lineOptions.series"
+                [chart]="chart.lineOptions.chart"
+                [xaxis]="chart.lineOptions.xaxis"
+                [grid]="chart.lineOptions.grid"
+                [stroke]="chart.lineOptions.stroke"
+                [tooltip]="chart.lineOptions.tooltip"
                 [colors]="data.domain"
               ></apx-chart>
             </div>
@@ -93,9 +93,9 @@
               <div class="col-6">
                 <apx-chart
                   [series]="item.series"
-                  [chart]="set.chartOptions.chart"
-                  [plotOptions]="set.iotOptions.plotOptions"
-                  [stroke]="set.chartOptions.stroke"
+                  [chart]="chart.roomOptions.chart"
+                  [plotOptions]="chart.iotOptions.plotOptions"
+                  [stroke]="chart.roomOptions.stroke"
                   [fill]="{ type: 'solid', color: '#1f8efa' }"
                 ></apx-chart>
                 <i class="fas fa-{{ item.icon }} device-icon"></i>
@@ -120,10 +120,10 @@
     <div class="row devices">
       <div
         class="col-lg-3 col-sm-6"
-        *ngFor="let item of set.iotData; let i = index"
+        *ngFor="let item of data.iotData; let i = index"
       >
         <div class="row my-3">
-          <div class="col-5">
+          <div class="col-6">
             <div class="m-auto sparkline">
               <p>
                 {{ item.series[0] }}
@@ -142,15 +142,15 @@
               </span>
             </div>
           </div>
-          <div class="col-7">
-            <div id="chart">
+          <div class="col-6">
+            <div id="chart" class="mx-auto">
               <apx-chart
                 [series]="[item.sparkline]"
-                [chart]="data.sparklineOptions.chart"
-                [stroke]="data.chartOptions.stroke"
+                [chart]="chart.sparklineOptions.chart"
+                [stroke]="chart.lineOptions.stroke"
                 [colors]="item.fill.colors"
-                [tooltip]="data.chartOptions.tooltip"
-                [xaxis]="data.chartOptions.xaxis"
+                [tooltip]="chart.lineOptions.tooltip"
+                [xaxis]="chart.lineOptions.xaxis"
               ></apx-chart>
             </div>
           </div>

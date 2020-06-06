@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'etp-stickybar',
@@ -10,7 +11,7 @@ export class StickybarComponent implements OnInit {
   panel = false;
   battery = false;
 
-  constructor() {}
+  constructor(public data: DataService) {}
 
   ngOnInit(): void {}
 

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SettingsService } from 'src/app/services/settings.service';
 import { DataService } from 'src/app/services/data.service';
+import { ChartsettingsService } from 'src/app/services/chartsettings.service';
 
 @Component({
   selector: 'app-analytics',
@@ -10,7 +11,11 @@ import { DataService } from 'src/app/services/data.service';
 export class AnalyticsComponent implements OnInit {
   time = new Date();
 
-  constructor(public set: SettingsService, public data: DataService) {}
+  constructor(
+    public chart: ChartsettingsService,
+    public data: DataService,
+    public set: SettingsService
+  ) {}
 
   ngOnInit(): void {}
 }
