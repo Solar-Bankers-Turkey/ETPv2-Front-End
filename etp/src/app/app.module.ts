@@ -25,6 +25,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatMenuModule,
     NgApexchartsModule,
     MatSelectModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

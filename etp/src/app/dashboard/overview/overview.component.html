@@ -17,39 +17,8 @@
           </div>
           <div class="col-md-6 side"></div>
         </div>
-        <div class="list">
-          <mat-list *ngFor="let item of report">
-            <div class="reports shadow-sm">
-              <div class="row">
-                <div class="col-sm-3">
-                  <i
-                    class="fa fa-info-circle text-primary mx-4"
-                    aria-hidden="true"
-                    *ngIf="item.status === 'info'"
-                  ></i>
-                  <i
-                    class="fas fa-exclamation-triangle text-warning mx-4"
-                    aria-hidden="true"
-                    *ngIf="item.status === 'warning'"
-                  ></i>
-                  <i
-                    class="fas fa-cog text-success mx-4"
-                    aria-hidden="true"
-                    *ngIf="item.status === 'setting'"
-                  ></i>
-                  <span>{{ item.date | date: "HH:mm, MMMM yyy" }}</span>
-                </div>
-                <div class="col-sm-8">
-                  <div
-                    class="mx-1 message"
-                    [class.text-center]="set.isHandset$ | async"
-                  >
-                    {{ item.message }}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </mat-list>
+        <div class="log">
+          <log-msg></log-msg>
         </div>
       </div>
     </div>

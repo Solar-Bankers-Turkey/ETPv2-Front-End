@@ -8,6 +8,8 @@ import { StickybarComponent } from './partials/stickybar/stickybar.component';
 import { ProfilebarComponent } from './partials/profilebar/profilebar.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
+import { LogMsgComponent } from './partials/log-msg/log-msg.component';
+import { MatListModule } from '@angular/material/list';
 
 const components = [
   TopbarComponent,
@@ -15,10 +17,17 @@ const components = [
   StickybarComponent,
   TopmenuComponent,
   ProfilebarComponent,
+  LogMsgComponent,
 ];
 @NgModule({
   declarations: [...components],
-  imports: [CommonModule, MatButtonModule, MatMenuModule, RouterModule],
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatMenuModule,
+    RouterModule,
+    MatListModule,
+  ],
   exports: [...components, RouterModule],
 })
 export class SnippetsModule {}

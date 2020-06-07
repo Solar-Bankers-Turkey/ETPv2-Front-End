@@ -3,16 +3,22 @@
 .table-head {
   th {
     font-weight: 300;
+    cursor: pointer;
   }
 }
 .table-data {
   border-bottom: 0.5px solid $darkbg;
   height: 80px;
+  vertical-align: middle;
   td {
     color: $small;
+    cursor: pointer;
     button {
       background-color: $grey;
     }
+  }
+  &:hover {
+    background-color: $bg2;
   }
 }
 

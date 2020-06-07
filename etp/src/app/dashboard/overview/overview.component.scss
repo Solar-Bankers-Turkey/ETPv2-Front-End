@@ -46,23 +46,6 @@
 .side {
   border-left: 0.5px solid $darkbg;
 }
-.list {
+.log {
   border-top: 0.5px solid $darkbg;
-  padding: 20px 5px;
-  margin: 10px 0;
-}
-.reports {
-  background-color: $darkbg;
-  padding: 6px;
-  cursor: pointer;
-  span {
-    color: $small;
-    font-size: 12px;
-  }
-  .message {
-    font-size: 12px;
-  }
-  &:hover {
-    background-color: $grey;
-  }
 }

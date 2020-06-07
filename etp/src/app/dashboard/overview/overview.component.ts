@@ -31,39 +31,6 @@ export class OverviewComponent implements OnInit {
     domain: ['#FFAB4F', '#1F8EFA', '#05C985'],
   };
 
-  report = [
-    {
-      status: 'warning',
-      date: 1590969600,
-      message: 'Your battery is full.',
-    },
-    {
-      status: 'info',
-      date: 1588291200,
-      message: 'Weekly report is ready.',
-    },
-    {
-      status: 'warning',
-      date: 1585699200,
-      message: 'Overusage on T phase.',
-    },
-    {
-      status: 'setting',
-      date: 1583020800,
-      message:
-        'The daily system backup has been completed and uploaded to the server.',
-    },
-    {
-      status: 'setting',
-      date: 1580515200,
-      message: 'Payment option has been changed.',
-    },
-    {
-      status: 'info',
-      date: 1577836800,
-      message: 'System update: software version 2.1.3 is now available.',
-    },
-  ];
   constructor(public set: SettingsService) {}
   ngOnInit(): void {}
 }

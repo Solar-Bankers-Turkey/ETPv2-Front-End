@@ -17,7 +17,7 @@
       <div class="card-body">
         <div class="table-responsive">
           <table class="table table-borderless table-vertical-center">
-            <thead class="my-5">
+            <thead>
               <tr class="text-white table-head">
                 <th style="min-width: 70px;">Seller</th>
                 <th style="min-width: 70px;">Location</th>
@@ -42,7 +42,7 @@
                 <td class="pt-4">
                   20/03/2020 - 13:58
                 </td>
-                <td>
+                <td class="pt-3">
                   <button
                     mat-raised-button
                     class="text-primary px-4"
@@ -130,7 +130,7 @@
 
         <!-- Validation board  -->
         <div class="mx-auto text-center success" *ngIf="sellValid">
-          <span class="material-icons">
+          <span class="material-icons text-success">
             done
           </span>
           <p>Supply Created Successfully</p>
@@ -228,7 +228,7 @@
 
         <!-- Validation board  -->
         <div class="mx-auto text-center success" *ngIf="buyValid">
-          <span class="material-icons">
+          <span class="material-icons text-success">
             done
           </span>
           <p>Purchase Successful</p>

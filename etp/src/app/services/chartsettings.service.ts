@@ -1,18 +1,21 @@
-import { Injectable, ViewChild } from '@angular/core';
+import { Injectable, ViewChild, OnInit } from '@angular/core';
 import {
   ChartComponent,
   ApexAxisChartSeries,
   ApexChart,
   ApexXAxis,
+  ApexYAxis,
+  ApexLegend,
   ApexDataLabels,
   ApexTitleSubtitle,
   ApexStroke,
   ApexGrid,
   ApexTooltip,
-  ApexNonAxisChartSeries,
   ApexPlotOptions,
   ApexFill,
 } from 'ng-apexcharts';
+import { SettingsService } from './settings.service';
+import { log } from 'util';
 
 export type ChartOptions = {
   series: ApexAxisChartSeries;
@@ -26,15 +29,17 @@ export type ChartOptions = {
   labels: string[];
   plotOptions: ApexPlotOptions;
   fill: ApexFill;
+  yaxis: ApexYAxis;
+  legend: ApexLegend;
 };
 
 @Injectable({
   providedIn: 'root',
 })
-export class ChartsettingsService {
+export class ChartsettingsService implements OnInit {
   //room radial chart
   @ViewChild('chart') chart: ChartComponent;
-  public roomOptions: Partial<ChartOptions> = {
+  roomOptions: Partial<ChartOptions> = {
     chart: {
       type: 'radialBar',
       width: 130,
@@ -77,7 +82,7 @@ export class ChartsettingsService {
   };
 
   //iot device radial charts
-  public iotOptions: Partial<ChartOptions> = {
+  iotOptions: Partial<ChartOptions> = {
     plotOptions: {
       radialBar: {
         startAngle: 0,
@@ -96,6 +101,26 @@ export class ChartsettingsService {
           show: false,
         },
       },
+    },
+  };
+
+  //sparkliine Chart
+  sparklineOptions: Partial<ChartOptions> = {
+    chart: {
+      type: 'line',
+      zoom: {
+        enabled: false,
+      },
+      toolbar: {
+        show: false,
+      },
+      sparkline: {
+        enabled: true,
+      },
+      height: 40,
+    },
+    stroke: {
+      width: 1.9,
     },
   };
 
@@ -178,24 +203,99 @@ export class ChartsettingsService {
     },
   };
 
-  sparklineOptions: Partial<ChartOptions> = {
-    chart: {
-      type: 'line',
-      zoom: {
-        enabled: false,
+  //History Bar chart
+  barOptions: Partial<ChartOptions> = {
+    series: [
+      {
+        name: 'Net Profit',
+        data: [44, 55, 30, 56, 41, 58, 63],
       },
+      {
+        name: 'Revenue',
+        data: [10, 20, 30, 40, 30, 20, 10],
+      },
+      {
+        name: 'Free Cash Flow',
+        data: [20, 61, 56, 36, 75, 68, 22],
+      },
+    ],
+    chart: {
+      type: 'bar',
+      height: 430,
       toolbar: {
         show: false,
       },
-      sparkline: {
-        enabled: true,
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: '50',
+        endingShape: 'flat',
       },
-      height: 40,
+    },
+    dataLabels: {
+      enabled: false,
     },
     stroke: {
-      width: 1.9,
+      show: true,
+      width: 3,
+      colors: ['transparent'],
+    },
+    grid: {
+      borderColor: '#20293c',
+    },
+    xaxis: {
+      labels: {
+        show: true,
+        style: {
+          colors: '#869AAC',
+        },
+      },
+      categories: [
+        'Monday',
+        'Tuesday',
+        'Wednessday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+        'Sunday',
+      ],
+      axisBorder: {
+        show: true,
+        color: '#20293c',
+      },
+      axisTicks: {
+        show: false,
+      },
+    },
+    yaxis: {
+      labels: {
+        show: true,
+        style: {
+          colors: '#869AAC',
+        },
+      },
+    },
+    legend: {
+      show: true,
+      labels: {
+        colors: '#869AAC',
+      },
+    },
+    fill: {
+      opacity: 1,
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return '$ ' + val + ' thousands';
+        },
+      },
     },
   };
 
-  constructor() {}
+  domain = ['#1F8EFA', '#FFAB4F', '#05C985'];
+  constructor(public set: SettingsService) {}
+
+  ngOnInit(): void {}
 }

@@ -1,0 +1,35 @@
+<div>
+  <div class="list">
+    <mat-list *ngFor="let item of data.report">
+      <div class="reports shadow-sm">
+        <div class="row">
+          <div class="col-lg-4 col-md-5 col-6">
+            <i
+              class="fa fa-info-circle text-primary mx-4"
+              aria-hidden="true"
+              *ngIf="item.status === 'info'"
+            ></i>
+            <i
+              class="fas fa-exclamation-triangle text-warning mx-4"
+              aria-hidden="true"
+              *ngIf="item.status === 'warning'"
+            ></i>
+            <i
+              class="fas fa-cog text-success mx-4"
+              aria-hidden="true"
+              *ngIf="item.status === 'setting'"
+            ></i>
+            <span [class.d-flex]="set.isHandset$ | async">{{
+              item.date | date: "HH:mm, MMMM yyy"
+            }}</span>
+          </div>
+          <div class="col-lg-8 col-md-7 col-6">
+            <div class="mx-1 message">
+              {{ item.message }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-list>
+  </div>
+</div>

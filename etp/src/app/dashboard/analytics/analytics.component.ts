@@ -10,7 +10,10 @@ import { ChartsettingsService } from 'src/app/services/chartsettings.service';
 })
 export class AnalyticsComponent implements OnInit {
   time = new Date();
-
+  month = true;
+  day = false;
+  year = false;
+  week = false;
   constructor(
     public chart: ChartsettingsService,
     public data: DataService,
