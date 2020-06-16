@@ -55,11 +55,11 @@
           RECOVER PASSWORD
         </button>
       </form>
-      <div class="forgot" *ngIf="isSignin">
-        <p (click)="changeType('reset')" i18n>
-          Forgot your password?
-        </p>
-      </div>
+    </div>
+    <div class="forgot" *ngIf="isSignin">
+      <p (click)="changeType('reset')" i18n>
+        Forgot your password?
+      </p>
     </div>
     <div class="signup">
       <p *ngIf="isSignin" i18n>

@@ -43,6 +43,15 @@ const routes: Routes = [
       {
         path: 'settings',
         component: SettingsComponent,
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../settings/settings.module').then(
+                (m) => m.SettingsModule
+              ),
+          },
+        ],
       },
       {
         path: 'solar-nodes',

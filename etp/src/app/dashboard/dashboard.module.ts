@@ -22,6 +22,7 @@ import { MatListModule } from '@angular/material/list';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgApexchartsModule,
     MatSelectModule,
     NgbModule,
+    MatSlideToggleModule,
   ],
 })
 export class DashboardModule {}

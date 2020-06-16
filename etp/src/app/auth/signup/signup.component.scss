@@ -1,20 +1,20 @@
 @import "../signin/signin.component.scss";
 @import "../../../variables.scss";
 
-.forgot {
-  width: 70%;
-  margin: auto 0 !important;
-  p {
-    margin: 3vh 0 !important;
-    text-align: center;
-    cursor: context-menu;
-    font-size: 2vh !important;
-  }
-}
+// .forgot {
+//   width: 70%;
+//   margin: auto 0 !important;
+//   p {
+//     margin: 3vh 0 !important;
+//     text-align: center;
+//     cursor: context-menu;
+//     font-size: 2vh !important;
+//   }
+// }
 @media (max-width: 500px) {
-  .forgot {
-    width: 100vw;
-  }
+  // .forgot {
+  //   width: 100vw;
+  // }
 }
 .mail {
   width: 300px;

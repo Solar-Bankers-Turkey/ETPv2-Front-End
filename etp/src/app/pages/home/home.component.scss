@@ -1,4 +1,68 @@
+@import "../../../variables.scss";
+
 .mobile {
   margin: 10vh auto 30px;
   text-align: center;
 }
+
+// --- Home styling ---
+.home-wrapper {
+  background: $big-bg;
+  min-height: 100vh;
+  color: #fff;
+  max-width: 100%;
+  .heading {
+    margin-left: 5vw;
+    margin-top: 10vh;
+    padding: 20px 0;
+    .title {
+      font-size: 5.6vh;
+      font-weight: 400;
+      line-height: 1;
+      margin-top: 3%;
+      text-shadow: 4px 4px 0px #0c1425, 7px 7px 0px rgba(0, 0, 0, 0.84);
+    }
+    p {
+      font-size: 2vh;
+      color: #aaa;
+      font-weight: 300;
+    }
+  }
+
+  .line-chart {
+    margin: 3vh -5vh 0;
+    img {
+      padding: 10px;
+    }
+  }
+  .top-btn {
+    margin: 20px auto;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    .span {
+      margin-right: 1vw;
+      font-weight: 400;
+      font-size: 2.5vh;
+      sup,
+      sub {
+        color: #70889e;
+        font-weight: 300;
+      }
+    }
+    .btn {
+      height: 4vh;
+      width: 20vh;
+      padding: 5px 10px;
+      margin: auto 7px;
+    }
+  }
+  .bar-pic {
+    width: 40vh;
+    margin-top: 5vh;
+  }
+  img {
+    border-radius: 5px;
+  }
+}
+// --- End of Home  ---

@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [AppComponent, ErrorComponent, HomeComponent],
@@ -26,6 +27,7 @@ import { MatSelectModule } from '@angular/material/select';
     NgApexchartsModule,
     MatSelectModule,
     MatButtonModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

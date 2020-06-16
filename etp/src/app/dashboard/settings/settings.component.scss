@@ -1,0 +1,10 @@
+@import "../history/history.component.scss";
+
+.side {
+  border-left: 1px solid $darkbg;
+  border-right: 1px solid $darkbg;
+}
+
+.small {
+  color: $sidetext;
+}
