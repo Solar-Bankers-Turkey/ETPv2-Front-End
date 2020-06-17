@@ -1,0 +1,45 @@
+@import "../../../../variables.scss";
+
+.w-tablet {
+  width: 85px !important;
+  height: 55px !important;
+}
+.card-body {
+  padding: 15px 0;
+  position: relative;
+  .icon {
+    left: 10px;
+    top: 30%;
+  }
+  button {
+    padding-left: 50px;
+  }
+  i {
+    right: 25px;
+    top: 40%;
+    transition: all 0.3s;
+  }
+  .icon,
+  i {
+    color: $sidetext;
+    position: absolute;
+    display: inline-block;
+  }
+  &:hover .icon,
+  &:hover i {
+    color: $primary;
+  }
+  &:hover i {
+    right: 15px;
+  }
+}
+
+.active {
+  .icon,
+  i {
+    color: $primary;
+  }
+  i {
+    right: 15px;
+  }
+}

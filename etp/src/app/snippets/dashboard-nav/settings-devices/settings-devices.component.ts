@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SettingsService } from 'src/app/services/settings.service';
 
 @Component({
   selector: 'device-settings',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./settings-devices.component.scss'],
 })
 export class SettingsDevicesComponent implements OnInit {
-  constructor() {}
+  @Input() options;
+
+  constructor(public set: SettingsService) {}
 
   ngOnInit(): void {}
 }

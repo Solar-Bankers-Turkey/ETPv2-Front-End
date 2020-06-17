@@ -10,8 +10,7 @@ import { StickybarComponent } from './dashboard-nav/stickybar/stickybar.componen
 import { TopmenuComponent } from './dashboard-nav/topmenu/topmenu.component';
 import { ProfilebarComponent } from './dashboard-nav/profilebar/profilebar.component';
 import { LogMsgComponent } from './dashboard-nav/log-msg/log-msg.component';
-import { SettingsDevicesComponent } from './dashboard-snips/settings-devices/settings-devices.component';
-import { SettingsOptionsComponent } from './dashboard-snips/settings-options/settings-options.component';
+import { SettingsDevicesComponent } from './dashboard-nav/settings-devices/settings-devices.component';
 
 const components = [
   TopbarComponent,
@@ -23,7 +22,7 @@ const components = [
   SettingsDevicesComponent,
 ];
 @NgModule({
-  declarations: [...components, SettingsOptionsComponent],
+  declarations: [...components],
   imports: [
     CommonModule,
     MatButtonModule,

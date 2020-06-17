@@ -1,0 +1,26 @@
+<div class="mx-auto my-2">
+  <div
+    class="card dash-card shadow-sm"
+    routerLink="/dashboard/settings/{{ options.route }}"
+    routerLinkActive="active"
+    [class.w-tablet]="set.isMedium$ | async"
+  >
+    <div class="card-body" [class.py-1]="set.isHandset$ | async">
+      <span class="material-icons-outlined icon">
+        {{ options.icon }}
+      </span>
+      <button
+        mat-button
+        class="w-100"
+        [class.text-left]="!(set.isTablet$ | async)"
+        *ngIf="!(set.isMedium$ | async)"
+      >
+        {{ options.navName | titlecase }}</button
+      ><i
+        class="fa fa-arrow-right"
+        *ngIf="!(set.isHandset$ | async)"
+        aria-hidden="true"
+      ></i>
+    </div>
+  </div>
+</div>
