@@ -7,13 +7,19 @@
   </p>
   <div class="container">
     <div class="form">
-      <div class="error">
-        <div *ngIf="errorMsg" class="alert alert-secondary" role="alert">
+      <div class="error d-block w-auto" *ngIf="errorMsg">
+        <div class="alert alert-secondary px-5" role="alert">
           <span class="text-danger">{{ errorMsg | titlecase }}</span>
         </div>
       </div>
 
-      <form action="" [formGroup]="signinForm">
+      <form
+        action=""
+        [formGroup]="signinForm"
+        class="d-block"
+        [class.w-50]="!(set.isHandset$ | async)"
+        [class.w-75]="set.isHandset$ | async"
+      >
         <div class="form-group">
           <label for="email" i18n>Email</label>
           <input
@@ -56,11 +62,12 @@
         </button>
       </form>
     </div>
-    <div class="forgot" *ngIf="isSignin">
+    <div class="forgot w-75 d-block" *ngIf="isSignin">
       <p (click)="changeType('reset')" i18n>
         Forgot your password?
       </p>
     </div>
+
     <div class="signup">
       <p *ngIf="isSignin" i18n>
         Don't have an account?

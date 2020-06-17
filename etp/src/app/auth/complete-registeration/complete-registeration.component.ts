@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SettingsService } from 'src/app/services/settings.service';
 
 @Component({
   selector: 'app-complete-registeration',
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class CompleteRegisterationComponent implements OnInit {
   regForm: FormGroup;
   errorMsg;
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, public set: SettingsService) {}
 
   ngOnInit(): void {
     this.regForm = this.fb.group({

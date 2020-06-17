@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { Register } from 'src/app/models/interfaces';
+import { SettingsService } from 'src/app/services/settings.service';
 
 @Component({
   selector: 'app-signup',
@@ -12,7 +13,11 @@ export class SignupComponent implements OnInit {
   signupForm: FormGroup;
   errorMsg = '';
   signedUp = false;
-  constructor(private fb: FormBuilder, private auth: AuthService) {}
+  constructor(
+    private fb: FormBuilder,
+    private auth: AuthService,
+    public set: SettingsService
+  ) {}
 
   ngOnInit(): void {
     this.signupForm = this.fb.group({

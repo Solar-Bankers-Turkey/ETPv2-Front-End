@@ -4,7 +4,9 @@
   margin: 10vh auto 30px;
   text-align: center;
 }
-
+.container {
+  max-width: calc(100vw - 10%) !important;
+}
 // --- Home styling ---
 .home-wrapper {
   background: $big-bg;

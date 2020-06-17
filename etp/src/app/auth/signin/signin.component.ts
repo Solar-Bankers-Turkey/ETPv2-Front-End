@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
+import { SettingsService } from 'src/app/services/settings.service';
 
 @Component({
   selector: 'app-signin',
@@ -19,7 +20,8 @@ export class SigninComponent implements OnInit {
     private fb: FormBuilder,
     private auth: AuthService,
     private router: Router,
-    private info: DataService
+    private info: DataService,
+    public set: SettingsService
   ) {}
 
   ngOnInit(): void {

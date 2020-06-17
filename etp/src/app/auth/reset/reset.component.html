@@ -3,7 +3,13 @@
 
   <div class="container">
     <div class="form">
-      <form action="" [formGroup]="resetForm">
+      <form
+        action=""
+        [formGroup]="resetForm"
+        class="d-block"
+        [class.w-50]="!(set.isHandset$ | async)"
+        [class.w-75]="set.isHandset$ | async"
+      >
         <div class="form-group">
           <label for="password" i18n>Old Password</label>
           <input

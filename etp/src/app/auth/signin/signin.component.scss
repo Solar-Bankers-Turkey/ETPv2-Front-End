@@ -1,8 +1,8 @@
 .btn {
-  height: 4vh !important;
+  height: 4.2vh !important;
   line-height: 10px;
 }
-p {
+.signup p {
   font-size: 2.3vh;
   span {
     font-size: 2.2vh;
@@ -22,9 +22,10 @@ p {
   font-weight: 300;
 }
 .alert {
-  margin: 0px 10vw 20px;
+  margin: 0px 5vw 20px;
   text-align: center;
 }
 .error {
   width: 100%;
+  line-height: 1.5;
 }
