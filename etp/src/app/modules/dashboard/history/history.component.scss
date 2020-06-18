@@ -1,0 +1,44 @@
+@import "variables.scss";
+.active {
+  background-color: $primary;
+  color: white !important;
+}
+.nav-item button {
+  height: 30px;
+  line-height: 1;
+  font-size: 12px;
+
+  font-weight: 400;
+}
+.icon {
+  span {
+    font-size: 30px;
+    cursor: pointer;
+    margin: auto 3px;
+    color: $secondary;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+.toggle {
+  background-color: $darkbg;
+  border: none;
+  box-shadow: none;
+  color: $sidetext;
+  padding: 3px 5px;
+}
+.menu {
+  color: white !important;
+
+  button {
+    font-weight: 400 !important;
+    font-size: 14px;
+    &:hover {
+      background-color: $bg1 !important;
+    }
+  }
+  &:hover {
+    background-color: $bg2 !important;
+  }
+}

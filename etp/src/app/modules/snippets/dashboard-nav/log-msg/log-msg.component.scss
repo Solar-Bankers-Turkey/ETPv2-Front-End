@@ -1,0 +1,21 @@
+@import "variables.scss";
+
+.list {
+  padding: 20px 5px;
+  margin: 10px 0;
+}
+.reports {
+  background-color: $darkbg;
+  padding: 10px;
+  cursor: pointer;
+  span {
+    color: $small;
+    font-size: 0.9em;
+  }
+  .message {
+    font-size: 1em;
+  }
+  &:hover {
+    background-color: $grey;
+  }
+}

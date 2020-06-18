@@ -1,0 +1,89 @@
+@import "variables.scss";
+
+.sticky-bar,
+.sticky-barside {
+  position: fixed;
+  top: 40%;
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  z-index: 50;
+  box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius: 3px 0 0 3px;
+
+  .item {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+
+    > button {
+      background: $darkbg;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 30px !important;
+      min-height: 30px !important;
+      border-radius: 3px;
+      transition: background 0.3s ease;
+      padding: 0 5px;
+      color: $primary;
+      > i {
+        transition: color 0.3s ease;
+        font-size: 1.3rem;
+      }
+
+      &:hover,
+      .active {
+        transition: background 0.3s ease;
+        background: $primary;
+        color: white;
+
+        > i {
+          transition: color 0.3s ease;
+        }
+      }
+      img:hover {
+        mix-blend-mode: difference;
+      }
+    }
+  }
+}
+.sticky-bar {
+  right: 0;
+  width: 46px;
+  background: $grey;
+}
+.sticky-barside {
+  right: -246px;
+  width: 180px;
+  height: 42px;
+  transition: all 0.3s;
+  z-index: 0;
+}
+.progress {
+  width: 160px;
+  background-color: $darkbg;
+  height: 8px;
+}
+.quota {
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+  background-color: $darkbg;
+  width: 160px;
+  padding: 5px;
+  span {
+    letter-spacing: 2px;
+    font-size: 10px;
+    font-weight: 600;
+    color: $primary;
+  }
+}
+.right {
+  right: 46px;
+}

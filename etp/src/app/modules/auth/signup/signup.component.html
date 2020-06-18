@@ -1,0 +1,108 @@
+<div class="wrapper">
+  <h1 class="title" i18n *ngIf="!signedUp">Sign Up</h1>
+  <div class="container">
+    <div class="form">
+      <div *ngIf="signedUp" class="text-center">
+        <div class="mail">
+          <img src="/assets/img/mail.png" alt="Mail sent" class="img-fluid" />
+        </div>
+        <div>
+          <p class="text-center confirm-title">
+            We have sent a confirmation email to
+            <strong class="text-success">{{ email.value }}</strong
+            >.
+          </p>
+          <p class="text-center confirm-sub">
+            Please check your email and click on the link to verfiy your email
+            address.
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button
+            mat-raised-button
+            routerLink="/auth/register"
+            class="btn btn-primary m-1"
+          >
+            Complete Registeration
+          </button>
+          <br />
+          <button mat-raised-button class="btn btn-primary m-1">
+            Resend Verification Email
+          </button>
+        </div>
+      </div>
+      <div class="error d-block w-auto" *ngIf="errorMsg && !signedUp">
+        <div class="alert alert-secondary px-5" role="alert">
+          <span class="text-danger" i18n>{{ errorMsg | titlecase }}</span>
+        </div>
+      </div>
+
+      <form
+        action=""
+        [formGroup]="signupForm"
+        *ngIf="!signedUp"
+        class="d-block"
+        [class.w-50]="!(set.isHandset$ | async)"
+        [class.w-75]="set.isHandset$ | async"
+      >
+        <div formGroupName="register">
+          <div class="form-group">
+            <label for="email" i18n>Email</label>
+            <input
+              (focus)="errorMsg = ''"
+              type="email"
+              class="form-control"
+              aria-describedby="emailHelpId"
+              formControlName="email"
+              [class.is-invalid]="email.touched && email.invalid"
+            />
+          </div>
+          <div class="form-group">
+            <label for="first name" i18n>First Name</label>
+            <input
+              (focus)="errorMsg = ''"
+              type="text"
+              class="form-control"
+              formControlName="firstName"
+              [class.is-invalid]="firstName.touched && firstName.invalid"
+            />
+          </div>
+          <div class="form-group">
+            <label for="Last name" i18n>Last Name</label>
+            <input
+              type="text"
+              (focus)="errorMsg = ''"
+              class="form-control"
+              formControlName="lastName"
+              [class.is-invalid]="lastName.touched && lastName.invalid"
+            />
+          </div>
+        </div>
+
+        <button
+          mat-raised-button
+          (click)="signup()"
+          class="btn btn-block mt-3"
+          type="submit"
+          i18n
+        >
+          SIGN UP
+        </button>
+      </form>
+    </div>
+    <div class="forgot d-block w-75 text-left px-4" *ngIf="!signedUp">
+      <p i18n class="font-weight-normal text-secondary">
+        By clicking sign up, you agree to the Solar Bankers User Agreement,
+        Privacy Policy, and Cookie Policy.
+      </p>
+    </div>
+  </div>
+
+  <div class="signup">
+    <p i18n>
+      Already have <a *ngIf="!signedUp">an</a>
+      <strong *ngIf="signedUp">a verified</strong> account?
+      <span routerLink="/auth/signin">sign in</span>
+    </p>
+  </div>
+</div>

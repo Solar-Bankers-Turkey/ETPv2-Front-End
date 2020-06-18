@@ -1,0 +1,50 @@
+@import "../history/history.component.scss";
+
+.side {
+  border-left: 1px solid $darkbg;
+  border-right: 1px solid $darkbg;
+}
+
+.small {
+  color: $sidetext;
+}
+
+.links {
+  opacity: 1;
+  transition: max-height 0.3s;
+}
+.links-hidden {
+  visibility: hidden;
+  max-height: 0;
+  div {
+    box-shadow: none !important;
+  }
+}
+.links-shown {
+  visibility: visible;
+  max-height: 90vh;
+}
+
+.icon {
+  position: absolute;
+  top: 25%;
+  left: 20px;
+  color: white;
+  display: inline-block;
+}
+
+.card-body:hover {
+  .icon,
+  .drop {
+    color: $shade1;
+  }
+}
+
+.drop {
+  padding-left: 50px;
+  text-align: center;
+  width: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
+}

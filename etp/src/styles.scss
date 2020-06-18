@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@import "variables.scss";
 
 /* You can add global styles to this file, and also import other style files */
 // Custom Theming for Angular Material
@@ -80,7 +80,19 @@ li {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, sans-serif !important;
+}
+
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p {
+  font-family: Roboto, sans-serif !important;
 }
 .btn {
   background-color: $primary !important;
@@ -95,15 +107,18 @@ body {
 .left {
   left: 0px !important;
 }
-
+.container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 // --- Auth Styling ---
 
 .wrapper {
   margin: 5vh auto 10px;
   line-height: 1;
   .title {
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 1.7rem;
+    font-weight: 300;
     color: $darkbg;
     text-align: center;
   }
@@ -117,12 +132,12 @@ body {
   .w-50 {
     width: 65% !important;
   }
-  form .w-75 {
-    width: 85% !important;
+  .w-75 {
+    width: 95% !important;
   }
   label {
-    font-weight: 500;
-    font-size: 2vh;
+    font-weight: 400;
+    font-size: 16px;
   }
   input,
   textarea {
@@ -130,16 +145,16 @@ body {
     caret-color: #1f8efa;
     color: white !important;
     font-weight: 300;
-    font-size: 16px;
-    border-radius: 5px;
+    border-radius: 3px;
+    border: none !important;
     &:focus {
-      background-color: $darkbg;
+      background-color: $darkbg !important;
       border: 1px solid $primary !important;
     }
   }
   input {
     width: 100%;
-    height: 4.5vh;
+    height: 33px;
   }
 }
 .forgot {
@@ -150,10 +165,8 @@ body {
 
   p {
     cursor: pointer;
-    font-size: 2.1vh;
-    margin: 10px auto;
+    font-size: 16px;
     color: $bg1;
-    text-align: center;
     line-height: 1.28;
     &:hover {
       color: $primary;
@@ -161,13 +174,13 @@ body {
   }
 }
 .signup {
-  margin-top: 8vh;
+  margin-top: 20%;
   text-align: center;
   color: $darkbg;
   span {
-    color: $primary !important;
+    color: $primary;
     cursor: pointer;
-    font-size: 1.5em;
+    font-size: 16px;
     &:hover {
       text-decoration: underline;
     }
@@ -179,11 +192,11 @@ body {
   font-size: 22px !important;
   font-weight: 300 !important;
   color: white;
-  margin: 40px auto 20px !important;
+  margin: 70px auto 30px !important;
 }
 .dash-card {
   background-color: $bg1;
-  border-radius: 0;
+  border-radius: 5px;
   color: white;
   p:first-child {
     color: #cdd3dd;
@@ -200,7 +213,7 @@ body {
 }
 // --- Media Queries ---
 @media (max-width: 800px) {
-  .container {
+  .container-fluid {
     padding: 0;
   }
 
@@ -210,7 +223,7 @@ body {
       margin: 30% auto 0;
     }
     .line-chart {
-      margin: 20px 20px;
+      margin: 0px 0px !important;
       width: 100%;
       img {
         padding: 0;

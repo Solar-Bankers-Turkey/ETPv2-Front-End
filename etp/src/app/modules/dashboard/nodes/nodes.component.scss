@@ -1,0 +1,56 @@
+@import "variables.scss";
+@import "../e-market/e-market.component.scss";
+
+.toggle {
+  background-color: $darkbg;
+  border: none;
+  box-shadow: none;
+  color: $sidetext;
+  padding: 3px 5px;
+}
+.menu {
+  color: white !important;
+
+  button {
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    &:hover {
+      background-color: $bg1 !important;
+    }
+  }
+  &:hover {
+    background-color: $bg2 !important;
+  }
+}
+
+.table-head {
+  text-align: center;
+  background-color: $grey;
+  th {
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 1.2em !important;
+    span {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 10px;
+    }
+  }
+}
+.table-data {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: white;
+  border-bottom: 0.5px solid $darkbg;
+  vertical-align: middle;
+  td {
+    cursor: pointer;
+    button {
+      background-color: $grey;
+    }
+  }
+  &:hover {
+    background-color: $bg2;
+  }
+}

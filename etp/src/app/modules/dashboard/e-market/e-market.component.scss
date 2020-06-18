@@ -1,0 +1,142 @@
+@import "variables.scss";
+
+.table-head {
+  th {
+    font-weight: 300;
+    cursor: pointer;
+  }
+}
+.table-data {
+  border-bottom: 0.5px solid $darkbg;
+  height: 70px;
+  vertical-align: middle;
+  td {
+    color: $small;
+    cursor: pointer;
+    button {
+      background-color: $grey;
+    }
+  }
+  &:hover {
+    background-color: $bg2;
+  }
+}
+
+::ng-deep .modal-content {
+  background-color: transparent !important;
+  border-radius: 10px;
+  .card-header,
+  .card-footer,
+  & {
+    border: none;
+    background-color: transparent !important;
+  }
+  .card,
+  .card-body {
+    background-color: $bg1;
+  }
+  .close {
+    border-radius: 100%;
+    background-color: $small;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px 5px;
+    color: $darkbg;
+    text-shadow: none !important;
+    height: 20px;
+    width: 20px;
+    line-height: 1;
+  }
+
+  .small {
+    font-size: 15px;
+    color: white;
+  }
+
+  .box {
+    background-color: $darkbg;
+    border-radius: 10px;
+    text-align: center;
+    span {
+      color: $shade1;
+      margin: 15% auto;
+      font-size: 13vh;
+    }
+    p {
+      color: $small;
+    }
+  }
+  .box-text {
+    font-size: 20px;
+    padding: 7px 10px;
+    font-weight: 300;
+    color: #fff;
+  }
+  .bills {
+    font-size: 5vh;
+    color: white;
+    font-weight: 400;
+    span,
+    small {
+      letter-spacing: 2px;
+      font-weight: 300;
+    }
+    span {
+      font-size: 20px;
+    }
+    small {
+      font-size: 14px;
+    }
+  }
+
+  label {
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 12px !important;
+    font-weight: 300;
+    height: 4vh;
+    line-height: 1 !important;
+  }
+
+  .success {
+    span {
+      color: $secondary;
+      margin: 10px auto 5px;
+      font-size: 13vh;
+    }
+    p {
+      font-size: 20px;
+      color: white;
+      margin-bottom: 35px;
+    }
+  }
+}
+.modal-card {
+  border-radius: 10px;
+}
+
+.backdrop {
+  background-color: $bg2;
+}
+
+input {
+  width: auto !important;
+  box-shadow: none !important;
+  border: none;
+}
+.custom-control-label {
+  &::before {
+    top: 0.2rem !important;
+    left: -1.1rem !important;
+    width: 0.7rem !important;
+    height: 0.7rem !important;
+    border: $darkbg solid 1px !important;
+  }
+  &::after {
+    background-image: none !important;
+  }
+}

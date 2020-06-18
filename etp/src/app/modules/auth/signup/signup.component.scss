@@ -1,0 +1,22 @@
+@import "../signin/signin.component.scss";
+@import "variables.scss";
+
+.mail {
+  width: 280px;
+  margin: 5px auto 0;
+}
+.confirm-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: $grey;
+}
+.confirm-sub {
+  font-weight: 300;
+  font-size: 18px;
+  color: $darkbg;
+  line-height: 1.5;
+}
+.forgot p {
+  cursor: default !important;
+  font-size: 13px !important;
+}

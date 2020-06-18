@@ -1,0 +1,59 @@
+@import "variables.scss";
+
+.w-tablet {
+  width: 85px !important;
+  height: 55px !important;
+}
+.card-body {
+  padding: 15px 0;
+  position: relative;
+  .icon {
+    left: 20px;
+    top: 32%;
+  }
+  button {
+    padding-left: 70px;
+    text-align: left;
+    color: $sidetext;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  i {
+    right: 25px;
+    top: 40%;
+    transition: all 0.3s;
+  }
+  .icon,
+  i {
+    color: $sidetext;
+    position: absolute;
+    display: inline-block;
+  }
+  &:hover .icon,
+  &:hover i {
+    color: $primary;
+  }
+  &:hover i {
+    right: 15px;
+  }
+}
+
+.active {
+  .icon,
+  i,
+  button {
+    color: $primary;
+  }
+  i {
+    right: 15px;
+  }
+  button {
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 500px) {
+  .icon {
+    top: 25% !important;
+  }
+}

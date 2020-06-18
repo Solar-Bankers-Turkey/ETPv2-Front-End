@@ -1,0 +1,27 @@
+@import "../signin/signin.component.scss";
+@import "variables.scss";
+
+input[type="date"] {
+  position: relative;
+  padding: 10px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: none;
+  z-index: 1;
+}
+
+input[type="date"]:before {
+  background: none;
+  display: block;
+  font-family: "FontAwesome";
+  content: "\f073";
+  /* This is the calendar icon in FontAwesome */
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  top: 1px;
+  right: 6px;
+  color: $secondary;
+}

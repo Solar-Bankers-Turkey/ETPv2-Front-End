@@ -1,0 +1,142 @@
+<div class="wrap">
+  <div class="container-fluid">
+    <div class="">
+      <div class="row">
+        <div class="col">
+          <h2 class="dash-title">History</h2>
+        </div>
+        <div class="col mt-auto mb-3 d-flex justify-content-end">
+          <div
+            ngbDropdown
+            class="ml-auto justify-content-end"
+            [class.text-center]="set.isHandset$ | async"
+          >
+            <span class="text-white mr-2"> Sort by</span>
+            <button class="toggle" id="dropdownBasic1" ngbDropdownToggle>
+              Category &nbsp; &nbsp; &nbsp;
+            </button>
+            <div
+              ngbDropdownMenu
+              aria-labelledby="dropdownBasic1"
+              class="bg-dark menu"
+            >
+              <button ngbDropdownItem>Warnings</button>
+              <button ngbDropdownItem>Updates</button>
+              <button ngbDropdownItem>Settings</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card dash-card shadow">
+      <div class="card-body">
+        <div class="bar">
+          <div class="row">
+            <div class="col d-flex justify-content-start my-1">
+              <p>History of activities</p>
+            </div>
+            <div class="col d-flex flex-wrap justify-content-center icon my-1">
+              <span
+                class="material-icons"
+                (click)="bar = true; line = !bar"
+                [class.text-primary]="bar"
+              >
+                bar_chart
+              </span>
+              <span
+                class="icon-graph"
+                (click)="line = true; bar = !line"
+                [class.text-primary]="line"
+              >
+              </span>
+              <span class="material-icons">
+                donut
+              </span>
+            </div>
+            <div class="col d-flex justify-content-end my-1">
+              <ul class="nav">
+                <li class="nav-item">
+                  <button
+                    mat-button
+                    class="nav-link text-secondary"
+                    [class.active]="day"
+                    (click)="day = true; month = year = week = !day"
+                  >
+                    DAY
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    mat-button
+                    class="nav-link text-secondary"
+                    [class.active]="week"
+                    (click)="week = true; month = year = day = !week"
+                  >
+                    WEEK
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    mat-button
+                    class="nav-link text-secondary"
+                    [class.active]="month"
+                    (click)="month = true; day = year = week = !month"
+                  >
+                    MONTH
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    mat-button
+                    class="nav-link text-secondary"
+                    [class.active]="year"
+                    (click)="year = true; month = day = week = !year"
+                  >
+                    YEAR
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="animate__animated animate__fadeIn animate__slow"
+            *ngIf="bar"
+          >
+            <apx-chart
+              [series]="data.barOptions.series"
+              [chart]="data.barOptions.chart"
+              [dataLabels]="data.barOptions.dataLabels"
+              [plotOptions]="data.barOptions.plotOptions"
+              [yaxis]="data.barOptions.yaxis"
+              [legend]="data.barOptions.legend"
+              [fill]="data.barOptions.fill"
+              [stroke]="data.barOptions.stroke"
+              [tooltip]="data.lineOptions.tooltip"
+              [xaxis]="data.barOptions.xaxis"
+              [grid]="data.barOptions.grid"
+              [colors]="data.domain"
+            ></apx-chart>
+          </div>
+          <div
+            class="animate__animated animate__fadeIn animate__slow"
+            *ngIf="line"
+          >
+            <apx-chart
+              [series]="data.barOptions.series"
+              [chart]="data.lineOptions.chart"
+              [xaxis]="data.lineOptions.xaxis"
+              [grid]="data.lineOptions.grid"
+              [stroke]="{ curve: 'smooth', width: 1.9 }"
+              [tooltip]="data.lineOptions.tooltip"
+              [colors]="data.domain"
+            ></apx-chart>
+          </div>
+        </div>
+        <div class="log">
+          <log-msg></log-msg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
