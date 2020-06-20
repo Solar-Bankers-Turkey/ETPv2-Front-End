@@ -9,13 +9,14 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form w-100">
-            <form action="" class="w-100 d-block">
+            <form action="" [formGroup]="newPassword" class="w-100 d-block">
               <div class="form-group">
                 <label for="current password">Current Password</label>
                 <input
                   type="password"
                   class="form-control"
                   aria-describedby="helpId"
+                  formControlName="current"
                 />
               </div>
               <div class="form-group">
@@ -24,6 +25,7 @@
                   type="password"
                   class="form-control"
                   aria-describedby="helpId"
+                  formControlName="old"
                 />
               </div>
               <div class="form-group">
@@ -32,6 +34,7 @@
                   type="password"
                   class="form-control"
                   aria-describedby="helpId"
+                  formControlName="new"
                 />
               </div>
               <div class="form-group mt-5">

@@ -11,6 +11,7 @@ import { DevicesComponent } from './devices/devices.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatButtonModule,
     NgbModule,
     MatMenuModule,
+    ReactiveFormsModule,
   ],
 })
 export class SettingsModule {}

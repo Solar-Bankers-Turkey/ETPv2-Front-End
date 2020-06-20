@@ -4,11 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class DataService {
-  user = JSON.parse(localStorage.getItem('etpuser'));
-  name = this.user?.name;
-  surname = this.user?.surname;
-  avi = this.user?.image;
-  pv = this.user?.installedPower?.pv;
+  user;
+  name;
+  avi;
+  pv;
+  surname;
   //devices data
   devices = [
     {
@@ -133,5 +133,11 @@ export class DataService {
 
   domain = ['#05C985', '#FFAB4F', '#EE423D', '#843FA0'];
 
-  constructor() {}
+  constructor() {
+    this.user = JSON.parse(localStorage.getItem('etpuser'));
+    this.name = this.user?.name;
+    this.surname = this.user?.surname;
+    this.avi = this.user?.image;
+    this.pv = this.user?.installedPower?.pv;
+  }
 }

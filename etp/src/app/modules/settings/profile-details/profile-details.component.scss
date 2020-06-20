@@ -1,4 +1,16 @@
 @import "variables.scss";
+.avatar {
+  width: 80px;
+  height: 80px;
+}
+.img-fluid {
+  height: 100%;
+  object-fit: cover;
+}
+.img-thumbnail {
+  background-color: $bg1;
+  border: none !important;
+}
 .update {
   margin-bottom: 6px;
 }
@@ -13,4 +25,7 @@ button {
   background-color: $grey;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  height: 30px;
+  line-height: 1;
+  position: relative;
 }
