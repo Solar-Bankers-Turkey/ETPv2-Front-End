@@ -1,7 +1,5 @@
+@import "variables.scss";
 .update {
-  height: 31px;
-  padding-right: 25px;
-  padding-left: 25px;
   margin-bottom: 6px;
 }
 .card,
@@ -10,4 +8,9 @@
 }
 label {
   color: white;
+}
+button {
+  background-color: $grey;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }

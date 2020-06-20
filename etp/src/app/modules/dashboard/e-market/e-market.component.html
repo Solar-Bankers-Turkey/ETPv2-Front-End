@@ -138,10 +138,7 @@
     </div>
 
     <!-- Sell baord buttons  -->
-    <div
-      class="card-footer text-muted d-flex justify-content-end mx-2"
-      *ngIf="!sellValid"
-    >
+    <div class="card-footer ml-auto" *ngIf="!sellValid">
       <button mat-button class="text-white mx-1" (click)="modal.close()">
         CANCEL
       </button>
@@ -238,10 +235,7 @@
     <!-- end of Validation voard  -->
 
     <!-- buy board buttons -->
-    <div
-      class="card-footer text-muted d-flex justify-content-end mx-2"
-      *ngIf="!buyValid"
-    >
+    <div class="card-footer ml-auto" *ngIf="!buyValid">
       <button mat-button class="text-white mx-1" (click)="modal.close()">
         CANCEL
       </button>

@@ -1,6 +1,9 @@
 @import "variables.scss";
 .add {
-  height: 30px;
+  background-color: $grey;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $primary;
 }
 
 .list-group,
