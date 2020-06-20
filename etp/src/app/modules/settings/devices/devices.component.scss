@@ -1,0 +1,9 @@
+@import "variables.scss";
+@import "../payment-options/payment-options.component.scss";
+.btn {
+  height: 30px;
+}
+.list-group-flush > .list-group-item {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

@@ -25,11 +25,11 @@
 
 .table-head {
   text-align: center;
-  background-color: $grey;
+  background-color: $bg1;
   th {
     font-weight: 300;
     cursor: pointer;
-    font-size: 1.2em !important;
+    font-size: 1em !important;
     span {
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -39,7 +39,7 @@
 }
 .table-data {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.05em;
   font-weight: 400;
   color: white;
   border-bottom: 0.5px solid $darkbg;

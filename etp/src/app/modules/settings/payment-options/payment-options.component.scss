@@ -1,0 +1,45 @@
+@import "variables.scss";
+.add {
+  height: 30px;
+}
+
+.list-group,
+.list-group-item {
+  background: transparent;
+}
+
+.text-shade {
+  color: $shade2;
+}
+.more:hover {
+  color: white;
+}
+
+::ng-deep {
+  .menu {
+    box-shadow: none !important;
+    border: none !important;
+    button {
+      font-size: 15px;
+      i {
+        font-size: 14px;
+      }
+    }
+  }
+  .modal-content {
+    background: transparent;
+    .btn {
+      height: 30px !important;
+      margin: auto;
+    }
+  }
+}
+.list-name {
+  font-size: 0.9375rem;
+}
+.list-group-item {
+  padding: 1.25rem 0 !important;
+}
+.card > * {
+  flex-shrink: 0;
+}

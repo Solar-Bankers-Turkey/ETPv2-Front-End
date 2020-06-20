@@ -1,14 +1,17 @@
 @import "variables.scss";
-.active {
-  background-color: $primary;
-  color: white !important;
-}
-.nav-item button {
-  height: 30px;
-  line-height: 1;
-  font-size: 12px;
 
-  font-weight: 400;
+.nav-item {
+  button {
+    height: 30px;
+    line-height: 1;
+    font-size: 12px;
+
+    font-weight: 400;
+  }
+  .active {
+    background-color: $primary;
+    color: white !important;
+  }
 }
 .icon {
   span {

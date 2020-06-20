@@ -32,8 +32,8 @@
         </div>
       </div>
       <div class="error d-block w-auto" *ngIf="errorMsg && !signedUp">
-        <div class="alert alert-secondary px-5" role="alert">
-          <span class="text-danger" i18n>{{ errorMsg | titlecase }}</span>
+        <div class="alert alert-danger px-5" role="alert">
+          <span i18n>{{ errorMsg | titlecase }}</span>
         </div>
       </div>
 
@@ -47,7 +47,7 @@
       >
         <div formGroupName="register">
           <div class="form-group">
-            <label for="email" i18n>Email</label>
+            <label for="email" i18n>Email Address</label>
             <input
               (focus)="errorMsg = ''"
               type="email"
@@ -91,7 +91,7 @@
       </form>
     </div>
     <div class="forgot d-block w-75 text-left px-4" *ngIf="!signedUp">
-      <p i18n class="font-weight-normal text-secondary">
+      <p i18n class="font-weight-normal">
         By clicking sign up, you agree to the Solar Bankers User Agreement,
         Privacy Policy, and Cookie Policy.
       </p>

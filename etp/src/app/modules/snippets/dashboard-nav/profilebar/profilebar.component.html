@@ -1,12 +1,4 @@
 <div class="bar-wrapper">
-  <div class="item" [matMenuTriggerFor]="helpMenu">
-    <i class="material-icons tabs">
-      help
-    </i>
-    <sup class="my-auto"
-      ><span class="badge badge-pill badge-primary"> 1 </span></sup
-    >
-  </div>
   <div class="item" [matMenuTriggerFor]="messageMenu">
     <i class="material-icons tabs">
       email
@@ -20,7 +12,7 @@
       notifications
     </i>
     <sup class="my-auto"
-      ><span class="badge badge-pill badge-primary"> 4 </span></sup
+      ><span class="badge badge-pill badge-danger"> 4 </span></sup
     >
   </div>
   <div class="item" [matMenuTriggerFor]="userMenu">
@@ -52,10 +44,7 @@
   <button mat-menu-item>Settings</button>
   <button mat-menu-item>Help</button>
 </mat-menu>
-<mat-menu #helpMenu="matMenu" class="menu">
-  <button mat-menu-item>Settings</button>
-  <button mat-menu-item>Help</button>
-</mat-menu>
+
 <mat-menu #langMenu="matMenu" class="menu">
   <button mat-menu-item>
     <div style="width: 20px; margin: auto 3px;">

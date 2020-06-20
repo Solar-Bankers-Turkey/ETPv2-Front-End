@@ -1,11 +1,11 @@
 @import "variables.scss";
 
 .w-tablet {
-  width: 85px !important;
+  width: 100px !important;
   height: 55px !important;
 }
 .card-body {
-  padding: 15px 0;
+  padding: 10px 0;
   position: relative;
   .icon {
     left: 20px;
@@ -15,8 +15,10 @@
     padding-left: 70px;
     text-align: left;
     color: $sidetext;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
   }
   i {
     right: 25px;

@@ -4,17 +4,22 @@
   th {
     font-weight: 300;
     cursor: pointer;
+    color: $shade2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 }
 .table-data {
   border-bottom: 0.5px solid $darkbg;
-  height: 70px;
+  height: 80px;
   vertical-align: middle;
+  color: white;
+  font-weight: 400;
   td {
-    color: $small;
     cursor: pointer;
     button {
       background-color: $grey;
+      letter-spacing: 1.5px;
     }
   }
   &:hover {

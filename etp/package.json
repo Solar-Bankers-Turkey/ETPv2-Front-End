@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "int:extract": "ng xi18n",
-    "scully": "scully",
+    "scully": "ng build && scully",
     "scully:serve": "scully serve"
   },
   "private": true,

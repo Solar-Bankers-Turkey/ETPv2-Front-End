@@ -1,5 +1,106 @@
 <div class="card dash-card">
+  <div class="card-header">
+    <div class="row align-items-center">
+      <div class="col">
+        <!-- Title -->
+        <p class="my-auto">
+          Payment methods
+        </p>
+      </div>
+      <div class="col-auto">
+        <!-- Button -->
+        <button mat-raised-button class="btn add btn-primary">
+          Add method
+        </button>
+      </div>
+    </div>
+  </div>
   <div class="card-body">
-    <p>Payment Options</p>
+    <!-- List group -->
+    <div
+      class="list-group list-group-flush my-n3"
+      *ngFor="let item of paymentInfo; let i = index"
+    >
+      <div class="list-group-item">
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <!-- Image -->
+            <img
+              class="img-fluid"
+              src="/assets/cards/{{ item.card }}.png"
+              alt="{{ item.card }}"
+              style="max-width: 38px;"
+            />
+          </div>
+          <div class="col ml-n2">
+            <!-- Heading -->
+            <h4 class="mb-1 list-name">
+              {{ item.card | titlecase }} {{ item.fullInfo }}
+            </h4>
+
+            <!-- Text -->
+            <small class="text-shade"> Expires {{ item.expires }} </small>
+          </div>
+          <div class="col-auto mr-n3">
+            <!-- Badge -->
+            <span
+              class="badge badge-success font-weight-normal px-2"
+              *ngIf="item.status === 'default'"
+            >
+              Default
+            </span>
+          </div>
+          <div class="col-auto">
+            <!-- Dropdown -->
+            <button
+              mat-icon-button
+              class="text-shade more"
+              [matMenuTriggerFor]="menu"
+              aria-label="Payment option edit menu"
+            >
+              <span class="material-icons">more_vert</span>
+            </button>
+            <mat-menu #menu="matMenu" class="menu" xPosition="before">
+              <button mat-menu-item>
+                <i class="material-icons mx-1">payments</i>
+                Edit
+              </button>
+              <button mat-menu-item (click)="open(content)">
+                <i class="material-icons mx-1 text-danger">delete</i>
+                <span class="text-danger">
+                  Delete
+                </span>
+              </button>
+              <ng-template #content let-modal>
+                <div class="modal-body dash-card py-2">
+                  <div class="row">
+                    <h6 class="col pt-2">
+                      You are deleting this payment option!
+                    </h6>
+                    <button
+                      mat-raised-button
+                      type="button"
+                      class="btn btn-primary col-auto mx-1"
+                      (click)="modal.close()"
+                    >
+                      No
+                    </button>
+                    <button
+                      mat-raised-button
+                      type="button"
+                      class="btn btn-danger col-auto ml-1 mr-2"
+                      (click)="delete(paymentInfo, i); modal.close()"
+                    >
+                      Yes
+                    </button>
+                  </div>
+                </div>
+              </ng-template>
+            </mat-menu>
+          </div>
+        </div>
+        <!-- / .row -->
+      </div>
+    </div>
   </div>
 </div>

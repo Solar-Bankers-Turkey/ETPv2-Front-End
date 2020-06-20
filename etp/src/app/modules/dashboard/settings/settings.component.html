@@ -1,36 +1,7 @@
 <div class="wrap">
   <div class="container-fluid">
-    <div class="">
-      <div class="row">
-        <div class="col">
-          <h2 class="dash-title">Settings</h2>
-        </div>
-        <div class="col mt-auto mb-4 d-flex justify-content-end">
-          <div
-            ngbDropdown
-            class="ml-auto justify-content-end"
-            [class.text-center]="set.isHandset$ | async"
-          >
-            <span class="text-white mr-2"> Sort by</span>
-            <button class="toggle" id="dropdownBasic1" ngbDropdownToggle>
-              Category &nbsp; &nbsp; &nbsp;
-            </button>
-            <div
-              ngbDropdownMenu
-              aria-labelledby="dropdownBasic1"
-              class="bg-dark menu"
-            >
-              <button ngbDropdownItem>Warnings</button>
-              <button ngbDropdownItem>Updates</button>
-              <button ngbDropdownItem>Settings</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="row mx-auto my-5">
-      <div class="col-md-3 my-auto">
+      <div class="col-md-3">
         <div
           class="card dash-card"
           (click)="dropdown()"
@@ -41,11 +12,20 @@
               widgets
             </span>
             <button mat-button class="drop">
-              See Other Settings
+              Settings
             </button>
           </div>
         </div>
-        <div [class]="(set.isHandset$ | async) ? links : ''">
+        <div
+          [class]="(set.isHandset$ | async) ? links : ''"
+          [class.fixed]="!(set.isHandset$ | async)"
+          [class.active]="
+            !(set.isHandset$ | async) &&
+            (set.sidetoggle === 'active' || (set.isTablet$ | async))
+          "
+        >
+          <h2 class="dash-title" *ngIf="!(set.isHandset$ | async)">Settings</h2>
+
           <div *ngFor="let item of options" (click)="dropdown()">
             <device-settings [options]="item"></device-settings>
           </div>

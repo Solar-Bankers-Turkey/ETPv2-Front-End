@@ -46,7 +46,7 @@ export class DataService {
         colors: ['#05C985'],
       },
       room: 'Living Room',
-      distance: '1034KM',
+      distance: '1034',
     },
     {
       series: [201],
@@ -59,7 +59,7 @@ export class DataService {
         colors: ['#FFAB4F'],
       },
       room: 'Studio',
-      distance: '1034KM',
+      distance: '1034',
     },
     {
       series: [289],
@@ -72,7 +72,7 @@ export class DataService {
         colors: ['#EE423D'],
       },
       room: "Kid's room",
-      distance: '1034KM',
+      distance: '1034',
     },
     {
       series: [196],
@@ -85,7 +85,7 @@ export class DataService {
         colors: ['#843FA0'],
       },
       room: 'Kitchen',
-      distance: '1034KM',
+      distance: '1034',
     },
   ];
   report = [

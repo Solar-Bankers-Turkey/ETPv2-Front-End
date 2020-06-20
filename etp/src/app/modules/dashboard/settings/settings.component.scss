@@ -1,5 +1,8 @@
 @import "../history/history.component.scss";
 
+.wrap {
+  margin: auto;
+}
 .side {
   border-left: 1px solid $darkbg;
   border-right: 1px solid $darkbg;
@@ -9,6 +12,16 @@
   color: $sidetext;
 }
 
+.fixed {
+  position: fixed;
+  width: 20%;
+  top: 8%;
+  left: 280px;
+  transition: all 0.3s;
+}
+.fixed.active {
+  left: 40px;
+}
 .links {
   opacity: 1;
   transition: max-height 0.3s;
@@ -47,4 +60,6 @@
   font-weight: 400;
   font-size: 18px;
   color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }

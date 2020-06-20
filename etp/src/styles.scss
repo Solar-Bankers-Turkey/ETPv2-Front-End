@@ -95,13 +95,13 @@ p {
   font-family: Roboto, sans-serif !important;
 }
 .btn {
-  background-color: $primary !important;
   border-radius: 2px !important;
-  font-size: 2vh !important;
-  font-weight: 300 !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
   color: white !important;
   line-height: 5px !important;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 .left {
@@ -116,9 +116,12 @@ p {
 .wrapper {
   margin: 5vh auto 10px;
   line-height: 1;
+  .btn {
+    background-color: $primary !important;
+  }
   .title {
     font-size: 1.7rem;
-    font-weight: 300;
+    font-weight: 400;
     color: $darkbg;
     text-align: center;
   }
@@ -137,7 +140,8 @@ p {
   }
   label {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
+    color: $dark;
   }
   input,
   textarea {
@@ -154,7 +158,31 @@ p {
   }
   input {
     width: 100%;
-    height: 33px;
+    height: 30px;
+  }
+  input[type="date"] {
+    position: relative;
+    padding: 10px;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    color: transparent;
+    background: none;
+    z-index: 1;
+  }
+
+  input[type="date"]:before {
+    background: none;
+    display: block;
+    font-family: "FontAwesome";
+    content: "\f073";
+    /* This is the calendar icon in FontAwesome */
+    width: 15px;
+    height: 20px;
+    position: absolute;
+    top: 1px;
+    right: 6px;
+    color: $secondary;
   }
 }
 .forgot {
@@ -165,8 +193,8 @@ p {
 
   p {
     cursor: pointer;
-    font-size: 16px;
-    color: $bg1;
+    font-size: 14px;
+    color: $secondary;
     line-height: 1.28;
     &:hover {
       color: $primary;
@@ -176,17 +204,24 @@ p {
 .signup {
   margin-top: 20%;
   text-align: center;
-  color: $darkbg;
+  p {
+    color: $secondary;
+  }
   span {
     color: $primary;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
+    text-transform: capitalize;
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 }
-
+.error .alert {
+  margin: 0px auto 20px;
+  font-size: 13px !important;
+  font-weight: 400;
+}
 // --- Dashboard ---
 .dash-title {
   font-size: 22px !important;
@@ -195,12 +230,14 @@ p {
   margin: 70px auto 30px !important;
 }
 .dash-card {
-  background-color: $bg1;
+  background-color: $bg2;
   border-radius: 5px;
   color: white;
   p:first-child {
     color: #cdd3dd;
-    font-size: 17px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 }
 .wrap {
@@ -214,7 +251,8 @@ p {
 // --- Media Queries ---
 @media (max-width: 800px) {
   .container-fluid {
-    padding: 0;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .home-wrapper {

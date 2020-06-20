@@ -18,7 +18,7 @@
                 ></apx-chart>
                 <div class="my-auto room">
                   {{ item.room }}
-                  <span class="d-block my-1"> {{ item.distance }}</span>
+                  <span class="d-block my-1"> {{ item.distance }} KM</span>
                 </div>
               </div>
             </div>
@@ -86,11 +86,11 @@
     <!-- Bottom cards  -->
     <div class="row devices">
       <div
-        class="col-lg-3 col-sm-6"
+        class="col-xl-3 col-md-6"
         [class.cols]="!(set.isTablet$ | async)"
         *ngFor="let item of data.devices"
       >
-        <div class="card dash-card shadow my-2">
+        <div class="card dash-card shadow-sm my-2">
           <div class="card-body">
             <div class="d-flex flex-wrap">
               <p class="mr-auto">{{ item.name | titlecase }}</p>
@@ -110,7 +110,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6">
+              <div class="col-5">
                 <apx-chart
                   [series]="item.series"
                   [chart]="chart.roomOptions.chart"
@@ -120,7 +120,7 @@
                 ></apx-chart>
                 <i class="fas fa-{{ item.icon }} device-icon"></i>
               </div>
-              <div class="col-6 reads">
+              <div class="col-7 reads px-2 text-right">
                 <p>
                   <i class="fas fa-history"></i>
                   {{ time | date: "HH:mm:ss" }}
