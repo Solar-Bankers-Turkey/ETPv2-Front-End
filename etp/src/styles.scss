@@ -252,8 +252,8 @@ p {
 // --- Media Queries ---
 @media (max-width: 800px) {
   .container-fluid {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   .home-wrapper {
