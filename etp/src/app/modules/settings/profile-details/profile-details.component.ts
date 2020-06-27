@@ -13,10 +13,11 @@ export class ProfileDetailsComponent implements OnInit {
   constructor(public data: DataService, public fb: FormBuilder) {}
   ngOnInit(): void {
     this.profileForm = this.fb.group({
-      name: [this.data.name],
-      surname: [this.data.surname],
+      name: [this.data?.name || ''],
+      surname: [this.data?.surname || ''],
       address: [
-        `${this.data.user.address.full_Address}  ${this.data.user.address.state} ${this.data.user.address.country}`,
+        `${this.data?.user?.address.full_Address}  ${this.data?.user?.address.state} ${this.data?.user?.address.country}` ||
+          '',
       ],
     });
   }

@@ -121,7 +121,6 @@ export class DataService {
       message: 'System update: software version 2.1.3 is now available.',
     },
   ];
-  isLoggedIn = JSON.parse(localStorage.getItem('etplog'));
 
   total = this.iotData
     .map((x) => {
@@ -137,7 +136,7 @@ export class DataService {
     this.user = JSON.parse(localStorage.getItem('etpuser'));
     this.name = this.user?.name;
     this.surname = this.user?.surname;
-    this.avi = this.user?.image;
+    this.avi = this.user?.image ? this.user?.avi : '/assets/img/avi.png';
     this.pv = this.user?.installedPower?.pv;
   }
 }

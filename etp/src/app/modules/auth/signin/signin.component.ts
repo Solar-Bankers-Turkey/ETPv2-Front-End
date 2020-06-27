@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Type } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '@services/auth.service';
@@ -18,7 +18,7 @@ export class SigninComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private auth: AuthService,
+    private asAuth: AuthService,
     private router: Router,
     private info: DataService,
     public set: SettingsService
@@ -31,7 +31,7 @@ export class SigninComponent implements OnInit {
     });
   }
 
-  changeType(val) {
+  changeType(val: any) {
     this.type = val;
   }
 
@@ -56,25 +56,34 @@ export class SigninComponent implements OnInit {
       const email = this.email.value;
       const password = this.password.value;
 
-      return this.auth.login(email, password).subscribe(
-        (data) => {
+      return this.asAuth.login(email, password).subscribe(
+        async (data) => {
           console.log('Success!', data);
           if (data['successCode'] <= 0) {
             this.errorMsg = data['message'];
           } else {
-            this.auth.auth.authorization = `Bearer ${data['access_token']}`;
-            this.signinForm.reset();
-            this.auth.getCustomerInfo().subscribe((result) => {
+            localStorage.setItem('etp-token', JSON.stringify(data));
+            (await this.asAuth.getCustomerInfo()).subscribe((result) => {
+              console.log(this.asAuth.authenticationToken);
               if (result['successCode'] > 0) {
-                localStorage.setItem('etpuser', JSON.stringify(result['data']));
-                localStorage.setItem('etplog', 'true');
+                this.signinForm.reset();
+                localStorage.setItem(
+                  'etp-user',
+                  JSON.stringify(result['data'])
+                );
+                localStorage.setItem('etp-log', 'true');
                 this.router.navigate(['/dashboard']);
+              } else {
+                this.errorMsg = JSON.stringify(result);
               }
-            });
+            }),
+              (err: any) => {
+                console.log(err);
+              };
           }
         },
         (error) => {
-          console.log(error.statusText);
+          console.log(error);
         }
       );
     }

@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  HttpClient,
-  HttpErrorResponse,
-  HttpHeaders,
-} from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { Register } from '../models/interfaces';
@@ -16,12 +12,12 @@ export class AuthService {
     'content-type': 'application/json',
   };
 
-  auth = {
-    authorization:
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiYXJpcyIsImp0aSI6ImUwNjlkODg0LTlmM2MtNGE0OC1hZDkxLTQyZDI1OTQ4Yzk1NyIsImlhdCI6IjA2LzA2LzIwMjAgMDA6MTU6MjciLCJldHBfdXNlciI6IkJnNEYxNHBSVEQ0WTk5RVQ5Ri9SaGJOWHR4LzVTaHpjVTJkeHg3QUNsT289IiwibmJmIjoxNTkxNDAyNTI3LCJleHAiOjE1OTE0MDQzMjcsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IlNvbGFyIEJhbmtlciJ9.4PghFMR7Wtyz6z1TBThRESB-6sLikDY3CvH7IYvyofg',
+  authenticationToken = {
+    authorization: '',
   };
-  customerUrl = 'http://142.93.165.55:5002/api/customer';
-
+  customerUrl = '/api/customer/getcustomershortinfo';
+  registerUrl = '/api/customer/register';
+  body;
   constructor(private http: HttpClient) {}
 
   //Login function
@@ -41,23 +37,36 @@ export class AuthService {
 
   // SignUp function
   signup(user: Register) {
-    const body = JSON.stringify(user);
-
+    this.body = JSON.stringify(user);
     return this.http
-      .post(`${this.customerUrl}/register`, body, {
+      .post(`${this.customerUrl}/register`, this.body, {
         headers: this.headers,
       })
       .pipe(catchError(this.errorHandler));
   }
 
-  getCustomerInfo() {
-    return this.http.get(`${this.customerUrl}/getcustomershortinfo`, {
-      headers: this.auth,
-    });
+  async getCustomerInfo() {
+    this.authenticationToken.authorization = `Bearer ${await this.getToken()}`;
+    return this.http
+      .get(`${this.customerUrl}/getcustomershortinfo`, {
+        headers: this.authenticationToken,
+      })
+      .pipe(catchError(this.errorHandler));
+  }
+
+  getToken() {
+    return JSON.parse(localStorage.getItem('etp-token')).access_token;
+  }
+
+  isLoggedIn() {
+    return (
+      !!localStorage.getItem('etp-token') && !!localStorage.getItem('etplog')
+    );
   }
 
   logout() {
-    localStorage.removetItem('etpuser');
-    localStorage.removeItem('etplog');
+    localStorage.removeItem('etp-token');
+    localStorage.removetItem('etp-user');
+    localStorage.removeItem('etp-log');
   }
 }

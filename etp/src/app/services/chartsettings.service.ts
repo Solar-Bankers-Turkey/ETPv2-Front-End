@@ -1,4 +1,4 @@
-import { Injectable, ViewChild, OnInit } from '@angular/core';
+import { Injectable, ViewChild, OnInit, Directive } from '@angular/core';
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -33,6 +33,7 @@ export type ChartOptions = {
   legend: ApexLegend;
 };
 
+@Directive()
 @Injectable({
   providedIn: 'root',
 })
