@@ -5,12 +5,14 @@ export interface Register {
 }
 
 export interface RegisterComplete {
-  address: string;
-  city: string;
-  phone: string;
-  birthDate: string;
-  identityNumber: string;
-  invoiceNumber: string;
+  Id: string;
+  Address: string;
+  City: string;
+  Phone: string;
+  BirthDate: string;
+  IdentityNumber: string;
+  InvoiceNumber: string;
+  ShortLocation: string;
 }
 
 export interface Signin {

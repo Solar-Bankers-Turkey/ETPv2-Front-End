@@ -1,10 +1,10 @@
 {
-  "/api/identity/*": {
-    "target": "http://142.93.165.55:9001",
+  "/customer-service/*": {
+    "target": "http://142.93.165.55:5000",
     "secure": false
   },
-  "/api/customer/*": {
-    "target": "http://142.93.165.55:5002",
+  "/identity-service/*": {
+    "target": "http://142.93.165.55:5000",
     "secure": false
   },
   "changeOrigin": true,

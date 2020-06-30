@@ -40,9 +40,9 @@ export class SettingsService {
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   toggleClass() {
-    this.sidetoggle = this.sidetoggle == 'active' ? '' : 'active';
+    this.sidetoggle = this.sidetoggle === 'active' ? '' : 'active';
 
-    this.overlay = this.sidetoggle == 'active' ? 'overlay active' : 'overlay';
+    this.overlay = this.sidetoggle === 'active' ? 'overlay active' : 'overlay';
   }
 
   dismiss() {

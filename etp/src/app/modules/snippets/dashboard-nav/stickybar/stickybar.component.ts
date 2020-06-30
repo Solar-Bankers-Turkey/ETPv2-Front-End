@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '@services/data.service';
+import { AuthService } from '@services/auth.service';
 
 @Component({
   selector: 'etp-stickybar',
@@ -10,8 +11,10 @@ export class StickybarComponent implements OnInit {
   coins = false;
   panel = false;
   battery = false;
-
-  constructor(public data: DataService) {}
+  data;
+  constructor(public asAuth: AuthService) {
+    this.data = this.asAuth.getUserInfo();
+  }
 
   ngOnInit(): void {}
 

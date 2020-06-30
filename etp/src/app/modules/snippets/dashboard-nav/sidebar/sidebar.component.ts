@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SettingsService } from '@services/settings.service';
-import { DataService } from '@services/data.service';
+import { AuthService } from '@services/auth.service';
 
 @Component({
   selector: 'etp-side',
@@ -8,7 +8,10 @@ import { DataService } from '@services/data.service';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
-  constructor(public set: SettingsService, public data: DataService) {}
+  data: any;
+  constructor(public set: SettingsService, public asAuth: AuthService) {
+    this.data = this.asAuth.getUserInfo();
+  }
 
   ngOnInit(): void {}
 }

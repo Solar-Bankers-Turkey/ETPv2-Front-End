@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '@services/data.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { AuthService } from '@services/auth.service';
 
 @Component({
   selector: 'app-profile-details',
@@ -10,21 +10,24 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 export class ProfileDetailsComponent implements OnInit {
   previewAvi;
   profileForm: FormGroup;
-  constructor(public data: DataService, public fb: FormBuilder) {}
+  data = this.asAuth.getUserInfo();
+  avi = this.data.image || '/assets/img/avi.png';
+
+  constructor(public asAuth: AuthService, public fb: FormBuilder) {}
   ngOnInit(): void {
     this.profileForm = this.fb.group({
       name: [this.data?.name || ''],
       surname: [this.data?.surname || ''],
       address: [
-        `${this.data?.user?.address.full_Address}  ${this.data?.user?.address.state} ${this.data?.user?.address.country}` ||
+        `${this.data?.address.full_Address}  ${this.data?.address.state} ${this.data?.address.country}` ||
           '',
       ],
     });
   }
 
   upload(e) {
-    var file = e.target.files[0];
-    var reader = new FileReader();
+    let file = e.target.files[0];
+    const reader = new FileReader();
 
     reader.onloadend = () => {
       this.previewAvi = reader.result;
@@ -38,6 +41,8 @@ export class ProfileDetailsComponent implements OnInit {
   }
 
   update() {
-    this.data.avi = this.previewAvi;
+    if (this.previewAvi) {
+      this.avi = this.previewAvi;
+    }
   }
 }

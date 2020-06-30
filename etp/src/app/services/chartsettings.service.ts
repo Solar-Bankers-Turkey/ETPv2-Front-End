@@ -66,7 +66,7 @@ export class ChartsettingsService implements OnInit {
             show: false,
           },
           value: {
-            formatter: function (val) {
+            formatter: (val) => {
               return parseInt(val.toString(), 10).toString() + ' %';
             },
             offsetY: 5,
@@ -82,7 +82,7 @@ export class ChartsettingsService implements OnInit {
     },
   };
 
-  //iot device radial charts
+  // iot device radial charts
   iotOptions: Partial<ChartOptions> = {
     plotOptions: {
       radialBar: {
@@ -105,7 +105,7 @@ export class ChartsettingsService implements OnInit {
     },
   };
 
-  //sparkliine Chart
+  // sparkliine Chart
   sparklineOptions: Partial<ChartOptions> = {
     chart: {
       type: 'line',
@@ -204,7 +204,7 @@ export class ChartsettingsService implements OnInit {
     },
   };
 
-  //History Bar chart
+  //  History Bar chart
   barOptions: Partial<ChartOptions> = {
     series: [
       {
@@ -288,7 +288,7 @@ export class ChartsettingsService implements OnInit {
     },
     tooltip: {
       y: {
-        formatter: function (val) {
+        formatter: (val) => {
           return '$ ' + val + ' thousands';
         },
       },

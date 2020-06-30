@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   min-height: 100vh;
   height: 100%;
-  box-shadow: inset 0 0 0 2000px #2f3b52e1;
+  box-shadow: inset 0 0 0 2000px rgba(47, 59, 82, 0.9);
   // width: 100%;
   margin: 0 -15px;
 }
@@ -26,7 +26,7 @@
   padding: calc(50vh - 7%) calc(70vw - 110%) 0;
   .title {
     color: white;
-    font-size: 2.2rem;
+    font-size: 2rem;
     line-height: 1.5;
     font-weight: bold;
     span {

@@ -21,26 +21,24 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.signupForm = this.fb.group({
-      register: this.fb.group({
-        email: ['', [Validators.required, Validators.email]],
-        firstName: ['', [Validators.required]],
-        lastName: ['', [Validators.required]],
-      }),
+      email: ['', [Validators.required, Validators.email]],
+      firstName: ['', [Validators.required]],
+      lastName: ['', [Validators.required]],
     });
   }
 
   get email() {
-    return this.signupForm.get('register.email');
+    return this.signupForm.get('email');
   }
   get firstName() {
-    return this.signupForm.get('register.firstName');
+    return this.signupForm.get('firstName');
   }
   get lastName() {
-    return this.signupForm.get('register.lastName');
+    return this.signupForm.get('lastName');
   }
 
   signup() {
-    if (this.signupForm.get('register').invalid) {
+    if (this.signupForm.invalid) {
       this.errorMsg = 'Please fill the provided fields correctly!';
     } else {
       const user: Register = {
@@ -51,6 +49,7 @@ export class SignupComponent implements OnInit {
 
       return this.auth.signup(user).subscribe(
         (data) => {
+          console.log(data);
           if (data['successCode'] < 1) {
             this.errorMsg = data['message'];
           } else {
@@ -59,7 +58,7 @@ export class SignupComponent implements OnInit {
           }
         },
         (error) => {
-          console.log(error.statusText);
+          console.log({ error });
         }
       );
     }

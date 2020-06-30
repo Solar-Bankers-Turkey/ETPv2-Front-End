@@ -22,10 +22,10 @@ export class OverviewComponent implements OnInit {
     },
   ];
   // options
-  gradient: boolean = false;
-  showLegend: boolean = true;
-  showLabels: boolean = true;
-  isDoughnut: boolean = true;
+  gradient = false;
+  showLegend = true;
+  showLabels = true;
+  isDoughnut = true;
 
   colorScheme = {
     domain: ['#FFAB4F', '#1F8EFA', '#05C985'],

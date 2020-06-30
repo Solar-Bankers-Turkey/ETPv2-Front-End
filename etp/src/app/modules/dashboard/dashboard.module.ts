@@ -6,7 +6,7 @@ import { SnippetsModule } from '../snippets/snippets.module';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NgApexchartsModule } from 'ng-apexcharts';
 
-//components
+// components
 import { NavComponent } from './nav/nav.component';
 import { OverviewComponent } from './overview/overview.component';
 import { EMarketComponent } from './e-market/e-market.component';
@@ -16,7 +16,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { HistoryComponent } from './history/history.component';
 import { NodesComponent } from './nodes/nodes.component';
 
-//material
+// material
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { ReactiveFormsModule } from '@angular/forms';

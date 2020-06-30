@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '@services/data.service';
+import { AuthService } from '@services/auth.service';
 
 @Component({
   selector: 'etp-topmenu',
@@ -7,7 +7,9 @@ import { DataService } from '@services/data.service';
   styleUrls: ['./topmenu.component.scss'],
 })
 export class TopmenuComponent implements OnInit {
-  constructor(public data: DataService) {}
-
+  data;
+  constructor(public asAuth: AuthService) {
+    this.data = this.asAuth.getUserInfo();
+  }
   ngOnInit(): void {}
 }

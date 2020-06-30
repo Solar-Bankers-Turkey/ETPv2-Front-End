@@ -58,28 +58,29 @@ export class SigninComponent implements OnInit {
 
       return this.asAuth.login(email, password).subscribe(
         async (data) => {
-          console.log('Success!', data);
+          console.log('Success!');
           if (data['successCode'] <= 0) {
             this.errorMsg = data['message'];
           } else {
             localStorage.setItem('etp-token', JSON.stringify(data));
-            (await this.asAuth.getCustomerInfo()).subscribe((result) => {
-              console.log(this.asAuth.authenticationToken);
-              if (result['successCode'] > 0) {
-                this.signinForm.reset();
-                localStorage.setItem(
-                  'etp-user',
-                  JSON.stringify(result['data'])
-                );
-                localStorage.setItem('etp-log', 'true');
-                this.router.navigate(['/dashboard']);
-              } else {
-                this.errorMsg = JSON.stringify(result);
-              }
-            }),
+            (await this.asAuth.getCustomerInfo()).subscribe(
+              (result) => {
+                if (result['successCode'] > 0) {
+                  this.signinForm.reset();
+                  localStorage.setItem(
+                    'etp-user',
+                    JSON.stringify(result['data'])
+                  );
+                  localStorage.setItem('etp-log', 'true');
+                  this.router.navigate(['/dashboard']);
+                } else {
+                  this.errorMsg = JSON.stringify(result);
+                }
+              },
               (err: any) => {
                 console.log(err);
-              };
+              }
+            );
           }
         },
         (error) => {
