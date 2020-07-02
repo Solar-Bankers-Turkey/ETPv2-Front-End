@@ -19,12 +19,12 @@
               aria-hidden="true"
               *ngIf="item.status === 'setting'"
             ></i>
-            <span [class.d-flex]="set.isHandset$ | async">{{
+            <span [class.d-flex]="set.isHandset$ | async" i18n>{{
               item.date | date: "HH:mm, MMMM yyy"
             }}</span>
           </div>
           <div class="col-lg-8 col-md-7 col-6">
-            <div class="mx-1 message">
+            <div class="mx-1 message" i18n>
               {{ item.message }}
             </div>
           </div>

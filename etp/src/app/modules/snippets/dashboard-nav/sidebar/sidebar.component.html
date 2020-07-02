@@ -9,7 +9,7 @@
         alt="{{ data?.name }}"
         class="img-fluid rounded-circle mb-3 img-thumbnail"
       />
-      <a class="mx-auto" routerLink="/dashboard"> {{ data?.name }} </a>
+      <a class="mx-auto" routerLink="/dashboard" i18n> {{ data?.name }} </a>
     </div>
   </div>
   <ul class="list-unstyled components">
@@ -18,28 +18,28 @@
       routerLink="/dashboard/overview"
       routerLinkActive="active"
     >
-      <a> <i class="icon-home" aria-hidden="true"></i> Overview</a>
+      <a i18n> <i class="icon-home" aria-hidden="true"></i> Overview</a>
     </li>
     <li
       (click)="set.dismiss()"
       routerLink="/dashboard/energy-market"
       routerLinkActive="active"
     >
-      <a> <i class="icon-energy" aria-hidden="true"></i> Energy Market </a>
+      <a i18n> <i class="icon-energy" aria-hidden="true"></i> Energy Market </a>
     </li>
     <li
       (click)="set.dismiss()"
       routerLink="/dashboard/analytics"
       routerLinkActive="active"
     >
-      <a><i class="far fa-chart-bar"></i> Analytics </a>
+      <a i18n><i class="far fa-chart-bar"></i> Analytics </a>
     </li>
     <!-- <li
       (click)="set.dismiss()"
       routerLink="/dashboard/rules"
       routerLinkActive="active"
     >
-      <a> <i class="fa fa-list-ul" aria-hidden="true"></i> Rules</a>
+      <a i18n> <i class="fa fa-list-ul" aria-hidden="true"></i> Rules</a>
     </li> -->
     <li
       (click)="set.dismiss()"
@@ -53,14 +53,14 @@
       routerLink="/dashboard/settings"
       routerLinkActive="active"
     >
-      <a> <i class="icon-settings" aria-hidden="true"></i> Settings</a>
+      <a i18n> <i class="icon-settings" aria-hidden="true"></i> Settings</a>
     </li>
     <li
       (click)="set.dismiss()"
       routerLink="/dashboard/solar-nodes"
       routerLinkActive="active"
     >
-      <a> <i class="fas fa-link" aria-hidden="true"></i> Solar Node</a>
+      <a i18n> <i class="fas fa-link" aria-hidden="true"></i> Solar Node</a>
     </li>
   </ul>
 </nav>

@@ -31,13 +31,7 @@ import { TokenInterceptorService } from '@services/token-interceptor.service';
     MatSlideToggleModule,
     ScullyLibModule,
   ],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: TokenInterceptorService,
-      multi: true,
-    },
-  ],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -57,13 +57,13 @@ export class SigninComponent implements OnInit {
       const password = this.password.value;
 
       return this.asAuth.login(email, password).subscribe(
-        async (data) => {
+        (data) => {
           console.log('Success!');
           if (data['successCode'] <= 0) {
             this.errorMsg = data['message'];
           } else {
             localStorage.setItem('etp-token', JSON.stringify(data));
-            (await this.asAuth.getCustomerInfo()).subscribe(
+            this.asAuth.getCustomerInfo().subscribe(
               (result) => {
                 if (result['successCode'] > 0) {
                   this.signinForm.reset();
@@ -74,7 +74,7 @@ export class SigninComponent implements OnInit {
                   localStorage.setItem('etp-log', 'true');
                   this.router.navigate(['/dashboard']);
                 } else {
-                  this.errorMsg = JSON.stringify(result);
+                  console.log({ result });
                 }
               },
               (err: any) => {

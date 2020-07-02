@@ -3,7 +3,7 @@
     <div class="">
       <div class="row">
         <div class="col">
-          <h2 class="dash-title">Solar Nodes</h2>
+          <h2 class="dash-title" i18n>Solar Nodes</h2>
         </div>
         <div class="col mt-auto mb-4 d-flex justify-content-end">
           <div
@@ -12,7 +12,7 @@
             [class.text-center]="set.isHandset$ | async"
           >
             <span class="text-white mr-2"> Sort by</span>
-            <button class="toggle" id="dropdownBasic1" ngbDropdownToggle>
+            <button class="toggle" id="dropdownBasic1" ngbDropdownToggle i18n>
               Category &nbsp; &nbsp; &nbsp;
             </button>
             <div
@@ -20,9 +20,9 @@
               aria-labelledby="dropdownBasic1"
               class="bg-dark menu"
             >
-              <button ngbDropdownItem>Warnings</button>
-              <button ngbDropdownItem>Updates</button>
-              <button ngbDropdownItem>Settings</button>
+              <button ngbDropdownItem i18n>Warnings</button>
+              <button ngbDropdownItem i18n>Updates</button>
+              <button ngbDropdownItem i18n>Settings</button>
             </div>
           </div>
         </div>
@@ -34,11 +34,11 @@
           <table class="table table-borderless table-vertical-center">
             <thead>
               <tr class="text-white table-head shadow-sm">
-                <th style="min-width: 170px;">Name</th>
+                <th style="min-width: 170px;" i18n>Name</th>
                 <th style="min-width: 170px;">
                   Available <span>iytecoin</span>
                 </th>
-                <th style="min-width: 170px;">Total Min Run</th>
+                <th style="min-width: 170px;" i18n>Total Min Run</th>
                 <th style="min-width: 100px;"></th>
               </tr>
             </thead>
@@ -56,6 +56,7 @@
                     mat-raised-button
                     class="text-primary px-4"
                     (click)="open(sell, item.name)"
+                    i18n
                   >
                     ADD TO MY WALLET
                   </button>

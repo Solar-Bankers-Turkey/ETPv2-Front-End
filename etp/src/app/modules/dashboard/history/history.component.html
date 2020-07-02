@@ -3,7 +3,7 @@
     <div class="">
       <div class="row">
         <div class="col">
-          <h2 class="dash-title">History</h2>
+          <h2 class="dash-title" i18n>History</h2>
         </div>
         <div class="col mt-auto mb-3 d-flex justify-content-end">
           <div
@@ -12,7 +12,7 @@
             [class.text-center]="set.isHandset$ | async"
           >
             <span class="text-white mr-2"> Sort by</span>
-            <button class="toggle" id="dropdownBasic1" ngbDropdownToggle>
+            <button class="toggle" id="dropdownBasic1" ngbDropdownToggle i18n>
               Category &nbsp; &nbsp; &nbsp;
             </button>
             <div
@@ -20,9 +20,9 @@
               aria-labelledby="dropdownBasic1"
               class="bg-dark menu"
             >
-              <button ngbDropdownItem>Warnings</button>
-              <button ngbDropdownItem>Updates</button>
-              <button ngbDropdownItem>Settings</button>
+              <button ngbDropdownItem i18n>Warnings</button>
+              <button ngbDropdownItem i18n>Updates</button>
+              <button ngbDropdownItem i18n>Settings</button>
             </div>
           </div>
         </div>
@@ -33,7 +33,7 @@
         <div class="bar">
           <div class="row">
             <div class="col d-flex justify-content-start my-1">
-              <p>History of activities</p>
+              <p i18n>History of activities</p>
             </div>
             <div class="col d-flex flex-wrap justify-content-center icon my-1">
               <span
@@ -61,6 +61,7 @@
                     class="nav-link text-secondary"
                     [class.active]="day"
                     (click)="day = true; month = year = week = !day"
+                    i18n
                   >
                     DAY
                   </button>
@@ -71,6 +72,7 @@
                     class="nav-link text-secondary"
                     [class.active]="week"
                     (click)="week = true; month = year = day = !week"
+                    i18n
                   >
                     WEEK
                   </button>
@@ -81,12 +83,14 @@
                     class="nav-link text-secondary"
                     [class.active]="month"
                     (click)="month = true; day = year = week = !month"
+                    i18n
                   >
                     MONTH
                   </button>
                 </li>
                 <li class="nav-item">
                   <button
+                    i18n
                     mat-button
                     class="nav-link text-secondary"
                     [class.active]="year"

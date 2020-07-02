@@ -3,7 +3,7 @@
     <div class="">
       <div class="row">
         <div class="col">
-          <h2 class="dash-title">Energy Market</h2>
+          <h2 class="dash-title" i18n>Energy Market</h2>
         </div>
         <div class="col mt-auto mb-4 d-flex justify-content-end">
           <button mat-mini-fab class="bg-primary" (click)="open(sell)">
@@ -19,12 +19,12 @@
           <table class="table table-borderless table-vertical-center">
             <thead>
               <tr class="text-white table-head">
-                <th style="min-width: 70px;">Seller</th>
-                <th style="min-width: 70px;">Location</th>
-                <th style="min-width: 70px;">Supply</th>
-                <th style="min-width: 70px;">Price</th>
-                <th style="min-width: 80px;">Date</th>
-                <th style="min-width: 100px;"></th>
+                <th style="min-width: 70px;" i18n>Seller</th>
+                <th style="min-width: 70px;" i18n>Location</th>
+                <th style="min-width: 70px;" i18n>Supply</th>
+                <th style="min-width: 70px;" i18n>Price</th>
+                <th style="min-width: 80px;" i18n>Date</th>
+                <th style="min-width: 100px;" i18n></th>
               </tr>
             </thead>
             <tbody class="py-5" *ngFor="let item of market">
@@ -44,6 +44,7 @@
                 </td>
                 <td class="pt-3">
                   <button
+                    i18n
                     mat-raised-button
                     class="text-primary px-4"
                     (click)="open(buy)"
@@ -64,7 +65,7 @@
 <ng-template #sell let-modal class="shadow-sm">
   <div class="card modal-card">
     <div class="card-header">
-      <h1 class="small d-inline">Add new sell order</h1>
+      <h1 class="small d-inline" i18n>Add new sell order</h1>
       <button
         type="button"
         class="close"
@@ -83,7 +84,7 @@
               <span class="material-icons-round">
                 monetization_on
               </span>
-              <p>Sell from battery</p>
+              <p i18n>Sell from battery</p>
             </div>
           </div>
           <div
@@ -102,7 +103,7 @@
                 />
               </div>
               <div class="form-group">
-                <label for="price"> Price </label>
+                <label for="price" i18n> Price </label>
                 <input
                   type="text"
                   class="form-control"
@@ -132,17 +133,18 @@
           <span class="material-icons text-success">
             done
           </span>
-          <p>Supply Created Successfully</p>
+          <p i18n>Supply Created Successfully</p>
         </div>
       </div>
     </div>
 
     <!-- Sell baord buttons  -->
     <div class="card-footer ml-auto" *ngIf="!sellValid">
-      <button mat-button class="text-white mx-1" (click)="modal.close()">
+      <button i18n mat-button class="text-white mx-1" (click)="modal.close()">
         CANCEL
       </button>
       <button
+        i18n
         mat-raised-button
         class="btn btn-primary"
         (click)="sellValid = true"
@@ -157,6 +159,7 @@
         mat-raised-button
         class="btn btn-primary"
         (click)="modal.close(); sellValid = false"
+        i18n
       >
         CLOSE
       </button>
@@ -169,7 +172,7 @@
 <ng-template #buy let-modal class="shadow-sm">
   <div class="card modal-card">
     <div class="card-header">
-      <h1 class="small d-inline">Buy Electricity</h1>
+      <h1 class="small d-inline" i18n>Buy Electricity</h1>
       <button
         type="button"
         class="close"
@@ -193,13 +196,13 @@
           <div class="col-sm-7" [class.my-3]="set.isHandset$ | async">
             <div class="row text-center">
               <div class="col-sm-6">
-                <div class="box w-75 box-text m-auto">
+                <div class="box w-75 box-text m-auto" i18n>
                   Supply
                 </div>
                 <h1 class="my-5 bills">12<span>kW</span></h1>
               </div>
               <div class="col-sm-6">
-                <div class="box w-75 box-text m-auto">
+                <div class="box w-75 box-text m-auto" i18n>
                   Price
                 </div>
                 <h1 class="my-5 bills">12.000 <small>IYTECOIN</small></h1>
@@ -227,7 +230,7 @@
           <span class="material-icons text-success">
             done
           </span>
-          <p>Purchase Successful</p>
+          <p i18n>Purchase Successful</p>
         </div>
       </div>
     </div>
@@ -236,10 +239,11 @@
 
     <!-- buy board buttons -->
     <div class="card-footer ml-auto" *ngIf="!buyValid">
-      <button mat-button class="text-white mx-1" (click)="modal.close()">
+      <button i18n mat-button class="text-white mx-1" (click)="modal.close()">
         CANCEL
       </button>
       <button
+        i18n
         mat-raised-button
         class="btn btn-primary"
         (click)="buyValid = true"
@@ -251,6 +255,7 @@
     <!-- Validation board buttons -->
     <div class="card-footer m-auto" *ngIf="buyValid">
       <button
+        i18n
         mat-raised-button
         class="btn btn-primary"
         (click)="modal.close(); buyValid = false"

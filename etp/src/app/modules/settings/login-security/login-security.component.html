@@ -1,9 +1,9 @@
 <div class="card dash-card">
   <div class="card-body">
-    <p>Login & security</p>
+    <p i18n>Login & security</p>
 
     <div class="mt-5 mx-3">
-      <h5 class="text-secondary font-weight-normal">
+      <h5 class="text-secondary font-weight-normal" i18n>
         Change Your Password
       </h5>
       <div class="row">
@@ -11,7 +11,7 @@
           <div class="form w-100">
             <form action="" [formGroup]="newPassword" class="w-100 d-block">
               <div class="form-group">
-                <label for="current password">Current Password</label>
+                <label for="current password" i18n>Current Password</label>
                 <input
                   type="password"
                   class="form-control"
@@ -20,7 +20,7 @@
                 />
               </div>
               <div class="form-group">
-                <label for="current password">New Password</label>
+                <label for="current password" i18n>New Password</label>
                 <input
                   type="password"
                   class="form-control"
@@ -29,7 +29,7 @@
                 />
               </div>
               <div class="form-group">
-                <label for="current password">Confirm New Password</label>
+                <label for="current password" i18n>Confirm New Password</label>
                 <input
                   type="password"
                   class="form-control"
@@ -42,6 +42,7 @@
                   mat-raised-button
                   class="text-primary px-4"
                   type="button"
+                  i18n
                 >
                   update password
                 </button>
@@ -54,28 +55,28 @@
           <div class="card bg-dark border ml-md-4">
             <div class="card-body">
               <!-- Text -->
-              <p class="mb-2">
+              <p class="mb-2" i18n>
                 Password requirements
               </p>
 
               <!-- Text -->
-              <p class="small text-white mb-2">
+              <p class="small text-white mb-2" i18n>
                 To create a new password, you have to meet all of the following
                 requirements:
               </p>
 
               <!-- List group -->
               <ul class="small text-white pl-4 mb-3">
-                <li class="my-1">
+                <li class="my-1" i18n>
                   Minimum 8 character
                 </li>
-                <li class="my-1">
-                  At least one special character
+                <li class="my-1" i18n>
+                  At least one uppercase letter
                 </li>
-                <li class="my-1">
+                <li class="my-1" i18n>
                   At least one number
                 </li>
-                <li class="my-1">
+                <li class="my-1" i18n>
                   Can’t be the same as a previous password
                 </li>
               </ul>

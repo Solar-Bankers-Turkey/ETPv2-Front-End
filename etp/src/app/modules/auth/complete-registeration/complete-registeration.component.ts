@@ -59,7 +59,7 @@ export class CompleteRegisterationComponent implements OnInit {
     return this.regForm.get('bDate');
   }
 
-  submit() {
+  async submit() {
     if (this.regForm.invalid) {
       this.errorMsg = 'Please Fill in the Provided Fields correctly';
     } else {
@@ -74,7 +74,7 @@ export class CompleteRegisterationComponent implements OnInit {
         ShortLocation: this.Address.value + this.City.value + this.State.value,
       };
 
-      return this.asAuth.completeRegisteration(user).subscribe(
+      return (await this.asAuth.completeRegisteration(user)).subscribe(
         (result) => {
           console.log(result);
         },

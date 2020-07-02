@@ -17,8 +17,8 @@ export class AuthService {
   authToken = false;
   headers = {
     'content-type': 'application/json',
+    Authorization: '',
   };
-
   authHeader = {
     authorization: '',
   };
@@ -39,20 +39,21 @@ export class AuthService {
     return throwError(error);
   }
 
-  defaultToken() {
+  async defaultToken() {
     /* Get default token to sign in */
     const email = 'clientadmin@solarbankers.org';
     const password = 'client_serv_ffaa70';
-    this.login(email, password).subscribe((data) => {
-      if (data['successCode'] <= 0) {
-        console.log(data['message']);
-      } else {
-        localStorage.setItem('etp-token', JSON.stringify(data));
-        console.log('Success!');
-        this.authToken = true;
-        console.log(this.authToken);
-      }
-    });
+    this.login(email, password).subscribe(
+      (data) => {
+        if (data['successCode'] <= 0) {
+          console.log(data['message']);
+        } else {
+          localStorage.setItem('etp-token', JSON.stringify(data));
+          console.log('Success!');
+        }
+      },
+      (error) => console.error(error)
+    );
     /* Get default token to sign in */
   }
 
@@ -60,19 +61,17 @@ export class AuthService {
   signup(user: Register) {
     this.body = JSON.stringify(user);
     this.defaultToken();
-    if (this.authToken) {
-      this.authToken = false;
-      return this.http
-        .post(this.registerUrl, this.body, {
-          headers: this.headers,
-        })
-        .pipe(catchError(this.errorHandler));
-    }
+    this.headers.Authorization = `Bearer ${this.getToken()}`;
+    return this.http
+      .post(this.registerUrl, this.body, {
+        headers: this.headers,
+      })
+      .pipe(catchError(this.errorHandler));
   }
 
   // ====Get customer Info
-  async getCustomerInfo() {
-    this.authHeader.authorization = `Bearer ${await this.getToken()}`;
+  getCustomerInfo() {
+    this.authHeader.authorization = `Bearer ${this.getToken()}`;
     return this.http
       .get(this.customerUrl, {
         headers: this.authHeader,
@@ -83,13 +82,11 @@ export class AuthService {
   //====CompleteRegisteration
   completeRegisteration(user: RegisterComplete) {
     this.body = JSON.stringify(user);
-    this.defaultToken();
-    if (!this.authToken) {
-      this.authToken = false;
+    return this.defaultToken().then(() => {
       return this.http
         .post(this.completeRegisterUrl, this.body, { headers: this.headers })
         .pipe(catchError(this.errorHandler));
-    }
+    });
   }
 
   // ====Login Token

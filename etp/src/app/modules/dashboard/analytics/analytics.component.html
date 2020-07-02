@@ -1,11 +1,11 @@
 <div class="wrap">
   <div class="container-fluid">
-    <h2 class="dash-title">Analytics</h2>
+    <h2 class="dash-title" i18n>Analytics</h2>
     <div class="card dash-card mb-2 shadow-sm">
       <div class="card-body">
         <div class="row">
           <div class="col-lg-4 col-md-5 col-sm-6">
-            <p>Energy Consumption</p>
+            <p i18n>Energy Consumption</p>
             <div *ngFor="let item of data.iotData; let i = index">
               <div id="chart" class="d-flex flex-wrap">
                 <apx-chart
@@ -28,6 +28,7 @@
               <ul class="nav justify-content-end">
                 <li class="nav-item">
                   <button
+                    i18n
                     mat-button
                     class="nav-link text-secondary"
                     [class.active]="day"
@@ -38,6 +39,7 @@
                 </li>
                 <li class="nav-item">
                   <button
+                    i18n
                     mat-button
                     class="nav-link text-secondary"
                     [class.active]="week"
@@ -48,6 +50,7 @@
                 </li>
                 <li class="nav-item">
                   <button
+                    i18n
                     mat-button
                     class="nav-link text-secondary"
                     [class.active]="month"
@@ -58,6 +61,7 @@
                 </li>
                 <li class="nav-item">
                   <button
+                    i18n
                     mat-button
                     class="nav-link text-secondary"
                     [class.active]="year"
@@ -95,7 +99,12 @@
             <div class="d-flex flex-wrap">
               <p class="mr-auto">{{ item.name | titlecase }}</p>
               <div ngbDropdown class="ml-auto justify-content-end">
-                <button class="toggle" id="dropdownBasic1" ngbDropdownToggle>
+                <button
+                  class="toggle"
+                  id="dropdownBasic1"
+                  ngbDropdownToggle
+                  i18n
+                >
                   This month &nbsp; &nbsp; &nbsp;
                 </button>
                 <div
@@ -103,9 +112,9 @@
                   aria-labelledby="dropdownBasic1"
                   class="bg-dark menu"
                 >
-                  <button ngbDropdownItem>This week</button>
-                  <button ngbDropdownItem>Today</button>
-                  <button ngbDropdownItem>This year</button>
+                  <button ngbDropdownItem i18n>This week</button>
+                  <button ngbDropdownItem i18n>Today</button>
+                  <button ngbDropdownItem i18n>This year</button>
                 </div>
               </div>
             </div>

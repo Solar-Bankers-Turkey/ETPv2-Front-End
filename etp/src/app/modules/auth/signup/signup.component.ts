@@ -37,7 +37,7 @@ export class SignupComponent implements OnInit {
     return this.signupForm.get('lastName');
   }
 
-  signup() {
+  async signup() {
     if (this.signupForm.invalid) {
       this.errorMsg = 'Please fill the provided fields correctly!';
     } else {
@@ -47,7 +47,7 @@ export class SignupComponent implements OnInit {
         Surname: this.lastName.value,
       };
 
-      return this.auth.signup(user).subscribe(
+      return (await this.auth.signup(user)).subscribe(
         (data) => {
           console.log(data);
           if (data['successCode'] < 1) {

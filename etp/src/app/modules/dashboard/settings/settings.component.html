@@ -11,7 +11,7 @@
             <span class="material-icons-round icon">
               widgets
             </span>
-            <button mat-button class="drop">
+            <button mat-button class="drop" i18n>
               Settings
             </button>
           </div>
@@ -24,7 +24,9 @@
             (set.sidetoggle === 'active' || (set.isTablet$ | async))
           "
         >
-          <h2 class="dash-title" *ngIf="!(set.isHandset$ | async)">Settings</h2>
+          <h2 class="dash-title" *ngIf="!(set.isHandset$ | async)" i18n>
+            Settings
+          </h2>
 
           <div *ngFor="let item of options" (click)="dropdown()">
             <device-settings [options]="item"></device-settings>
