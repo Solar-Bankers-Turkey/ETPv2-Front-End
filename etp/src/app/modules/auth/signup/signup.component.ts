@@ -49,12 +49,12 @@ export class SignupComponent implements OnInit {
 
       return (await this.auth.signup(user)).subscribe(
         (data) => {
-          console.log(data);
           if (data['successCode'] < 1) {
             this.errorMsg = data['message'];
+            localStorage.removeItem('etp-token');
           } else {
-            this.signupForm.reset();
             this.signedUp = true;
+            localStorage.removeItem('etp-token');
           }
         },
         (error) => {

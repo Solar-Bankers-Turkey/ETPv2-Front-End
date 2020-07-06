@@ -5,16 +5,15 @@ import { AuthService } from '@services/auth.service';
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuard implements CanActivate {
+export class DashboardGuard implements CanActivate {
   constructor(private asAuth: AuthService, public router: Router) {}
 
   canActivate(): boolean {
-    if (!this.asAuth.isAuthenticated()) {
-      localStorage.removeItem('etp-token');
-      localStorage.removeItem('etp-user');
-      this.router.navigate(['auth']);
+    if (this.asAuth.isAuthenticated()) {
+      this.router.navigate(['dashboard/overview']);
       return false;
     }
+
     return true;
   }
 }

@@ -1,8 +1,6 @@
-import { Component, OnInit, OnDestroy, Type } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { AuthService } from '@services/auth.service';
-import { DataService } from '@services/data.service';
 import { SettingsService } from '@services/settings.service';
 
 @Component({
@@ -13,14 +11,11 @@ import { SettingsService } from '@services/settings.service';
 export class SigninComponent implements OnInit {
   type: 'signin' | 'reset' = 'signin';
   signinForm: FormGroup;
-
   errorMsg = '';
 
   constructor(
     private fb: FormBuilder,
     private asAuth: AuthService,
-    private router: Router,
-    private info: DataService,
     public set: SettingsService
   ) {}
 
@@ -49,44 +44,30 @@ export class SigninComponent implements OnInit {
     return this.signinForm.get('password');
   }
 
-  signin() {
+  async signin() {
     if (this.signinForm.invalid) {
       this.errorMsg = 'Please fill the provided fields correctly!';
     } else {
       const email = this.email.value;
       const password = this.password.value;
 
-      return this.asAuth.login(email, password).subscribe(
-        (data) => {
-          console.log('Success!');
-          if (data['successCode'] <= 0) {
-            this.errorMsg = data['message'];
-          } else {
-            localStorage.setItem('etp-token', JSON.stringify(data));
-            this.asAuth.getCustomerInfo().subscribe(
-              (result) => {
-                if (result['successCode'] > 0) {
-                  this.signinForm.reset();
-                  localStorage.setItem(
-                    'etp-user',
-                    JSON.stringify(result['data'])
-                  );
-                  localStorage.setItem('etp-log', 'true');
-                  this.router.navigate(['/dashboard']);
-                } else {
-                  console.log({ result });
-                }
-              },
-              (err: any) => {
-                console.log(err);
-              }
-            );
+      await this.asAuth
+        .login(email, password)
+        .toPromise()
+        .then(
+          (data) => {
+            console.log('Success!');
+            if (data['successCode'] <= 0) {
+              this.errorMsg = data['message'];
+            } else {
+              localStorage.setItem('etp-token', JSON.stringify(data));
+            }
+          },
+          (error) => {
+            console.log(error);
           }
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
+        );
+      return this.asAuth.getCustomerInfo();
     }
   }
 }

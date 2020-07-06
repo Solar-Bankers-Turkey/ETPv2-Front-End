@@ -11,7 +11,7 @@ export class ProfileDetailsComponent implements OnInit {
   previewAvi;
   profileForm: FormGroup;
   data = this.asAuth.getUserInfo();
-  avi = this.data.image || '/assets/img/avi.png';
+  avi = this.data?.image || '/assets/img/avi.png';
 
   constructor(public asAuth: AuthService, public fb: FormBuilder) {}
   ngOnInit(): void {

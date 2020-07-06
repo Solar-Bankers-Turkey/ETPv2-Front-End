@@ -65,13 +65,13 @@ export class CompleteRegisterationComponent implements OnInit {
     } else {
       const user: RegisterComplete = {
         Id: this.Id,
-        Address: this.Address.value,
-        City: this.City.value,
-        Phone: this.Phone.value,
-        IdentityNumber: this.TcNum.value,
-        InvoiceNumber: this.EiNum.value,
-        BirthDate: this.BDate.value,
-        ShortLocation: this.Address.value + this.City.value + this.State.value,
+        Address: 'subway park avenue',
+        City: 'Izmir',
+        Phone: '05338768850',
+        IdentityNumber: '2304399939',
+        InvoiceNumber: '324235434',
+        BirthDate: '03.10.1997',
+        ShortLocation: '',
       };
 
       return (await this.asAuth.completeRegisteration(user)).subscribe(

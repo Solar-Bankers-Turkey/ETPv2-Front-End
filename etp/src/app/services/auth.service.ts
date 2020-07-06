@@ -4,6 +4,10 @@ import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { Router } from '@angular/router';
 import { Register, RegisterComplete } from '@models/interfaces';
+import { credentials } from '@models/settings-options';
+import { JwtHelperService } from '@auth0/angular-jwt';
+
+const jwtHelper = new JwtHelperService();
 
 @Injectable({
   providedIn: 'root',
@@ -11,17 +15,10 @@ import { Register, RegisterComplete } from '@models/interfaces';
 export class AuthService {
   customerUrl = '/customer-service/customer/getcustomershortinfo';
   registerUrl = '/customer-service/customer/register';
-  completeRegisterUrl = '/customer-service/customer/registrationcomplete';
+  completeRegisterUrl = '/customer-service/customer/registercomplete';
   loginUrl = '/identity-service/identity/login';
   body;
   authToken = false;
-  headers = {
-    'content-type': 'application/json',
-    Authorization: '',
-  };
-  authHeader = {
-    authorization: '',
-  };
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -35,63 +32,88 @@ export class AuthService {
       )
       .pipe(catchError(this.errorHandler));
   }
+
   errorHandler(error: HttpErrorResponse) {
     return throwError(error);
   }
 
   async defaultToken() {
     /* Get default token to sign in */
-    const email = 'clientadmin@solarbankers.org';
-    const password = 'client_serv_ffaa70';
-    this.login(email, password).subscribe(
-      (data) => {
-        if (data['successCode'] <= 0) {
-          console.log(data['message']);
-        } else {
-          localStorage.setItem('etp-token', JSON.stringify(data));
-          console.log('Success!');
-        }
-      },
-      (error) => console.error(error)
-    );
+    const email = credentials.email;
+    const password = credentials.password;
+    return this.login(email, password)
+      .toPromise()
+      .then(
+        (data) => {
+          if (data['successCode'] <= 0) {
+            console.log(data['message']);
+          } else {
+            localStorage.setItem('etp-token', JSON.stringify(data));
+            console.log('Success!');
+          }
+        },
+        (error) => console.error(error)
+      );
     /* Get default token to sign in */
   }
 
   // ====SignUp function
-  signup(user: Register) {
+  async signup(user: Register) {
     this.body = JSON.stringify(user);
-    this.defaultToken();
-    this.headers.Authorization = `Bearer ${this.getToken()}`;
+    await this.defaultToken();
+    const token = this.getToken();
     return this.http
       .post(this.registerUrl, this.body, {
-        headers: this.headers,
+        headers: {
+          'content-type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
       })
       .pipe(catchError(this.errorHandler));
   }
 
   // ====Get customer Info
   getCustomerInfo() {
-    this.authHeader.authorization = `Bearer ${this.getToken()}`;
     return this.http
       .get(this.customerUrl, {
-        headers: this.authHeader,
+        headers: {
+          Authorization: `Bearer ${this.getToken()}`,
+        },
+      })
+      .pipe(catchError(this.errorHandler))
+      .subscribe(
+        (result) => {
+          if (result['successCode'] > 0) {
+            localStorage.setItem('etp-user', JSON.stringify(result['data']));
+            this.router.navigate(['/dashboard']);
+          } else {
+            console.log({ result });
+          }
+        },
+        (err: any) => {
+          console.log(err);
+        }
+      );
+  }
+
+  //====CompleteRegisteration
+  async completeRegisteration(user: RegisterComplete) {
+    this.body = JSON.stringify(user);
+    await this.defaultToken();
+    const token = this.getToken();
+    return this.http
+      .post(this.completeRegisterUrl, user, {
+        headers: {
+          'content-type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
       })
       .pipe(catchError(this.errorHandler));
   }
 
-  //====CompleteRegisteration
-  completeRegisteration(user: RegisterComplete) {
-    this.body = JSON.stringify(user);
-    return this.defaultToken().then(() => {
-      return this.http
-        .post(this.completeRegisterUrl, this.body, { headers: this.headers })
-        .pipe(catchError(this.errorHandler));
-    });
-  }
-
   // ====Login Token
   getToken() {
-    return JSON.parse(localStorage.getItem('etp-token')).access_token;
+    return JSON.parse(localStorage.getItem('etp-token'))?.access_token;
   }
 
   // ====User Info
@@ -99,18 +121,14 @@ export class AuthService {
     return JSON.parse(localStorage.getItem('etp-user'));
   }
 
-  //===Login
-  isLoggedIn() {
-    return (
-      !!localStorage.getItem('etp-token') && !!localStorage.getItem('etplog')
-    );
+  isAuthenticated(): boolean {
+    return !jwtHelper.isTokenExpired(this.getToken());
   }
 
   //===Logout
   logout() {
     localStorage.removeItem('etp-token');
     localStorage.removeItem('etp-user');
-    localStorage.removeItem('etp-log');
     return this.router.navigate(['auth']);
   }
 }

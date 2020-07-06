@@ -1,12 +1,14 @@
 {
   "/customer-service/*": {
     "target": "http://142.93.165.55:5000",
-    "secure": false
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
   },
   "/identity-service/*": {
     "target": "http://142.93.165.55:5000",
-    "secure": false
-  },
-  "changeOrigin": true,
-  "logLevel": "debug"
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
 }

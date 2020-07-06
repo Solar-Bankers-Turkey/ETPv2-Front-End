@@ -63,3 +63,9 @@ export const paymentInfo = [
     status: 'none',
   },
 ];
+
+export const credentials = {
+  port: 'http://142.93.165.55:5000',
+  email: 'clientadmin@solarbankers.org',
+  password: 'client_serv_ffaa70',
+};

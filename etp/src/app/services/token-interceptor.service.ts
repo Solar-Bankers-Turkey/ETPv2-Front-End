@@ -12,10 +12,8 @@ import { AuthService } from './auth.service';
   providedIn: 'root',
 })
 export class TokenInterceptorService implements HttpInterceptor {
-  token;
-  constructor(private asAuth: AuthService) {
-    this.token = this.asAuth.getToken();
-  }
+  token = this.asAuth.getToken();
+  constructor(private asAuth: AuthService) {}
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler
