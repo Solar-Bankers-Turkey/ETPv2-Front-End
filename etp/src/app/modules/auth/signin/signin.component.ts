@@ -64,6 +64,8 @@ export class SigninComponent implements OnInit {
             }
           },
           (error) => {
+            this.errorMsg =
+              'There seems to be an error, please make sure you have entered your correct details';
             console.log(error);
           }
         );

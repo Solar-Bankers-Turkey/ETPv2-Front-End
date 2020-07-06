@@ -13,10 +13,12 @@ const jwtHelper = new JwtHelperService();
   providedIn: 'root',
 })
 export class AuthService {
-  customerUrl = '/customer-service/customer/getcustomershortinfo';
-  registerUrl = '/customer-service/customer/register';
-  completeRegisterUrl = '/customer-service/customer/registercomplete';
-  loginUrl = '/identity-service/identity/login';
+  customerUrl =
+    credentials.port + '/customer-service/customer/getcustomershortinfo';
+  registerUrl = credentials.port + '/customer-service/customer/register';
+  completeRegisterUrl =
+    credentials.port + '/customer-service/customer/registercomplete';
+  loginUrl = credentials.port + '/identity-service/identity/login';
   body;
   authToken = false;
 
@@ -87,6 +89,7 @@ export class AuthService {
             localStorage.setItem('etp-user', JSON.stringify(result['data']));
             this.router.navigate(['/dashboard']);
           } else {
+            localStorage.removeItem('etp-token');
             console.log({ result });
           }
         },

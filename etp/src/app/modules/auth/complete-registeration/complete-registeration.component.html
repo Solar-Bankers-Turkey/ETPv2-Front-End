@@ -2,7 +2,24 @@
   <h1 class="title" i18n>Few more steps..</h1>
   <div class="container">
     <div class="form">
-      <div class="error d-block w-auto" *ngIf="errorMsg">
+      <div *ngIf="completed" class="text-center d-block">
+        <div class="mail">
+          <img src="/assets/img/mail.png" alt="Mail sent" class="img-fluid" />
+        </div>
+        <div>
+          <p class="text-center confirm-sub">
+            Please check your email for your Login Info
+          </p>
+          <div class="mx-auto">
+            <a href="/auth" routerLink="/auth"
+              ><button mat-raised-button class="btn btn-primary px-4 my-3">
+                Log in
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="error d-block w-auto" *ngIf="errorMsg && !completed">
         <div class="alert alert-danger px-5" role="alert">
           <span i18n>{{ errorMsg | titlecase }}</span>
         </div>
@@ -10,6 +27,7 @@
       <form
         [formGroup]="regForm"
         class="d-block"
+        *ngIf="!completed"
         [class.w-50]="!(set.isHandset$ | async)"
         [class.w-75]="set.isHandset$ | async"
       >
@@ -91,7 +109,7 @@
         </button>
       </form>
     </div>
-    <div class="signup mb-2 mt-4">
+    <div class="signup mb-2 mt-4" *ngIf="!completed">
       <span routerLink="/auth/signin" i18n>Not now</span>
     </div>
   </div>

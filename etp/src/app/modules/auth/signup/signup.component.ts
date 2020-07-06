@@ -51,13 +51,13 @@ export class SignupComponent implements OnInit {
         (data) => {
           if (data['successCode'] < 1) {
             this.errorMsg = data['message'];
-            localStorage.removeItem('etp-token');
           } else {
             this.signedUp = true;
-            localStorage.removeItem('etp-token');
           }
+          localStorage.removeItem('etp-token');
         },
         (error) => {
+          this.errorMsg = 'There seems to be an error, please try again!';
           console.log({ error });
         }
       );

@@ -14,6 +14,8 @@ export class CompleteRegisterationComponent implements OnInit {
   regForm: FormGroup;
   errorMsg: any;
   Id: any;
+  completed = false;
+
   constructor(
     private fb: FormBuilder,
     public set: SettingsService,
@@ -60,25 +62,38 @@ export class CompleteRegisterationComponent implements OnInit {
   }
 
   async submit() {
+    const address = `${this.Address.value}`;
+    const city = `${this.City.value}`;
+    const phone = `${this.Phone.value}`;
+    const IdNo = `${this.EiNum}`;
+    const InNo = `${this.TcNum}`;
+    const birth = `${this.BDate.value}`;
+
     if (this.regForm.invalid) {
       this.errorMsg = 'Please Fill in the Provided Fields correctly';
     } else {
       const user: RegisterComplete = {
         Id: this.Id,
-        Address: 'subway park avenue',
-        City: 'Izmir',
-        Phone: '05338768850',
-        IdentityNumber: '2304399939',
-        InvoiceNumber: '324235434',
-        BirthDate: '03.10.1997',
+        Address: address.toString(),
+        City: city.toString(),
+        Phone: phone.toString(),
+        BirthDate: birth.toString(),
+        IdentityNumber: IdNo.toString(),
+        InvoiceNumber: InNo.toString(),
         ShortLocation: '',
       };
 
       return (await this.asAuth.completeRegisteration(user)).subscribe(
         (result) => {
-          console.log(result);
+          if (result['successCode'] === 1) {
+            this.completed = true;
+          } else {
+            this.errorMsg = "There's been an error, please try again";
+          }
+          localStorage.removeItem('etp-token');
         },
         (error) => {
+          this.errorMsg = 'There seems to be an error, please try again!';
           console.log(error);
         }
       );
