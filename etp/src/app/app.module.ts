@@ -12,6 +12,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 import { TokenInterceptorService } from '@services/token-interceptor.service';
 
 import { registerLocaleData } from '@angular/common';
@@ -33,6 +34,7 @@ registerLocaleData(localeTr);
     MatSelectModule,
     MatButtonModule,
     MatSlideToggleModule,
+    ScullyLibModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
