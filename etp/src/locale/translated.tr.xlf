@@ -2,6 +2,270 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" target-language="tr" datatype="plaintext" original="ng2.template">
     <body>
+     <trans-unit id="ngb.alert.close" datatype="html">
+        <source>Close</source>
+        <target>Kapat</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/alert/alert.d.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.previous" datatype="html">
+        <source>Previous</source>
+        <target>Önceki</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/carousel/carousel.d.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.next" datatype="html">
+        <source>Next</source>
+        <target>Sonraki</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/carousel/carousel.d.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.previous-month" datatype="html">
+        <source>Previous month</source>
+        <target>Geçtiğimiz ay</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.next-month" datatype="html">
+        <source>Next month</source>
+        <target>Gelecek ay</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-month" datatype="html">
+        <source>Select month</source>
+        <target>Ay seç</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-year" datatype="html">
+        <source>Select year</source>
+        <target>Yıl seç</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first" datatype="html">
+        <source>««</source>
+        <target>««</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous" datatype="html">
+        <source>«</source>
+        <target>«</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next" datatype="html">
+        <source>»</source>
+        <target>»</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last" datatype="html">
+        <source>»»</source>
+        <target>»»</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first-aria" datatype="html">
+        <source>First</source>
+        <target>İlk</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous-aria" datatype="html">
+        <source>Previous</source>
+        <target>Önceki</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next-aria" datatype="html">
+        <source>Next</source>
+        <target>Sonraki</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last-aria" datatype="html">
+        <source>Last</source>
+        <target>Son</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.progressbar.value" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{getPercentValue()}}"/>%</source>
+        <target></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/progressbar/progressbar.d.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
+        <source>Increment hours</source>
+        <target>Artış saatleri</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.HH" datatype="html">
+        <source>HH</source>
+        <target>HH</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.hours" datatype="html">
+        <source>Hours</source>
+        <target>Saatler</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
+        <source>Decrement hours</source>
+        <target>Azaltma saatleri</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
+        <source>Increment minutes</source>
+        <target>Dakikaları artır</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.MM" datatype="html">
+        <source>MM</source>
+        <target>AA</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.minutes" datatype="html">
+        <source>Minutes</source>
+        <target>Dakika</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
+        <source>Decrement minutes</source>
+        <target>Azaltma dakikaları</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
+        <source>Increment seconds</source>
+        <target>Saniye artışı</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.SS" datatype="html">
+        <source>SS</source>
+        <target>SS</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.seconds" datatype="html">
+        <source>Seconds</source>
+        <target>Saniye</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
+        <source>Decrement seconds</source>
+        <target>Saniye azaltma</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.PM" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ i18n.getAfternoonPeriod() }}"/></source>
+        <target><x id="INTERPOLATION" equiv-text="{{i18n.getAfternoonPeriod ()}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.AM" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ i18n.getMorningPeriod() }}"/></source>
+        <target><x id="INTERPOLATION" equiv-text="{{i18n.getMorningPeriod ()}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.toast.close-aria" datatype="html">
+        <source>Close</source>
+        <target>Kapat</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/toast/toast.d.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="31b3c04d6124017a5584a55c89e4da7b094f0a14" datatype="html">
         <source>
           SIGN IN
@@ -40,8 +304,8 @@
               Energy Trading Platform
             </source>
         <target>
-              &lt; <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
-              Enerji Ticaret Platformu
+              <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+              Enerji Ticaret Platformuna Hoşgeldiniz
             </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
@@ -80,7 +344,7 @@
       </trans-unit>
       <trans-unit id="ec984ab36f1da5f75ba43f9bd4b866ca9c7e6493" datatype="html">
         <source>Email Address</source>
-        <target>E</target>
+        <target>E-posta adresi </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
           <context context-type="linenumber">24</context>
@@ -154,7 +418,7 @@
       </trans-unit>
       <trans-unit id="5b8bf12f4e970c1db79251c5d4fed51dd6897d8e" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{ errorMsg | titlecase }}"/></source>
-        <target><x id="ENTERPOLATION" equiv-text="{{errorMsg | titlecase}}"/></target>
+        <target><x id="INTERPOLATION" equiv-text="{{errorMsg | titlecase}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
           <context context-type="linenumber">36</context>
@@ -347,7 +611,7 @@ Kaydet        </target>
       </trans-unit>
       <trans-unit id="b8a0cebab7133d4461e81405ecf034bf630826f6" datatype="html">
         <source> <x id="INTERPOLATION" equiv-text="{{ data?.name }}"/> </source>
-        <target> <x id="ENTERPOLATION" equiv-text="{{veri? .name}}"/> </target>
+        <target> <x id="INTERPOLATION" equiv-text="{{veri? .name}}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/sidebar/sidebar.component.html</context>
           <context context-type="linenumber">12</context>
@@ -371,7 +635,7 @@ Kaydet        </target>
       </trans-unit>
       <trans-unit id="a0d55e6c18613a87a6406d22931bfbf6e5822024" datatype="html">
         <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Analytics </source>
-        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/> <x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/> Analytics </target>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/> <x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/> Analitiği </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/sidebar/sidebar.component.html</context>
           <context context-type="linenumber">35</context>
@@ -403,7 +667,7 @@ Kaydet        </target>
       </trans-unit>
       <trans-unit id="649e2b41c4ccdfe5c27eca65da876cc5cfbe699f" datatype="html">
         <source>Hi, <x id="INTERPOLATION" equiv-text="{{ data?.surname }}"/></source>
-        <target>Merhaba, <x id="ENTERPOLATION" equiv-text="{{data? .Surname}}"/></target>
+        <target>Merhaba, <x id="INTERPOLATION" equiv-text="{{data? .Surname}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/profilebar/profilebar.component.html</context>
           <context context-type="linenumber">19</context>
@@ -435,7 +699,7 @@ Kaydet        </target>
       </trans-unit>
       <trans-unit id="fc4269725926ec796e826d50d6f54a9e05abf97b" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{               item.date | date: "HH:mm, MMMM yyy"             }}"/></source>
-        <target><x id="ENTERPOLATION" equiv-text="{{item.date | tarih: "SS: dd, MMMM yyy"}} "/></target>
+        <target><x id="INTERPOLATION" equiv-text="{{item.date | tarih: "SS: dd, MMMM yyy"}} "/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/log-msg/log-msg.component.html</context>
           <context context-type="linenumber">22</context>
@@ -446,7 +710,7 @@ Kaydet        </target>
               <x id="INTERPOLATION" equiv-text="{{ item.message }}"/>
             </source>
         <target>
-              <x id="ENTERPOLATION" equiv-text="{{item.message}}"/>
+              <x id="INTERPOLATION" equiv-text="{{item.message}}"/>
             </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/log-msg/log-msg.component.html</context>
@@ -458,7 +722,7 @@ Kaydet        </target>
         <x id="INTERPOLATION" equiv-text="{{ options.icon }}"/>
       </source>
         <target>
-        <x id="ENTERPOLATION" equiv-text="{{options.icon}}"/>
+        <x id="INTERPOLATION" equiv-text="{{options.icon}}"/>
       </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/settings-devices/settings-devices.component.html</context>
@@ -469,7 +733,7 @@ Kaydet        </target>
         <source>
         <x id="INTERPOLATION" equiv-text="{{ options.navName | titlecase }}"/></source>
         <target>
-        <x id="ENTERPOLATION" equiv-text="{{options.navName | titlecase}}"/></target>
+        <x id="INTERPOLATION" equiv-text="{{options.navName | titlecase}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/settings-devices/settings-devices.component.html</context>
           <context context-type="linenumber">18</context>
@@ -685,7 +949,7 @@ Kaydet        </target>
       </trans-unit>
       <trans-unit id="efbe55685ffef5af777f95b5b512f2c8b15cbfcc" datatype="html">
         <source>Analytics</source>
-        <target>Analiz</target>
+        <target>Analitiği</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
           <context context-type="linenumber">3</context>

@@ -1,6 +1,6 @@
 <nav id="sidebar" [class]="set.sidetoggle">
   <div class="etp sticky-top">
-    <a href="#">ETP</a>
+    <a href="#" i18n>ETP</a>
   </div>
   <div style="background-color: transparent;" class="sticky-top">
     <div class="sidebar-header">
@@ -9,7 +9,7 @@
         alt="{{ data?.name }}"
         class="img-fluid rounded-circle mb-3 img-thumbnail"
       />
-      <a class="mx-auto" routerLink="/dashboard" i18n> {{ data?.name }} </a>
+      <a class="mx-auto" routerLink="/dashboard"> {{ data?.name }} </a>
     </div>
   </div>
   <ul class="list-unstyled components">
@@ -46,7 +46,7 @@
       routerLink="/dashboard/history"
       routerLinkActive="active"
     >
-      <a><i class="fa fa-history" aria-hidden="true"></i> History</a>
+      <a i18n><i class="fa fa-history" aria-hidden="true"></i> History</a>
     </li>
     <li
       (click)="set.dismiss()"
