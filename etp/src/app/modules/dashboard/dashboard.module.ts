@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { SnippetsModule } from '../snippets/snippets.module';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NgApexchartsModule } from 'ng-apexcharts';
 
 // components
@@ -41,7 +40,6 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     DashboardRoutingModule,
     MatButtonModule,
     SnippetsModule,
-    NgxChartsModule,
     MatListModule,
     ReactiveFormsModule,
     NgApexchartsModule,
