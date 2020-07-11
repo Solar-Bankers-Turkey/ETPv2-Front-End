@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '@services/auth.service';
 import { SettingsService } from '@services/settings.service';
+import { SeoService } from '@services/seo.service';
 
 @Component({
   selector: 'app-signin',
@@ -16,10 +17,15 @@ export class SigninComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private asAuth: AuthService,
-    public set: SettingsService
+    public set: SettingsService,
+    private seo: SeoService
   ) {}
 
   ngOnInit(): void {
+    this.seo.generateTags({
+      title: 'Sign In - Energy Trading Platform',
+    });
+
     this.signinForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],

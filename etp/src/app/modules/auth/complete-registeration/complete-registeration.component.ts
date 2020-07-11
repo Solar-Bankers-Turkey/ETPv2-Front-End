@@ -4,6 +4,7 @@ import { SettingsService } from '@services/settings.service';
 import { ActivatedRoute } from '@angular/router';
 import { RegisterComplete } from '@models/interfaces';
 import { AuthService } from '@services/auth.service';
+import { SeoService } from '@services/seo.service';
 
 @Component({
   selector: 'app-complete-registeration',
@@ -20,10 +21,14 @@ export class CompleteRegisterationComponent implements OnInit {
     private fb: FormBuilder,
     public set: SettingsService,
     private route: ActivatedRoute,
-    private asAuth: AuthService
+    private asAuth: AuthService,
+    private seo: SeoService
   ) {}
 
   ngOnInit(): void {
+    this.seo.generateTags({
+      title: 'Complete Registeration - Energy Trading Platform',
+    });
     this.route.queryParams.subscribe((params) => {
       this.Id = params?.id;
     });
@@ -65,8 +70,8 @@ export class CompleteRegisterationComponent implements OnInit {
     const address = `${this.Address.value}`;
     const city = `${this.City.value}`;
     const phone = `${this.Phone.value}`;
-    const IdNo = `${this.EiNum}`;
-    const InNo = `${this.TcNum}`;
+    const IdNo = `${this.EiNum.value}`;
+    const InvNo = `${this.TcNum.value}`;
     const birth = `${this.BDate.value}`;
 
     if (this.regForm.invalid) {
@@ -79,9 +84,13 @@ export class CompleteRegisterationComponent implements OnInit {
         Phone: phone.toString(),
         BirthDate: birth.toString(),
         IdentityNumber: IdNo.toString(),
-        InvoiceNumber: InNo.toString(),
+        InvoiceNumber: InvNo.toString(),
         ShortLocation: '',
       };
+
+      console.log({ IdNo });
+      console.log({ InvNo });
+      console.log({ user });
 
       return (await this.asAuth.completeRegisteration(user)).subscribe(
         (result) => {

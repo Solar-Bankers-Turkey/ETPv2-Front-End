@@ -12,20 +12,35 @@ export class SeoService {
     private router: Router
   ) {}
 
-  generateTags({ title = '', description = '', image = '' }) {
+  generateTags({
+    title = '',
+    description = '',
+    image = '/assets/img/laptop-and-iphone.png',
+  }) {
     this.title.setTitle(title);
     this.meta.addTags([
       // Open Graph
+      { name: 'title', content: title },
+      { name: 'description', content: description },
+      // Open Graph
+      { property: 'og:type', content: 'website' },
       {
-        name: 'og:url',
+        property: 'og:url',
         content: `http://etp.solarbankers.org${this.router.url}`,
       },
-      { name: 'og:title', content: title },
-      { name: 'og:description', content: description },
-      { name: 'og:image', content: image },
+      { property: 'og:title', content: title },
+      { property: 'og:description', content: description },
+      { property: 'og:image', content: image },
+
       // Twitter Card
-      { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:site', content: '@fireship_dev' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: image },
+      { name: 'twitter:title', content: title },
+      {
+        name: 'twitter:url',
+        content: `http://etp.solarbankers.org${this.router.url}`,
+      },
     ]);
   }
 }

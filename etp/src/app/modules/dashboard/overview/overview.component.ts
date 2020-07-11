@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SettingsService } from '@services/settings.service';
+import { SeoService } from '@services/seo.service';
 
 @Component({
   selector: 'app-overview',
@@ -31,6 +32,10 @@ export class OverviewComponent implements OnInit {
     domain: ['#FFAB4F', '#1F8EFA', '#05C985'],
   };
 
-  constructor(public set: SettingsService) {}
-  ngOnInit(): void {}
+  constructor(public set: SettingsService, private seo: SeoService) {}
+  ngOnInit(): void {
+    this.seo.generateTags({
+      title: 'Dashboard - Energy Trading Platform',
+    });
+  }
 }

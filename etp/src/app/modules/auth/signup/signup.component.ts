@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '@services/auth.service';
 import { SettingsService } from '@services/settings.service';
 import { Register } from '@models/interfaces';
+import { SeoService } from '@services/seo.service';
 
 @Component({
   selector: 'app-signup',
@@ -16,10 +17,14 @@ export class SignupComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private auth: AuthService,
-    public set: SettingsService
+    public set: SettingsService,
+    private seo: SeoService
   ) {}
 
   ngOnInit(): void {
+    this.seo.generateTags({
+      title: 'Sign Up - Energy Trading Platform',
+    });
     this.signupForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       firstName: ['', [Validators.required]],
