@@ -15,10 +15,10 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { TokenInterceptorService } from '@services/token-interceptor.service';
 
-import { registerLocaleData } from '@angular/common';
-import localeTr from '@angular/common/locales/tr';
+// /import { registerLocaleData } from '@angular/common';
+// import localeTr from '@angular/common/locales/tr';
 
-registerLocaleData(localeTr);
+// registerLocaleData(localeTr);
 
 @NgModule({
   declarations: [AppComponent, ErrorComponent],
