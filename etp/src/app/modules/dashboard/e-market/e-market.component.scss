@@ -2,11 +2,12 @@
 
 .table-head {
   th {
-    font-weight: 300;
+    font-weight: 400;
     cursor: pointer;
     color: $shade2;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-size: 0.9rem;
   }
 }
 .table-data {
@@ -14,7 +15,7 @@
   height: 80px;
   vertical-align: middle;
   color: white;
-  font-weight: 400;
+  font-weight: 300;
   td {
     cursor: pointer;
     button {

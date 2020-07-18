@@ -15,7 +15,8 @@ import {
   ApexFill,
 } from 'ng-apexcharts';
 import { SettingsService } from './settings.service';
-import { log } from 'util';
+import { ForecastService } from './forecast.service';
+import { DatePipe } from '@angular/common';
 
 export type ChartOptions = {
   series: ApexAxisChartSeries;
@@ -39,6 +40,10 @@ export type ChartOptions = {
 })
 export class ChartsettingsService implements OnInit {
   //room radial chart
+  forecast;
+  weatherData = [];
+  datePipe = new DatePipe('en');
+
   @ViewChild('chart') chart: ChartComponent;
   roomOptions: Partial<ChartOptions> = {
     chart: {
@@ -295,8 +300,79 @@ export class ChartsettingsService implements OnInit {
     },
   };
 
+  //Weather forecast Chart
+  weatherForecastOptions: Partial<ChartOptions> = {
+    series: [],
+    chart: {
+      type: 'rangeBar',
+      height: 250,
+      toolbar: {
+        show: false,
+      },
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: '15',
+        startingShape: 'rounded',
+        endingShape: 'rounded',
+      },
+    },
+    grid: {
+      show: false,
+    },
+    xaxis: {
+      labels: {
+        show: true,
+        style: {
+          colors: '#869AAC',
+        },
+      },
+      axisBorder: {
+        show: false,
+      },
+      axisTicks: {
+        show: false,
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+  };
+
   domain = ['#1F8EFA', '#FFAB4F', '#05C985'];
-  constructor(public set: SettingsService) {}
+
+  constructor(public set: SettingsService, private cast: ForecastService) {}
 
   ngOnInit(): void {}
+
+  async forecastDetails() {
+    await this.cast
+      .getForecast()
+      .toPromise()
+      .then((data) => {
+        this.forecast = data;
+      });
+    console.log(this.forecast);
+    this.weatherData = [
+      {
+        name: 'Weekly Temperature',
+        data: this.forecast.daily.data.map((days) => ({
+          x: this.datePipe.transform(days.time, 'shortTime'),
+          y: [
+            this.getCelcius(days.temperatureMin),
+            this.getCelcius(days.temperatureMax),
+          ],
+        })),
+      },
+    ];
+
+    console.log(this.weatherData);
+    this.weatherForecastOptions.series = this.weatherData;
+    return this.forecast;
+  }
+
+  getCelcius(F) {
+    return ((5 / 9) * (F - 32)).toFixed(1);
+  }
 }

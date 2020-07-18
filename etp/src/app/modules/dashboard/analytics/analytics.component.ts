@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChartsettingsService } from '@services/chartsettings.service';
 import { DataService } from '@services/data.service';
 import { SettingsService } from '@services/settings.service';
+import { SeoService } from '@services/seo.service';
 
 @Component({
   selector: 'app-analytics',
@@ -17,8 +18,13 @@ export class AnalyticsComponent implements OnInit {
   constructor(
     public chart: ChartsettingsService,
     public data: DataService,
-    public set: SettingsService
+    public set: SettingsService,
+    private seo: SeoService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.seo.generateTags({
+      title: 'IOT device status  - Energy Trading Platform',
+    });
+  }
 }

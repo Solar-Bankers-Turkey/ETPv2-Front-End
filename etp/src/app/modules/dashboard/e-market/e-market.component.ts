@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { SettingsService } from '@services/settings.service';
+import { SeoService } from '@services/seo.service';
 
 @Component({
   selector: 'app-e-market',
@@ -63,7 +64,8 @@ export class EMarketComponent implements OnInit {
     private modalService: NgbModal,
     private fb: FormBuilder,
     public set: SettingsService,
-    public config: NgbModalConfig
+    public config: NgbModalConfig,
+    private seo: SeoService
   ) {
     config.backdrop = 'static';
     config.keyboard = false;
@@ -73,6 +75,9 @@ export class EMarketComponent implements OnInit {
     this.sellForm = this.fb.group({
       energy: [''],
       price: [''],
+    });
+    this.seo.generateTags({
+      title: 'Energy Market - Energy Trading Platform',
     });
   }
 

@@ -43,9 +43,35 @@
   }
 }
 
-.side {
-  border-left: 0.5px solid $darkbg;
-}
 .log {
   border-top: 0.5px solid $darkbg;
+}
+
+.bg-grey {
+  background-color: $darkbg !important;
+}
+.left-icon {
+  position: absolute;
+  top: 25%;
+  i {
+    font-size: 2.5rem;
+  }
+}
+
+.right {
+  margin-left: 80px;
+}
+.earn {
+  font-size: 24px;
+  font-weight: 300;
+  span {
+    font-size: 18px;
+    font-weight: 500;
+    color: $shade2;
+    letter-spacing: 2px !important;
+    text-transform: uppercase;
+  }
+}
+.grey {
+  color: $shade2;
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SettingsService } from '@services/settings.service';
 import { ChartsettingsService } from '@services/chartsettings.service';
+import { SeoService } from '@services/seo.service';
 
 @Component({
   selector: 'app-history',
@@ -17,7 +18,15 @@ export class HistoryComponent implements OnInit {
   line = false;
   bar = true;
 
-  constructor(public set: SettingsService, public data: ChartsettingsService) {}
+  constructor(
+    public set: SettingsService,
+    public data: ChartsettingsService,
+    private seo: SeoService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.seo.generateTags({
+      title: 'History - Energy Trading Platform',
+    });
+  }
 }

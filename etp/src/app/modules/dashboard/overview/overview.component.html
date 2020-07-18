@@ -4,13 +4,101 @@
     <div class="card dash-card shadow-sm">
       <div class="card-body">
         <div class="row">
-          <div class="col-md-6">
-            <p i18n>History of activities</p>
+          <div class="col-md-5 mb-5">
+            <div class="col-12 mx-auto">
+              <div class="card dash-card bg-grey shadow-sm my-5 py-2 px-3">
+                <p>
+                  Earnings
+                </p>
+                <div class="card-body position-relative">
+                  <div class="left-icon">
+                    <span class="material-icons h1">money</span>
+                  </div>
+                  <div class="right">
+                    <div class="d-block grey">Total</div>
+                    <p class="earn">3,500 <span>TL</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card dash-card shadow-sm bg-grey py-2 px-3">
+                <p>total co<sub>2</sub> savings</p>
+                <div class="card-body position-relative">
+                  <div class="left-icon">
+                    <i class="fas fa-industry f-2"></i>
+                  </div>
+                  <div class="right">
+                    <div class="d-block grey">Total</div>
+                    <p class="earn">29.99 <span>t</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-md-6 side"></div>
+          <div class="col-md-7">
+            <div id="chart" class="bg-grey p-3 shadow-sm dash-card">
+              <p i18n>Energy Balance Today</p>
+              <apx-chart
+                [series]="series"
+                [chart]="chart.lineOptions.chart"
+                [xaxis]="chart.lineOptions.xaxis"
+                [grid]="chart.lineOptions.grid"
+                [stroke]="stroke"
+                [tooltip]="chart.lineOptions.tooltip"
+                [colors]="colorScheme.domain"
+              ></apx-chart>
+            </div>
+          </div>
         </div>
-        <div class="log">
-          <log-msg></log-msg>
+        <div class="log my-3">
+          <div class="card dash-card py-2 px-3 my-4 border-0">
+            <p>
+              Forecast
+            </p>
+            <div class="card-body">
+              <div class="row">
+                <div
+                  class="dash-card bg-grey col-md-3 py-2 px-3 shadow h-50 mb-3"
+                >
+                  <p>Weather today</p>
+
+                  <div class="row mt-4 mb-2">
+                    <div class="col-5">
+                      <img
+                        src="/assets/svg/weather/050-sun.svg"
+                        alt="{{ today?.summary }}"
+                        class="img-fluid mx-2"
+                      />
+                    </div>
+                    <div class="col-7 my-auto">
+                      <h2 class="earn">
+                        {{ chart.getCelcius(today?.temperature) }}
+                        &deg; <span>C</span>
+                      </h2>
+                      <p class="grey">{{ today?.summary }}</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-md-8 offset-1"
+                  [class.my-5]="set.isHandset$ | async"
+                >
+                  <div id="chart" class="dash-card">
+                    <p class="pr-5">Temperature Over the week</p>
+                    <apx-chart
+                      [series]="chart.weatherForecastOptions.series"
+                      [chart]="chart.weatherForecastOptions.chart"
+                      [dataLabels]="chart.weatherForecastOptions.dataLabels"
+                      [plotOptions]="chart.weatherForecastOptions.plotOptions"
+                      [xaxis]="chart.barOptions.xaxis"
+                      [grid]="chart.weatherForecastOptions.grid"
+                      [yaxis]="chart.barOptions.yaxis"
+                    ></apx-chart>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

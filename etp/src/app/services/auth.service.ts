@@ -13,12 +13,10 @@ const jwtHelper = new JwtHelperService();
   providedIn: 'root',
 })
 export class AuthService {
-  customerUrl =
-    credentials.port + '/customer-service/customer/getcustomershortinfo';
-  registerUrl = credentials.port + '/customer-service/customer/register';
-  completeRegisterUrl =
-    credentials.port + '/customer-service/customer/registercomplete';
-  loginUrl = credentials.port + '/identity-service/identity/login';
+  customerUrl = '/customer-service/customer/getcustomershortinfo';
+  registerUrl = '/customer-service/customer/register';
+  completeRegisterUrl = '/customer-service/customer/registercomplete';
+  loginUrl = '/identity-service/identity/login';
   body;
   authToken = false;
 

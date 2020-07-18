@@ -10,5 +10,11 @@
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug"
+  },
+  "/forecast/*": {
+    "target": "https://api.darksky.net",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
   }
 }

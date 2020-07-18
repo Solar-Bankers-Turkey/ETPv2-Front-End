@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { SettingsService } from '@services/settings.service';
+import { SeoService } from '@services/seo.service';
 
 @Component({
   selector: 'app-nodes',
@@ -27,10 +28,14 @@ export class NodesComponent implements OnInit {
   constructor(
     public set: SettingsService,
     private modalService: NgbModal,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private seo: SeoService
   ) {}
 
   ngOnInit(): void {
+    this.seo.generateTags({
+      title: 'Solar Nodes - Energy Trading Platform',
+    });
     this.sellForm = this.fb.group({
       energy: [''],
       price: [''],
