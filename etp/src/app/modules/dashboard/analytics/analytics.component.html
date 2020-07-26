@@ -88,7 +88,46 @@
       </div>
     </div>
     <!-- Bottom cards  -->
-    <div class="row devices">
+    <div class="card dash-card shadow-sm h-100">
+      <div class="card-body">
+        <p>meter status control</p>
+        <div class="table-responsive">
+          <table class="table table-borderless table-vertical-center">
+            <thead>
+              <tr class="text-white table-head">
+                <th style="min-width: 80px;" i18n>District Name</th>
+                <th style="min-width: 80px;" i18n>Branch Name</th>
+                <th style="min-width: 80px;" i18n>Status Info</th>
+                <th style="min-width: 80px;" i18n>Modem serial number</th>
+                <th style="min-width: 80px;" i18n>Meter serial number</th>
+                <th style="min-width: 80px;" i18n>Meter name</th>
+                <th style="min-width: 80px;" i18n>Last read date</th>
+
+                <th style="min-width: 50px;" i18n></th>
+              </tr>
+            </thead>
+            <tbody class="py-5">
+              <tr class="table-data">
+                <td class="pt-4">Ege</td>
+                <td class="pt-4">TFTC - Urla</td>
+                <td class="pt-4">Data sending</td>
+                <td class="pt-4">a363a35d658df8d5</td>
+                <td class="pt-4">
+                  relay 3
+                </td>
+                <td class="pt-4">Clima 05</td>
+                <td class="pt-4">20.07.2020</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="row devices">
       <div
         class="col-xl-3 col-md-6"
         [class.cols]="!(set.isTablet$ | async)"
@@ -146,7 +185,7 @@
       </div>
     </div>
 
-    <!-- sparklines  -->
+    <!-- sparklines  
     <div class="row devices my-4">
       <div
         class="col-lg-3 col-sm-6"
@@ -186,6 +225,4 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+    </div> -->

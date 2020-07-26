@@ -6,7 +6,10 @@
     "etp": {
       "projectType": "application",
       "i18n": {
-        "sourceLocale": "en"
+        "sourceLocale": "en",
+        "locales": {
+          "tr": "src/locale/translated.tr.xlf"
+        }
       },
       "schematics": {
         "@schematics/angular:component": {
@@ -25,6 +28,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "localize": true,
             "aot": true,
             "assets": [
               "src/favicon.ico",
@@ -67,6 +71,16 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "tr": {
+              "localize": [
+                "tr"
+              ],
+              "aot": true,
+              "i18nFile": "src/locale/translated.tr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "tr",
+              "i18nMissingTranslation": "error"
             }
           }
         },
@@ -79,6 +93,12 @@
           "configurations": {
             "production": {
               "browserTarget": "etp:build:production"
+            },
+            "tr": {
+              "browserTarget": "etp:build:tr"
+            },
+            "en": {
+              "browserTarget": "etp:build:en"
             }
           }
         },

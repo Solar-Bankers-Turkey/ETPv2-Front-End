@@ -313,7 +313,7 @@ export class ChartsettingsService implements OnInit {
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: '15',
+        columnWidth: '17',
         startingShape: 'rounded',
         endingShape: 'rounded',
       },
@@ -357,22 +357,18 @@ export class ChartsettingsService implements OnInit {
     this.weatherData = [
       {
         name: 'Weekly Temperature',
-        data: this.forecast.daily.data.map((days) => ({
-          x: this.datePipe.transform(days.time, 'shortTime'),
-          y: [
-            this.getCelcius(days.temperatureMin),
-            this.getCelcius(days.temperatureMax),
-          ],
+        data: this.forecast.daily.map((days) => ({
+          x: this.datePipe.transform(days.dt, 'EEEE'),
+          y: [this.getCelcius(days.temp.min), this.getCelcius(days.temp.max)],
         })),
       },
     ];
 
-    console.log(this.weatherData);
     this.weatherForecastOptions.series = this.weatherData;
     return this.forecast;
   }
 
-  getCelcius(F) {
-    return ((5 / 9) * (F - 32)).toFixed(1);
+  getCelcius(K) {
+    return (K - 273.15).toFixed(1);
   }
 }

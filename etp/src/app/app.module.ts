@@ -10,7 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { NgApexchartsModule } from 'ng-apexcharts';
-import { CountUpModule } from 'ngx-countup';
 
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -35,7 +34,6 @@ import { TokenInterceptorService } from '@services/token-interceptor.service';
     MatSelectModule,
     MatButtonModule,
     MatSlideToggleModule,
-    CountUpModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

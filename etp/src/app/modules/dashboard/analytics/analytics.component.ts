@@ -7,7 +7,10 @@ import { SeoService } from '@services/seo.service';
 @Component({
   selector: 'app-analytics',
   templateUrl: './analytics.component.html',
-  styleUrls: ['./analytics.component.scss'],
+  styleUrls: [
+    './analytics.component.scss',
+    '../e-market/e-market.component.scss',
+  ],
 })
 export class AnalyticsComponent implements OnInit {
   time = new Date();

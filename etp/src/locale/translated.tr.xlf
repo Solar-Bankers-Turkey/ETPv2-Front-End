@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<xliff version="1.2"
+  xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" target-language="tr" datatype="plaintext" original="ng2.template">
     <body>
-     <trans-unit id="ngb.alert.close" datatype="html">
+      <trans-unit id="ngb.alert.close" datatype="html">
         <source>Close</source>
         <target>Kapat</target>
         <context-group purpose="location">
@@ -139,7 +140,9 @@
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.progressbar.value" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="{{getPercentValue()}}"/>%</source>
+        <source>
+          <x id="INTERPOLATION" equiv-text="{{getPercentValue()}}"/>
+%</source>
         <target></target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/progressbar/progressbar.d.ts</context>
@@ -243,16 +246,24 @@
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.PM" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="{{ i18n.getAfternoonPeriod() }}"/></source>
-        <target><x id="INTERPOLATION" equiv-text="{{i18n.getAfternoonPeriod ()}}"/></target>
+        <source>
+          <x id="INTERPOLATION" equiv-text="{{ i18n.getAfternoonPeriod() }}"/>
+        </source>
+        <target>
+          <x id="INTERPOLATION" equiv-text="{{i18n.getAfternoonPeriod ()}}"/>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
           <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.AM" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="{{ i18n.getMorningPeriod() }}"/></source>
-        <target><x id="INTERPOLATION" equiv-text="{{i18n.getMorningPeriod ()}}"/></target>
+        <source>
+          <x id="INTERPOLATION" equiv-text="{{ i18n.getMorningPeriod() }}"/>
+        </source>
+        <target>
+          <x id="INTERPOLATION" equiv-text="{{i18n.getMorningPeriod ()}}"/>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
           <context context-type="linenumber">77</context>
@@ -302,11 +313,11 @@
         <source>
               Welcome to <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
               Energy Trading Platform
-            </source>
+        </source>
         <target>
-              <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
               Enerji Ticaret Platformuna Hoşgeldiniz
-            </target>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
           <context context-type="linenumber">45</context>
@@ -320,1222 +331,1371 @@
           <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="64f48da6d8e2305e79b57fc8244814b1066a4688" datatype="html">
-        <source>Get green energy from the sun </source>
-        <target>Güneşten yeşil enerji alın </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/authhome/authhome.component.html</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="26fc417ae16ae93555af06b858dc25eca879570f" datatype="html">
+      <trans-unit id="f0badd6214f8ee72ceb29b3f43dfa61873f585f9" datatype="html">
         <source>
+          <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>
+Get green energy from the sun <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
+        <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          And sell on Energy Trading Platform
+      </source>
+      <target>
+        <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&amp; lt; span &amp; gt;"/>
+ Güneşten yeşil enerji alın <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&amp; lt; / span &amp; gt;"/>
+      <x id="LINE_BREAK" ctype="lb" equiv-text="&amp; lt; br /&gt;&gt;"/>
+          Ve Enerji Ticaret Platformu&apos;nda satış
+    </target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/authhome/authhome.component.html</context>
+      <context context-type="linenumber">5</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="ba4f24bf9bf3dc4db3d6bc1b8b63339295f0b806" datatype="html">
+    <source>Sign In</source>
+    <target>Oturum aç</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
+      <context context-type="linenumber">2</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="4d528d81243448524f3e1de53c8b67e41aa7639f" datatype="html">
+    <source>Forgot Password</source>
+    <target>Parolanızı mı unuttunuz</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
+      <context context-type="linenumber">3</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="26fc417ae16ae93555af06b858dc25eca879570f" datatype="html">
+    <source>
     Place your email in the field below. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
     We will send you a link with the instructions to follow.
-  </source>
-        <target>
+    </source>
+    <target>
     E-postanızı aşağıdaki alana yerleştirin. <x id="LINE_BREAK" ctype="lb" equiv-text="&amp; lt; br /&gt; gt"/>
     Size aşağıdaki talimatları içeren bir bağlantı göndereceğiz.
-  </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ec984ab36f1da5f75ba43f9bd4b866ca9c7e6493" datatype="html">
-        <source>Email Address</source>
-        <target>E-posta adresi </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
-          <context context-type="linenumber">24</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
-          <context context-type="linenumber">50</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="c32ef07f8803a223a83ed17024b38e8d82292407" datatype="html">
-        <source>Password</source>
-        <target>Parola</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
-          <context context-type="linenumber">35</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="f36e82dbae17eacc69267b0327c0ff48cf247b13" datatype="html">
-        <source>
+    </target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
+      <context context-type="linenumber">4</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="5b8bf12f4e970c1db79251c5d4fed51dd6897d8e" datatype="html">
+    <source>
+      <x id="INTERPOLATION" equiv-text="{{ errorMsg | titlecase }}"/>
+    </source>
+    <target>
+      <x id="INTERPOLATION" equiv-text="{{errorMsg | titlecase}}"/>
+    </target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
+      <context context-type="linenumber">12</context>
+    </context-group>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
+      <context context-type="linenumber">23</context>
+    </context-group>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
+      <context context-type="linenumber">24</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="ec984ab36f1da5f75ba43f9bd4b866ca9c7e6493" datatype="html">
+    <source>Email Address</source>
+    <target>E</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
+      <context context-type="linenumber">24</context>
+    </context-group>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
+      <context context-type="linenumber">37</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="c32ef07f8803a223a83ed17024b38e8d82292407" datatype="html">
+    <source>Password</source>
+    <target>Parola</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
+      <context context-type="linenumber">35</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="f36e82dbae17eacc69267b0327c0ff48cf247b13" datatype="html">
+    <source>
           RECOVER PASSWORD
-        </source>
-        <target>
+    </source>
+    <target>
           ŞİFRE KURTARMA
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
-          <context context-type="linenumber">60</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="404d32d7f0ad99387f33d2df3e542c89e08165c5" datatype="html">
-        <source>
+    </target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
+      <context context-type="linenumber">60</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="404d32d7f0ad99387f33d2df3e542c89e08165c5" datatype="html">
+    <source>
         Forgot your password?
-      </source>
-        <target>
+    </source>
+    <target>
         Parolanızı mı unuttunuz?
-      </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
-          <context context-type="linenumber">66</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6aa578528235e86d85b43610c2a2d611713bf2aa" datatype="html">
-        <source>
+    </target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
+      <context context-type="linenumber">66</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="6aa578528235e86d85b43610c2a2d611713bf2aa" datatype="html">
+    <source>
         Don&apos;t have an account?
-        <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>sign up<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
-      </source>
-        <target>
+      <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>
+sign up<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
+    </source>
+    <target>
         Hesabınız yok mu?
-        <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&amp; lt; span &amp; gt;"/> kaydolun <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&amp; lt; / span &amp; gt; "/>
-      </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
-          <context context-type="linenumber">72</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html">
-        <source>Login</source>
-        <target>Oturum aç</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
-          <context context-type="linenumber">78</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="28629af803ab8b5f6e995b17d486e6a1527e2a96" datatype="html">
-        <source>Sign Up</source>
-        <target>Kaydol</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
-          <context context-type="linenumber">2</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5b8bf12f4e970c1db79251c5d4fed51dd6897d8e" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="{{ errorMsg | titlecase }}"/></source>
-        <target><x id="INTERPOLATION" equiv-text="{{errorMsg | titlecase}}"/></target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
-          <context context-type="linenumber">36</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">7</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="c83b838d845690bcb897f775f53b5316535306dc" datatype="html">
-        <source>First Name</source>
-        <target>İsim</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
-          <context context-type="linenumber">61</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="166b2cc65003221ff5f3ec05d5baca41e6821396" datatype="html">
-        <source>Last Name</source>
-        <target>Soyisim</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
-          <context context-type="linenumber">71</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="cb8d289a76a599130f1dcbb33bddaf93f27da7ce" datatype="html">
-        <source>
+      <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&amp; lt; span &amp; gt;"/>
+ kaydolun <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&amp; lt; / span &amp; gt; "/>
+    </target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
+      <context context-type="linenumber">72</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html">
+    <source>Login</source>
+    <target>Oturum aç</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
+      <context context-type="linenumber">78</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="28629af803ab8b5f6e995b17d486e6a1527e2a96" datatype="html">
+    <source>Sign Up</source>
+    <target>Kaydol</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
+      <context context-type="linenumber">2</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="c83b838d845690bcb897f775f53b5316535306dc" datatype="html">
+    <source>First Name</source>
+    <target>İsim</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
+      <context context-type="linenumber">48</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="166b2cc65003221ff5f3ec05d5baca41e6821396" datatype="html">
+    <source>Last Name</source>
+    <target>Soyadı</target>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
+      <context context-type="linenumber">58</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="cb8d289a76a599130f1dcbb33bddaf93f27da7ce" datatype="html">
+    <source>
         By clicking sign up, you agree to the Solar Bankers User Agreement,
         Privacy Policy, and Cookie Policy.
-      </source>
-        <target>
+    </source>
+    <target>
         Kaydol&apos;a tıklayarak, Solar Bankacılar Kullanıcı Sözleşmesi&apos;ni kabul etmiş olursunuz,
         Gizlilik Politikası ve Çerez Politikası.
-      </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
-          <context context-type="linenumber">98</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="53413ec68b5fd59a0807701a751f88ab76901c10" datatype="html">
-        <source>
-      Already have <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>an<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
-      <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>a verified<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> account?
-      <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>sign in<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
-    </source>
-        <target>
-      Zaten <x id="START_LINK" ctype="xa" equiv-text="&amp; lt; a &amp; gt;"/> bir <x id="CLOSE_LINK" ctype="xa" equiv-text="&amp; lt; / a &amp; gt;"/>
-      <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&amp; lt; strong &amp; gt;"/> doğrulanmış bir <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&amp; lt; / güçlü &amp; gt; "/> hesap?
-      <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&amp; lt; span &amp; gt;"/> oturum açın <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&amp; lt; / span &amp; gt; "/>
     </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
-          <context context-type="linenumber">106</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="34557152cff7bc7db72a2a8706794d7fba4bac86" datatype="html">
-        <source>Reset Password</source>
-        <target>Şifreyi yenile</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/reset/reset.component.html</context>
-          <context context-type="linenumber">2</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4ad47fba753bd89ce442197653ce65004eff1e6d" datatype="html">
-        <source>Old Password</source>
-        <target>Eski Şifre</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/reset/reset.component.html</context>
-          <context context-type="linenumber">14</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="c7014c6360e94b236286b869c3fe0ea9911c0387" datatype="html">
-        <source>New Password</source>
-        <target>Yeni Şifre</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/reset/reset.component.html</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="b81fbd1b5d0723eba41870071d02065674bdd565" datatype="html">
-        <source>Confirm New Password</source>
-        <target>Yeni şifreyi onayla</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/reset/reset.component.html</context>
-          <context context-type="linenumber">31</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
-          <context context-type="linenumber">32</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2b4323730f99109b795d154fc9c29ba01d903713" datatype="html">
-        <source>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
+      <context context-type="linenumber">85</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="53413ec68b5fd59a0807701a751f88ab76901c10" datatype="html">
+    <source>
+      Already have <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>
+an<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+  <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>
+a verified<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+ account?
+<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>
+sign in<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
+</source>
+<target>
+      Zaten <x id="START_LINK" ctype="xa" equiv-text="&amp; lt; a &amp; gt;"/>
+ bir <x id="CLOSE_LINK" ctype="xa" equiv-text="&amp; lt; / a &amp; gt;"/>
+<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&amp; lt; strong &amp; gt;"/>
+ doğrulanmış bir <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&amp; lt; / güçlü &amp; gt; "/>
+ hesap?
+<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&amp; lt; span &amp; gt;"/>
+ oturum açın <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&amp; lt; / span &amp; gt; "/>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
+<context context-type="linenumber">93</context>
+</context-group>
+</trans-unit>
+<trans-unit id="34557152cff7bc7db72a2a8706794d7fba4bac86" datatype="html">
+<source>Reset Password</source>
+<target>Şifreyi yenile</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/reset/reset.component.html</context>
+<context context-type="linenumber">2</context>
+</context-group>
+</trans-unit>
+<trans-unit id="4ad47fba753bd89ce442197653ce65004eff1e6d" datatype="html">
+<source>Old Password</source>
+<target>eski şifre</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/reset/reset.component.html</context>
+<context context-type="linenumber">14</context>
+</context-group>
+</trans-unit>
+<trans-unit id="c7014c6360e94b236286b869c3fe0ea9911c0387" datatype="html">
+<source>New Password</source>
+<target>Yeni Şifre</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/reset/reset.component.html</context>
+<context context-type="linenumber">23</context>
+</context-group>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
+<context context-type="linenumber">23</context>
+</context-group>
+</trans-unit>
+<trans-unit id="b81fbd1b5d0723eba41870071d02065674bdd565" datatype="html">
+<source>Confirm New Password</source>
+<target>Yeni şifreyi onayla</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/reset/reset.component.html</context>
+<context context-type="linenumber">31</context>
+</context-group>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
+<context context-type="linenumber">32</context>
+</context-group>
+</trans-unit>
+<trans-unit id="2b4323730f99109b795d154fc9c29ba01d903713" datatype="html">
+<source>
           SAVE
-        </source>
-        <target>
-Kaydet        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/reset/reset.component.html</context>
-          <context context-type="linenumber">38</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ecf56050fea1c30b87adaaa762db1f0c5b76e23a" datatype="html">
-        <source>Few more steps..</source>
-        <target>Birkaç adım kaldı ..</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">2</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="db654f91d847f34e71ffb99268ff3a1807913421" datatype="html">
-        <source>Phone Number</source>
-        <target>Telefon numarası</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="729754dd19eb9ce0670b0aeb5a6ae60574c2c563" datatype="html">
-        <source>Address</source>
-        <target>Adres</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5c7012b5a926b32d9e45fefdcc8a1a3cb6f023d0" datatype="html">
-        <source>City</source>
-        <target>Şehir</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">33</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="873b72903b1858a9cd6c8967521030b4d7d1435b" datatype="html">
-        <source>State</source>
-        <target>Bölge</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">44</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="fceea851a54e4b23e4e52add78b2cc64126b6d68" datatype="html">
-        <source>Electric Invoice Number</source>
-        <target>Elektrik Abone Numarası</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">55</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7afcbdc57a6de86300c17a97a31e1fb1cfe0f76d" datatype="html">
-        <source>TC Number</source>
-        <target>TC Kimlik Numarası</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">64</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="c7958d835569ddb937a9c522e2505b9d86468ca5" datatype="html">
-        <source>Birth Date</source>
-        <target>Doğum Tarihi</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">73</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="a66f97ceb98f929c1d42681c688b985115b9e1e5" datatype="html">
-        <source>
+</source>
+<target>
+          KAYIT ETMEK
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/reset/reset.component.html</context>
+<context context-type="linenumber">38</context>
+</context-group>
+</trans-unit>
+<trans-unit id="ecf56050fea1c30b87adaaa762db1f0c5b76e23a" datatype="html">
+<source>Few more steps..</source>
+<target>Birkaç adım kaldı ..</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
+<context context-type="linenumber">2</context>
+</context-group>
+</trans-unit>
+<trans-unit id="269b3cfa65c5e33eaad94efe7f137d603d3c5583" datatype="html">
+<source>
+            Please check your email for your Login Info
+</source>
+<target>
+            Lütfen Giriş Bilgileriniz için e-postanızı kontrol edin
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
+<context context-type="linenumber">10</context>
+</context-group>
+</trans-unit>
+<trans-unit id="9ca30496504825dd4dc411862512e8c7541fa102" datatype="html">
+<source>
+                Log in
+</source>
+<target>
+                Oturum aç
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
+<context context-type="linenumber">15</context>
+</context-group>
+</trans-unit>
+<trans-unit id="db654f91d847f34e71ffb99268ff3a1807913421" datatype="html">
+<source>Phone Number</source>
+<target>Telefon numarası</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
+<context context-type="linenumber">36</context>
+</context-group>
+</trans-unit>
+<trans-unit id="729754dd19eb9ce0670b0aeb5a6ae60574c2c563" datatype="html">
+<source>Address</source>
+<target>Adres</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
+<context context-type="linenumber">45</context>
+</context-group>
+</trans-unit>
+<trans-unit id="5c7012b5a926b32d9e45fefdcc8a1a3cb6f023d0" datatype="html">
+<source>City</source>
+<target>Kent</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
+<context context-type="linenumber">51</context>
+</context-group>
+</trans-unit>
+<trans-unit id="873b72903b1858a9cd6c8967521030b4d7d1435b" datatype="html">
+<source>State</source>
+<target>Durum</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
+<context context-type="linenumber">62</context>
+</context-group>
+</trans-unit>
+<trans-unit id="fceea851a54e4b23e4e52add78b2cc64126b6d68" datatype="html">
+<source>Electric Invoice Number</source>
+<target>Elektrik Faturası Numarası</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
+<context context-type="linenumber">73</context>
+</context-group>
+</trans-unit>
+<trans-unit id="7afcbdc57a6de86300c17a97a31e1fb1cfe0f76d" datatype="html">
+<source>TC Number</source>
+<target>TC Numarası</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
+<context context-type="linenumber">82</context>
+</context-group>
+</trans-unit>
+<trans-unit id="c7958d835569ddb937a9c522e2505b9d86468ca5" datatype="html">
+<source>Birth Date</source>
+<target>Doğum günü</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
+<context context-type="linenumber">91</context>
+</context-group>
+</trans-unit>
+<trans-unit id="a66f97ceb98f929c1d42681c688b985115b9e1e5" datatype="html">
+<source>
           COMPLETE MY ACCOUNT
-        </source>
-        <target>
+</source>
+<target>
           HESABIMI TAMAMLAYIN
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">89</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="a817f195b240c87bee12800ba91dd3e8d3ff45f4" datatype="html">
-        <source>Not now</source>
-        <target>Şimdi değil</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">95</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="b8a0cebab7133d4461e81405ecf034bf630826f6" datatype="html">
-        <source> <x id="INTERPOLATION" equiv-text="{{ data?.name }}"/> </source>
-        <target> <x id="INTERPOLATION" equiv-text="{{veri? .name}}"/> </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/sidebar/sidebar.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="9ced3f7217d7fdac7d309b6d8ad9a8446662ce3a" datatype="html">
-        <source> <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Overview</source>
-        <target> <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/> <x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/> Genel Bakış</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/sidebar/sidebar.component.html</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3e28e471a3878ca8a1aaabd1d7b2af8ff353e962" datatype="html">
-        <source> <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Energy Market </source>
-        <target> <x id="START_ITALIC_TEXT" ctype="xi" equiv-text="&amp; lt; i &amp; gt;"/> <x id="CLOSE_ITALIC_TEXT" ctype="xi" equiv-text="&amp; lt; / i &amp; gt;"/> Enerji Market </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/sidebar/sidebar.component.html</context>
-          <context context-type="linenumber">28</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="a0d55e6c18613a87a6406d22931bfbf6e5822024" datatype="html">
-        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Analytics </source>
-        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/> <x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/> Analitiği </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/sidebar/sidebar.component.html</context>
-          <context context-type="linenumber">35</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="87669f21d8286edba47f1d738d795f088bc268c8" datatype="html">
-        <source> <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Settings</source>
-        <target> <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/> <x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/> Ayarlar</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/sidebar/sidebar.component.html</context>
-          <context context-type="linenumber">56</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="0a6f1af83778cabf7073a3731f6e6c103d5c79b8" datatype="html">
-        <source> <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Solar Node</source>
-        <target> <x id="START_ITALIC_TEXT" ctype="xi" equiv-text="&amp; lt; i &amp; gt;"/> <x id="CLOSE_ITALIC_TEXT" ctype="xi" equiv-text="&amp; lt; / i &amp; gt;"/> Solar düğüm</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/sidebar/sidebar.component.html</context>
-          <context context-type="linenumber">63</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="19863bae38dd9f5492a303fb7a56c033acae4638" datatype="html">
-        <source>RELOAD</source>
-        <target>TEKRAR YÜKLE</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/topmenu/topmenu.component.html</context>
-          <context context-type="linenumber">11</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="649e2b41c4ccdfe5c27eca65da876cc5cfbe699f" datatype="html">
-        <source>Hi, <x id="INTERPOLATION" equiv-text="{{ data?.surname }}"/></source>
-        <target>Merhaba, <x id="INTERPOLATION" equiv-text="{{data? .Surname}}"/></target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/profilebar/profilebar.component.html</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="a002c0dfcb73331fc141987912beb45d704cb519" datatype="html">
-        <source>
-    <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Settings
-  </source>
-        <target>
-    <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/> <x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/> Ayarlar
-  </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/profilebar/profilebar.component.html</context>
-          <context context-type="linenumber">32</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ffe0d5e7c72689ee2c27597132d21ba466b9324f" datatype="html">
-        <source>
-    <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Logout
-  </source>
-        <target>
-    <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/> <x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/> Çıkış
-  </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/profilebar/profilebar.component.html</context>
-          <context context-type="linenumber">35</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="fc4269725926ec796e826d50d6f54a9e05abf97b" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="{{               item.date | date: "HH:mm, MMMM yyy"             }}"/></source>
-        <target><x id="INTERPOLATION" equiv-text="{{item.date | tarih: "SS: dd, MMMM yyy"}} "/></target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/log-msg/log-msg.component.html</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="9015197978a25dc7e945e8754a26d581620bcde4" datatype="html">
-        <source>
-              <x id="INTERPOLATION" equiv-text="{{ item.message }}"/>
-            </source>
-        <target>
-              <x id="INTERPOLATION" equiv-text="{{item.message}}"/>
-            </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/log-msg/log-msg.component.html</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="310b1ce61546f0237eab470e0daa5707c28b1edc" datatype="html">
-        <source>
-        <x id="INTERPOLATION" equiv-text="{{ options.icon }}"/>
-      </source>
-        <target>
-        <x id="INTERPOLATION" equiv-text="{{options.icon}}"/>
-      </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/settings-devices/settings-devices.component.html</context>
-          <context context-type="linenumber">9</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="f013fb2b67a18a7e3b99800bed3b0e13dec2c40b" datatype="html">
-        <source>
-        <x id="INTERPOLATION" equiv-text="{{ options.navName | titlecase }}"/></source>
-        <target>
-        <x id="INTERPOLATION" equiv-text="{{options.navName | titlecase}}"/></target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/settings-devices/settings-devices.component.html</context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="e95ae009d0bdb45fcc656e8b65248cf7396080d5" datatype="html">
-        <source>Overview</source>
-        <target>genel bakış</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/overview/overview.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="07ae9d024029476501644a3252045a0c11070a81" datatype="html">
-        <source>History of activities</source>
-        <target>Faaliyetlerin tarihçesi</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/overview/overview.component.html</context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
-          <context context-type="linenumber">36</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1062f6bac8ec0271cffbd4044b5065e5731c0506" datatype="html">
-        <source>Energy Market</source>
-        <target>Enerji Marketi</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="328c759c9dd77f41866119252dca13c72c980344" datatype="html">
-        <source>Seller</source>
-        <target>satıcı</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ed31c09fd77c36238c13d83635f3fe5294c733d2" datatype="html">
-        <source>Location</source>
-        <target>Lokasyon</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="cd8c07ee71d02a75bd9604fb099f22fc3d5d25e8" datatype="html">
-        <source>Supply</source>
-        <target>Arz</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">24</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4d6ee53858628de558a18623894a03c8673bce9e" datatype="html">
-        <source>Price</source>
-        <target>Fiyat</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">25</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2f933b826a570836cab04f683970a2d22068458c" datatype="html">
-        <source>Date</source>
-        <target>tarih</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">26</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="b75b39c8db87c6137356c4224e6e54a07869322a" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
+<context context-type="linenumber">107</context>
+</context-group>
+</trans-unit>
+<trans-unit id="a817f195b240c87bee12800ba91dd3e8d3ff45f4" datatype="html">
+<source>Not now</source>
+<target>Şimdi değil</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
+<context context-type="linenumber">113</context>
+</context-group>
+</trans-unit>
+<trans-unit id="ab563084066ed1aaa72ad97e85507678765d30d8" datatype="html">
+<source>ETP</source>
+<target>ETP</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/sidebar/sidebar.component.html</context>
+<context context-type="linenumber">3</context>
+</context-group>
+</trans-unit>
+<trans-unit id="9ced3f7217d7fdac7d309b6d8ad9a8446662ce3a" datatype="html">
+<source>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>
+ Overview</source>
+<target>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/>
+ Genel Bakış</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/sidebar/sidebar.component.html</context>
+<context context-type="linenumber">21</context>
+</context-group>
+</trans-unit>
+<trans-unit id="3e28e471a3878ca8a1aaabd1d7b2af8ff353e962" datatype="html">
+<source>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>
+ Energy Market </source>
+<target>
+<x id="START_ITALIC_TEXT" ctype="xi" equiv-text="&amp; lt; i &amp; gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="xi" equiv-text="&amp; lt; / i &amp; gt;"/>
+ Enerji Market </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/sidebar/sidebar.component.html</context>
+<context context-type="linenumber">28</context>
+</context-group>
+</trans-unit>
+<trans-unit id="a0d55e6c18613a87a6406d22931bfbf6e5822024" datatype="html">
+<source>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>
+ Analytics </source>
+<target>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/>
+ Analytics </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/sidebar/sidebar.component.html</context>
+<context context-type="linenumber">35</context>
+</context-group>
+</trans-unit>
+<trans-unit id="56d46649c2044f170961bd48f10f16eee5301cb5" datatype="html">
+<source>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>
+ History</source>
+<target>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/>
+ Geçmiş</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/sidebar/sidebar.component.html</context>
+<context context-type="linenumber">49</context>
+</context-group>
+</trans-unit>
+<trans-unit id="87669f21d8286edba47f1d738d795f088bc268c8" datatype="html">
+<source>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>
+ Settings</source>
+<target>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/>
+ Ayarlar</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/sidebar/sidebar.component.html</context>
+<context context-type="linenumber">56</context>
+</context-group>
+</trans-unit>
+<trans-unit id="0a6f1af83778cabf7073a3731f6e6c103d5c79b8" datatype="html">
+<source>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>
+ Solar Node</source>
+<target>
+<x id="START_ITALIC_TEXT" ctype="xi" equiv-text="&amp; lt; i &amp; gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="xi" equiv-text="&amp; lt; / i &amp; gt;"/>
+ Solar düğüm</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/sidebar/sidebar.component.html</context>
+<context context-type="linenumber">63</context>
+</context-group>
+</trans-unit>
+<trans-unit id="19863bae38dd9f5492a303fb7a56c033acae4638" datatype="html">
+<source>RELOAD</source>
+<target>TEKRAR YÜKLE</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/topmenu/topmenu.component.html</context>
+<context context-type="linenumber">11</context>
+</context-group>
+</trans-unit>
+<trans-unit id="649e2b41c4ccdfe5c27eca65da876cc5cfbe699f" datatype="html">
+<source>Hi, <x id="INTERPOLATION" equiv-text="{{ data?.surname }}"/>
+</source>
+<target>Merhaba, <x id="INTERPOLATION" equiv-text="{{data? .Surname}}"/>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/profilebar/profilebar.component.html</context>
+<context context-type="linenumber">19</context>
+</context-group>
+</trans-unit>
+<trans-unit id="a002c0dfcb73331fc141987912beb45d704cb519" datatype="html">
+<source>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>
+ Settings
+</source>
+<target>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/>
+ Ayarlar
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/profilebar/profilebar.component.html</context>
+<context context-type="linenumber">32</context>
+</context-group>
+</trans-unit>
+<trans-unit id="ffe0d5e7c72689ee2c27597132d21ba466b9324f" datatype="html">
+<source>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>
+ Logout
+</source>
+<target>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/>
+<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/>
+ Çıkış
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/profilebar/profilebar.component.html</context>
+<context context-type="linenumber">35</context>
+</context-group>
+</trans-unit>
+<trans-unit id="fc4269725926ec796e826d50d6f54a9e05abf97b" datatype="html">
+<source>
+<x id="INTERPOLATION" equiv-text="{{               item.date | date: &quot;HH:mm, MMMM yyy&quot;             }}"/>
+</source>
+<target>
+<x id="INTERPOLATION" equiv-text="{{item.date | tarih: &quot;SS: dd, MMMM yyy&quot;}} "/>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/log-msg/log-msg.component.html</context>
+<context context-type="linenumber">22</context>
+</context-group>
+</trans-unit>
+<trans-unit id="9015197978a25dc7e945e8754a26d581620bcde4" datatype="html">
+<source>
+<x id="INTERPOLATION" equiv-text="{{ item.message }}"/>
+</source>
+<target>
+<x id="INTERPOLATION" equiv-text="{{item.message}}"/>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/log-msg/log-msg.component.html</context>
+<context context-type="linenumber">27</context>
+</context-group>
+</trans-unit>
+<trans-unit id="310b1ce61546f0237eab470e0daa5707c28b1edc" datatype="html">
+<source>
+<x id="INTERPOLATION" equiv-text="{{ options.icon }}"/>
+</source>
+<target>
+<x id="INTERPOLATION" equiv-text="{{options.icon}}"/>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/settings-devices/settings-devices.component.html</context>
+<context context-type="linenumber">9</context>
+</context-group>
+</trans-unit>
+<trans-unit id="f013fb2b67a18a7e3b99800bed3b0e13dec2c40b" datatype="html">
+<source>
+<x id="INTERPOLATION" equiv-text="{{ options.navName | titlecase }}"/>
+</source>
+<target>
+<x id="INTERPOLATION" equiv-text="{{options.navName | titlecase}}"/>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/settings-devices/settings-devices.component.html</context>
+<context context-type="linenumber">18</context>
+</context-group>
+</trans-unit>
+<trans-unit id="e95ae009d0bdb45fcc656e8b65248cf7396080d5" datatype="html">
+<source>Overview</source>
+<target>genel bakış</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/overview/overview.component.html</context>
+<context context-type="linenumber">3</context>
+</context-group>
+</trans-unit>
+<trans-unit id="07ae9d024029476501644a3252045a0c11070a81" datatype="html">
+<source>History of activities</source>
+<target>Faaliyetlerin tarihçesi</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/overview/overview.component.html</context>
+<context context-type="linenumber">8</context>
+</context-group>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
+<context context-type="linenumber">36</context>
+</context-group>
+</trans-unit>
+<trans-unit id="1062f6bac8ec0271cffbd4044b5065e5731c0506" datatype="html">
+<source>Energy Market</source>
+<target>Enerji Piyasası</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">6</context>
+</context-group>
+</trans-unit>
+<trans-unit id="328c759c9dd77f41866119252dca13c72c980344" datatype="html">
+<source>Seller</source>
+<target>satıcı</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">22</context>
+</context-group>
+</trans-unit>
+<trans-unit id="ed31c09fd77c36238c13d83635f3fe5294c733d2" datatype="html">
+<source>Location</source>
+<target>yer</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">23</context>
+</context-group>
+</trans-unit>
+<trans-unit id="cd8c07ee71d02a75bd9604fb099f22fc3d5d25e8" datatype="html">
+<source>Supply</source>
+<target>Arz</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">24</context>
+</context-group>
+</trans-unit>
+<trans-unit id="4d6ee53858628de558a18623894a03c8673bce9e" datatype="html">
+<source>Price</source>
+<target>Fiyat</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">25</context>
+</context-group>
+</trans-unit>
+<trans-unit id="2f933b826a570836cab04f683970a2d22068458c" datatype="html">
+<source>Date</source>
+<target>tarih</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">26</context>
+</context-group>
+</trans-unit>
+<trans-unit id="b75b39c8db87c6137356c4224e6e54a07869322a" datatype="html">
+<source>
                     BUY
-                  </source>
-        <target>
+</source>
+<target>
                     AL
-                  </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">51</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="d81b3979a3045855e54689e1dae2bf3b2feeb8fc" datatype="html">
-        <source>Add new sell order</source>
-        <target>Satın alma emrini ver</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">68</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="c2ad993a5411d0cb449e886acf850c529b4e564c" datatype="html">
-        <source>Sell from battery</source>
-        <target>Pilden Sat</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">87</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="f13c3a7687e1adb51286113e4061b31a2d2507a0" datatype="html">
-        <source> Price </source>
-        <target> Fiyat </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">106</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1a9d08f632832af58143df4ff0d5ea1edc5c6b14" datatype="html">
-        <source>Supply Created Successfully</source>
-        <target>Arz Başarıyla Oluşturuldu</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">136</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="35d035552a3b9e0fb0d9be51e18575b2ed727678" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">51</context>
+</context-group>
+</trans-unit>
+<trans-unit id="d81b3979a3045855e54689e1dae2bf3b2feeb8fc" datatype="html">
+<source>Add new sell order</source>
+<target>Yeni satış siparişi ekle</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">68</context>
+</context-group>
+</trans-unit>
+<trans-unit id="c2ad993a5411d0cb449e886acf850c529b4e564c" datatype="html">
+<source>Sell from battery</source>
+<target>Aküden satış</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">87</context>
+</context-group>
+</trans-unit>
+<trans-unit id="f13c3a7687e1adb51286113e4061b31a2d2507a0" datatype="html">
+<source> Price </source>
+<target> Fiyat </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">106</context>
+</context-group>
+</trans-unit>
+<trans-unit id="1a9d08f632832af58143df4ff0d5ea1edc5c6b14" datatype="html">
+<source>Supply Created Successfully</source>
+<target>Arz Başarıyla Oluşturuldu</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">136</context>
+</context-group>
+</trans-unit>
+<trans-unit id="35d035552a3b9e0fb0d9be51e18575b2ed727678" datatype="html">
+<source>
         CANCEL
-      </source>
-        <target>
-        İPTAL ET
-      </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">143</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">242</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="f2b03ebf22a4bbee9e3c52b68b90f5f002646661" datatype="html">
-        <source>
+</source>
+<target>
+        İPTAL ETMEK
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">143</context>
+</context-group>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">242</context>
+</context-group>
+</trans-unit>
+<trans-unit id="f2b03ebf22a4bbee9e3c52b68b90f5f002646661" datatype="html">
+<source>
         CREATE SUPPLY
-      </source>
-        <target>
-        ARZ OLUŞTUR
-      </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">151</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="0f9ce30d5ff7bbdda7bace433f9146fb4ee6ac2c" datatype="html">
-        <source>
+</source>
+<target>
+        TEDARİK OLUŞTUR
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">151</context>
+</context-group>
+</trans-unit>
+<trans-unit id="0f9ce30d5ff7bbdda7bace433f9146fb4ee6ac2c" datatype="html">
+<source>
         CLOSE
-      </source>
-        <target>
+</source>
+<target>
         KAPAT
-      </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">163</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">262</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="f79203546dedf667c305ea78a740fee4aac26279" datatype="html">
-        <source>Buy Electricity</source>
-        <target>Elektrik Satın Al</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">175</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="a9057b2aec196d4231459781fddc81c13c619eb6" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">163</context>
+</context-group>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">262</context>
+</context-group>
+</trans-unit>
+<trans-unit id="f79203546dedf667c305ea78a740fee4aac26279" datatype="html">
+<source>Buy Electricity</source>
+<target>Elektrik Satın Al</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">175</context>
+</context-group>
+</trans-unit>
+<trans-unit id="a9057b2aec196d4231459781fddc81c13c619eb6" datatype="html">
+<source>
                   Supply
-                </source>
-        <target>
+</source>
+<target>
                   Arz
-                </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">199</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="9ca7f1cab2eb15b1f6e770f03f4df57fee41e442" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">199</context>
+</context-group>
+</trans-unit>
+<trans-unit id="9ca7f1cab2eb15b1f6e770f03f4df57fee41e442" datatype="html">
+<source>
                   Price
-                </source>
-        <target>
+</source>
+<target>
                   Fiyat
-                </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">205</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="01a1257c04b3c77f85f123aa7cd79145e8c6b10f" datatype="html">
-        <source>Purchase Successful</source>
-        <target>Satın Alma Başarılı</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">233</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="85c190192bf8ef9910c5b89d593582dbcf7e706f" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">205</context>
+</context-group>
+</trans-unit>
+<trans-unit id="01a1257c04b3c77f85f123aa7cd79145e8c6b10f" datatype="html">
+<source>Purchase Successful</source>
+<target>Satın Alma Başarılı</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">233</context>
+</context-group>
+</trans-unit>
+<trans-unit id="85c190192bf8ef9910c5b89d593582dbcf7e706f" datatype="html">
+<source>
         BUY ORDER
-      </source>
-        <target>
+</source>
+<target>
         SİPARİŞ AL
-      </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
-          <context context-type="linenumber">250</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="efbe55685ffef5af777f95b5b512f2c8b15cbfcc" datatype="html">
-        <source>Analytics</source>
-        <target>Analitiği</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4e715255c5b06d1554bfdf532fd87d5bfac43899" datatype="html">
-        <source>Energy Consumption</source>
-        <target>Enerji tüketimi</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ef96497160c82f5ff365faf31dfa3a611a3062c5" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/e-market/e-market.component.html</context>
+<context context-type="linenumber">250</context>
+</context-group>
+</trans-unit>
+<trans-unit id="efbe55685ffef5af777f95b5b512f2c8b15cbfcc" datatype="html">
+<source>Analytics</source>
+<target>analitik</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
+<context context-type="linenumber">3</context>
+</context-group>
+</trans-unit>
+<trans-unit id="4e715255c5b06d1554bfdf532fd87d5bfac43899" datatype="html">
+<source>Energy Consumption</source>
+<target>Enerji tüketimi</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
+<context context-type="linenumber">8</context>
+</context-group>
+</trans-unit>
+<trans-unit id="ef96497160c82f5ff365faf31dfa3a611a3062c5" datatype="html">
+<source>
                     DAY
-                  </source>
-        <target>
+</source>
+<target>
                     GÜN
-                  </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
-          <context context-type="linenumber">36</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
-          <context context-type="linenumber">65</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="f29924a0dd0c552bf24edc598e491b403f22aaa2" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
+<context context-type="linenumber">36</context>
+</context-group>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
+<context context-type="linenumber">65</context>
+</context-group>
+</trans-unit>
+<trans-unit id="f29924a0dd0c552bf24edc598e491b403f22aaa2" datatype="html">
+<source>
                     WEEK
-                  </source>
-        <target>
+</source>
+<target>
                     HAFTA
-                  </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
-          <context context-type="linenumber">47</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
-          <context context-type="linenumber">76</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="516b92202442dcc5ebf03d4c556b76706a3b9fea" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
+<context context-type="linenumber">47</context>
+</context-group>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
+<context context-type="linenumber">76</context>
+</context-group>
+</trans-unit>
+<trans-unit id="516b92202442dcc5ebf03d4c556b76706a3b9fea" datatype="html">
+<source>
                     MONTH
-                  </source>
-        <target>
+</source>
+<target>
                     AY
-                  </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
-          <context context-type="linenumber">58</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
-          <context context-type="linenumber">87</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="991c0706deb3eedeba239bb9de08d1023e6917d7" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
+<context context-type="linenumber">58</context>
+</context-group>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
+<context context-type="linenumber">87</context>
+</context-group>
+</trans-unit>
+<trans-unit id="991c0706deb3eedeba239bb9de08d1023e6917d7" datatype="html">
+<source>
                     YEAR
-                  </source>
-        <target>
+</source>
+<target>
                     YIL
-                  </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
-          <context context-type="linenumber">69</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
-          <context context-type="linenumber">98</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="e7bd552132166ea3513a6b9406a8886d74b8d136" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
+<context context-type="linenumber">69</context>
+</context-group>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
+<context context-type="linenumber">98</context>
+</context-group>
+</trans-unit>
+<trans-unit id="e7bd552132166ea3513a6b9406a8886d74b8d136" datatype="html">
+<source>
                   This month      
-                </source>
-        <target>
+</source>
+<target>
                   Bu ay
-                </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
-          <context context-type="linenumber">107</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="b036e40577baa6b918b2267d319d4b3aeaa88a5a" datatype="html">
-        <source>This week</source>
-        <target>Bu hafta</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
-          <context context-type="linenumber">115</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7fb1099e29660162f9154d5b2feee7743a423df6" datatype="html">
-        <source>Today</source>
-        <target>Bugün</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
-          <context context-type="linenumber">116</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="65cefcc53d1f6445df7568e8a40c49165f1090ee" datatype="html">
-        <source>This year</source>
-        <target>Bu yıl</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
-          <context context-type="linenumber">117</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2489eefea00931942b91f4a1ae109514b591e2e1" datatype="html">
-        <source>Rules</source>
-        <target>kurallar</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/rules/rules.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="a57d0e8515167f6d99054e7cc9d0c8b6be145878" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
+<context context-type="linenumber">107</context>
+</context-group>
+</trans-unit>
+<trans-unit id="b036e40577baa6b918b2267d319d4b3aeaa88a5a" datatype="html">
+<source>This week</source>
+<target>Bu hafta</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
+<context context-type="linenumber">115</context>
+</context-group>
+</trans-unit>
+<trans-unit id="7fb1099e29660162f9154d5b2feee7743a423df6" datatype="html">
+<source>Today</source>
+<target>Bugün</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
+<context context-type="linenumber">116</context>
+</context-group>
+</trans-unit>
+<trans-unit id="65cefcc53d1f6445df7568e8a40c49165f1090ee" datatype="html">
+<source>This year</source>
+<target>Bu yıl</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/analytics/analytics.component.html</context>
+<context context-type="linenumber">117</context>
+</context-group>
+</trans-unit>
+<trans-unit id="2489eefea00931942b91f4a1ae109514b591e2e1" datatype="html">
+<source>Rules</source>
+<target>kurallar</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/rules/rules.component.html</context>
+<context context-type="linenumber">3</context>
+</context-group>
+</trans-unit>
+<trans-unit id="a57d0e8515167f6d99054e7cc9d0c8b6be145878" datatype="html">
+<source>
               Settings
-            </source>
-        <target>
+</source>
+<target>
               Ayarlar
-            </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/settings/settings.component.html</context>
-          <context context-type="linenumber">14</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="30aa81dab0ac16b4477c5a0df679382272af1f9e" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/settings/settings.component.html</context>
+<context context-type="linenumber">14</context>
+</context-group>
+</trans-unit>
+<trans-unit id="30aa81dab0ac16b4477c5a0df679382272af1f9e" datatype="html">
+<source>
             Settings
-          </source>
-        <target>
+</source>
+<target>
             Ayarlar
-          </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/settings/settings.component.html</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="efac3af0b32e953279c25b6519cae256811e0fe8" datatype="html">
-        <source>History</source>
-        <target>Tarih</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8013c906ad8c1399be7f157175eba37e5cda020b" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/settings/settings.component.html</context>
+<context context-type="linenumber">27</context>
+</context-group>
+</trans-unit>
+<trans-unit id="efac3af0b32e953279c25b6519cae256811e0fe8" datatype="html">
+<source>History</source>
+<target>Tarih</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
+<context context-type="linenumber">6</context>
+</context-group>
+</trans-unit>
+<trans-unit id="8013c906ad8c1399be7f157175eba37e5cda020b" datatype="html">
+<source>
               Category      
-            </source>
-        <target>
+</source>
+<target>
               Kategori
-            </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="be979d8e8ec9a54fb09ee7882b2993ba9e9b317d" datatype="html">
-        <source>Warnings</source>
-        <target>Uyarılar</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="721c5049f844116adbebd35d077c25b851549ba1" datatype="html">
-        <source>Updates</source>
-        <target>Güncellemeler</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
-          <context context-type="linenumber">24</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
-          <context context-type="linenumber">24</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="121cc5391cd2a5115bc2b3160379ee5b36cd7716" datatype="html">
-        <source>Settings</source>
-        <target>Ayarlar</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
-          <context context-type="linenumber">25</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
-          <context context-type="linenumber">25</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="24851a7d140926f7f6290a1b9306f1a3fd14e280" datatype="html">
-        <source>Solar Nodes</source>
-        <target>Solar Nod</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="cff1428d10d59d14e45edec3c735a27b5482db59" datatype="html">
-        <source>Name</source>
-        <target>İsim</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
-          <context context-type="linenumber">37</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="b8cd41ca86cdfb7242e43cbe445f30cb7f56a704" datatype="html">
-        <source>Total Min Run</source>
-        <target>Toplam Çalışma Süresi</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
-          <context context-type="linenumber">41</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="e69e74970647cc78b08adee64b0d7c45c781d2a3" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
+<context context-type="linenumber">15</context>
+</context-group>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
+<context context-type="linenumber">15</context>
+</context-group>
+</trans-unit>
+<trans-unit id="be979d8e8ec9a54fb09ee7882b2993ba9e9b317d" datatype="html">
+<source>Warnings</source>
+<target>Uyarılar</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
+<context context-type="linenumber">23</context>
+</context-group>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
+<context context-type="linenumber">23</context>
+</context-group>
+</trans-unit>
+<trans-unit id="721c5049f844116adbebd35d077c25b851549ba1" datatype="html">
+<source>Updates</source>
+<target>Güncellemeler</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
+<context context-type="linenumber">24</context>
+</context-group>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
+<context context-type="linenumber">24</context>
+</context-group>
+</trans-unit>
+<trans-unit id="121cc5391cd2a5115bc2b3160379ee5b36cd7716" datatype="html">
+<source>Settings</source>
+<target>Ayarlar</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/history/history.component.html</context>
+<context context-type="linenumber">25</context>
+</context-group>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
+<context context-type="linenumber">25</context>
+</context-group>
+</trans-unit>
+<trans-unit id="24851a7d140926f7f6290a1b9306f1a3fd14e280" datatype="html">
+<source>Solar Nodes</source>
+<target>Güneş Düğümleri</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
+<context context-type="linenumber">6</context>
+</context-group>
+</trans-unit>
+<trans-unit id="cff1428d10d59d14e45edec3c735a27b5482db59" datatype="html">
+<source>Name</source>
+<target>ad</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
+<context context-type="linenumber">37</context>
+</context-group>
+</trans-unit>
+<trans-unit id="b8cd41ca86cdfb7242e43cbe445f30cb7f56a704" datatype="html">
+<source>Total Min Run</source>
+<target>Toplam Min. Koşu</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
+<context context-type="linenumber">41</context>
+</context-group>
+</trans-unit>
+<trans-unit id="e69e74970647cc78b08adee64b0d7c45c781d2a3" datatype="html">
+<source>
                     ADD TO MY WALLET
-                  </source>
-        <target>
-Cüzdanıma Ekle                  </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
-          <context context-type="linenumber">60</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4fb93c67491332e167d3ac7be170c3b62585a551" datatype="html">
-        <source>
+</source>
+<target>
+                    CÜZDAN EKLE
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/dashboard/nodes/nodes.component.html</context>
+<context context-type="linenumber">60</context>
+</context-group>
+</trans-unit>
+<trans-unit id="4fb93c67491332e167d3ac7be170c3b62585a551" datatype="html">
+<source>
           Payment methods
-        </source>
-        <target>
-          Ödeme Yöntemleri
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/payment-options/payment-options.component.html</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="fd65feaad58422cfd35e403634cc758a7fab36c5" datatype="html">
-        <source>
+</source>
+<target>
+          Ödeme metodları
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/payment-options/payment-options.component.html</context>
+<context context-type="linenumber">6</context>
+</context-group>
+</trans-unit>
+<trans-unit id="fd65feaad58422cfd35e403634cc758a7fab36c5" datatype="html">
+<source>
           Add method
-        </source>
-        <target>
+</source>
+<target>
           Yöntem ekle
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/payment-options/payment-options.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="b7524dbd41745c7d5af135a3ab3019ca08575015" datatype="html">
-        <source>
-                <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>payments<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/payment-options/payment-options.component.html</context>
+<context context-type="linenumber">12</context>
+</context-group>
+</trans-unit>
+<trans-unit id="b7524dbd41745c7d5af135a3ab3019ca08575015" datatype="html">
+<source>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>
+payments<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>
                 Edit
-              </source>
-        <target>
-                <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/> ödemeler <x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/>
+</source>
+<target>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/>
+ ödemeler <x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/>
                 Düzenle
-              </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/payment-options/payment-options.component.html</context>
-          <context context-type="linenumber">64</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2f8a86dee229655394e65356808e5eea5ee6a34a" datatype="html">
-        <source>
-                <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>delete<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>
-                <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/payment-options/payment-options.component.html</context>
+<context context-type="linenumber">64</context>
+</context-group>
+</trans-unit>
+<trans-unit id="2f8a86dee229655394e65356808e5eea5ee6a34a" datatype="html">
+<source>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>
+delete<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>
+<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>
                   Delete
-                <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
-              </source>
-        <target>
-                <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/> sil <x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/>
-                <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&amp; lt; span &amp; gt;"/>
+<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
+</source>
+<target>
+<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; i &amp; gt;"/>
+ sil <x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&amp; lt; / i &amp; gt;"/>
+<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&amp; lt; span &amp; gt;"/>
                   Sil
-                <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&amp; lt; / span &amp; gt;"/>
-              </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/payment-options/payment-options.component.html</context>
-          <context context-type="linenumber">68</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="048811b71958cde57823ee6072b59fe7609f7e88" datatype="html">
-        <source>
+<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&amp; lt; / span &amp; gt;"/>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/payment-options/payment-options.component.html</context>
+<context context-type="linenumber">68</context>
+</context-group>
+</trans-unit>
+<trans-unit id="048811b71958cde57823ee6072b59fe7609f7e88" datatype="html">
+<source>
                       No
-                    </source>
-        <target>
+</source>
+<target>
                       Hayır
-                    </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/payment-options/payment-options.component.html</context>
-          <context context-type="linenumber">86</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6ba05d2b7006ac1a11775d4a4c45de82bf6c673e" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/payment-options/payment-options.component.html</context>
+<context context-type="linenumber">86</context>
+</context-group>
+</trans-unit>
+<trans-unit id="6ba05d2b7006ac1a11775d4a4c45de82bf6c673e" datatype="html">
+<source>
                       Yes
-                    </source>
-        <target>
+</source>
+<target>
                       Evet
-                    </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/payment-options/payment-options.component.html</context>
-          <context context-type="linenumber">95</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8bcabdf6b16cad0313a86c7e940c5e3ad7f9f8ab" datatype="html">
-        <source>Notifications</source>
-        <target>Bildirimler</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/notifications-setting/notifications-setting.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4f8b2bb476981727ab34ed40fde1218361f92c45" datatype="html">
-        <source>Details</source>
-        <target>ayrıntılar</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="f1d3ae3514752e08253801769ea815e6fb1fcc2e" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/payment-options/payment-options.component.html</context>
+<context context-type="linenumber">95</context>
+</context-group>
+</trans-unit>
+<trans-unit id="8bcabdf6b16cad0313a86c7e940c5e3ad7f9f8ab" datatype="html">
+<source>Notifications</source>
+<target>Bildirimler</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/notifications-setting/notifications-setting.component.html</context>
+<context context-type="linenumber">3</context>
+</context-group>
+</trans-unit>
+<trans-unit id="4f8b2bb476981727ab34ed40fde1218361f92c45" datatype="html">
+<source>Details</source>
+<target>ayrıntılar</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
+<context context-type="linenumber">3</context>
+</context-group>
+</trans-unit>
+<trans-unit id="f1d3ae3514752e08253801769ea815e6fb1fcc2e" datatype="html">
+<source>
                 Your avatar
-              </source>
-        <target>
-Profil Fotoğrafı              </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="0253b1d8594013d5889b5da542d3a3b190f98a47" datatype="html">
-        <source>
+</source>
+<target>
+                Senin avatarın
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
+<context context-type="linenumber">21</context>
+</context-group>
+</trans-unit>
+<trans-unit id="0253b1d8594013d5889b5da542d3a3b190f98a47" datatype="html">
+<source>
                 PNG or JPG no bigger than 1000px wide and tall.
-              </source>
-        <target>
-                Dosya PNG veya JPG formatında ve en fazla 1000x1000 boyutunda olmalıdır.
-              </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
-          <context context-type="linenumber">26</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ba4a0caee703d6328fdb0d70380f541915451742" datatype="html">
-        <source> First Name</source>
-        <target> İsim</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
-          <context context-type="linenumber">58</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="26b7649337e48ef3e3ccd71ea1a710dab5f7eb61" datatype="html">
-        <source> Last Name</source>
-        <target> Soyadı</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
-          <context context-type="linenumber">68</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4c043a73d6746219db82bc2df61ea4a0747d7bc7" datatype="html">
-        <source> Email Address</source>
-        <target> E Mail Adresi</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
-          <context context-type="linenumber">80</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="c6475313842c5045822b313902cdc7e317ea1b2e" datatype="html">
-        <source> Phone Number</source>
-        <target> Telefon numarası</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
-          <context context-type="linenumber">89</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="9aa9dd46b13ae1eedccaa06a4c17a7ae18ab080f" datatype="html">
-        <source> Address</source>
-        <target> Adres</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
-          <context context-type="linenumber">99</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="568f50e7cff568aebd5983aeb8ebf3aa13a3efb0" datatype="html">
-        <source> Tc Number</source>
-        <target> TC Numarası</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
-          <context context-type="linenumber">111</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5c531118ce61f9d59da9e1bac06663ede505700c" datatype="html">
-        <source> Birth Date</source>
-        <target> Doğum günü</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
-          <context context-type="linenumber">120</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="28aa004c8738bcd209616fa8593f0032ddfb06ff" datatype="html">
-        <source>
+</source>
+<target>
+                PNG veya JPG en fazla 1000 piksel genişliğinde ve uzunluğunda.
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
+<context context-type="linenumber">26</context>
+</context-group>
+</trans-unit>
+<trans-unit id="ba4a0caee703d6328fdb0d70380f541915451742" datatype="html">
+<source> First Name</source>
+<target> İsim</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
+<context context-type="linenumber">58</context>
+</context-group>
+</trans-unit>
+<trans-unit id="26b7649337e48ef3e3ccd71ea1a710dab5f7eb61" datatype="html">
+<source> Last Name</source>
+<target> Soyadı</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
+<context context-type="linenumber">68</context>
+</context-group>
+</trans-unit>
+<trans-unit id="4c043a73d6746219db82bc2df61ea4a0747d7bc7" datatype="html">
+<source> Email Address</source>
+<target> E</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
+<context context-type="linenumber">80</context>
+</context-group>
+</trans-unit>
+<trans-unit id="c6475313842c5045822b313902cdc7e317ea1b2e" datatype="html">
+<source> Phone Number</source>
+<target> Telefon numarası</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
+<context context-type="linenumber">89</context>
+</context-group>
+</trans-unit>
+<trans-unit id="9aa9dd46b13ae1eedccaa06a4c17a7ae18ab080f" datatype="html">
+<source> Address</source>
+<target> Adres</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
+<context context-type="linenumber">99</context>
+</context-group>
+</trans-unit>
+<trans-unit id="568f50e7cff568aebd5983aeb8ebf3aa13a3efb0" datatype="html">
+<source> Tc Number</source>
+<target> TC Numarası</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
+<context context-type="linenumber">111</context>
+</context-group>
+</trans-unit>
+<trans-unit id="5c531118ce61f9d59da9e1bac06663ede505700c" datatype="html">
+<source> Birth Date</source>
+<target> Doğum günü</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
+<context context-type="linenumber">120</context>
+</context-group>
+</trans-unit>
+<trans-unit id="28aa004c8738bcd209616fa8593f0032ddfb06ff" datatype="html">
+<source>
               Update
-            </source>
-        <target>
-              Güncelle
-            </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
-          <context context-type="linenumber">136</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="0ffae096d04988fb5d14e052b69a694e67f4ab87" datatype="html">
-        <source>Login &amp; security</source>
-        <target>Giriş ve güvenlik</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="79b603b5f4752557cd0bd8b8b1b7a2ee609e4fd0" datatype="html">
-        <source>
+</source>
+<target>
+              Güncelleme
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/profile-details/profile-details.component.html</context>
+<context context-type="linenumber">136</context>
+</context-group>
+</trans-unit>
+<trans-unit id="0ffae096d04988fb5d14e052b69a694e67f4ab87" datatype="html">
+<source>Login &amp; security</source>
+<target>Giriş ve güvenlik</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
+<context context-type="linenumber">3</context>
+</context-group>
+</trans-unit>
+<trans-unit id="79b603b5f4752557cd0bd8b8b1b7a2ee609e4fd0" datatype="html">
+<source>
         Change Your Password
-      </source>
-        <target>
+</source>
+<target>
         Şifreni değiştir
-      </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1ae3dcf96b494406b6fd6fbd2f15f7259553bf4d" datatype="html">
-        <source>Current Password</source>
-        <target>Şimdiki Şifre</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
-          <context context-type="linenumber">14</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="36db82cf1ee63269d9d3091cf9905ab403ba6aa6" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
+<context context-type="linenumber">6</context>
+</context-group>
+</trans-unit>
+<trans-unit id="1ae3dcf96b494406b6fd6fbd2f15f7259553bf4d" datatype="html">
+<source>Current Password</source>
+<target>Şimdiki Şifre</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
+<context context-type="linenumber">14</context>
+</context-group>
+</trans-unit>
+<trans-unit id="36db82cf1ee63269d9d3091cf9905ab403ba6aa6" datatype="html">
+<source>
                   update password
-                </source>
-        <target>
+</source>
+<target>
                   Şifreyi güncelle
-                </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
-          <context context-type="linenumber">46</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8770b94c12a37bd0f6171a6cb8914a7f05f04b54" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
+<context context-type="linenumber">46</context>
+</context-group>
+</trans-unit>
+<trans-unit id="8770b94c12a37bd0f6171a6cb8914a7f05f04b54" datatype="html">
+<source>
                 Password requirements
-              </source>
-        <target>
+</source>
+<target>
                 Parola gereksinimleri
-              </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
-          <context context-type="linenumber">58</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="e2e98ef8d2eee821722d40b05ec00db55d08b2a3" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
+<context context-type="linenumber">58</context>
+</context-group>
+</trans-unit>
+<trans-unit id="e2e98ef8d2eee821722d40b05ec00db55d08b2a3" datatype="html">
+<source>
                 To create a new password, you have to meet all of the following
                 requirements:
-              </source>
-        <target>
-                Yeni bir şifre oluşturmak için aşağıdaki şartları karşılamanız gerekir
+</source>
+<target>
+                Yeni bir şifre oluşturmak için aşağıdakilerin tümünü karşılamanız gerekir
                 Gereksinimler:
-              </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
-          <context context-type="linenumber">63</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="093ec0d924f110d5c6ab130bcd9ea01c8b7c94e3" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
+<context context-type="linenumber">63</context>
+</context-group>
+</trans-unit>
+<trans-unit id="093ec0d924f110d5c6ab130bcd9ea01c8b7c94e3" datatype="html">
+<source>
                   Minimum 8 character
-                </source>
-        <target>
+</source>
+<target>
                   Minimum 8 karakter
-                </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
-          <context context-type="linenumber">70</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="494bd4a19728edcc79fe15a3988571702c31a339" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
+<context context-type="linenumber">70</context>
+</context-group>
+</trans-unit>
+<trans-unit id="494bd4a19728edcc79fe15a3988571702c31a339" datatype="html">
+<source>
                   At least one uppercase letter
-                </source>
-        <target>
+</source>
+<target>
                   En az bir büyük harf
-                </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
-          <context context-type="linenumber">73</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5f9c2c19abc648c4f1e5e8f44b2254ec22c2fa2a" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
+<context context-type="linenumber">73</context>
+</context-group>
+</trans-unit>
+<trans-unit id="5f9c2c19abc648c4f1e5e8f44b2254ec22c2fa2a" datatype="html">
+<source>
                   At least one number
-                </source>
-        <target>
+</source>
+<target>
                   En az bir sayı
-                </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
-          <context context-type="linenumber">76</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7cade0ac77cc90f8b7b63d7e25b788043390f19b" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
+<context context-type="linenumber">76</context>
+</context-group>
+</trans-unit>
+<trans-unit id="7cade0ac77cc90f8b7b63d7e25b788043390f19b" datatype="html">
+<source>
                   Can’t be the same as a previous password
-                </source>
-        <target>
+</source>
+<target>
                   Önceki bir şifre ile aynı olamaz
-                </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
-          <context context-type="linenumber">79</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="fdaff7112dbd1641559f0d49b15c5ae9bda8cf3d" datatype="html">
-        <source>Your Devices</source>
-        <target>Cihazlarınız</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/devices/devices.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="0b3f77815a105bc8b02201f638b57df706def2ee" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/login-security/login-security.component.html</context>
+<context context-type="linenumber">79</context>
+</context-group>
+</trans-unit>
+<trans-unit id="fdaff7112dbd1641559f0d49b15c5ae9bda8cf3d" datatype="html">
+<source>Your Devices</source>
+<target>Cihazlarınız</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/devices/devices.component.html</context>
+<context context-type="linenumber">3</context>
+</context-group>
+</trans-unit>
+<trans-unit id="0b3f77815a105bc8b02201f638b57df706def2ee" datatype="html">
+<source>
             Device History
-          </source>
-        <target>
+</source>
+<target>
             Cihaz Geçmişi
-          </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/devices/devices.component.html</context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="e58779c91209aacf1497b7b835da0d35fed35b2d" datatype="html">
-        <source>
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/devices/devices.component.html</context>
+<context context-type="linenumber">8</context>
+</context-group>
+</trans-unit>
+<trans-unit id="e58779c91209aacf1497b7b835da0d35fed35b2d" datatype="html">
+<source>
             If you see a device here that you believe wasn’t you, please contact
             our support account immediately.
-          </source>
-        <target>
+</source>
+<target>
             Burada sizin olmadığınıza inandığınız bir cihaz görürseniz, lütfen
-            hemen destek hattımız ile iletişime geçiniz.
-          </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/devices/devices.component.html</context>
-          <context context-type="linenumber">11</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="173d1fa28f6bbb8fb47071aedf9449aa44c27e6e" datatype="html">
-        <source>
+            hemen destek hesabımız.
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/devices/devices.component.html</context>
+<context context-type="linenumber">11</context>
+</context-group>
+</trans-unit>
+<trans-unit id="173d1fa28f6bbb8fb47071aedf9449aa44c27e6e" datatype="html">
+<source>
             Logout All devices
-          </source>
-        <target>
-Tüm Cihazlardan Çıkış Yap          </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/settings/devices/devices.component.html</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-      </trans-unit>
-    </body>
-  </file>
+</source>
+<target>
+            Çıkış Tüm cihazlar
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/devices/devices.component.html</context>
+<context context-type="linenumber">17</context>
+</context-group>
+</trans-unit>
+<trans-unit id="e348c458ce2c8d3e44222f0db09b29cc0e1877ae" datatype="html">
+<source>
+                    Log out
+</source>
+<target>
+                    Çıkış Yap
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/modules/settings/devices/devices.component.html</context>
+<context context-type="linenumber">47</context>
+</context-group>
+</trans-unit>
+
+</body>
+</file>
 </xliff>

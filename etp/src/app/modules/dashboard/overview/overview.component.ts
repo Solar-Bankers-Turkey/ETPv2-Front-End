@@ -3,6 +3,7 @@ import { SettingsService } from '@services/settings.service';
 import { SeoService } from '@services/seo.service';
 import { ChartsettingsService } from '@services/chartsettings.service';
 import { ForecastService } from '@services/forecast.service';
+import { DataService } from '@services/data.service';
 @Component({
   selector: 'app-overview',
   templateUrl: './overview.component.html',
@@ -29,7 +30,8 @@ export class OverviewComponent implements OnInit {
   constructor(
     public set: SettingsService,
     private seo: SeoService,
-    public chart: ChartsettingsService
+    public chart: ChartsettingsService,
+    public data: DataService
   ) {}
   ngOnInit(): void {
     this.seo.generateTags({
@@ -37,7 +39,7 @@ export class OverviewComponent implements OnInit {
     });
 
     this.chart.forecastDetails().then((data) => {
-      this.today = data.currently;
+      this.today = data.current;
     });
   }
 }

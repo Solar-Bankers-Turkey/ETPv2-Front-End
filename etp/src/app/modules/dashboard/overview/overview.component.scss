@@ -42,7 +42,9 @@
     }
   }
 }
-
+.dash-card {
+  border-radius: 10px;
+}
 .log {
   border-top: 0.5px solid $darkbg;
 }
@@ -50,16 +52,23 @@
 .bg-grey {
   background-color: $darkbg !important;
 }
+
 .left-icon {
   position: absolute;
   top: 25%;
+  left: 0;
   i {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+}
+.notif {
+  i {
+    font-size: 16px !important;
   }
 }
 
 .right {
-  margin-left: 80px;
+  margin-left: 45px;
 }
 .earn {
   font-size: 24px;
