@@ -1,4 +1,7 @@
 @import "variables.scss";
+a:hover {
+  text-decoration: none;
+}
 .bar-wrapper {
   display: flex;
   align-items: stretch;

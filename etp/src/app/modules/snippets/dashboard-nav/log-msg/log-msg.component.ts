@@ -9,6 +9,6 @@ import { SettingsService } from '@services/settings.service';
 })
 export class LogMsgComponent implements OnInit {
   constructor(public data: DataService, public set: SettingsService) {}
-
+  url = window.location.href.split('/')[3];
   ngOnInit(): void {}
 }

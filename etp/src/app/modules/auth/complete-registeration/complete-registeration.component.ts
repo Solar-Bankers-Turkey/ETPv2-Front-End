@@ -75,7 +75,13 @@ export class CompleteRegisterationComponent implements OnInit {
     const birth = `${this.BDate.value}`;
 
     if (this.regForm.invalid) {
-      this.errorMsg = 'Please Fill in the Provided Fields correctly';
+      let url = window.location.href.split('/')[3];
+      if (url === 'en') {
+        this.errorMsg = 'Please fill the provided fields correctly!';
+      }
+      if (url === 'tr') {
+        this.errorMsg = 'Lütfen sağlanan alanları doğru bir şekilde doldurun!';
+      }
     } else {
       const user: RegisterComplete = {
         Id: this.Id,

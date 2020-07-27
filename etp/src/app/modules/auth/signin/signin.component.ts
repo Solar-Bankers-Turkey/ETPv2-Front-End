@@ -52,7 +52,13 @@ export class SigninComponent implements OnInit {
 
   async signin() {
     if (this.signinForm.invalid) {
-      this.errorMsg = 'Please fill the provided fields correctly!';
+      let url = window.location.href.split('/')[3];
+      if (url === 'en') {
+        this.errorMsg = 'Please fill the provided fields correctly!';
+      }
+      if (url === 'tr') {
+        this.errorMsg = 'Lütfen sağlanan alanları doğru bir şekilde doldurun!';
+      }
     } else {
       const email = this.email.value;
       const password = this.password.value;

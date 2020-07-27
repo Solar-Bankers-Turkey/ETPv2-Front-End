@@ -18,11 +18,10 @@
   <div class="item" [matMenuTriggerFor]="userMenu">
     <span class="tabs ml-auto" i18n>Hi, {{ data?.surname }}</span>
   </div>
-  <div class="item" [matMenuTriggerFor]="langMenu" style="line-height: 1;">
-    <div style="width: 30px; margin: auto 3px;">
-      <img class="img-fluid rounded-sm" src="/assets/svg/usa.svg" alt="" />
+  <div class="item" [matMenuTriggerFor]="langMenu">
+    <div class="my-auto">
+      <span class="icon-globe px-2"></span>
     </div>
-    <span class="my-auto"> &nbsp; EN</span>
   </div>
 </div>
 
@@ -46,10 +45,20 @@
 </mat-menu>
 
 <mat-menu #langMenu="matMenu" class="menu">
-  <button mat-menu-item>
-    <div style="width: 20px; margin: auto 3px;">
-      <img class="img-fluid rounded-sm" src="/assets/svg/turkey.svg" alt="" />
-      &nbsp; TR
-    </div>
-  </button>
+  <a href="/en{{ router.url }}"
+    ><button mat-menu-item>
+      <div style="width: 25px; margin: auto 3px;">
+        <img class="img-fluid rounded-sm" src="/assets/svg/usa.svg" alt="" />
+        &nbsp; EN
+      </div>
+    </button></a
+  >
+  <a href="/tr{{ router.url }}">
+    <button mat-menu-item>
+      <div style="width: 25px; margin: auto 3px;">
+        <img class="img-fluid rounded-sm" src="/assets/svg/turkey.svg" alt="" />
+        &nbsp; TR
+      </div>
+    </button></a
+  >
 </mat-menu>

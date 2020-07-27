@@ -17,6 +17,7 @@ export class HistoryComponent implements OnInit {
   //charts
   line = false;
   bar = true;
+  url = window.location.href.split('/')[3];
 
   constructor(
     public set: SettingsService,

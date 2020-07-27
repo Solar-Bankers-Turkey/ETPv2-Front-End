@@ -8,10 +8,6 @@ import { map, shareReplay } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class SettingsService {
-  languageList = [
-    { code: 'en', label: 'English' },
-    { code: 'tr', label: 'Turkish' },
-  ];
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe([Breakpoints.Handset])
     .pipe(

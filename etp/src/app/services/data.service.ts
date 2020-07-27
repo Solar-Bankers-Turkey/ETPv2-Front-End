@@ -87,33 +87,40 @@ export class DataService {
     {
       status: 'warning',
       date: 1590969600,
-      message: 'Your battery is full.',
+      messageEN: 'Your battery is full.',
+      messageTR: 'Piliniz dolu.',
     },
     {
       status: 'info',
       date: 1588291200,
-      message: 'Weekly report is ready.',
+      messageEN: 'Weekly report is ready.',
+      messageTR: 'Haftalık rapor hazır.',
     },
     {
       status: 'warning',
       date: 1585699200,
-      message: 'Overusage on T phase.',
+      messageEN: 'Overusage on T phase.',
+      messageTR: 'T fazında aşırı kullanım.',
     },
     {
       status: 'setting',
       date: 1583020800,
-      message:
+      messageEN:
         'The daily system backup has been completed and uploaded to the server.',
+      messageTR:
+        'Günlük sistem yedekleme işlemi tamamlanır ve sunucuya yüklenir.',
     },
     {
       status: 'setting',
       date: 1580515200,
-      message: 'Payment option has been changed.',
+      messageEN: 'Payment option has been changed.',
+      messageTR: 'Ödeme seçeneği değiştirildi.',
     },
     {
       status: 'info',
       date: 1577836800,
-      message: 'System update: software version 2.1.3 is now available.',
+      messageEN: 'System update: software version 2.1.3 is now available.',
+      messageTR: 'Sistem güncellemesi: 2.1.3 yazılım sürümü mevcuttur.',
     },
   ];
 

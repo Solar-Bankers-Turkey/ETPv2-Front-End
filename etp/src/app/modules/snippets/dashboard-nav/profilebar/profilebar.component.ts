@@ -10,6 +10,7 @@ import { AuthService } from '@services/auth.service';
 })
 export class ProfilebarComponent implements OnInit {
   data;
+
   constructor(
     public set: SettingsService,
     public router: Router,

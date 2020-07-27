@@ -44,7 +44,13 @@ export class SignupComponent implements OnInit {
 
   async signup() {
     if (this.signupForm.invalid) {
-      this.errorMsg = 'Please fill the provided fields correctly!';
+      let url = window.location.href.split('/')[3];
+      if (url === 'en') {
+        this.errorMsg = 'Please fill the provided fields correctly!';
+      }
+      if (url === 'tr') {
+        this.errorMsg = 'Lütfen sağlanan alanları doğru bir şekilde doldurun!';
+      }
     } else {
       const user: Register = {
         Email: this.email.value,

@@ -25,7 +25,7 @@
           </div>
           <div class="col-lg-8 col-md-7 col-6">
             <div class="mx-1 message" i18n>
-              {{ item.message }}
+              {{ url === "en" ? item.messageEN : (item.messageTR | titlecase) }}
             </div>
           </div>
         </div>

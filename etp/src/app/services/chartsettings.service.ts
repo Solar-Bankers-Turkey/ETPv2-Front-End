@@ -353,7 +353,6 @@ export class ChartsettingsService implements OnInit {
       .then((data) => {
         this.forecast = data;
       });
-    console.log(this.forecast);
     this.weatherData = [
       {
         name: 'Weekly Temperature',

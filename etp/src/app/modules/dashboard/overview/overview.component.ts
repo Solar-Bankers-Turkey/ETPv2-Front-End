@@ -4,6 +4,7 @@ import { SeoService } from '@services/seo.service';
 import { ChartsettingsService } from '@services/chartsettings.service';
 import { ForecastService } from '@services/forecast.service';
 import { DataService } from '@services/data.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-overview',
   templateUrl: './overview.component.html',
@@ -24,14 +25,15 @@ export class OverviewComponent implements OnInit {
     curve: 'smooth',
     width: 1.9,
   };
-
+  url = window.location.href.split('/')[3];
   forecast;
   today;
   constructor(
     public set: SettingsService,
     private seo: SeoService,
     public chart: ChartsettingsService,
-    public data: DataService
+    public data: DataService,
+    private router: Router
   ) {}
   ngOnInit(): void {
     this.seo.generateTags({
@@ -41,5 +43,8 @@ export class OverviewComponent implements OnInit {
     this.chart.forecastDetails().then((data) => {
       this.today = data.current;
     });
+    console.log(this.router.navigated);
+    console.log(window.location.href.split('/'));
+    console.log(this.router.url);
   }
 }
