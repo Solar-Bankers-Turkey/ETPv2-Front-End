@@ -1,0 +1,27 @@
+// Front setup
+@import "front/variables";
+
+// Custom setup
+@import "user-variables";
+
+// Bootstrap core
+$enable-grid-classes: false;
+$primary: #2f3b52;
+$secondary: #b99745;
+$success: #05c985;
+$danger: #ee423d;
+$warning: #ffab4f;
+$light: #f8f9fa;
+$dark: #20293c;
+@import "bootstrap/scss/bootstrap";
+
+/*----------------------------------------------------------------------
+  * Front - Responsive Website Template version v2.9.0
+  * Copyright 2018 Htmlstream
+  * Licensed under Bootstrap Themes (https://themes.getbootstrap.com/licenses/)
+------------------------------------------------------------------------*/
+
+@import "front/front";
+
+// Custom core
+@import "user";

@@ -23,7 +23,7 @@ import { TokenInterceptorService } from '@services/token-interceptor.service';
 @NgModule({
   declarations: [AppComponent, ErrorComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
