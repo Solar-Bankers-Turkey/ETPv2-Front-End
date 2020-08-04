@@ -1,0 +1,9 @@
+#contact {
+  padding: 100px 0 50px;
+}
+.lang a {
+  cursor: pointer;
+  &:hover {
+    color: #b99745;
+  }
+}

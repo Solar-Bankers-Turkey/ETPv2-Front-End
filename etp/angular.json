@@ -37,7 +37,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/animate.css/animate.css"
+              "./node_modules/animate.css/animate.css",
+              "src/assets/scss/theme.scss"
             ],
             "scripts": [
               "node_modules/apexcharts/dist/apexcharts.min.js"

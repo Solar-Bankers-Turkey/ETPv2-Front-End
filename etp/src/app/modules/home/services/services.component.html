@@ -1,0 +1,112 @@
+<div
+  class="about container text-center"
+  data-aos="fade-up"
+  data-aos-duration="1000"
+  style="margin-bottom: 0 !important;"
+>
+  <p class="subtitle">OUR SERVICES</p>
+  <h5 class="title">Check Out What We Are Capable Of.</h5>
+  <ul class="nav nav-tabs justify-content-center my-5">
+    <li
+      class="nav-item"
+      (click)="eTrading = false; iot = false; blockchain = true"
+    >
+      <a
+        class="nav-link"
+        [class.active]="blockchain"
+        (click)="eTrading = false; iot = false; blockchain = true"
+        >Block Chain</a
+      >
+    </li>
+    <li
+      class="nav-item"
+      (click)="eTrading = false; iot = true; blockchain = false"
+    >
+      <a
+        class="nav-link"
+        [class.active]="iot"
+        (click)="eTrading = false; iot = true; blockchain = false"
+        >IOT setup</a
+      >
+    </li>
+    <li
+      class="nav-item"
+      (click)="eTrading = true; iot = false; blockchain = false"
+    >
+      <a
+        class="nav-link"
+        [class.active]="eTrading"
+        (click)="eTrading = true; iot = false; blockchain = false"
+        >Energy trading</a
+      >
+    </li>
+  </ul>
+  <div class="row blockchain" *ngIf="blockchain">
+    <div
+      class="col-md-6 my-auto"
+      data-aos="fade"
+      data-aos-duration="1000"
+      data-aos-delay="200"
+    >
+      <p>
+        Traditionally, to buy or sell power, traders need to draft contracts and
+        communicate with each other directly. Many contracts for can get
+        complicated. Traders call each other, send emails, or use an instant
+        messenger. This is a time-consuming, inefficient and expensive process.
+        However, with the introduction of the blockchain, traders on the energy
+        trading platform are able to trade directly and place bids for power and
+        let sellers turn it into a trade and vice versa. This happens through
+        the implementation of smart contracts, without the need for a central
+        retailer.
+      </p>
+    </div>
+    <div
+      class="col-md-6"
+      data-aos="fade-left"
+      data-aos-duration="2000"
+      data-aos-delay="400"
+    >
+      <img src="/assets/img/service.png" alt="blockchain" class="img-fluid" />
+    </div>
+  </div>
+  <div class="row iot" *ngIf="iot">
+    <div class="col-md-6 my-auto">
+      <p>
+        Traditionally,<strong>IOT</strong> to buy or sell power, traders need to
+        draft contracts and communicate with each other directly. Many contracts
+        for can get complicated. Traders call each other, send emails, or use an
+        instant messenger. This is a time-consuming, inefficient and expensive
+        process. However, with the introduction of the blockchain, traders on
+        the energy trading platform are able to trade directly and place bids
+        for power and let sellers turn it into a trade and vice versa. This
+        happens through the implementation of smart contracts, without the need
+        for a central retailer.
+      </p>
+    </div>
+    <div class="col-md-6">
+      <img src="/assets/img/service.png" alt="iot" class="img-fluid" />
+    </div>
+  </div>
+  <div class="row etrading" *ngIf="eTrading">
+    <div class="col-md-6 my-auto">
+      <p>
+        Traditionally, <em>Etrading</em> to buy or sell power, traders need to
+        draft contracts and communicate with each other directly. Many contracts
+        for can get complicated. Traders call each other, send emails, or use an
+        instant messenger. This is a time-consuming, inefficient and expensive
+        process. However, with the introduction of the blockchain, traders on
+        the energy trading platform are able to trade directly and place bids
+        for power and let sellers turn it into a trade and vice versa. This
+        happens through the implementation of smart contracts, without the need
+        for a central retailer.
+      </p>
+    </div>
+    <div class="col-md-6">
+      <img
+        src="/assets/img/service.png"
+        alt="energy trading"
+        class="img-fluid"
+      />
+    </div>
+  </div>
+</div>
