@@ -73,7 +73,7 @@
 <ng-template #sell let-modal class="">
   <div class="card modal-card">
     <div class="card-header">
-      <h1 class="small d-inline">
+      <h1 class="small d-inline" i18n>
         Add to wallet from {{ node | lowercase }} node
       </h1>
       <button
@@ -94,7 +94,7 @@
               <span class="material-icons-round">
                 monetization_on
               </span>
-              <p>Sell from battery</p>
+              <p i18n>Sell from battery</p>
             </div>
           </div>
           <div
@@ -103,7 +103,7 @@
           >
             <form action="" [formGroup]="sellForm">
               <div class="form-group">
-                <label for="Energy"> Energy Kw/h</label>
+                <label for="Energy" i18n> Energy Kw/h</label>
                 <input
                   type="text"
                   class="form-control"
@@ -113,7 +113,7 @@
                 />
               </div>
               <div class="form-group">
-                <label for="price"> Price </label>
+                <label for="price" i18n> Price </label>
                 <input
                   type="text"
                   class="form-control"
@@ -133,20 +133,21 @@
           <span class="material-icons text-success">
             done
           </span>
-          <p>Supply Created Successfully</p>
+          <p i18n>Supply Created Successfully</p>
         </div>
       </div>
     </div>
 
     <!-- Sell baord buttons  -->
     <div class="card-footer ml-auto" *ngIf="!sellValid">
-      <button mat-button class="text-white mx-1" (click)="modal.close()">
+      <button i18n mat-button class="text-white mx-1" (click)="modal.close()">
         CANCEL
       </button>
       <button
         mat-raised-button
         class="btn btn-primary"
         (click)="sellValid = true"
+        i18n
       >
         ADD
       </button>
@@ -158,6 +159,7 @@
         mat-raised-button
         class="btn btn-primary"
         (click)="modal.close(); sellValid = false"
+        i18n
       >
         CLOSE
       </button>

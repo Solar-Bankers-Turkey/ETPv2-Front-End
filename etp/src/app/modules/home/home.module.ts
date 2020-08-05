@@ -5,7 +5,6 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { ServicesComponent } from './services/services.component';
 import { HeroComponent } from './hero/hero.component';
 import { WhyComponent } from './why/why.component';
 import { LandingComponent } from './landing/landing.component';
@@ -17,7 +16,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ServicesComponent,
     HeroComponent,
     WhyComponent,
     LandingComponent,

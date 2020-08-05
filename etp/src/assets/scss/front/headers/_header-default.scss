@@ -16,7 +16,7 @@
     box-shadow: $header-box-shadow;
 
     &-divider {
-      border-bottom: 1px solid rgba($white, .2);
+      border-bottom: 1px solid rgba($white, 0.2);
     }
   }
 
@@ -33,8 +33,8 @@
 .u-header__navbar {
   padding-top: $header-navbar-paddingY;
   padding-bottom: $header-navbar-paddingY;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Navbar Space */
@@ -78,7 +78,7 @@
   &-text {
     font-size: 2.25rem;
     font-weight: $font-weight-bold;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
 
     &,
     &:focus,
@@ -109,8 +109,8 @@
   color: $gray-700;
   font-size: $header-navbar-link-font-size;
   font-weight: $font-weight-light;
-  padding-left: .5rem;
-  padding-right: .5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 /* Nav Item */
@@ -154,7 +154,7 @@
       font-size: 65%;
       font-weight: 900;
       content: "\f107";
-      margin-left: .5rem;
+      margin-left: 0.5rem;
       transition: $header-nav-link-icon-transition;
     }
   }
@@ -187,7 +187,7 @@
         font-weight: 900;
         content: "\f105";
         margin-left: auto;
-        margin-right: .04rem;
+        margin-right: 0.04rem;
         transition: $header-nav-link-icon-transition;
       }
     }
@@ -326,7 +326,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba($dark, .5);
+    background-color: rgba($dark, 0.5);
     @include border-bottom-left-radius($header-banner-border-radius);
     content: "";
   }
@@ -344,7 +344,7 @@
     color: $white;
     font-size: $header-banner-title-font-sizes;
     font-weight: $header-banner-title-font-weights;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   &-text {
@@ -370,7 +370,7 @@
     color: $primary;
     font-size: $header-banner-title-font-sizes;
     font-weight: $header-banner-title-font-weights;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   &-text {

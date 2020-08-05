@@ -16,7 +16,7 @@ export class CompleteRegisterationComponent implements OnInit {
   errorMsg: any;
   Id: any;
   completed = false;
-
+  url = window.location.href.split('/')[3];
   constructor(
     private fb: FormBuilder,
     public set: SettingsService,
@@ -75,12 +75,13 @@ export class CompleteRegisterationComponent implements OnInit {
     const birth = `${this.BDate.value}`;
 
     if (this.regForm.invalid) {
-      let url = window.location.href.split('/')[3];
-      if (url === 'en') {
+      if (this.url === 'en') {
         this.errorMsg = 'Please fill the provided fields correctly!';
       }
-      if (url === 'tr') {
+      if (this.url === 'tr') {
         this.errorMsg = 'Lütfen sağlanan alanları doğru bir şekilde doldurun!';
+      } else {
+        this.errorMsg = 'Please fill the provided fields correctly!';
       }
     } else {
       const user: RegisterComplete = {
@@ -94,21 +95,31 @@ export class CompleteRegisterationComponent implements OnInit {
         ShortLocation: '',
       };
 
-      console.log({ IdNo });
-      console.log({ InvNo });
-      console.log({ user });
-
       return (await this.asAuth.completeRegisteration(user)).subscribe(
         (result) => {
           if (result['successCode'] === 1) {
             this.completed = true;
           } else {
-            this.errorMsg = "There's been an error, please try again";
+            if (this.url === '/en') {
+              this.errorMsg = "There's been an error, please try again";
+            }
+            if (this.url === '/tr') {
+              this.errorMsg = 'Bir hata oluştu. Lütfen tekrar deneyin';
+            } else {
+              this.errorMsg = "There's been an error, please try again";
+            }
           }
           localStorage.removeItem('etp-token');
         },
         (error) => {
-          this.errorMsg = 'There seems to be an error, please try again!';
+          if (this.url === '/en') {
+            this.errorMsg = "There's been an error, please try again";
+          }
+          if (this.url === '/tr') {
+            this.errorMsg = 'Bir hata oluştu. Lütfen tekrar deneyin';
+          } else {
+            this.errorMsg = "There's been an error, please try again";
+          }
           console.log(error);
         }
       );

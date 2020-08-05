@@ -37,8 +37,11 @@
           }
 
           &__sub-menu {
-            border-top: $header-sub-menu-border-top-width solid $header-sub-menu-border-color;
-            @include border-bottom-radius($header-sub-menu-bottom-border-radius);
+            border-top: $header-sub-menu-border-top-width solid
+              $header-sub-menu-border-color;
+            @include border-bottom-radius(
+              $header-sub-menu-bottom-border-radius
+            );
             box-shadow: $header-submenu-box-shadow;
 
             &-nav-link {
@@ -126,7 +129,8 @@
     &#{$infix} {
       @include media-breakpoint-down($breakpoint) {
         .u-header__nav-last-item {
-          display: none;
+          // display: none;
+          text-align: right;
         }
 
         .u-header__nav-link,
@@ -161,8 +165,8 @@
         }
 
         .u-header__mega-menu-wrapper {
-          padding-top: .5rem;
-          padding-bottom: .5rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
         }
 
         // Submenu
@@ -174,7 +178,8 @@
           }
 
           &:not(.u-header__promo) {
-            border-left: $header-sub-menu-border-left-width solid $header-sub-menu-border-color;
+            border-left: $header-sub-menu-border-left-width solid
+              $header-sub-menu-border-color;
           }
 
           .u-header__sub-menu {
@@ -187,7 +192,7 @@
           }
 
           &-nav-group {
-            padding-top: .5rem;
+            padding-top: 0.5rem;
             padding-left: $header-nav-groups-padding;
           }
 
@@ -260,7 +265,7 @@
 @include media-breakpoint-between(md, md) {
   .navbar-expand-md {
     .u-header__navbar-brand {
-      padding-top: .5rem;
+      padding-top: 0.5rem;
     }
   }
 
@@ -278,7 +283,7 @@
 @include media-breakpoint-between(sm, md) {
   .navbar-expand-sm {
     .u-header__navbar-brand {
-      padding-top: .5rem;
+      padding-top: 0.5rem;
     }
   }
 }

@@ -45,7 +45,7 @@
               <mat-list-item>
                 <div class="left-icon notif">
                   <i
-                    class="fa fa-info-circle text-primary mx-4"
+                    class="fa fa-info-circle text-info mx-4"
                     aria-hidden="true"
                     *ngIf="item.status === 'info'"
                   ></i>
@@ -132,6 +132,7 @@
                   [xaxis]="chart.barOptions.xaxis"
                   [grid]="chart.weatherForecastOptions.grid"
                   [yaxis]="chart.barOptions.yaxis"
+                  [colors]="['#b99745']"
                 ></apx-chart>
               </div>
             </div>

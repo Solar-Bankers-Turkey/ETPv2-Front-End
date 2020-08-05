@@ -13,6 +13,7 @@ export class SigninComponent implements OnInit {
   type: 'signin' | 'reset' = 'signin';
   signinForm: FormGroup;
   errorMsg = '';
+  url = window.location.href.split('/')[3];
 
   constructor(
     private fb: FormBuilder,
@@ -52,12 +53,13 @@ export class SigninComponent implements OnInit {
 
   async signin() {
     if (this.signinForm.invalid) {
-      let url = window.location.href.split('/')[3];
-      if (url === 'en') {
+      if (this.url === 'en') {
         this.errorMsg = 'Please fill the provided fields correctly!';
       }
-      if (url === 'tr') {
+      if (this.url === 'tr') {
         this.errorMsg = 'Lütfen sağlanan alanları doğru bir şekilde doldurun!';
+      } else {
+        this.errorMsg = 'Please fill the provided fields correctly!';
       }
     } else {
       const email = this.email.value;
@@ -76,8 +78,15 @@ export class SigninComponent implements OnInit {
             }
           },
           (error) => {
-            this.errorMsg =
-              'There seems to be an error, please make sure you have entered your correct details';
+            if (this.url === '/en') {
+              this.errorMsg =
+                'Email and/or Password is invalid, please Try again';
+            }
+            if (this.url === '/tr') {
+              this.errorMsg =
+                'E-posta ve / veya Parola geçersiz, lütfen tekrar deneyin';
+            }
+
             console.log(error);
           }
         );

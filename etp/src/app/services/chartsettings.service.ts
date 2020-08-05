@@ -197,7 +197,7 @@ export class ChartsettingsService implements OnInit {
         position: 'back',
         opacity: 0.9,
         stroke: {
-          color: '#1f8efa',
+          color: '#b99745',
           width: 1.5,
           dashArray: 0,
         },
@@ -340,7 +340,7 @@ export class ChartsettingsService implements OnInit {
     },
   };
 
-  domain = ['#1F8EFA', '#FFAB4F', '#05C985'];
+  domain = ['#b99745', '#FFFFFF', '#05C985'];
 
   constructor(public set: SettingsService, private cast: ForecastService) {}
 

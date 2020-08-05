@@ -50,6 +50,8 @@ export class SignupComponent implements OnInit {
       }
       if (url === 'tr') {
         this.errorMsg = 'Lütfen sağlanan alanları doğru bir şekilde doldurun!';
+      } else {
+        this.errorMsg = 'Please fill the provided fields correctly!';
       }
     } else {
       const user: Register = {

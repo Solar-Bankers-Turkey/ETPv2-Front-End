@@ -12,7 +12,7 @@
       &,
       &::before,
       &::after {
-        background-color: $hamburger-layer-hover-color;
+        // background-color: $hamburger-layer-hover-color;
       }
     }
   }
@@ -27,7 +27,7 @@
   &__inner {
     display: block;
     top: $hamburger-layer-height / 2;
-    margin:top, $hamburger-layer-height / -2;
+    margin: top, $hamburger-layer-height / -2;
 
     &,
     &::before,
@@ -65,7 +65,12 @@
     transform: translate3d(0, $y-offset, 0) rotate(45deg);
 
     &::before {
-      transform: rotate(-45deg) translate3d($hamburger-layer-width / -7, $hamburger-layer-spacing * -1, 0);
+      transform: rotate(-45deg)
+        translate3d(
+          $hamburger-layer-width / -7,
+          $hamburger-layer-spacing * -1,
+          0
+        );
       opacity: 0;
     }
 
@@ -110,7 +115,7 @@
         &,
         &::before,
         &::after {
-          background-color: $hamburger-layer-hover-color;
+          // background-color: $hamburger-layer-hover-color;
         }
       }
     }

@@ -1,6 +1,45 @@
 <div class="wrap">
   <div class="container-fluid">
     <h2 class="dash-title" i18n>IOT device status</h2>
+
+    <!-- Status Table card  -->
+    <div class="card dash-card h-100 mb-3">
+      <div class="card-body">
+        <p i18n>meter status control</p>
+        <div class="table-responsive">
+          <table class="table table-borderless table-vertical-center">
+            <thead>
+              <tr class="text-white table-head">
+                <th style="min-width: 80px;" i18n>District Name</th>
+                <th style="min-width: 80px;" i18n>Branch Name</th>
+                <th style="min-width: 80px;" i18n>Status Info</th>
+                <th style="min-width: 80px;" i18n>Modem serial number</th>
+                <th style="min-width: 80px;" i18n>Meter serial number</th>
+                <th style="min-width: 80px;" i18n>Meter name</th>
+                <th style="min-width: 80px;" i18n>Last read date</th>
+
+                <th style="min-width: 50px;" i18n></th>
+              </tr>
+            </thead>
+            <tbody class="py-5">
+              <tr class="table-data">
+                <td class="pt-4">Ege</td>
+                <td class="pt-4">TFTC - Urla</td>
+                <td class="pt-4">Data sending</td>
+                <td class="pt-4">a363a35d658df8d5</td>
+                <td class="pt-4">
+                  relay 3
+                </td>
+                <td class="pt-4">Clima 05</td>
+                <td class="pt-4">20.07.2020</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom cards  -->
     <div class="card dash-card mb-2">
       <div class="card-body">
         <div class="row">
@@ -87,43 +126,6 @@
         </div>
       </div>
     </div>
-    <!-- Bottom cards  -->
-    <div class="card dash-card h-100">
-      <div class="card-body">
-        <p>meter status control</p>
-        <div class="table-responsive">
-          <table class="table table-borderless table-vertical-center">
-            <thead>
-              <tr class="text-white table-head">
-                <th style="min-width: 80px;" i18n>District Name</th>
-                <th style="min-width: 80px;" i18n>Branch Name</th>
-                <th style="min-width: 80px;" i18n>Status Info</th>
-                <th style="min-width: 80px;" i18n>Modem serial number</th>
-                <th style="min-width: 80px;" i18n>Meter serial number</th>
-                <th style="min-width: 80px;" i18n>Meter name</th>
-                <th style="min-width: 80px;" i18n>Last read date</th>
-
-                <th style="min-width: 50px;" i18n></th>
-              </tr>
-            </thead>
-            <tbody class="py-5">
-              <tr class="table-data">
-                <td class="pt-4">Ege</td>
-                <td class="pt-4">TFTC - Urla</td>
-                <td class="pt-4">Data sending</td>
-                <td class="pt-4">a363a35d658df8d5</td>
-                <td class="pt-4">
-                  relay 3
-                </td>
-                <td class="pt-4">Clima 05</td>
-                <td class="pt-4">20.07.2020</td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -164,7 +166,7 @@
                   [chart]="chart.roomOptions.chart"
                   [plotOptions]="chart.iotOptions.plotOptions"
                   [stroke]="chart.roomOptions.stroke"
-                  [fill]="{ type: 'solid', color: '#1f8efa' }"
+                  [fill]="{ type: 'solid', color: '#b99745' }"
                 ></apx-chart>
                 <i class="fas fa-{{ item.icon }} device-icon"></i>
               </div>

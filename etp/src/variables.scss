@@ -1,4 +1,4 @@
-$primary: #1f8efa;
+$primary: #b99745;
 $bg1: #2f3b52;
 $big-bg: linear-gradient(90deg, #0c1425 100%, #242e42 0%);
 $bg2: #242e42;
@@ -13,3 +13,7 @@ $shade1: #44556b;
 $shade2: #869aac;
 $success: #05c985;
 $danger: #ee423d;
+
+.bg2 {
+  background-color: $bg2;
+}
