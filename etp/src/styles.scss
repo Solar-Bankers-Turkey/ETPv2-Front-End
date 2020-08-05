@@ -50,20 +50,7 @@ li {
 }
 body {
   margin: 0;
-  // font-family: Roboto, sans-serif !important;
 }
-
-// button,
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6,
-// div,
-// p {
-//   font-family: Roboto, sans-serif !important;
-// }
 
 * {
   scroll-behavior: smooth;
@@ -95,16 +82,6 @@ textarea:focus {
   float: none;
 }
 
-// .btn {
-//   border-radius: 4px !important;
-//   font-size: 13px !important;
-//   font-weight: 400 !important;
-//   color: white !important;
-//   line-height: 5px !important;
-//   letter-spacing: 1.5px;
-//   text-transform: uppercase;
-// }
-
 .left {
   left: 0px !important;
 }
@@ -117,10 +94,7 @@ textarea:focus {
 .wrapper {
   margin: 5vh auto 10px;
   line-height: 1;
-  // .btn {
-  //   background-color: $primary !important;
-  //   border-radius: 2px !important;
-  // }
+
   .title {
     font-size: 1.7rem;
     font-weight: 400;
@@ -232,7 +206,8 @@ textarea:focus {
   margin: 70px auto 30px !important;
 }
 .dash-card {
-  background-color: $bg2;
+  background-color: $bg2 !important;
+  border: none !important;
   border-radius: 5px;
   color: white;
   p:first-child {

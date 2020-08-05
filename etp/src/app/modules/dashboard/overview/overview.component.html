@@ -6,7 +6,7 @@
       <div class="col-md-5 mb-3">
         <div class="row my-3">
           <div class="col-md-6 col-sm-12">
-            <div class="card dash-card shadow-sm py-2 px-3">
+            <div class="card dash-card py-2 px-3">
               <p i18n>
                 Earnings
               </p>
@@ -22,7 +22,7 @@
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
-            <div class="card dash-card shadow-sm py-2 px-3">
+            <div class="card dash-card py-2 px-3">
               <p i18n>total co<sub>2</sub> savings</p>
               <div class="card-body position-relative">
                 <div class="left-icon">
@@ -37,7 +37,7 @@
           </div>
         </div>
 
-        <div class="dash-card shadow-sm p-3 col-12">
+        <div class="dash-card p-3 col-12">
           <p i18n>Recent Notifications</p>
 
           <div *ngFor="let item of data.report | slice: 0 - 4">
@@ -72,7 +72,7 @@
       </div>
 
       <div class="col-md-7">
-        <div id="chart" class="p-3 shadow-sm dash-card">
+        <div id="chart" class="p-3 dash-card">
           <p i18n>Energy Balance Today</p>
           <apx-chart
             [series]="series"
