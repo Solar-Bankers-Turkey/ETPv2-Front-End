@@ -10,6 +10,7 @@ import { WhyComponent } from './why/why.component';
 import { LandingComponent } from './landing/landing.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeroComponent,
     WhyComponent,
     LandingComponent,
+    ErrorComponent,
   ],
   imports: [CommonModule, HomeRoutingModule, NgbModule, ReactiveFormsModule],
 })

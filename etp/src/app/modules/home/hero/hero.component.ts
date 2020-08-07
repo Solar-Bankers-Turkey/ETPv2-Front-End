@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { map, shareReplay } from 'rxjs/operators';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { SettingsService } from '@services/settings.service';
 
 @Component({
   selector: 'hero',
@@ -9,15 +11,12 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./hero.component.scss'],
 })
 export class HeroComponent implements OnInit {
-  isHandset$: Observable<boolean> = this.breakpointObserver
-    .observe([Breakpoints.Handset])
-    .pipe(
-      map((result) => {
-        return result.matches;
-      }),
-      shareReplay()
-    );
-  constructor(private breakpointObserver: BreakpointObserver) {}
-
+  constructor(public set: SettingsService, config: NgbCarouselConfig) {
+    // customize default values of carousels used by this component tree
+    config.interval = 5000;
+    config.wrap = true;
+    config.keyboard = true;
+    config.pauseOnHover = true;
+  }
   ngOnInit(): void {}
 }

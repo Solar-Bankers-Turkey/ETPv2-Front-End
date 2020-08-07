@@ -1,185 +1,68 @@
-<div class="home-wrapper" id="home">
-  <!-- ========== HEADER ========== -->
-  <header id="header" [class]="navClass">
-    <div class="u-header__section">
-      <!-- Topbar -->
+<!-- ========== MAIN CONTENT ========== -->
+<main
+  id="content"
+  role="main"
+  (click)="languageDropdown = false; isMenuCollapsed = true"
+>
+  <!-- hero  -->
+  <div id="homes" class="hero">
+    <hero></hero>
+  </div>
+  <!-- End of hero  -->
+  <!-- SVG Top Shape -->
+  <!-- <figure>
+    <svg
+      preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="100%"
+      height="64px"
+      viewBox="0 0 1921 273"
+      style="margin-bottom: -8px; enable-background: new 0 0 1921 273;"
+      xml:space="preserve"
+    >
+      <polygon class="fill-gray-100" points="0,273 1921,273 1921,0 " />
+    </svg>
+  </figure> -->
+  <!-- End SVG Top Shape -->
+  <!-- About  -->
 
-      <!-- End Topbar -->
+  <div id="about">
+    <about></about>
+  </div>
 
-      <div id="logoAndNav">
-        <!-- Nav -->
-        <nav
-          class="navbar container navbar-expand-lg u-header__navbar u-header__navbar--no-space"
-        >
-          <!-- Logo -->
-          <a
-            class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center"
-            href=""
-            aria-label="Front"
-          >
-            <img [src]="headerLogo" alt="solarbankers" [class]="logo" />
-          </a>
-          <!-- End Logo -->
+  <!-- End of about  -->
 
-          <!-- Responsive Toggle Button -->
-          <button
-            type="button"
-            class="navbar-toggler btn btn-trans btn-icon right-5"
-            aria-label="Toggle navigation"
-            (click)="
-              isMenuCollapsed = !isMenuCollapsed; languageDropdown = false
-            "
-          >
-            <span id="hamburgerTrigger" class="u-hamburger__box">
-              <span class="u-hamburger__inner"></span>
-            </span>
-          </button>
-          <!-- End Responsive Toggle Button -->
+  <!-- SVG Bottom Shape -->
+  <figure>
+    <svg
+      preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="100%"
+      height="64px"
+      viewBox="0 0 1921 273"
+      style="margin-bottom: -8px; enable-background: new 0 0 1921 273;"
+      xml:space="preserve"
+    >
+      <polygon class="fill-gray-100" points="1921,0 0,0 0,273 " />
+    </svg>
+  </figure>
+  <!-- End SVG Bottom Shape -->
 
-          <!-- Navigation -->
-          <div
-            [ngbCollapse]="isMenuCollapsed"
-            id="navBar"
-            class="collapse navbar-collapse u-header__navbar-collapse"
-          >
-            <ul class="navbar-nav u-header__navbar-nav">
-              <!-- Home -->
-              <li
-                (click)="isMenuCollapsed = true"
-                class="nav-item u-header__nav-item"
-                data-animation-in="slideInUp"
-                data-animation-out="fadeOut"
-                data-position="left"
-              >
-                <a
-                  id="homeMegaMenu"
-                  class="nav-link u-header__nav-link"
-                  href="#home"
-                  i18n
-                  >Home</a
-                >
-              </li>
-              <!-- End Home -->
+  <!--Advantages  -->
+  <div id="advantages">
+    <why></why>
+  </div>
 
-              <!-- About -->
-              <li
-                (click)="isMenuCollapsed = true"
-                class="nav-item u-header__nav-item"
-                data-animation-in="slideInUp"
-                data-animation-out="fadeOut"
-              >
-                <a
-                  id="pagesMegaMenu"
-                  class="nav-link u-header__nav-link"
-                  href="#about"
-                  i18n
-                  >About</a
-                >
-              </li>
-              <!-- End About -->
+  <!-- End of Advantages -->
 
-              <!-- WHy -->
-              <li
-                (click)="isMenuCollapsed = true"
-                class="nav-item u-header__nav-item"
-                data-animation-in="slideInUp"
-                data-animation-out="fadeOut"
-              >
-                <a
-                  id="blogMegaMenu"
-                  class="nav-link u-header__nav-link"
-                  href="#advantages"
-                  i18n
-                  >Why</a
-                >
-              </li>
-              <!-- End WHy-->
-
-              <!-- Contact -->
-              <li
-                (click)="isMenuCollapsed = true"
-                class="nav-item u-header__nav-item"
-                data-animation-in="slideInUp"
-                data-animation-out="fadeOut"
-              >
-                <a
-                  id="blogMegaMenu"
-                  class="nav-link u-header__nav-link"
-                  href="#contact"
-                  i18n
-                  >Contact</a
-                >
-              </li>
-              <!-- End Contact-->
-              <!-- Button -->
-              <li class="nav-item u-header__nav-last-item">
-                <a [class]="headerButton" routerLink="/auth/" i18n>
-                  Get Started
-                </a>
-              </li>
-              <!-- End Button -->
-            </ul>
-          </div>
-          <!-- End Navigation -->
-        </nav>
-        <div class="lang">
-          <button
-            [class]="languageButton"
-            type="button"
-            (click)="
-              languageDropdown = !languageDropdown; isMenuCollapsed = true
-            "
-          >
-            <i class="icon-globe" aria-hidden="true"></i>
-          </button>
-
-          <div [class]="languagePos" *ngIf="languageDropdown">
-            <ul class="list px-0">
-              <li>
-                <a href="/en/">
-                  <img
-                    src="/assets/svg/usa.svg"
-                    alt=""
-                    width="25px"
-                    class="d-inline-block mr-3"
-                  />
-                  <span class="d-inline-block d-sm-none">EN</span>
-                  <span class="d-none d-sm-inline-block" i18n>English</span>
-                </a>
-              </li>
-              <li>
-                <a href="/tr/">
-                  <img
-                    src="/assets/svg/turkey.svg"
-                    alt=""
-                    width="25px"
-                    class="d-inline-block mr-3"
-                  />
-                  <span class="d-inline-block d-sm-none ml-auto">TR</span>
-                  <span class="d-none d-sm-inline-block ml-auto" i18n
-                    >Turkish</span
-                  >
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- End Nav -->
-      </div>
-    </div>
-  </header>
-
-  <!-- ========== MAIN CONTENT ========== -->
-  <main
-    id="content"
-    role="main"
-    (click)="languageDropdown = false; isMenuCollapsed = true"
-  >
-    <!-- hero  -->
-    <div id="homes" class="hero">
-      <hero></hero>
-    </div>
-    <!-- End of hero  -->
+  <!-- contact us  -->
+  <div id="contact">
     <!-- SVG Top Shape -->
     <figure>
       <svg
@@ -198,175 +81,9 @@
       </svg>
     </figure>
     <!-- End SVG Top Shape -->
-    <!-- About  -->
 
-    <div id="about">
-      <about></about>
-    </div>
-
-    <!-- End of about  -->
-
-    <!-- SVG Bottom Shape -->
-    <figure>
-      <svg
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        x="0px"
-        y="0px"
-        width="100%"
-        height="64px"
-        viewBox="0 0 1921 273"
-        style="margin-bottom: -8px; enable-background: new 0 0 1921 273;"
-        xml:space="preserve"
-      >
-        <polygon class="fill-gray-100" points="1921,0 0,0 0,273 " />
-      </svg>
-    </figure>
-    <!-- End SVG Bottom Shape -->
-
-    <!--Advantages  -->
-    <div id="advantages">
-      <why></why>
-    </div>
-
-    <!-- End of Advantages -->
-
-    <!-- contact us  -->
-    <div id="contact">
-      <!-- SVG Top Shape -->
-      <figure>
-        <svg
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          width="100%"
-          height="64px"
-          viewBox="0 0 1921 273"
-          style="margin-bottom: -8px; enable-background: new 0 0 1921 273;"
-          xml:space="preserve"
-        >
-          <polygon class="fill-gray-100" points="0,273 1921,273 1921,0 " />
-        </svg>
-      </figure>
-      <!-- End SVG Top Shape -->
-
-      <contact></contact>
-    </div>
-    <!-- End of contact  -->
-  </main>
-  <!-- ========== END MAIN CONTENT ========== -->
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="space-2">
-    <div class="container">
-      <div class="row space-2">
-        <div class="col-md-4 mb-7 mb-md-0">
-          <!-- Contacts -->
-          <div class="media">
-            <span class="btn btn-icon btn-soft-dark rounded-circle mr-3">
-              <span class="fas fa-phone btn-icon__inner"></span>
-            </span>
-            <div class="media-body">
-              <h4 class="h6 text-dark font-weight-normal mb-0" i18n>Call us</h4>
-              <span class="d-block font-size-1">+90(232)503 6718</span>
-            </div>
-          </div>
-          <!-- End Contacts -->
-        </div>
-
-        <div class="col-md-4 mb-7 mb-md-0">
-          <!-- Contacts -->
-          <div class="media">
-            <span class="btn btn-icon btn-soft-dark rounded-circle mr-3">
-              <span class="fas fa-envelope btn-icon__inner"></span>
-            </span>
-            <div class="media-body">
-              <h4 class="h6 text-dark font-weight-normal mb-0" i18n>
-                Email us
-              </h4>
-              <span class="d-block font-size-1">info@solarbankers.org</span>
-            </div>
-          </div>
-          <!-- End Contacts -->
-        </div>
-
-        <div class="col-md-4">
-          <!-- Contacts -->
-          <div class="media">
-            <span class="btn btn-icon btn-soft-dark rounded-circle mr-3">
-              <span class="fas fa-map-marker-alt btn-icon__inner"></span>
-            </span>
-            <div class="media-body">
-              <h4 class="h6 text-dark font-weight-normal mb-0" i18n>Address</h4>
-              <span class="d-block font-size-1"
-                >Mah. Gülbahçhe Cadç İYTE Teknopark İzmir A9 Binası, No. 1/44/4
-                Urla/İzmir</span
-              >
-            </div>
-          </div>
-          <!-- End Contacts -->
-        </div>
-      </div>
-    </div>
-
-    <hr class="my-0" />
-    <div class="container text-center mt-3">
-      <ul class="list-inline mb-4">
-        <li class="list-inline-item">
-          <a
-            class="btn btn-sm btn-icon btn-soft-facebook btn-bg-transparent"
-            href="https://www.facebook.com/solarbankerseurope/"
-          >
-            <span class="fab fa-facebook-f btn-icon__inner h6"></span>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a
-            class="btn btn-sm btn-icon btn-soft-twitter btn-bg-transparent"
-            href="https://twitter.com/solarbankers_?lang=en"
-          >
-            <span class="fab fa-twitter btn-icon__inner h6"></span>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a
-            class="btn btn-sm btn-icon btn-soft-success btn-bg-transparent"
-            href="https://t.me/solarbankersICO"
-          >
-            <span class="fab fa-telegram btn-icon__inner h6"></span>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a
-            class="btn btn-sm btn-icon btn-soft-info btn-bg-transparent"
-            href="https://www.linkedin.com/company/solar-bankers-turkey/"
-          >
-            <span class="fab fa-linkedin btn-icon__inner h6"></span>
-          </a>
-        </li>
-      </ul>
-      <p class="small text-muted mb-0">
-        © Solarbankers. 2020 Energy Trading Platform. All rights reserved.
-      </p>
-    </div>
-  </footer>
-  <!-- ========== END FOOTER ========== -->
-
-  <!-- Go to Top -->
-  <a
-    class="js-go-to u-go-to"
-    href="#"
-    data-position='{"bottom": 15, "right": 15 }'
-    data-type="fixed"
-    data-offset-top="400"
-    data-compensation="#header"
-    data-show-effect="slideInUp"
-    data-hide-effect="slideOutDown"
-  >
-    <span class="fas fa-arrow-up u-go-to__inner"></span>
-  </a>
-  <!-- End Go to Top -->
-</div>
+    <contact></contact>
+  </div>
+  <!-- End of contact  -->
+</main>
+<!-- ========== END MAIN CONTENT ========== -->

@@ -85,6 +85,9 @@ export class SigninComponent implements OnInit {
             if (this.url === '/tr') {
               this.errorMsg =
                 'E-posta ve / veya Parola geçersiz, lütfen tekrar deneyin';
+            } else {
+              this.errorMsg =
+                'Email and/or Password is invalid, please Try again';
             }
 
             console.log(error);

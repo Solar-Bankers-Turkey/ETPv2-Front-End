@@ -26,7 +26,7 @@ $etp-theme: mat-light-theme($etp-primary, $etp-accent, $etp-warn);
 @include angular-material-theme($etp-theme);
 
 $enable-grid-classes: false;
-$primary: #b99745;
+$primary: #1f8efa;
 $secondary: #657d95;
 $success: #05c985;
 $danger: #ee423d;
@@ -61,7 +61,7 @@ body {
 .nav-box .nav-link.active,
 .u-header__nav-item:hover .u-header__nav-link,
 .u-header__nav-item:focus .u-header__nav-link {
-  color: #b99745 !important;
+  color: #1f8efa !important;
 }
 
 .me-header {
@@ -72,7 +72,7 @@ body {
 }
 input:focus,
 textarea:focus {
-  border-color: #b99745 !important;
+  border-color: #1f8efa !important;
 }
 
 .dropdown-menu {

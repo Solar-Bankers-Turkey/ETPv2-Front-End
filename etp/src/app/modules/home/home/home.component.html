@@ -1,100 +1,288 @@
-<div class="home-wrapper">
-  <div class="container">
-    <svg
-      id="Layer_1"
-      data-name="Layer 1"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 924 942.41"
-      style="position: absolute; top: 0; right: 0; width: 40%;"
-      [class.d-none]="set.isTablet$ | async"
-    >
-      <defs>
-        <style>
-          .cls-1 {
-            fill: #2f3b52;
-          }
-        </style>
-      </defs>
-      <path
-        class="cls-1"
-        d="M996.34,267.53c1.92,9.3,11.26,14.81,13.29,16.1,19,12,392.16,282.48,910.37,658.78V0H1269.93c-143.63,129.7-247.4,225.59-263.62,243.39C995.56,255.2,995.45,263.25,996.34,267.53Z"
-        transform="translate(-996)"
-      />
-    </svg>
-    <!-- login buttons  -->
-    <div class="top-btn" [class.mx-3]="!(set.isTablet$ | async)">
-      <span class="span"
-        >0.4$ <sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup>
-        <sub>K W H</sub></span
-      >
-      <a href="/auth/signin" routerLink="/auth/signin"
-        ><button mat-raised-button class="btn" type="button" i18n>
-          SIGN IN
-        </button></a
-      >
-      <a href="/auth/signup" routerLink="/auth/signup">
-        <button mat-raised-button class="btn" type="button" i18n>
-          SIGN UP
-        </button></a
-      >
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div [class.col-lg-6]="!(set.isTablet$ | async)" class="mx-auto">
-          <div class="heading" [class.mobile]="set.isTablet$ | async">
-            <h1 class="title" i18n [class.my-1]="set.isTablet$ | async">
-              Welcome to <br />
-              Energy Trading Platform
-            </h1>
-            <p i18n>by solar bankers</p>
-            <div style="width: 20vh; margin: 5px -5% 0;">
-              <img
-                src="assets/img/logo.png"
-                alt="solar bankers"
-                class="img-fluid"
-              />
-            </div>
-          </div>
+<div class="home-wrapper" id="home">
+  <!-- ========== HEADER ========== -->
+  <header id="header" [class]="navClass">
+    <div class="u-header__section">
+      <!-- Topbar -->
 
-          <div
-            class="line-charts"
-            *ngIf="!(set.isHandset$ | async) && !(set.isTablet$ | async)"
+      <!-- End Topbar -->
+
+      <div id="logoAndNav" class="container">
+        <!-- Nav -->
+        <nav
+          class="navbar navbar-expand-xl u-header__navbar u-header__navbar--no-space"
+        >
+          <!-- Logo -->
+          <a
+            class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center"
+            href=""
+            aria-label="Front"
           >
-            <img src="/assets/img/Chart.png" alt="charts" class="img-fluid" />
+            <img
+              [src]="'/assets/img/mainlogo1.png'"
+              alt="solarbankers"
+              [class]="'img-fluid width-sm'"
+            />
+          </a>
+          <!-- End Logo -->
+
+          <!-- Responsive Toggle Button -->
+          <button
+            type="button"
+            class="navbar-toggler btn btn-trans btn-icon right-5"
+            aria-label="Toggle navigation"
+            (click)="
+              isMenuCollapsed = !isMenuCollapsed; languageDropdown = false
+            "
+          >
+            <span id="hamburgerTrigger" class="u-hamburger__box">
+              <span class="u-hamburger__inner"></span>
+            </span>
+          </button>
+          <!-- End Responsive Toggle Button -->
+
+          <!-- Navigation -->
+          <div
+            [ngbCollapse]="isMenuCollapsed"
+            id="navBar"
+            class="collapse navbar-collapse u-header__navbar-collapse"
+          >
+            <ul class="navbar-nav u-header__navbar-nav">
+              <!-- Home -->
+              <li
+                (click)="isMenuCollapsed = true"
+                class="nav-item u-header__nav-item"
+                data-animation-in="slideInUp"
+                data-animation-out="fadeOut"
+                data-position="left"
+              >
+                <a
+                  id="homeMegaMenu"
+                  class="nav-link u-header__nav-link"
+                  href="#home"
+                  i18n
+                  >Home</a
+                >
+              </li>
+              <!-- End Home -->
+
+              <!-- About -->
+              <li
+                (click)="isMenuCollapsed = true"
+                class="nav-item u-header__nav-item"
+                data-animation-in="slideInUp"
+                data-animation-out="fadeOut"
+              >
+                <a
+                  id="pagesMegaMenu"
+                  class="nav-link u-header__nav-link"
+                  href="#about"
+                  i18n
+                  >About</a
+                >
+              </li>
+              <!-- End About -->
+
+              <!-- WHy -->
+              <li
+                (click)="isMenuCollapsed = true"
+                class="nav-item u-header__nav-item"
+                data-animation-in="slideInUp"
+                data-animation-out="fadeOut"
+              >
+                <a
+                  id="blogMegaMenu"
+                  class="nav-link u-header__nav-link"
+                  href="#advantages"
+                  i18n
+                  >Why</a
+                >
+              </li>
+              <!-- End WHy-->
+
+              <!-- Contact -->
+              <li
+                (click)="isMenuCollapsed = true"
+                class="nav-item u-header__nav-item"
+                data-animation-in="slideInUp"
+                data-animation-out="fadeOut"
+              >
+                <a
+                  id="blogMegaMenu"
+                  class="nav-link u-header__nav-link"
+                  href="#contact"
+                  i18n
+                  >Contact</a
+                >
+              </li>
+              <!-- End Contact-->
+              <!-- Button -->
+              <li class="nav-item u-header__nav-last-item">
+                <a [class]="headerButton" routerLink="/auth/" i18n>
+                  Get Started
+                </a>
+              </li>
+              <!-- End Button -->
+            </ul>
           </div>
+          <!-- End Navigation -->
+        </nav>
+        <div class="lang">
+          <button
+            [class]="languageButton"
+            type="button"
+            (click)="
+              languageDropdown = !languageDropdown; isMenuCollapsed = true
+            "
+          >
+            <i class="icon-globe" aria-hidden="true"></i>
+          </button>
+
+          <div [class]="languagePos" *ngIf="languageDropdown">
+            <ul class="list px-0">
+              <li>
+                <a href="/en/">
+                  <img
+                    src="/assets/svg/usa.svg"
+                    alt=""
+                    width="25px"
+                    class="d-inline-block mr-3"
+                  />
+                  <span class="d-inline-block d-sm-none">EN</span>
+                  <span class="d-none d-sm-inline-block" i18n>English</span>
+                </a>
+              </li>
+              <li>
+                <a href="/tr/">
+                  <img
+                    src="/assets/svg/turkey.svg"
+                    alt=""
+                    width="25px"
+                    class="d-inline-block mr-3"
+                  />
+                  <span class="d-inline-block d-sm-none ml-auto">TR</span>
+                  <span class="d-none d-sm-inline-block ml-auto" i18n
+                    >Turkish</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Nav -->
+      </div>
+    </div>
+  </header>
+
+  <router-outlet></router-outlet>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="space-2">
+    <div class="container">
+      <div class="row space-2">
+        <div class="col-md-4 mb-7 mb-md-0">
+          <!-- Contacts -->
+          <div class="media">
+            <span class="btn btn-icon btn-soft-dark rounded-circle mr-3">
+              <span class="fas fa-phone btn-icon__inner"></span>
+            </span>
+            <div class="media-body">
+              <h4 class="h6 text-dark font-weight-normal mb-0" i18n>Call us</h4>
+              <span class="d-block font-size-1">+90(232)503 6718</span>
+            </div>
+          </div>
+          <!-- End Contacts -->
         </div>
 
-        <!-- mobile view picture  -->
-        <div
-          class="line-chart mx-auto"
-          *ngIf="(set.isHandset$ | async) || (set.isTablet$ | async)"
-        >
-          <img src="/assets/img/combine.png" alt="charts" class="img-fluid" />
-          <img src="/assets/img/Chart.png" alt="charts" class="img-fluid" />
-        </div>
-        <div
-          class="col-lg-6"
-          *ngIf="!(set.isHandset$ | async) && !(set.isTablet$ | async)"
-        >
-          <div class="container">
-            <div class="bar-pic">
-              <img
-                src="/assets/img/Consumption@2x.png"
-                alt="consumption by day"
-                class="img-fluid"
-              />
-            </div>
-            <div class="dash-cards card px-4 py-3 w-75 my-4 ml-auto shadow">
-              <p class="bar-chart">Active hours</p>
-              <img
-                src="/assets/img/active-hours.png"
-                alt="consumption by day"
-                class="img-fluid"
-              />
+        <div class="col-md-4 mb-7 mb-md-0">
+          <!-- Contacts -->
+          <div class="media">
+            <span class="btn btn-icon btn-soft-dark rounded-circle mr-3">
+              <span class="fas fa-envelope btn-icon__inner"></span>
+            </span>
+            <div class="media-body">
+              <h4 class="h6 text-dark font-weight-normal mb-0" i18n>
+                Email us
+              </h4>
+              <span class="d-block font-size-1">info@solarbankers.org</span>
             </div>
           </div>
+          <!-- End Contacts -->
+        </div>
+
+        <div class="col-md-4">
+          <!-- Contacts -->
+          <div class="media">
+            <span class="btn btn-icon btn-soft-dark rounded-circle mr-3">
+              <span class="fas fa-map-marker-alt btn-icon__inner"></span>
+            </span>
+            <div class="media-body">
+              <h4 class="h6 text-dark font-weight-normal mb-0" i18n>Address</h4>
+              <span class="d-block font-size-1"
+                >Mah. Gülbahçhe Cadç İYTE Teknopark İzmir A9 Binası, No. 1/44/4
+                Urla/İzmir</span
+              >
+            </div>
+          </div>
+          <!-- End Contacts -->
         </div>
       </div>
     </div>
-  </div>
+
+    <hr class="my-0" />
+    <div class="container text-center mt-3">
+      <ul class="list-inline mb-4">
+        <li class="list-inline-item">
+          <a
+            class="btn btn-sm btn-icon btn-soft-facebook btn-bg-transparent"
+            href="https://www.facebook.com/solarbankerseurope/"
+          >
+            <span class="fab fa-facebook-f btn-icon__inner h6"></span>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a
+            class="btn btn-sm btn-icon btn-soft-twitter btn-bg-transparent"
+            href="https://twitter.com/solarbankers_?lang=en"
+          >
+            <span class="fab fa-twitter btn-icon__inner h6"></span>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a
+            class="btn btn-sm btn-icon btn-soft-success btn-bg-transparent"
+            href="https://t.me/solarbankersICO"
+          >
+            <span class="fab fa-telegram btn-icon__inner h6"></span>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a
+            class="btn btn-sm btn-icon btn-soft-info btn-bg-transparent"
+            href="https://www.linkedin.com/company/solar-bankers-turkey/"
+          >
+            <span class="fab fa-linkedin btn-icon__inner h6"></span>
+          </a>
+        </li>
+      </ul>
+      <p class="small text-muted mb-0">
+        © Solarbankers. 2020 Energy Trading Platform. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- Go to Top -->
+  <a
+    class="js-go-to u-go-to"
+    href="#"
+    data-position='{"bottom": 15, "right": 15 }'
+    data-type="fixed"
+    data-offset-top="400"
+    data-compensation="#header"
+    data-show-effect="slideInUp"
+    data-hide-effect="slideOutDown"
+  >
+    <span class="fas fa-arrow-up u-go-to__inner"></span>
+  </a>
+  <!-- End Go to Top -->
 </div>

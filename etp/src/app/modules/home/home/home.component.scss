@@ -1,83 +1,63 @@
 @import "variables.scss";
 
-.mobile {
-  margin: 10vh auto 30px;
-}
-.container {
-  max-width: calc(100vw - 10%) !important;
-}
-// --- Home styling ---
-.home-wrapper {
-  background: $big-bg;
-  min-height: 100vh;
-  color: #fff;
-  max-width: 100%;
-  position: relative;
-  .heading {
-    margin-left: 5vw;
-    margin-top: 8vh;
-    padding: 20px 0 0;
-    .title {
-      font-size: 2.7rem;
-      font-weight: 400;
-      line-height: 1;
-      margin-top: 3%;
-      text-shadow: 4px 4px 0px #0c1425, 7px 7px 0px rgba(0, 0, 0, 0.84);
-    }
-    p {
-      font-size: 14px;
-      color: #aaa;
-      font-weight: 300;
-    }
-  }
-
-  .line-charts {
-    margin: 7vh -5vh 0;
-    width: 120%;
-  }
-
-  .line-chart {
-    margin: 0px;
-    width: 100%;
-  }
-  .top-btn {
-    margin: 20px auto;
+.lang {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  button {
     position: absolute;
+  }
+  .btn-lang {
     right: 0;
-    z-index: 1;
-    .span {
-      margin-right: 1vw;
-      font-weight: 400;
-      font-size: 2.5vh;
-      sup,
-      sub {
-        color: #70889e;
-        font-weight: 300;
-      }
-    }
-    .btn {
-      height: 4.5vh;
-      width: 20vh;
-      padding: 5px 10px;
-      margin: auto 10px;
-      border-radius: 2px !important;
-      background-color: $primary !important;
-    }
-  }
-  .bar-pic {
-    width: 45vh;
-    margin-top: 7vh;
-  }
-  img {
-    border-radius: 5px;
+    top: 1em;
+    display: block;
   }
 
-  .bar-chart {
-    color: #ccc;
+  .btn-scroll-lang {
+    right: 0;
+    top: 1em;
   }
-
-  .dash-cards {
-    background-color: $bg1;
+  .dropdown {
+    // position: fixed;
+    cursor: pointer;
+    background-color: white;
+    height: auto;
+    padding: 0px 20px 5px;
+    width: 100%;
+    right: 5px;
+    transition: all 0.3s;
+    animation: slideInUp;
+    animation-duration: 100ms;
+    border-top: 1.5px solid #3e4e6c;
+    ul li {
+      margin: 10px auto;
+      width: 100%;
+    }
   }
 }
-// --- End of Home  ---
+.scroll-top {
+  top: 80px;
+}
+
+.top {
+  top: 90px;
+}
+.right-5 {
+  margin-right: 3.2rem;
+}
+
+/* .hero {
+  background-image: url("/assets/img/System.gif");
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  background-size: cover;
+  // padding: 5vh 0;
+} */
+.width-sm {
+  width: 6.5rem !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

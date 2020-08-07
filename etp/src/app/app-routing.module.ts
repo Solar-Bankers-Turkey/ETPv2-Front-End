@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { ErrorComponent } from './error/error.component';
+import { ErrorComponent } from './modules/home/error/error.component';
 import { AuthGuard } from './guards/auth.guard';
 import { DashboardGuard } from './guards/dashboard.guard';
 
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
     loadChildren: () =>
       import('./modules/home/home.module').then((m) => m.HomeModule),
   },

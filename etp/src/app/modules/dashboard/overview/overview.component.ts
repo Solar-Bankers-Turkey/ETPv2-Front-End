@@ -19,7 +19,7 @@ export class OverviewComponent implements OnInit {
   ];
 
   colorScheme = {
-    domain: ['#FFAB4F', '#b99745', '#05C985'],
+    domain: ['#FFAB4F', '#1f8efa', '#05C985'],
   };
   stroke = {
     curve: 'smooth',

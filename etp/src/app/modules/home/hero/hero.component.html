@@ -1,31 +1,112 @@
-<!-- Hero Section -->
-<div class="container space-2 space-top-md-4 space-top-lg-3 space-bottom-lg-2">
-  <div class="row justify-content-lg-between mb-7">
-    <div
-      class="col-lg-12 text-center mb-7 mb-lg-0"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-delay="200"
+<!-- Hero v1 Section -->
+<div class="u-hero-v1">
+  <!-- Hero Carousel Main -->
+  <ngb-carousel>
+    <ng-template
+      ngbSlide
+      class="animate__animated animate__fadeIn animate__slow"
     >
-      <!-- Content -->
-      <div class="container space-2 space-md-3">
-        <div class="text-center w-lg-80 mx-auto">
-          <h1
-            class="text-white display-2 font-size-md-down-5 font-weight-semi-bold"
-            i18n
-          >
-            Energy Trading Platform
-          </h1>
-        </div>
-
-        <div class="text-center w-lg-40 mx-auto">
-          <p class="lead text-white-70" i18n>
-            by solar bankers
-          </p>
+      <!-- Slide #1 -->
+      <div
+        class="d-lg-flex align-items-lg-center u-hero-v1__main animate__animated animate__fadeInRight animate__slow"
+        style="
+          background-image: url(https://img.freepik.com/free-photo/group-businesspeople-with-energy-saving-concept-white-background_23-2147826623.jpg?size=626&ext=jpg&uid=R16664828&ga=GA1.2.461699731.1589202714);
+        "
+      >
+        <div class="container space-3 space-top-md-5 space-top-lg-3">
+          <div class="row">
+            <div class="col-md-8 col-lg-6 position-relative">
+              <span
+                class="d-block h4 text-white font-weight-light mb-2"
+                data-scs-animation-in="fadeInUp"
+              >
+                Welcome to
+              </span>
+              <h1
+                class="text-white display-4 font-size-md-down-5 mb-0"
+                data-scs-animation-in="fadeInUp"
+                data-scs-animation-delay="200"
+              >
+                Energy <span class="font-weight-semi-bold">Trading</span>
+                Platform
+              </h1>
+              <p>By solar bankers</p>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- End Content -->
+      <!-- End Slide #1 -->
+    </ng-template>
+    <ng-template
+      ngbSlide
+      class="animate__animated animate__fadeIn animate__slow"
+    >
+      <div>
+        <!-- Slide #2 -->
+        <div
+          class="d-lg-flex align-items-lg-center u-hero-v1__main animate__animated animate__fadeInRight animate__slow"
+          style="
+            background-image: url(https://img.freepik.com/free-photo/close-up-woman-s-hand-holding-green-batteries_23-2147839003.jpg?size=626&ext=jpg&uid=R16664828&ga=GA1.2.461699731.1589202714);
+          "
+        >
+          <div class="container space-3 space-top-md-5 space-top-lg-3">
+            <div class="row">
+              <div class="col-md-8 col-lg-6">
+                <span
+                  class="d-block h4 text-white font-weight-light mb-2"
+                  data-scs-animation-in="fadeInUp"
+                >
+                </span>
+                <h2
+                  class="text-white display-4 font-size-md-down-5 mb-0"
+                  data-scs-animation-in="fadeInUp"
+                  data-scs-animation-delay="200"
+                >
+                  <span class="font-weight-semi-bold"> An Easy</span> Way to Buy
+                  and Sell Electricity
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Slide #2 -->
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  <!-- Slide #2 -->
+
+  <div>
+    <div class="row mx-0">
+      <div class="col-md-6 px-0">
+        <div class="bg-white">
+          <div class="container space-2 col-8 m-auto">
+            <a href="/auth" routerLink="/auth"
+              ><h3 class="h5 text-muted">
+                <span class="d-block text-secondary"
+                  >Get Started as a prosumer</span
+                >
+              </h3>
+              <p class="mb-0">
+                Manage your Electricity and sell your Extra Easily
+              </p></a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 px-0">
+        <div class="bg-secondary w-100">
+          <div class="container space-2 col-8 m-auto">
+            <a href="/auth" routerLink="/auth"
+              ><h3 class="h5 text-white">Get Started as a Consumer</h3>
+              <p class="text-white-70 mb-0">
+                Manage your Electricity Easily
+              </p></a
+            >
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <!-- End Slide #2 -->
 </div>
-<!-- End Hero Section -->
+<!-- End Hero v1 Section -->
