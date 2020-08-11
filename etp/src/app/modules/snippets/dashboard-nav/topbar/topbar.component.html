@@ -1,5 +1,5 @@
 <div
-  class="header"
+  class="header powerflow"
   [class.left]="set.sidetoggle !== '' || (set.isTablet$ | async)"
 >
   <div
@@ -19,5 +19,61 @@
     <etp-topmenu *ngIf="!(set.isTablet$ | async)"></etp-topmenu>
     <div class="mx-2" *ngIf="!(set.isTablet$ | async)"></div>
     <etp-profilebar></etp-profilebar>
+    <div
+      class="powerflow-dropdown animate__animated animate__slideInDown"
+      *ngIf="set.powerflow"
+    >
+      <div class="container box">
+        <div class="pw-title">
+          POWER FLOW
+        </div>
+
+        <div class="row">
+          <div class="top justify-content-center d-flex col-12">
+            <div class="circle-container">
+              <p class="label mb-0 text-center mx-auto">Solar</p>
+              <div class="circle solar">
+                <i class="flaticon-066-solar-energy"></i>
+                <span> 40 kW</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="middle d-flex d-flex justify-content-between col-12">
+            <div class="circle-container">
+              <p class="label mb-0 text-center mx-auto">Grid</p>
+              <div class="circle grid">
+                <i class="flaticon-021-electric-tower-1" style="top: 16px;"></i>
+              </div>
+            </div>
+            <div class="circle-container">
+              <p class="label mb-0 text-center mx-auto">Home</p>
+              <div class="circle home">
+                <i class="icon-home" style="top: 11px; left: 25px;"></i>
+                <span> 40 kW</span>
+              </div>
+            </div>
+          </div>
+          <div class="bottom justify-content-center d-flex col-12">
+            <div class="circle-container">
+              <div class="circle battery">
+                <i class="flaticon-047-battery"></i>
+                <span style="left: 28px;"> 80% </span>
+              </div>
+              <p class="label mb-0 text-center mx-auto">Battery</p>
+            </div>
+          </div>
+        </div>
+        <div class="straight-path down">
+          <div class="shape trail-down"></div>
+        </div>
+        <div class="straight-path lefts">
+          <div class="shape trail-left"></div>
+        </div>
+        <div class="straight-path rights">
+          <div class="shape trail-right"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -10,7 +10,7 @@
   top: 0;
   right: 0;
   left: 280px;
-  z-index: 97;
+  z-index: 907;
   .toggle {
     border-left: none;
     border-bottom: none;
@@ -25,8 +25,237 @@
     align-items: stretch;
     margin: 0;
     color: white;
+    position: relative;
   }
 }
 .container-fluid {
   padding: 0 !important;
+}
+.powerflow {
+  &-dropdown {
+    z-index: 1;
+    position: absolute;
+    background-color: $bg1;
+    width: auto;
+    top: 100%;
+    left: 30%;
+    height: auto;
+    padding: 30px 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  }
+  .box {
+    position: relative;
+
+    .pw-title {
+      text-align: center;
+      margin: 10px auto;
+      letter-spacing: 2px;
+      color: #cdd3dd;
+    }
+    .circle-container {
+      z-index: 50;
+    }
+    .circle {
+      border-radius: 100%;
+      height: 85px;
+      width: 85px;
+      background-color: $darkbg;
+      border: 2px solid $secondary;
+      z-index: 102;
+      text-align: center;
+      display: block;
+      position: relative;
+      i,
+      span {
+        position: absolute;
+        color: $secondary;
+      }
+      i {
+        font-size: 30px;
+        top: 8px;
+        left: 4px;
+      }
+      span {
+        font-size: 16px;
+        top: 50px;
+        left: 18px;
+        font-weight: 300;
+      }
+    }
+    .top {
+      margin-bottom: 30px;
+    }
+    .middle {
+      margin: 30px auto;
+    }
+
+    .bottom {
+      margin-top: 30px;
+    }
+
+    .straight-path {
+      display: block;
+      top: 114px;
+      position: absolute;
+    }
+    .down {
+      height: 269px;
+      left: 49.8%;
+      width: 7px;
+      background: #fbcf3c;
+      background: linear-gradient($bg1, $bg1),
+        linear-gradient(
+          180deg,
+          #fbcf3c 0%,
+          rgba(148, 255, 53, 0.8183648459) 100%
+        );
+      border: double 1px transparent;
+      border-width: 0px 0px 1px 1px;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+    }
+    .lefts,
+    .rights {
+      height: 161px;
+      z-index: 0;
+      width: 40%;
+      border: double 1px transparent;
+    }
+
+    .lefts {
+      right: 51.5%;
+      border-bottom-right-radius: 22px;
+      background-image: linear-gradient($bg1, $bg1),
+        linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 1) 56%,
+          rgba(251, 207, 60, 1) 84%
+        );
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      border-width: 0 1px 1px 0;
+    }
+    .rights {
+      left: 51.5%;
+      border-bottom-left-radius: 22px;
+      background-image: linear-gradient($bg1, $bg1),
+        linear-gradient(130deg, #fbcf3c 0%, #1f8efa 61%);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      border-width: 0 0 1px 1px;
+    }
+
+    .grid {
+      border-color: white;
+      i {
+        color: white;
+      }
+    }
+
+    .solar {
+      border-color: rgba(251, 207, 60, 1);
+
+      i {
+        color: rgba(251, 207, 60, 1);
+      }
+    }
+    .home {
+      border-color: $primary;
+      i {
+        color: $primary;
+      }
+    }
+    .battery {
+      border-color: rgba(148, 255, 53, 1);
+      i {
+        color: rgba(148, 255, 53, 1);
+      }
+    }
+
+    .solar span,
+    .battery span,
+    .home span,
+    .grid span {
+      color: white;
+    }
+  }
+}
+
+.shape {
+  position: absolute;
+  background: rgba(31, 142, 250, 78%);
+  width: 15px;
+  height: 15px;
+  border: 5px solid rgb(29, 41, 62, 44%);
+  display: block;
+  border-radius: 50%;
+  top: 32px;
+  transition: all 1s ease-in-out;
+}
+
+.trail {
+  &-down {
+    right: 0;
+    animation: trail 1.5s infinite;
+  }
+  &-left {
+    left: 96%;
+    animation: short-trail 1.5s infinite, left-side 1.5s infinite;
+  }
+  &-right {
+    right: 96%;
+    animation: short-trail 1.5s infinite, right-side 1.5s infinite;
+  }
+}
+
+@keyframes trail {
+  0% {
+    top: 5px;
+  }
+  50% {
+    top: 151px;
+  }
+  100% {
+    top: 251px;
+  }
+}
+@keyframes short-trail {
+  0% {
+    top: 5px;
+  }
+
+  50% {
+    top: 151px;
+  }
+}
+@keyframes right-side {
+  51% {
+    top: 151px;
+    right: 90%;
+  }
+  100% {
+    top: 151px;
+    right: 0;
+  }
+}
+@keyframes left-side {
+  51% {
+    top: 151px;
+    left: 90%;
+  }
+  100% {
+    top: 161px;
+    left: 0;
+  }
+}
+@media (max-width: 500px) {
+  .powerflow {
+    &-dropdown {
+      left: 10%;
+      right: 9%;
+    }
+  }
 }

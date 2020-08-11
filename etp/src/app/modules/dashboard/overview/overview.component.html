@@ -3,9 +3,9 @@
     <h2 class="dash-title" i18n>Overview</h2>
 
     <div class="row">
-      <div class="col-md-5 mb-3">
+      <div class="col-lg-5 mb-3">
         <div class="row my-3">
-          <div class="col-md-6 col-sm-12">
+          <div class="col-md-6 col-sm-12 mb-2">
             <div class="card dash-card py-2 px-3">
               <p i18n>
                 Earnings
@@ -18,18 +18,18 @@
                   <div class="d-block grey" i18n>Total</div>
                   <p class="earn">
                     3,500
-                    <span
+                    <span style="position: absolute; top: 21%; left: 100px;"
                       ><img
                         src="assets/svg/tl.svg"
                         alt="TL"
-                        style="width: 18px; vertical-align: baseline;"
+                        style="width: 5em;"
                     /></span>
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-sm-12">
+          <div class="col-md-6 col-sm-12 mb-2">
             <div class="card dash-card py-2 px-3">
               <p i18n>total co<sub>2</sub> savings</p>
               <div class="card-body position-relative">
@@ -48,7 +48,7 @@
         <div class="dash-card p-3 col-12">
           <p i18n>Recent Notifications</p>
 
-          <div *ngFor="let item of data.report | slice: 0 - 4">
+          <div *ngFor="let item of data.report | slice: 0 - 4" class="mb-2">
             <mat-list>
               <mat-list-item>
                 <div class="left-icon notif">
@@ -68,7 +68,7 @@
                     *ngIf="item.status === 'setting'"
                   ></i>
                 </div>
-                <div class="right text-white" i18n>
+                <div class="right text-white message" i18n>
                   {{
                     url === "en" ? item.messageEN : (item.messageTR | titlecase)
                   }}
@@ -79,7 +79,7 @@
         </div>
       </div>
 
-      <div class="col-md-7">
+      <div class="col-lg-7">
         <div id="chart" class="p-3 dash-card">
           <p i18n>Energy Balance Today</p>
           <apx-chart

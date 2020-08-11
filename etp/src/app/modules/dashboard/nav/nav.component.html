@@ -6,7 +6,7 @@
   <div id="content" [class]="set.sidetoggle">
     <etp-topbar></etp-topbar>
 
-    <div id="dashcomps" class="mx-auto">
+    <div id="dashcomps" class="mx-auto" (click)="set.powerflow = false">
       <router-outlet></router-outlet>
     </div>
     <etp-stickybar *ngIf="set.isTablet$ | async"></etp-stickybar>
