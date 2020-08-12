@@ -60,7 +60,7 @@
                       type="text"
                       class="form-control"
                       name="firstName"
-                      placeholder="First name"
+                      [placeholder]="url === 'tr' ? 'İsim' : 'First name'"
                       aria-label="First name"
                       required
                       data-msg="Please enter your first name."
@@ -82,7 +82,7 @@
                       type="text"
                       class="form-control"
                       name="lasstName"
-                      placeholder="Last name"
+                      [placeholder]="url === 'tr' ? 'Soyadı' : 'Last name'"
                       aria-label="Last name"
                       required
                       data-msg="Please enter your last name."
@@ -106,7 +106,7 @@
                       type="text"
                       class="form-control"
                       name="email"
-                      placeholder="Email address"
+                      [placeholder]="url === 'tr' ? 'E-posta' : 'Email address'"
                       aria-label="Email address"
                       required
                       data-msg="Please enter a valid email address."
@@ -130,7 +130,11 @@
                   class="form-control"
                   rows="4"
                   name="description"
-                  placeholder="Hi there, I would like to ..."
+                  [placeholder]="
+                    url === 'tr'
+                      ? 'Merhaba isterim ...'
+                      : 'Hi there, I would like to ...'
+                  "
                   aria-label="Hi there, I would like to ..."
                   required
                   data-msg="Please enter a reason."

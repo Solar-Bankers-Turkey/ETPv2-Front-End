@@ -74,7 +74,11 @@ export class CompleteRegisterationComponent implements OnInit {
     const InvNo = `${this.TcNum.value}`;
     const birth = `${this.BDate.value}`;
 
-    if (this.regForm.invalid) {
+    if (
+      this.regForm.invalid &&
+      this.State.value === '' &&
+      this.City.value === ''
+    ) {
       if (this.url === 'en') {
         this.errorMsg = 'Please fill the provided fields correctly!';
       }

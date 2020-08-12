@@ -19,12 +19,12 @@
               aria-hidden="true"
               *ngIf="item.status === 'setting'"
             ></i>
-            <span [class.d-flex]="set.isHandset$ | async" i18n>{{
+            <span [class.d-flex]="set.isHandset$ | async">{{
               item.date | date: "HH:mm, MMMM yyy"
             }}</span>
           </div>
           <div class="col-lg-8 col-md-7 col-6">
-            <div class="mx-1 message" i18n>
+            <div class="mx-1 message">
               {{ url === "en" ? item.messageEN : (item.messageTR | titlecase) }}
             </div>
           </div>

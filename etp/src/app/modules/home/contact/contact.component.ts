@@ -11,6 +11,7 @@ export class ContactComponent implements OnInit {
   closed = false;
   contact: FormGroup;
   errorMsg = '';
+  url = window.location.href.split('/')[3];
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {

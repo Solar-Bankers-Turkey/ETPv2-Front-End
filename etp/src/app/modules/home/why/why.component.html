@@ -40,11 +40,13 @@
           data-aos-duration="1000"
           data-aos-delay="1200"
         >
-          <h4 class="h6 mb-0">{{ item.title }}</h4>
+          <h4 class="h6 mb-0">
+            {{ url === "tr" ? item.titleTr : item.titleEn }}
+          </h4>
         </div>
       </div>
       <p data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
-        {{ item.desc }}
+        {{ url === "tr" ? item.descTr : item.descEn }}
       </p>
       <!-- End Icon Block -->
     </div>

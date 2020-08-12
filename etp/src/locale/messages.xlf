@@ -235,51 +235,90 @@
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="31b3c04d6124017a5584a55c89e4da7b094f0a14" datatype="html">
-        <source>
-          SIGN IN
-        </source>
+      <trans-unit id="92eee6be6de0b11c924e3ab27db30257159c0a7c" datatype="html">
+        <source>Home</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">63</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/topbar/topbar.component.html</context>
+          <context context-type="linenumber">50</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="c80a6785fcc589e576647cbf187502d8453edf02" datatype="html">
-        <source>
-          SIGN UP
-        </source>
+      <trans-unit id="004b222ff9ef9dd4771b777950ca1d0e4cd4348a" datatype="html">
+        <source>About</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
-          <context context-type="linenumber">36</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
-          <context context-type="linenumber">75</context>
+          <context context-type="linenumber">80</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="cedfeb8975218abe2ce2a63399ae0cb410491dac" datatype="html">
-        <source>
-              Welcome to <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
-              Energy Trading Platform
-            </source>
+      <trans-unit id="8834eea1b28bdc658c17c6ebb945839ff780a2d9" datatype="html">
+        <source>Why</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">97</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5c6a7066d8f6127025a0386d821b4cb9a1ba6081" datatype="html">
-        <source>by solar bankers</source>
+      <trans-unit id="34746fb1c7f3d2194d99652bdff89e6e14c9c4f4" datatype="html">
+        <source>Contact</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fb733dbadbdcb8a06c40d679988827ff50dbab33" datatype="html">
+        <source>
+                  Get Started
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a0843de0a64adcc7ee6a946408b6876cd8abdcae" datatype="html">
+        <source>English</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">151</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="498095dc81b4ee354d8b83bcec0a1195fa44395b" datatype="html">
+        <source>Turkish</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">164</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7b865a709c6d624931514f719635b53dd1c51169" datatype="html">
+        <source>Call us</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">189</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ab232b7bc04eb63a2d9bd9aa51a28427b715b58c" datatype="html">
+        <source>
+                Email us
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">203</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="729754dd19eb9ce0670b0aeb5a6ae60574c2c563" datatype="html">
+        <source>Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">219</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
           <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="ae89a08ab9c77434ca7b8b116498317ecac8f2d9" datatype="html">
-        <source>WELCOME</source>
+      <trans-unit id="04be62e4c763c9788231894e723a618e2b407979" datatype="html">
+        <source>ABOUT US</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/home/about/about.component.html</context>
           <context context-type="linenumber">10</context>
@@ -368,7 +407,7 @@
         <source>I want to receive ETP Newsletters</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/home/contact/contact.component.html</context>
-          <context context-type="linenumber">160</context>
+          <context context-type="linenumber">164</context>
         </context-group>
       </trans-unit>
       <trans-unit id="425ff0c8b460391d1d47b96754e84ab6f2df54de" datatype="html">
@@ -377,32 +416,82 @@
           </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/home/contact/contact.component.html</context>
-          <context context-type="linenumber">175</context>
+          <context context-type="linenumber">179</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fda3cf34433344ee0c8e959d4c47814136372121" datatype="html">
         <source>You&apos;ll hear from us within 1-2 business days.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/home/contact/contact.component.html</context>
-          <context context-type="linenumber">200</context>
+          <context context-type="linenumber">204</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="05d44374f3f51ec8488d663e54fadaa0199f48d4" datatype="html">
+      <trans-unit id="30f5941c72c799c47acf544af4d327075f256813" datatype="html">
         <source>
-            Energy Trading Platform
-          </source>
+                Welcome to
+              </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/home/hero/hero.component.html</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1020388ee2381b33ca3d9bfa7d3bcf7a77be960a" datatype="html">
+      <trans-unit id="d333bee45018380a5fc0b6c3aece05c5457e536b" datatype="html">
         <source>
-            by solar bankers
-          </source>
+                Energy <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Trading<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
+                Platform
+              </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/home/hero/hero.component.html</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="891f8653a037bde3e6b3b882f11e110967166b45" datatype="html">
+        <source>By solar bankers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/hero/hero.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="efc5870b530fac85b54b60314b785816e4adb7f8" datatype="html">
+        <source>
+                  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> An Easy<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Way to Buy
+                  and Sell Electricity
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/hero/hero.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a8ff6e42ac5a890be15bf5f132cceff1d390c46d" datatype="html">
+        <source>Get Started as a prosumer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/hero/hero.component.html</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="97a45a37f18e80c46ab75b4ac7c95e9842785bbb" datatype="html">
+        <source>
+                Manage your Electricity and sell your Extra Easily
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/hero/hero.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7dd27f30ef0163cb7e2d90bc644a13c1119659fe" datatype="html">
+        <source>Get Started as a Consumer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/hero/hero.component.html</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1d68665d621085ef4e2694c7ea3a09af991ce7a2" datatype="html">
+        <source>
+                Manage your Electricity Easily
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/hero/hero.component.html</context>
+          <context context-type="linenumber">104</context>
         </context-group>
       </trans-unit>
       <trans-unit id="a4f0f2d916147be8c0e1012f43cea7470819e7c3" datatype="html">
@@ -419,84 +508,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/home/why/why.component.html</context>
           <context context-type="linenumber">11</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="92eee6be6de0b11c924e3ab27db30257159c0a7c" datatype="html">
-        <source>Home</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/home/landing/landing.component.html</context>
-          <context context-type="linenumber">59</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="004b222ff9ef9dd4771b777950ca1d0e4cd4348a" datatype="html">
-        <source>About</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/home/landing/landing.component.html</context>
-          <context context-type="linenumber">76</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8834eea1b28bdc658c17c6ebb945839ff780a2d9" datatype="html">
-        <source>Why</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/home/landing/landing.component.html</context>
-          <context context-type="linenumber">93</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="34746fb1c7f3d2194d99652bdff89e6e14c9c4f4" datatype="html">
-        <source>Contact</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/home/landing/landing.component.html</context>
-          <context context-type="linenumber">110</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="fb733dbadbdcb8a06c40d679988827ff50dbab33" datatype="html">
-        <source>
-                  Get Started
-                </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/home/landing/landing.component.html</context>
-          <context context-type="linenumber">116</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="a0843de0a64adcc7ee6a946408b6876cd8abdcae" datatype="html">
-        <source>English</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/home/landing/landing.component.html</context>
-          <context context-type="linenumber">147</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="498095dc81b4ee354d8b83bcec0a1195fa44395b" datatype="html">
-        <source>Turkish</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/home/landing/landing.component.html</context>
-          <context context-type="linenumber">160</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7b865a709c6d624931514f719635b53dd1c51169" datatype="html">
-        <source>Call us</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/home/landing/landing.component.html</context>
-          <context context-type="linenumber">273</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ab232b7bc04eb63a2d9bd9aa51a28427b715b58c" datatype="html">
-        <source>
-                Email us
-              </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/home/landing/landing.component.html</context>
-          <context context-type="linenumber">287</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="729754dd19eb9ce0670b0aeb5a6ae60574c2c563" datatype="html">
-        <source>Address</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/home/landing/landing.component.html</context>
-          <context context-type="linenumber">303</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f0badd6214f8ee72ceb29b3f43dfa61873f585f9" datatype="html">
@@ -566,6 +577,15 @@
           <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="31b3c04d6124017a5584a55c89e4da7b094f0a14" datatype="html">
+        <source>
+          SIGN IN
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/signin/signin.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="f36e82dbae17eacc69267b0327c0ff48cf247b13" datatype="html">
         <source>
           RECOVER PASSWORD
@@ -620,6 +640,15 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
           <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c80a6785fcc589e576647cbf187502d8453edf02" datatype="html">
+        <source>
+          SIGN UP
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/signup/signup.component.html</context>
+          <context context-type="linenumber">75</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cb8d289a76a599130f1dcbb33bddaf93f27da7ce" datatype="html">
@@ -720,39 +749,25 @@
           <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5c7012b5a926b32d9e45fefdcc8a1a3cb6f023d0" datatype="html">
-        <source>City</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">55</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="873b72903b1858a9cd6c8967521030b4d7d1435b" datatype="html">
-        <source>State</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">66</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="fceea851a54e4b23e4e52add78b2cc64126b6d68" datatype="html">
         <source>Electric Invoice Number</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">77</context>
+          <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7afcbdc57a6de86300c17a97a31e1fb1cfe0f76d" datatype="html">
         <source>TC Number</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">86</context>
+          <context context-type="linenumber">90</context>
         </context-group>
       </trans-unit>
       <trans-unit id="c7958d835569ddb937a9c522e2505b9d86468ca5" datatype="html">
         <source>Birth Date</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">95</context>
+          <context context-type="linenumber">99</context>
         </context-group>
       </trans-unit>
       <trans-unit id="a66f97ceb98f929c1d42681c688b985115b9e1e5" datatype="html">
@@ -761,14 +776,44 @@
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">111</context>
+          <context context-type="linenumber">115</context>
         </context-group>
       </trans-unit>
       <trans-unit id="a817f195b240c87bee12800ba91dd3e8d3ff45f4" datatype="html">
         <source>Not now</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/auth/complete-registeration/complete-registeration.component.html</context>
-          <context context-type="linenumber">117</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5eb454ec14940f68b86e53618e36148fb2c3b31c" datatype="html">
+        <source>
+          POWER FLOW
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/topbar/topbar.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5fc8c41d36f99344b126e45fec15d0d26d822a3b" datatype="html">
+        <source>Solar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/topbar/topbar.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e0b996bf8fdc049279ea410a0d3955f732731e41" datatype="html">
+        <source>Grid</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/topbar/topbar.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8abfd6bf3df0d1a2a99599cbb496824bf57062a0" datatype="html">
+        <source>Battery</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/topbar/topbar.component.html</context>
+          <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ab563084066ed1aaa72ad97e85507678765d30d8" datatype="html">
@@ -827,6 +872,13 @@
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="59910f848aeb459dff52106498b1b6b4803ad224" datatype="html">
+        <source>check power flow</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/topmenu/topmenu.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="649e2b41c4ccdfe5c27eca65da876cc5cfbe699f" datatype="html">
         <source>Hi, <x id="INTERPOLATION" equiv-text="{{ data?.surname }}"/></source>
         <context-group purpose="location">
@@ -850,41 +902,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/profilebar/profilebar.component.html</context>
           <context context-type="linenumber">34</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="fc4269725926ec796e826d50d6f54a9e05abf97b" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="{{
-              item.date | date: &quot;HH:mm, MMMM yyy&quot;
-            }}"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/log-msg/log-msg.component.html</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="48b14352b5f085fce77819b27cf97cdead4e358d" datatype="html">
-        <source>
-              <x id="INTERPOLATION" equiv-text="{{ url === &quot;en&quot; ? item.messageEN : (item.messageTR | titlecase) }}"/>
-            </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/log-msg/log-msg.component.html</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="310b1ce61546f0237eab470e0daa5707c28b1edc" datatype="html">
-        <source>
-        <x id="INTERPOLATION" equiv-text="{{ options.icon }}"/>
-      </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/settings-devices/settings-devices.component.html</context>
-          <context context-type="linenumber">9</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="f013fb2b67a18a7e3b99800bed3b0e13dec2c40b" datatype="html">
-        <source>
-        <x id="INTERPOLATION" equiv-text="{{ options.navName | titlecase }}"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/snippets/dashboard-nav/settings-devices/settings-devices.component.html</context>
-          <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e95ae009d0bdb45fcc656e8b65248cf7396080d5" datatype="html">
@@ -911,39 +928,28 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/dashboard/overview/overview.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d5f0ec9cf9165e6b3875e9c03138a1bef41ca9b4" datatype="html">
         <source>total co<x id="START_SUBSTRIPT" ctype="x-sub" equiv-text="&lt;sub&gt;"/>2<x id="CLOSE_SUBSTRIPT" ctype="x-sub" equiv-text="&lt;/sub&gt;"/> savings</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/dashboard/overview/overview.component.html</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1d65cc22d5842c06d33b244fc67de9db4003537e" datatype="html">
         <source>Recent Notifications</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/dashboard/overview/overview.component.html</context>
-          <context context-type="linenumber">41</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="44f66db789d9293a355677287fd222097d8f2b13" datatype="html">
-        <source>
-                  <x id="INTERPOLATION" equiv-text="{{
-                    url === &quot;en&quot; ? item.messageEN : (item.messageTR | titlecase)
-                  }}"/>
-                </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/dashboard/overview/overview.component.html</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="a60f25e12e403bf08426b4e5e5dc2a794937f094" datatype="html">
         <source>Energy Balance Today</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/dashboard/overview/overview.component.html</context>
-          <context context-type="linenumber">76</context>
+          <context context-type="linenumber">84</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6b5efcad0853c96e08a9261ca04ad8e970796bf7" datatype="html">
@@ -952,14 +958,14 @@
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/dashboard/overview/overview.component.html</context>
-          <context context-type="linenumber">92</context>
+          <context context-type="linenumber">100</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e64863f9951b98c92bf8883cd371cac0831b0f05" datatype="html">
         <source>Weather today</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/dashboard/overview/overview.component.html</context>
-          <context context-type="linenumber">100</context>
+          <context context-type="linenumber">108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="b839353bb837a8d94211bd83003d9d75f188ec7e" datatype="html">
@@ -968,7 +974,7 @@
                 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/dashboard/overview/overview.component.html</context>
-          <context context-type="linenumber">124</context>
+          <context context-type="linenumber">132</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1062f6bac8ec0271cffbd4044b5065e5731c0506" datatype="html">

@@ -119,7 +119,8 @@ textarea:focus {
     color: white;
   }
   input,
-  textarea {
+  textarea,
+  select {
     // background-color: $bg2;
     caret-color: $primary;
     font-weight: 300;
@@ -130,7 +131,8 @@ textarea:focus {
       border: 1px solid $primary !important;
     }
   }
-  input {
+  input,
+  select {
     width: 100%;
     height: 35px;
   }

@@ -13,6 +13,7 @@
   align-items: center;
   padding: 0px 5px;
   cursor: pointer;
+  position: relative;
   .item {
     display: flex;
     margin: auto 5px;
@@ -47,5 +48,18 @@
     width: 9vw;
     height: 0.4rem;
     background-color: $darkbg;
+  }
+}
+.caret-down {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  text-align: center;
+  right: 40%;
+  font-size: 0.63em;
+  &:hover {
+    color: $primary;
   }
 }
