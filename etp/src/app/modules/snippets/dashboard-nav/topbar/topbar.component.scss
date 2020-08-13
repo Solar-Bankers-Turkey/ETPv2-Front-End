@@ -69,7 +69,9 @@
       display: block;
       position: relative;
       cursor: pointer;
-      transition: all 0.5s i, span {
+      transition: all 0.5s;
+      i,
+      span {
         position: absolute;
         color: $secondary;
       }
