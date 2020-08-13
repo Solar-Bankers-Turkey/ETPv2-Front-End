@@ -69,8 +69,7 @@
       display: block;
       position: relative;
       cursor: pointer;
-      i,
-      span {
+      transition: all 0.5s i, span {
         position: absolute;
         color: $secondary;
       }
@@ -101,6 +100,7 @@
       display: block;
       top: 104px;
       position: absolute;
+      transition: all 0.5s;
     }
     .down {
       height: 276px;

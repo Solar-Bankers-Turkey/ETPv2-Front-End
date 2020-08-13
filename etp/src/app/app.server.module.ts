@@ -1,4 +1,4 @@
-import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
+
 import { NgModule } from '@angular/core';
 import { ServerModule } from '@angular/platform-server';
 
