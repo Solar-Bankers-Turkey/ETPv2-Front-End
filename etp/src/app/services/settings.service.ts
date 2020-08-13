@@ -8,7 +8,7 @@ import { map, shareReplay } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class SettingsService {
-  powerflow = false;
+  powerflow = true;
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe([Breakpoints.Handset])
     .pipe(

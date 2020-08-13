@@ -9,13 +9,13 @@
   }
   .btn-lang {
     right: 0;
-    top: 1em;
+    top: 1.5em;
     display: block;
   }
 
   .btn-scroll-lang {
     right: 0;
-    top: 1em;
+    top: 1.2em;
   }
   .dropdown {
     // position: fixed;
@@ -28,7 +28,7 @@
     transition: all 0.3s;
     animation: slideInUp;
     animation-duration: 100ms;
-    border-top: 1.5px solid #3e4e6c;
+    border-top: 2px solid $secondary;
     ul li {
       margin: 10px auto;
       width: 100%;
@@ -40,10 +40,7 @@
 }
 
 .top {
-  top: 90px;
-}
-.right-5 {
-  margin-right: 3.2rem;
+  top: 75px;
 }
 
 /* .hero {
@@ -60,4 +57,7 @@
   width: 6.5rem !important;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.btn-soft-light:hover {
+  color: $grey;
 }

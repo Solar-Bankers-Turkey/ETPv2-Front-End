@@ -13,10 +13,10 @@ import { SettingsService } from '@services/settings.service';
 export class HeroComponent implements OnInit {
   constructor(public set: SettingsService, config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
-    config.interval = 100000;
+    config.interval = 5000;
     config.wrap = true;
     config.keyboard = true;
-    config.pauseOnHover = true;
+    config.pauseOnHover = false;
   }
   ngOnInit(): void {}
 }

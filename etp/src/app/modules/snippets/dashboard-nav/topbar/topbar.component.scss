@@ -63,11 +63,12 @@
       height: 85px;
       width: 85px;
       background-color: $darkbg;
-      border: 2px solid $secondary;
+      border: 1px solid $secondary;
       z-index: 102;
       text-align: center;
       display: block;
       position: relative;
+      cursor: pointer;
       i,
       span {
         position: absolute;
@@ -76,7 +77,7 @@
       i {
         font-size: 30px;
         top: 8px;
-        left: 4px;
+        left: 5px;
       }
       span {
         font-size: 16px;
@@ -98,11 +99,11 @@
 
     .straight-path {
       display: block;
-      top: 114px;
+      top: 104px;
       position: absolute;
     }
     .down {
-      height: 269px;
+      height: 276px;
       left: 49.8%;
       width: 7px;
       background: #fbcf3c;
@@ -117,8 +118,22 @@
       background-origin: border-box;
       background-clip: content-box, border-box;
     }
+    .accross {
+      height: 1px;
+      left: 18%;
+      top: 268px !important;
+      width: 276px;
+      background: #fbcf3c;
+      background: linear-gradient(#2f3b52, #2f3b52),
+        linear-gradient(90deg, white 0%, #1f8efa 100%);
+      border: double 1px transparent;
+      border-width: 0px 0px 1px 1px;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+    }
     .lefts,
-    .rights {
+    .rights,
+    .up-right {
       height: 161px;
       z-index: 0;
       width: 40%;
@@ -140,16 +155,30 @@
     }
     .rights {
       left: 51.5%;
-      border-bottom-left-radius: 22px;
+      border-bottom-left-radius: 5px;
       background-image: linear-gradient($bg1, $bg1),
         linear-gradient(130deg, #fbcf3c 0%, #1f8efa 61%);
       background-origin: border-box;
       background-clip: content-box, border-box;
       border-width: 0 0 1px 1px;
     }
-
+    .up-right {
+      top: 273px !important;
+      left: 51.5%;
+      border-top-left-radius: 5px;
+      background-image: linear-gradient(#2f3b52, #2f3b52),
+        linear-gradient(
+          9deg,
+          rgba(148, 255, 53, 0.8183648459) 68% 0%,
+          #1f8efa 100%
+        );
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      border-width: 1px 0 0 1px;
+    }
     .grid {
       border-color: white;
+      box-shadow: 0px 0px 13px white;
       i {
         color: white;
       }
@@ -157,6 +186,7 @@
 
     .solar {
       border-color: rgba(251, 207, 60, 1);
+      box-shadow: 0px 0px 13px #fbcf3c;
 
       i {
         color: rgba(251, 207, 60, 1);
@@ -164,12 +194,14 @@
     }
     .home {
       border-color: $primary;
+      box-shadow: 0px 0px 13px $primary;
       i {
         color: $primary;
       }
     }
     .battery {
       border-color: rgba(148, 255, 53, 1);
+      box-shadow: 0px 0px 13px rgba(148, 255, 53, 1);
       i {
         color: rgba(148, 255, 53, 1);
       }
@@ -186,28 +218,48 @@
 
 .shape {
   position: absolute;
-  background: rgba(31, 142, 250, 78%);
-  width: 15px;
-  height: 15px;
-  border: 5px solid rgb(29, 41, 62, 44%);
+  width: 10px;
+  height: 10px;
+  border: 3.5px solid rgba(36, 65, 115, 0.71);
   display: block;
   border-radius: 50%;
-  top: 32px;
+  top: 56px;
   transition: all 1s ease-in-out;
 }
 
 .trail {
   &-down {
     right: 0;
+    background-color: #fbcf3c;
+    box-shadow: 0px 0px 7px #fbcf3c;
     animation: trail 1.5s infinite;
   }
-  &-left {
-    left: 96%;
+  /*  &-left {
+    left: 97%;
+    background-color: #fbcf3c;
+
+    box-shadow: 0px 0px 7px #fbcf3c;
     animation: short-trail 1.5s infinite, left-side 1.5s infinite;
-  }
+  } */
   &-right {
-    right: 96%;
-    animation: short-trail 1.5s infinite, right-side 1.5s infinite;
+    right: 97%;
+    background-color: $primary;
+    box-shadow: 0px 0px 7px $primary;
+    animation: right-side 1.5s infinite;
+  }
+  &-up-right {
+    top: 90px;
+    right: 97%;
+    box-shadow: 0px 0px 7px rgba(148, 255, 53, 0.8183648459);
+    background-color: rgba(148, 255, 53, 0.8183648459);
+    animation: up-side 1.5s infinite;
+  }
+  &-accross {
+    top: -4px;
+    left: 22px;
+    background-color: white;
+    box-shadow: 0px 0px 7px white;
+    animation: trail-accross 1.5s infinite;
   }
 }
 
@@ -216,38 +268,81 @@
     top: 5px;
   }
   50% {
-    top: 151px;
+    top: 154px;
   }
   100% {
-    top: 251px;
+    top: 261px;
   }
 }
-@keyframes short-trail {
+
+@keyframes trail-accross {
   0% {
-    top: 5px;
+    left: 10px;
   }
 
   50% {
-    top: 151px;
+    left: 122px;
+  }
+
+  100% {
+    left: 241px;
   }
 }
-@keyframes right-side {
-  51% {
-    top: 151px;
-    right: 90%;
+
+@keyframes up-side {
+  0% {
+    top: 90px;
+    right: 97%;
   }
+  49% {
+    top: 0px;
+    right: 97%;
+  }
+
+  50% {
+    top: -5px;
+    right: 94%;
+  }
+  51% {
+    top: -5px;
+    right: 94%;
+  }
+
   100% {
-    top: 151px;
+    top: -5px;
     right: 0;
   }
 }
-@keyframes left-side {
-  51% {
+@keyframes right-side {
+  0% {
+    top: 5px;
+    right: 97%;
+  }
+  49% {
     top: 151px;
-    left: 90%;
+    right: 97%;
+  }
+  50% {
+    top: 152px;
+    right: 94%;
+  }
+  51% {
+    top: 154px;
+    right: 94%;
   }
   100% {
-    top: 161px;
+    top: 154px;
+    right: 0;
+  }
+}
+
+@keyframes left-side {
+  51% {
+    top: 154px;
+    left: 94%;
+  }
+  100% {
+    top: 154px;
     left: 0;
   }
 }

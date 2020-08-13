@@ -17,11 +17,7 @@
             href=""
             aria-label="Front"
           >
-            <img
-              [src]="'/assets/img/mainlogo1.png'"
-              alt="solarbankers"
-              [class]="'img-fluid width-sm'"
-            />
+            <img [src]="headerLogo" alt="solarbankers" [class]="logo" />
           </a>
           <!-- End Logo -->
 
@@ -30,6 +26,8 @@
             type="button"
             class="navbar-toggler btn btn-trans btn-icon right-5"
             aria-label="Toggle navigation"
+            [attr.aria-expanded]="!isMenuCollapsed"
+            aria-controls="collapseBasic"
             (click)="
               isMenuCollapsed = !isMenuCollapsed; languageDropdown = false
             "
@@ -173,7 +171,9 @@
     </div>
   </header>
 
-  <router-outlet></router-outlet>
+  <div (click)="languageDropdown = false">
+    <router-outlet></router-outlet>
+  </div>
 
   <!-- ========== FOOTER ========== -->
   <footer class="space-2">

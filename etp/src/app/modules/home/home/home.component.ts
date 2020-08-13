@@ -8,17 +8,16 @@ import { SeoService } from '@services/seo.service';
 })
 export class HomeComponent implements OnInit {
   languageDropdown = false;
-  navClass = 'u-header u-header--bg-transparent-xl';
+  navClass =
+    'u-header--bg-transparent-lg u-header--white-nav-links-lg u-header--abs-top-lg';
   headerLogo = '/assets/img/home/logo.png';
   logo = 'img-fluid';
   headerButton = 'btn btn-sm btn-dark transition-3d-hover';
-  languageButton = 'btn btn-icon btn-lang btn-soft-secondary rounded-circle ';
+  languageButton = 'btn btn-icon btn-lang btn-soft-light rounded-circle ';
   languagePos = 'dropdown top';
   public isMenuCollapsed = true;
   constructor(public set: SettingsService, private seo: SeoService) {
     this.set.isTablet$.subscribe((data) => {
-      console.log(data);
-
       if (data) {
         this.headerLogo = '/assets/img/mainlogo1.png';
         this.logo = 'img-fluid width-sm';
@@ -64,11 +63,12 @@ export class HomeComponent implements OnInit {
           this.navClass =
             'u-header u-header--sticky-top-xl u-header--bg-light u-header--show-hide-md animate__animated animate__SlideInDown animate__slow';
         } else {
-          this.navClass = 'u-header u-header--bg-transparent-xl';
+          this.navClass =
+            'u-header--bg-transparent-lg u-header--white-nav-links-lg u-header--abs-top-lg';
           this.headerLogo = '/assets/img/home/logo.png';
           this.logo = 'img-fluid';
           this.languageButton =
-            'btn btn-lang btn-soft-secondary btn-icon rounded-circle ';
+            'btn btn-lang btn-soft-light btn-icon rounded-circle ';
           this.headerButton = 'btn btn-sm btn-dark transition-3d-hover';
           this.languagePos = 'dropdown top';
         }

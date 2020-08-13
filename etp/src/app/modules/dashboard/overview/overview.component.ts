@@ -43,8 +43,5 @@ export class OverviewComponent implements OnInit {
     this.chart.forecastDetails().then((data) => {
       this.today = data.current;
     });
-    console.log(this.router.navigated);
-    console.log(window.location.href.split('/'));
-    console.log(this.router.url);
   }
 }

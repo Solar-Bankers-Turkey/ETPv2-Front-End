@@ -9,3 +9,12 @@
 .carousel-control-next {
   cursor: pointer;
 }
+.u-header--abs-top-lg {
+  top: 0;
+  bottom: auto;
+  width: 100%;
+  z-index: 11;
+}
+.navbar-nav {
+  padding-top: 10px;
+}
