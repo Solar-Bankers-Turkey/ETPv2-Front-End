@@ -23,6 +23,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "apexcharts"
+            ],
+            "preserveSymlinks": true,
             "outputPath": "dist/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
