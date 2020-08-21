@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+      <title>Collapsible sidebar using Bootstrap 4</title>
+
+      <!-- Bootstrap CSS CDN -->
+      <link
+         rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+         crossorigin="anonymous"
+      />
+
+      <!-- Our Custom CSS -->
+      <link rel="stylesheet" href="styles.css" />
+      <!-- Scrollbar Custom CSS -->
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+      />
+
+      <!-- Font Awesome JS -->
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css"
+      />
+   </head>
+
+   <body>
+      <div class="wrapper">
+         <!-- Sidebar  -->
+         <nav id="sidebar">
+            <div class="sidebar-header">
+               <h3 class="w-100">
+                  <img
+                     src="http://etp.solarbankers.org/assets/img/mainlogo1.png"
+                     alt=""
+                     width="80%"
+                     class="mx-auto"
+                  />
+               </h3>
+            </div>
+
+            <ul class="list-unstyled components">
+               <li class="nav-title">Table of Content</li>
+               <li class="">
+                  <a href="#foreword">Foreword</a>
+                  <ul class="sub list-unstyled" id="homeSubmenu">
+                     <li>
+                        <a href="#warning"><span>-</span> Warning</a>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#package">Content of the package</a>
+               </li>
+               <li>
+                  <a href="#installation">Installation</a>
+                  <ul class="sub list-unstyled" id="homeSubmenu">
+                     <li>
+                        <a href="#operating"
+                           ><span>-</span> Solar Node Operating System</a
+                        >
+                     </li>
+                     <li>
+                        <a href="#hardware"><span>-</span> Hardware</a>
+                     </li>
+                     <li>
+                        <a href="#config"><span>-</span> Configurations</a>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+
+            <!--  <ul class="list-unstyled CTAs">
+               <li>
+                  <a
+                     href="https://bootstrapious.com/tutorial/files/sidebar.zip"
+                     class="download"
+                     >Download source</a
+                  >
+               </li>
+               <li>
+                  <a
+                     href="https://bootstrapious.com/p/bootstrap-sidebar"
+                     class="article"
+                     >Back to article</a
+                  >
+               </li>
+            </ul> -->
+         </nav>
+
+         <!-- Page Content  -->
+         <div
+            id="content"
+            data-spy="scroll"
+            data-target="sidebar"
+            data-offset="0"
+         >
+            <nav class="navbar navbar-expand-lg navbar-light">
+               <div class="container-fluid">
+                  <button
+                     type="button"
+                     id="sidebarCollapse"
+                     class="btn btn-info navbar-toggler"
+                  >
+                     <i class="icon-menu"></i>
+                  </button>
+
+                  <div class="nav navbar-nav ml-auto">
+                     <h3 class="my-auto">
+                        Solar Bankers Node Config <span>Guide</span>
+                     </h3>
+                  </div>
+               </div>
+            </nav>
+
+            <div class="container mt-5">
+               <div id="foreword" class="paragraph py-5">
+                  <h2>Foreword</h2>
+                  <p>
+                     Thank you for your trust in Solar Bankers. In using the
+                     Solar Bankers Node, you are obliged to install and operate
+                     your device according to the safety instructions, warnings,
+                     specification sheets, as well as common sense. The Solar
+                     Bankers Team is not responsible for any property losses or
+                     personal injuries caused by failure to understand the
+                     proper use of the product. Since this is the first version
+                     of the Solar Bankers Node, built especially for
+                     early-adopter customers, you may face an unexpected
+                     situation. We appreciate your patience in dealing with such
+                     a scenario. The Solar Bankers team stands ready to help,
+                     and remains willing to offer the most appropriate solution
+                     to address any product defect. This includes a warranty
+                     that covers, as necessary, free repair or replacement of
+                     the entire product*.
+                  </p>
+                  <p>
+                     <span class="p-title">
+                        Warranty terms:
+                     </span>
+                     This manufacturer warranty covers any defect in material or
+                     workmanship that may occur under normal use within a period
+                     of one (1) year from the purchase date. When you discover
+                     any defects with the Solar Bankers Node, stop all
+                     operations and contact the Solar Bankers team immediately
+                     to obtain warranty coverage. You may reach the Solar
+                     Bankers team at:
+                     <a href="mailto:info@solarbankers.com" class="text-primary"
+                        >info@solarbankers.com</a
+                     >
+                     .
+                  </p>
+
+                  <p>
+                     <span class="p-title">Exclusions: </span>There is
+                     absolutely no coverage for accidents, fire, or water
+                     damage, acts of nature or external forces, or damage caused
+                     by repairs, unauthorized upgrade attempts, or removal of
+                     components. This warranty does not cover cosmetic damage.
+                     This warranty does not apply to products that have been
+                     lost, altered, broken, or damaged by misuse or failure to
+                     follow instructions provided with the product. Also, there
+                     is no warranty against normal wear.
+                  </p>
+                  <p>
+                     <span class="p-title">Remedy terms: </span>At its
+                     discretion, Solar Bankers will make remedy through
+                     replacement or repair of defects. Return shipping costs are
+                     the responsibility of the original purchaser. Warranty
+                     period: all warranty claims must be reported to the
+                     manufacturer during the one year warranty period from the
+                     date of the purchase to be eligible for coverage.
+                  </p>
+                  <p>
+                     <span class="p-title">Safety: </span> It’s important that
+                     you assemble and operate this product and all components in
+                     strict accordance with the instructions in this manual.
+                  </p>
+                  <p>
+                     <span class="p-title">Handling Lithium batteries – </span>
+                     Exercise extreme caution while handling the power bank.
+                     Follow the instructions included in the package and
+                     provided by the manufacturer.
+                  </p>
+                  <p>
+                     <span class="p-title"> Firm connections – </span> Before
+                     powering the Solar Bankers Node, ensure that all
+                     connections are secure for all components.
+                  </p>
+                  <p>
+                     <span class="p-title">Precautions – </span> Take time to
+                     consider situations that may be dangerous or cause damage:
+                  </p>
+                  <ul class="px-5">
+                     <li>
+                        During operation, do not expose the Raspberry Pi or the
+                        Power Bank to water. The back of the solar panel must be
+                        also protected from any water infiltration.
+                     </li>
+                     <li>
+                        Do not expose the Solar Bankers Node to heat from any
+                        source. This device is designed to reliable operate at
+                        normal ambient temperatures.
+                     </li>
+                  </ul>
+                  <p>
+                     If any of the following situations occur, stop using the
+                     Solar Bankers Node immediately and contact support to make
+                     arrangements to check your unit:
+                  </p>
+                  <ul class="px-5">
+                     <li>
+                        Liquid has penetrated into the Solar Bankers Node.
+                     </li>
+                     <li>
+                        The Solar Bankers Node does not work well, or it does
+                        not function according to the content in the user guide.
+                     </li>
+                     <li>
+                        The Solar Bankers Node has been dropped and damaged.
+                     </li>
+                     <li>The Solar Bankers Node has an obvious breakage.</li>
+                  </ul>
+               </div>
+               <div id="warning" class="my-5 py-5">
+                  <p>
+                     <span class="p-title">
+                        Warning -
+                     </span>
+                  </p>
+                  <ul class="px-5">
+                     <li>
+                        Always unplug the power before installing any component
+                        into this device or removing anything from this device
+                     </li>
+                     <li>
+                        Do not touch the Solar Bankers Node with any wet part of
+                        the body, and do not operate the Solar Bankers Node
+                        while bearfoot.
+                     </li>
+                     <li>
+                        The Solar Bankers Node is not intended to be used by
+                        children. Nor is it intended for use by persons that
+                        exhibit any physical, sensory, or mental impairment, or
+                        persons lacking experience and knowledge of the Solar
+                        Bankers Node – unless supervised or previously
+                        instructed in its use by those responsible for their
+                        safety.
+                     </li>
+                  </ul>
+               </div>
+               <div class="line"></div>
+
+               <div id="package" class="paragraph py-5">
+                  <h2>Content Of the Package</h2>
+                  <p>
+                     <span class="p-title">- </span> One (1) 23 Wp
+                     poly-crystalline solar panel with DC/DC converter for USB
+                     output.
+                  </p>
+                  <p>
+                     <span class="p-title">- </span> One (1) EasyAcc Monster
+                     20,000 mAh Power Bank (4A input 4.8A Smart Output)
+                  </p>
+                  <p>
+                     <span class="p-title">- </span> Two (2) micro USB/USB
+                     cables
+                  </p>
+                  <p>
+                     <span class="p-title">- </span> One (1) Raspberry Pi 3
+                     Model B +
+                  </p>
+                  <p>
+                     <span class="p-title">- </span> One (1) Raspberry Pi 3 Case
+                  </p>
+                  <p>
+                     <span class="p-title">- </span> One (1) Raspberry Pi 5.1V
+                     2.5A Power Supply (UK, EU, USA and Australia)
+                  </p>
+                  <p>
+                     <span class="p-title">- </span> One (1) 16 GB MicroSD card
+                     preloaded with the latest version of NOOBS
+                  </p>
+               </div>
+
+               <div class="line"></div>
+
+               <div class="paragraph">
+                  <div id="installation">
+                     <h2>Installing the Solar Bankers Node</h2>
+                  </div>
+
+                  <div class="my-5 px-5 py-5" id="operating">
+                     <h4 class="mb-4">Solar Node Operating System</h4>
+                     <p>
+                        Please download the image file of the solar bankers
+                        operating system. After downloading you can easily write
+                        the image file to the SD card with blena etcher.
+                        <a
+                           href="https://www.balena.io/etcher/"
+                           target="_blank"
+                           class="text-primary"
+                           >https://www.balena.io/etcher/</a
+                        >
+                     </p>
+                     <p>
+                        Use an SD card reader and connect it to your
+                        computer.Click Flash from file button and select the
+                        solar node iso file. After selecting the target you can
+                        start the flash button.
+                     </p>
+                     <div class="px-5 py-5 mx-auto my-4">
+                        <img
+                           src="operations.jpeg"
+                           class="img-fluid"
+                           alt="installing picture ilustrations"
+                        />
+                     </div>
+
+                     <p>
+                        After flashing you can plug the sd card into raspberry
+                        pi.
+                     </p>
+                  </div>
+
+                  <div class="my-5 px-5 py-5" id="hardware">
+                     <h4 class="mb-4">Hardware</h4>
+                     <p>
+                        Before installing the Solar Bankers Node, make sure
+                        that:
+                     </p>
+                     <ul class="px-5">
+                        <li>
+                           The Power Bank is fully charged. To charge the device
+                           follow the instructions available in the package.
+                        </li>
+                        <li>
+                           Insert the MicroSD card into the Raspberry Pi and
+                           place the device into its case.
+
+                           <ul>
+                              <li>
+                                 Connect the Raspberry Pi to Power Bank
+                              </li>
+                              <li>
+                                 Connect the Power Bank to the Solar Panel.
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                     <p>That's all!</p>
+
+                     <p class="p-title">
+                        You can see the wire connections on this schematic.
+                     </p>
+
+                     <div class="px-5 mx-auto my-4">
+                        <img
+                           src="connections.jpeg"
+                           alt="Wire connections"
+                           class="img-fluid"
+                        />
+                     </div>
+                  </div>
+
+                  <div class="my-5 px-5 py-5" id="config">
+                     <h4>Configurations</h4>
+                     <p>
+                        After you finnish the power connection solar node will
+                        open the wifi hotspot to connect and access the
+                        configuration page. You can connect the solar node
+                        network with your smartphone or computer.
+                     </p>
+                     <div class="mx-auto my-4 px-5">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <img
+                                 src="config1.jpeg"
+                                 class="img-fluid"
+                                 alt=""
+                              />
+                           </div>
+                           <div class="col-md-6">
+                              <img
+                                 src="config2.jpeg"
+                                 class="img-fluid"
+                                 alt=""
+                              />
+                           </div>
+                        </div>
+                     </div>
+
+                     <p>
+                        After connecting you open browser and write
+                        <a
+                           href="http://solarnode.local"
+                           class="text-primary"
+                           target="_blank"
+                           >http://solarnode.local</a
+                        >.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="overlay"></div>
+
+      <!-- jQuery CDN - Slim version (=without AJAX) -->
+      <script
+         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+         crossorigin="anonymous"
+      ></script>
+      <!-- jQuery Custom Scroller CDN -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+      <script type="text/javascript">
+         $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+               theme: "minimal",
+            });
+
+            $("#dismiss, .overlay").on("click", function () {
+               $("#sidebar").removeClass("active");
+               $(".overlay").removeClass("active");
+            });
+
+            $("#sidebarCollapse").on("click", function () {
+               $("#sidebar").addClass("active");
+               $(".overlay").addClass("active");
+               $(".collapse.in").toggleClass("in");
+               $("a[aria-expanded=true]").attr("aria-expanded", "false");
+            });
+         });
+      </script>
+   </body>
+</html>
