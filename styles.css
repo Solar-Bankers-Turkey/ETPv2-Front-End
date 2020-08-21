@@ -256,4 +256,8 @@ a.article:hover {
       padding-left: 15px !important;
       padding-right: 15px !important;
    }
+
+   .w-sm-100 {
+      width: 100% !important;
+   }
 }
