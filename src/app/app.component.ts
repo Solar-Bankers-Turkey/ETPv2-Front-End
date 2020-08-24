@@ -102,9 +102,13 @@ export class AppComponent implements OnInit {
         );
         this.wifiList[tg].saved = true;
         this.changeValuePosition(this.wifiList, tg, 0);
+        this.changeValuePosition(this.wifiList, 1, tg);
       } else {
+        this.new = false;
         this.wifiList.unshift({ name: this.wi.value, saved: true });
       }
+      this.clear();
+      this.md.dismissAll();
     } else {
       this.wifiError = 'Please Enter Password to Connect';
     }
@@ -115,8 +119,11 @@ export class AppComponent implements OnInit {
       this.wifiList.find((element) => element.name === this.wi.value)
     );
     this.wifiList[a].saved = false;
-    this.wifiList.unshift(this.wifiList[a]);
-    this.wifiList[0] = { name: undefined, saved: false };
+    if (a === 0) {
+      this.wifiList.unshift({ name: undefined, saved: false });
+    }
+    this.wifiList.push(this.wifiList[a]);
+    this.clear();
   }
 
   changeValuePosition = (arr, init, target) => {

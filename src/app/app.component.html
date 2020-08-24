@@ -60,7 +60,9 @@
               <p *ngIf="wifiList[0].name">
                 SSID : <span>{{ wifiList[0].name }}</span>
               </p>
-              <p *ngIf="!wifiList[0].name"></p>
+              <p *ngIf="!wifiList[0].name">
+                &nbsp;
+              </p>
             </div>
           </div>
         </div>
@@ -235,7 +237,7 @@
       type="button"
       class="btn submit mr-auto"
       *ngIf="forgetPass"
-      (click)="forgetWifi(); clear()"
+      (click)="forgetWifi()"
     >
       Forget Wifi
     </button>
@@ -255,7 +257,7 @@
       color="primary"
       class="btn btn-success"
       *ngIf="addWifi"
-      (click)="saveWifi(); modal.close(); clear()"
+      (click)="saveWifi()"
     >
       Connect
     </button>
