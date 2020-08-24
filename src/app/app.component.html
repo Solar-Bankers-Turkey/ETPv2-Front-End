@@ -40,7 +40,10 @@
             matRipple
             [matRippleCentered]="true"
           >
-            <div class="status"></div>
+            <div
+              class="status"
+              [class.not-configured]="!wifiList[0].name"
+            ></div>
             <div>
               <h2>
                 Wifi Configuration
