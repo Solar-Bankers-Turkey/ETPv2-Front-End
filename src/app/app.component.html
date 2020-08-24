@@ -51,12 +51,16 @@
               </small>
             </div>
             <div class="detail">
-              <h3>
+              <h3 *ngIf="wifiList[0].name">
                 <span class="badge badge-pill badge-success">Connected</span>
               </h3>
-              <p>
-                SSID : <span>{{ wifiConnect.connectedTo }}</span>
+              <h3 *ngIf="!wifiList[0].name">
+                <span class="badge badge-pill badge-danger">Not Connected</span>
+              </h3>
+              <p *ngIf="wifiList[0].name">
+                SSID : <span>{{ wifiList[0].name }}</span>
               </p>
+              <p *ngIf="!wifiList[0].name"></p>
             </div>
           </div>
         </div>
@@ -114,7 +118,12 @@
     </div>
 
     <div class="mx-auto text-center my-3">
-      <button mat-raised-button color="primary" class="btn px-5">
+      <button
+        mat-raised-button
+        color="primary"
+        class="btn px-5"
+        (click)="submit()"
+      >
         Submit
       </button>
     </div>
@@ -134,14 +143,21 @@
         </h2>
 
         <div class="my-2">
-          <div class="list-group">
+          <div
+            class="list-group"
+            *ngFor="let item of config.getNetworks().Interfaces"
+          >
             <div
-              (click)="connect(wifiConnect.connectedTo)"
+              *ngIf="item.NetworkType === 'ethernet'"
               class="list-group-item my-1 d-flex justify-content-between align-items-center"
-              [class.active]="wifiConnect.connections.ethernet"
+              [class.active]="item.SSID !== ''"
             >
-              {{ wifiConnect.connectedTo }}
-              <span class="badge badge-pill badge-success">connected</span>
+              {{ item.Name }}
+              <span
+                class="badge badge-pill badge-success"
+                *ngIf="item.SSID !== ''"
+                >connected</span
+              >
             </div>
           </div>
         </div>
@@ -155,18 +171,20 @@
           <div class="list-group">
             <div
               (click)="connect(item)"
-              class="list-group-item my-1 d-flex justify-content-between align-items-center"
-              [class.active]="wifiConnect.connectedTo === item?.name"
+              class="list-group-item my-1 justify-content-between align-items-center"
+              [class.active]="wifiList.indexOf(item) === 0 && item.name"
+              [class.d-flex]="wifiList.indexOf(item) === 0 && item.name"
+              [class.d-none]="!item.name"
               *ngFor="let item of wifiList"
             >
               {{ item?.name }}
               <span
-                *ngIf="wifiConnect.connectedTo === item?.name"
+                *ngIf="wifiList.indexOf(item) === 0 && item.name"
                 class="badge badge-pill badge-success"
                 >connected</span
               >
               <span
-                *ngIf="item?.saved && wifiConnect.connectedTo !== item?.name"
+                *ngIf="item.saved && wifiList.indexOf(item) > 0"
                 class="badge badge-pill badge-warning text-white"
                 >saved</span
               >
@@ -208,7 +226,7 @@
       *ngIf="!addWifi"
       type="button"
       class="btn submit"
-      (click)="addWifi = true"
+      (click)="addWifi = true; new = true"
     >
       Add a connection
     </button>
@@ -217,7 +235,7 @@
       type="button"
       class="btn submit mr-auto"
       *ngIf="forgetPass"
-      (click)="modal.close(); clear()"
+      (click)="forgetWifi(); clear()"
     >
       Forget Wifi
     </button>
@@ -237,7 +255,7 @@
       color="primary"
       class="btn btn-success"
       *ngIf="addWifi"
-      (click)="modal.close(); clear()"
+      (click)="saveWifi(); modal.close(); clear()"
     >
       Connect
     </button>

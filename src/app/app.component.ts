@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ConfigService } from './config.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'config';
 
   wifiForm: FormGroup;
@@ -15,44 +16,15 @@ export class AppComponent {
   notif: FormGroup;
   wifiList = [];
   forgetPass = false;
-  wifiConnect = {
-    internet: true,
-    connections: { wifi: true, ethernet: true },
-    connectedTo: 'TFTC Energy',
-    availableNetworks: [
-      'TFTC Energy',
-      'FiberHGW_ZTYS96_2.4GHz',
-      'JotForm',
-      'JotForm',
-      'DIRECT-d1-HP 1200 Neverstop',
-      'EMQ24',
-      'JotForm',
-      'LinoviG-guest',
-      'DIRECT-2E-HP OfficeJet Pro 6960',
-      'HP-Print-88-LaserJet 400 MFP',
-    ],
-    savedNetworks: [
-      { name: 'EMQ24', password: 'Emrecan.24' },
-      { name: 'TFTC Energy', password: 'FswkuMPn' },
-    ],
-    error: null,
-    ip: '192.168.12.28',
-  };
   addWifi = false;
   wifiError;
-  constructor(private md: NgbModal, private fb: FormBuilder) {
-    let a = this.wifiConnect.availableNetworks;
-    for (let i = 0; i < a.length; i++) {
-      if (a[i] === this.wifiConnect.connectedTo) {
-        this.wifiList[0] = { name: a[i], saved: true };
-      }
-      if (this.wifiConnect.savedNetworks.some((item) => item.name === a[i])) {
-        this.wifiList.splice(1, 1, { name: a[i], saved: true });
-      } else {
-        this.wifiList.push({ name: a[i], saved: false });
-      }
-    }
+  new = false;
 
+  constructor(
+    private md: NgbModal,
+    private fb: FormBuilder,
+    public config: ConfigService
+  ) {
     this.wifiForm = this.fb.group({
       wifi_name: ['', [Validators.required]],
       password: ['', [Validators.required]],
@@ -66,6 +38,25 @@ export class AppComponent {
     this.notif = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
     });
+  }
+
+  ngOnInit() {
+    let a = this.config.getNetworks();
+    let b = a.AvailableNetworks;
+    for (let i = 0; i < b.length; i++) {
+      this.wifiList.push({ name: b[i], saved: false });
+      if (a.Interfaces.some((x) => x.SSID === b[i])) {
+        this.changeValuePosition(this.wifiList, i, 0);
+        this.wifiList[0].saved = true;
+      }
+      if (
+        a.Config.wifi_networks.some((item) => item.ssid === b[i]) &&
+        a.Config.wifi_networks.find((x) => x.ssid === b[i]).ssid !==
+          a.Interfaces.find((x) => x.SSID === b[i]).SSID
+      ) {
+        this.wifiList.unshift({ name: b[i], saved: true });
+      }
+    }
   }
 
   open(modal) {
@@ -83,15 +74,16 @@ export class AppComponent {
   }
 
   connect(wifi) {
-    if (wifi.name !== this.wifiConnect.connectedTo) {
+    let a = this.config.getNetworks();
+    if (a.Interfaces.some((x) => x.SSID !== wifi.name)) {
       this.wi.setValue(wifi.name);
       this.addWifi = true;
       if (wifi.saved) {
         this.forgetPass = true;
-        let key = this.wifiConnect.savedNetworks.filter(
-          (x) => x.name === wifi.name
-        );
-        this.ps.setValue(key[0].password);
+        let key = a.Config.wifi_networks.filter((x) => x.ssid === wifi.name);
+        let ps = key[0]?.password || 'password';
+
+        this.ps.setValue(ps);
       } else {
         this.wifiError = 'Enter password to connect!';
       }
@@ -99,9 +91,38 @@ export class AppComponent {
       this.addWifi = true;
       this.forgetPass = true;
       this.wi.setValue(wifi.name);
-      this.ps.setValue('password');
     }
   }
+
+  saveWifi() {
+    if (this.wifiForm.valid) {
+      if (!this.new) {
+        const tg = this.wifiList.indexOf(
+          this.wifiList.find((element) => element.name === this.wi.value)
+        );
+        this.wifiList[tg].saved = true;
+        this.changeValuePosition(this.wifiList, tg, 0);
+      } else {
+        this.wifiList.unshift({ name: this.wi.value, saved: true });
+      }
+    } else {
+      this.wifiError = 'Please Enter Password to Connect';
+    }
+  }
+
+  forgetWifi() {
+    let a = this.wifiList.indexOf(
+      this.wifiList.find((element) => element.name === this.wi.value)
+    );
+    this.wifiList[a].saved = false;
+    this.wifiList.unshift(this.wifiList[a]);
+    this.wifiList[0] = { name: undefined, saved: false };
+  }
+
+  changeValuePosition = (arr, init, target) => {
+    [arr[init], arr[target]] = [arr[target], arr[init]];
+    return arr;
+  };
 
   clear() {
     this.addWifi = false;
@@ -109,5 +130,10 @@ export class AppComponent {
     this.wi.setValue('');
     this.wifiError = '';
     this.ps.setValue('');
+    this.new = false;
+  }
+
+  submit() {
+    console.log('submit');
   }
 }
