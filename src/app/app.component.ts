@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   accountForm: FormGroup;
   notif: FormGroup;
   wifiList = [];
+  wifiSubscribe;
   forgetPass = false;
   addWifi = false;
   wifiError;
@@ -38,10 +39,10 @@ export class AppComponent implements OnInit {
     this.notif = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
     });
-  }
-
-  ngOnInit() {
-    let a = this.config.getNetworks();
+    this.config.getNetworks().subscribe((data) => {
+      this.wifiSubscribe = data;
+    });
+    let a = this.wifiSubscribe;
     let b = a.AvailableNetworks;
     for (let i = 0; i < b.length; i++) {
       this.wifiList.push({ name: b[i], saved: false });
@@ -59,6 +60,8 @@ export class AppComponent implements OnInit {
     }
   }
 
+  ngOnInit() {}
+
   open(modal) {
     this.md.open(modal, {
       centered: true,
@@ -74,7 +77,7 @@ export class AppComponent implements OnInit {
   }
 
   connect(wifi) {
-    let a = this.config.getNetworks();
+    let a = this.wifiSubscribe;
     if (a.Interfaces.some((x) => x.SSID !== wifi.name)) {
       this.wi.setValue(wifi.name);
       this.addWifi = true;

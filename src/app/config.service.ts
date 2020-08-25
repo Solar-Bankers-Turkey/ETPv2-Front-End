@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ConfigService {
+  response;
   constructor(private http: HttpClient) {}
 
   getNetworks() {
@@ -74,6 +75,6 @@ export class ConfigService {
       ConfigPath: '/home/eco/connman_config.json',
     };
 
-    return response;
+    return this.http.get('http://localhost:8080/status');
   }
 }

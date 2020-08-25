@@ -64,7 +64,7 @@
                 SSID : <span>{{ wifiList[0].name }}</span>
               </p>
               <p *ngIf="!wifiList[0].name">
-                &nbsp;
+                SSID: No connection
               </p>
             </div>
           </div>
@@ -150,7 +150,7 @@
         <div class="my-2">
           <div
             class="list-group"
-            *ngFor="let item of config.getNetworks().Interfaces"
+            *ngFor="let item of wifiSubscribe?.Interfaces"
           >
             <div
               *ngIf="item.NetworkType === 'ethernet'"
